@@ -71,28 +71,28 @@ belongs_to user
 belongs_to region
 
 ##regions
-has_many user_regions
-has_many users through user_regions
-has_many bird_regions
-has_many birds through bird_regions
-has_many quizzes**
+has_many user_regions;
+has_many users through user_regions;
+has_many bird_regions;
+has_many birds through bird_regions;
+has_many quizzes**;
 
 ##bird_regions
-belongs_to region
-belongs_to bird
+belongs_to region;
+belongs_to bird;
 
 ##birds
-has_many bird_regions
-has_many regions through bird_regions
-has_many users through regions
+has_many bird_regions;
+has_many regions through bird_regions;
+has_many users through regions;
 
 ##quizzes
-has_many questions
-belongs_to user
-belongs_to region**
+has_many questions;
+belongs_to user;
+belongs_to region**;
 
 ##questions
-belongs_to quiz
-belongs_to bird**
+belongs_to quiz;
+belongs_to bird**;
 
 
