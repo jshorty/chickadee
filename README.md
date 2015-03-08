@@ -1,27 +1,23 @@
-# Flux-capacitr
+# Chickadee
 
 [Heroku link][heroku]
 
 [heroku]: http://flux-capacitr.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
-
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+Chickadee is a clone of the language-learning app Duolingo, used for learning to identify birds by song. It's built on Rails and Backbone.  With Chickadee, users can:
+- [ ] Sign up, log in, and log out
+- [ ] Edit user profile
+- [ ] Upload a profile image
+- [ ] Create birds 
+- [ ] Create regions
+- [ ] View birds
+- [ ] View regions
+- [ ] Take a quiz on a region's birdsongs
+- [ ] Track their scores
 
 ## Design Docs
-* [View Wireframes][views]
+* Wireframes were done with ink and paper!
 * [DB schema][schema]
 
 [views]: ./docs/views.md
