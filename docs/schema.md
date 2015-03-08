@@ -17,7 +17,7 @@ id              | integer   | not null, primary key
 common_name     | string    | not null, unique
 scientific_name | string    | not null, unique
 song_description| string    | (substitute for mp3 initially)
-audio_url       | string    | 
+audio_query_url | string    |
 
 ## regions
 column name     | data type | details
@@ -26,6 +26,7 @@ id              | integer   | not null, primary key
 county          | string    | scoped uniqueness (state)
 state           | string    | scoped uniqueness (country)
 country         | string    | not null, enforce uniqueness when county/state left blank (how?)
+ebird_query_url | string    |
 
 ## user_regions (JOIN TABLE)
 column name | data type | details
@@ -56,6 +57,8 @@ column name | data type | details
 id          | integer   | not null, primary key
 quiz_id     | integer   | not null, foreign key (references quizzes), indexed
 bird_id     | integer   | not null, foreign key (references birds)
+answered    | boolean   | not null, default false
+correct     | boolean   | not null, default false
 
 # Associations
 ## users

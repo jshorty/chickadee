@@ -1,29 +1,37 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Viewing Regions and Birds, User Profile
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+StaticPagesController (public, private)
+Api::RegionsController (create, destroy, index, show)
+Api::BirdsController (create, destroy, index, quiz_question)
+(quiz_question route responds with 4 random birds from a region)
 
 ### Views
-* blogs/show.json.jbuilder
+* layouts/_header.html.erb (header partial on all pages)
+* regions/index.json.jbuilder (JSON for a user's region)
+* regions/show.json.jbuilder (JSON for a user's region and its birds)
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+* Region (parses associated Birds collection)
+* Bird
 
 ### Collections
-* Blogs
-* Posts
+* Regions
+* Birds
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+StaticPages#private---
+* RegionForm
+* RegionShow (composite view, contains PostsIndex subview)
+* RegionIndex (composite view, contains RegionIndexItem subviews)
+* UserForm
+
+StaticPages#public
+* Welcome
+* SessionForm
 
 ## Gems/Libraries

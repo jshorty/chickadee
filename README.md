@@ -8,13 +8,14 @@
 Chickadee is a clone of the language-learning app Duolingo, used for learning to identify birds by song. It's built on Rails and Backbone.  With Chickadee, users can:
 - [ ] Sign up, log in, and log out
 - [ ] Edit user profile
-- [ ] Upload a profile image
 - [ ] Create birds
 - [ ] Create regions
 - [ ] View birds
 - [ ] View regions
-- [ ] Take a quiz on a region's birdsongs
-- [ ] Track their scores
+- [ ] Take a quiz on a region's birdsongs (text description)
+- [ ] See their score on a quiz
+- [ ] Listen to the bird song for a given quiz question
+- [ ] Upload a profile image
 
 ## Design Docs
 * Wireframes were done with ink and paper!
@@ -24,59 +25,37 @@ Chickadee is a clone of the language-learning app Duolingo, used for learning to
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
-I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
+### Phase 1: User Authentication, Birds and Regions (~1-2 days)
+I will implement user authentication and the birds and regions resources with rails. Region creation will cause creation of bird models via queries to the eBird API, which will be written into the region's model logic. Nokogiri will allow me to parse the XML from querying eBird. By the end of this phase I will have simple static pages for users, sessions, regions, and birds paralleling those needed in the completed MVP.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+### Phase 2: Viewing Regions and Birds, User Profile (~1 days)
+I will add API routes to serve JSON data for a users' regions and birds, and build the Backbone front end for these resources. I plan on two static pages, one for all accessible logged-out views (just welcome page and login for the MVP) and one for logged-in views.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Quizzes (~2 days)
+I will add the quiz and question resources in Rails to be served and managed as JSON through the API, and corresponding models, collections and views in Backbone. The quiz will be presented through a series of Question/Answer Show views, flashing a QuestionResult View after each answer and a QuizResult View at the end.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: MP3 Audio (~2-3 days)
+I will query the xeno-canto API to get a link for mp3 audio of a species' song; in the frequent case of multiple songs I will have one selected at random. When creating a new quiz, an mp3 link should be retrieved for each question's bird. When that question is presented, a simple player (play button only) will be visible in the QuestionShow view and play the audio from xeno-canto's servers. Ideally the audio for upcoming questions in the quiz could be queued up and ready by the time that user reaches that question. I would love to talk potential logistics over with a TA!
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Profile Image Upload (~1 days)
+To allow users to upload and display a profile image like Duolingo, I'll use Paperclip and an AWS S3 Bucket to provide this functionality from the user profile page. I'll install the gems, configure heroku to work with the AWS resources, and finally display the user's image in the header when logged in.
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
-- [ ] Multiple sessions/session management
-- [ ] User avatars
-- [ ] Typeahead search bar
+- [ ] Draggable, droppable regions on regions index/landing page
+- [ ] Modal view login/signup
+- [ ] Typeahead entry on new region form
+- [ ] Gamification (3 "lives" during quiz, gain XP)
+- [ ] Bird images shown with audio in quiz and on answer hover
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
