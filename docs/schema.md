@@ -59,16 +59,16 @@ bird_id     | integer   | not null, foreign key (references birds)
 
 # Associations
 ## users
-has_many user_regions
-has_many regions through user_regions
-has_many bird_regions
-has_many birds though bird_regions
-has_many quizzes
-has_many questions through quizzes**
+has_many user_regions;
+has_many regions through user_regions;
+has_many bird_regions;
+has_many birds though bird_regions;
+has_many quizzes;
+has_many questions through quizzes**;
 
 ##user_regions
-belongs_to user
-belongs_to region
+belongs_to user;
+belongs_to region;
 
 ##regions
 has_many user_regions;
@@ -95,4 +95,4 @@ belongs_to region**;
 belongs_to quiz;
 belongs_to bird**;
 
-
+**unsure if needed
