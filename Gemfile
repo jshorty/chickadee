@@ -43,5 +43,12 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+end
+
 # Required by Heroku for serving assets in production, logging to stdout
 gem 'rails_12factor', group: :production
