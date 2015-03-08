@@ -1,45 +1,58 @@
 # Schema Information
 
-## blogs
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-owner_id    | integer   | not null, foreign key (references users)
-title       | string    | not null
-
-## followings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-blog_id     | integer   | not null, foreign key (references blogs)
-follower_id | integer   | not null, foreign key (references users)
-
-## posts
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users)
-title       | string    | not null
-body        | string    |
-
-## tags
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-label       | string    | not null, unique
-
-## taggings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-post_id     | integer   | not null, foreign key (references posts)
-tag_id      | integer   | not null, foreign key (references tags)
-
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-email           | string    | not null, unique
+email           | string    | not null, unique, indexed
 password_digest | string    | not null
-session_token   | string    | not null, unique
+session_token   | string    | not null
+alias           | string    |
+image_url       | string    |
 
+## birds
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+common_name     | string    | not null, unique
+scientific_name | string    | not null, unique
+song_description| string    | (substitute for mp3 initially)
+audio_url       | string    | 
+
+## regions
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+county          | string    | scoped uniqueness (state)
+state           | string    | scoped uniqueness (country)
+country         | string    | not null, enforce uniqueness when county/state left blank (how?)
+
+## user_regions (JOIN TABLE)
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users)
+region_id   | integer   | not null, foreign key (references regions), indexed
+
+## bird_regions (JOIN TABLE)
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+bird_id     | integer   | not null, foreign key (references birds)
+region_id   | integer   | not null, foreign key (references regions), indexed
+
+## quizzes
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users), indexed
+region_id   | integer   | not null, foreign key (references regions)
+progress    | integer   | not null, default 0
+score       | integer   | not null, default 0
+
+## questions
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+quiz_id     | integer   | not null, foreign key (references quizzes), indexed
+bird_id     | integer   | not null, foreign key (references birds)
