@@ -39,18 +39,28 @@ class Region < ActiveRecord::Base
   end
 
   def ebird_query_string
-    base_url = "http://ebird.org/ws1.1/data/obs/region_spp/recent?"
+    base_url = "http://ebird.org/ws1.1/data/obs/region/recent?"
     query_end = "&back=30&maxResults=10000&includeProvisional=false"
 
     if self.county
-      region = "rtype=subnational2"
+      region = "rtype=subnational2&r="
+      code =  County.all.joins("JOIN states ON counties.state = states.code")
+                    .where(["states.name = ? AND counties.name = ?",
+                      self.state, self.county])
+                    .first.code
 
-    elsif self.state
-      region = "rtype=subnational1"
+    elsif self.state #several countries have two state entries w/ same name
+      region = "rtype=subnational1&r="
+      code = State.all.joins("JOIN countries ON states.country = countries.code")
+                  .where(["states.name = ? AND countries.name = ?",
+                    self.state, self.country])
+                  .first.code
 
     else
-      region = "rtype=country"
-
+      region = "rtype=country&r="
+      code = Country.all.where({name: this.country}).first.code
     end
+
+    base_url + region + code + query_end
   end
 end
