@@ -3,6 +3,13 @@ class Region < ActiveRecord::Base
   validates :county, uniqueness: {scope: :state}
   validate :region_has_clear_specificity
 
+  has_many :bird_regions,
+    class_name: "BirdRegion",
+    primary_key: :id,
+    foreign_key: :region_id
+
+  has_many :birds, through: :bird_regions, source: :bird
+
   def region_has_clear_specificity
     if self.county && !self.state
       errors.add(:state, "must specify a state when selecting a county")

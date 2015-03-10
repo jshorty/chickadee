@@ -1,6 +1,13 @@
 class Bird < ActiveRecord::Base
   validates :common_name, :sci_name, presence: true, uniqueness: true
 
+  has_many :bird_regions,
+    class_name: "BirdRegion",
+    primary_key: :id,
+    foreign_key: :bird_id
+
+  has_many :regions, through: :bird_regions, source: :region
+
   def genus
     self.sci_name.split(" ")[0]
   end
