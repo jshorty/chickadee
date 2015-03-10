@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     dependent: :destroy
 
   has_many :regions, through: :user_regions, source: :region
+  has_many :birds, through: :regions, source: :birds
 
   def email_must_have_valid_format
     if self.email

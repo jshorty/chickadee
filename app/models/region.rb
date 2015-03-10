@@ -1,7 +1,7 @@
 class Region < ActiveRecord::Base
   validates :country, presence: true
-  validates :county, uniqueness: {scope: :state}
   validate :region_has_clear_specificity
+  validate :region_is_unique_by_scope
 
   has_many :bird_regions,
     class_name: "BirdRegion",
@@ -26,20 +26,18 @@ class Region < ActiveRecord::Base
   end
 
   def region_is_unique_by_scope
-    # if self.county
-    #   return Region.none? do |region|
-    #       self.county == region.county && self.state == region.state &&
-    #       self.country == region.country
-    #     end
-    if self.state
-      return Region.none? do |region|
-          !region.county && self.state == region.state &&
-          self.country == region.country
-        end
-    else
-      return Region.none? do |region|
-          !region.county && !region.state && self.country == region.country
-        end
+    if self.county && Region.all.where({
+        county: self.county, state: self.state, country: self.country}).any?
+      errors[:base] << "region already exists in the database"
+    elsif self.state && Region.all.where({
+        county: nil, state: self.state, country: self.country}).any?
+      errors[:base] << "region already exists in the database"
+    elsif Region.all.where({
+        county: nil, state: nil, country: self.country}).any?
+      errors[:base] << "region already exists in the database"
     end
+  end
+
+  def ebird_query_string
   end
 end
