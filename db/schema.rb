@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310190830) do
+ActiveRecord::Schema.define(version: 20150310220357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,24 @@ ActiveRecord::Schema.define(version: 20150310190830) do
   add_index "birds", ["common_name"], name: "index_birds_on_common_name", unique: true, using: :btree
   add_index "birds", ["sci_name"], name: "index_birds_on_sci_name", unique: true, using: :btree
 
+  create_table "counties", force: :cascade do |t|
+    t.string "code",    null: false
+    t.string "name",    null: false
+    t.string "state",   null: false
+    t.string "country", null: false
+  end
+
+  add_index "counties", ["code"], name: "index_counties_on_code", using: :btree
+  add_index "counties", ["name"], name: "index_counties_on_name", using: :btree
+
+  create_table "countries", force: :cascade do |t|
+    t.string "code", null: false
+    t.string "name", null: false
+  end
+
+  add_index "countries", ["code"], name: "index_countries_on_code", using: :btree
+  add_index "countries", ["name"], name: "index_countries_on_name", using: :btree
+
   create_table "regions", force: :cascade do |t|
     t.string   "county"
     t.string   "state"
@@ -43,6 +61,15 @@ ActiveRecord::Schema.define(version: 20150310190830) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "states", force: :cascade do |t|
+    t.string "code",    null: false
+    t.string "name",    null: false
+    t.string "country", null: false
+  end
+
+  add_index "states", ["code"], name: "index_states_on_code", using: :btree
+  add_index "states", ["name"], name: "index_states_on_name", using: :btree
 
   create_table "user_regions", force: :cascade do |t|
     t.integer  "user_id",    null: false
