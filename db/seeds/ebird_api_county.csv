@@ -1,0 +1,4681 @@
+COUNTRY_CODE,SUBNATIONAL1_CODE,SUBNATIONAL2_CODE,SUBNATIONAL2_NAME
+CA,CA-AB,CA-AB-EI,Red Deer
+CA,CA-AB,CA-AB-EL,Edmonton
+CA,CA-AB,CA-AB-ET,Grande Cache
+CA,CA-AB,CA-AB-FI,Drumheller
+CA,CA-AB,CA-AB-FN,Banff
+CA,CA-AB,CA-AB-FO,Hanna
+CA,CA-AB,CA-AB-FT,Edson
+CA,CA-AB,CA-AB-NI,Rocky Mountain House
+CA,CA-AB,CA-AB-NT,Grande Prairie
+CA,CA-AB,CA-AB-ON,Medicine Hat
+CA,CA-AB,CA-AB-SE,Stettler
+CA,CA-AB,CA-AB-SI,Calgary
+CA,CA-AB,CA-AB-SN,Slave Lake
+CA,CA-AB,CA-AB-ST,Fort McMurray
+CA,CA-AB,CA-AB-TE,Camrose-Lloydminister
+CA,CA-AB,CA-AB-TN,Athabasca
+CA,CA-AB,CA-AB-TR,Fort MacLeod
+CA,CA-AB,CA-AB-TV,St. Paul
+CA,CA-AB,CA-AB-TW,Lethbridge
+CA,CA-BC,CA-BC-AC,Alberni-Clayoquot
+CA,CA-BC,CA-BC-BN,Bulkley-Nechako
+CA,CA-BC,CA-BC-CC,Central Coast
+CA,CA-BC,CA-BC-CK,Central Kootenay
+CA,CA-BC,CA-BC-CO,Central Okanagan
+CA,CA-BC,CA-BC-CP,Capital
+CA,CA-BC,CA-BC-CR,Cariboo
+CA,CA-BC,CA-BC-CS,Columbia-Shuswap
+CA,CA-BC,CA-BC-CV,Cowichan Valley
+CA,CA-BC,CA-BC-CX,Comox-Strathcona
+CA,CA-BC,CA-BC-EK,East Kootenay
+CA,CA-BC,CA-BC-FF,Fraser-Fort George
+CA,CA-BC,CA-BC-FV,Fraser Valley
+CA,CA-BC,CA-BC-GV,Metro Vancouver
+CA,CA-BC,CA-BC-KB,Kootenay Boundary
+CA,CA-BC,CA-BC-KS,Kitimat-Stikine
+CA,CA-BC,CA-BC-MW,Mount Waddington
+CA,CA-BC,CA-BC-NA,Nanaimo
+CA,CA-BC,CA-BC-NO,North Okanagan
+CA,CA-BC,CA-BC-NR,Northern Rockies
+CA,CA-BC,CA-BC-OS,Okanagan-Similkameen
+CA,CA-BC,CA-BC-PC,Peace River
+CA,CA-BC,CA-BC-PW,Powell River
+CA,CA-BC,CA-BC-SC,Sunshine Coast
+CA,CA-BC,CA-BC-SL,Squamish-Lillooet
+CA,CA-BC,CA-BC-SQ,Skeena-Queen Charlotte
+CA,CA-BC,CA-BC-ST,Stikine
+CA,CA-BC,CA-BC-TN,Thompson-Nicola
+CA,CA-MB,CA-MB-EE,Churchill and Northern Manitoba
+CA,CA-MB,CA-MB-EI,Central Manitoba - Central Plains
+CA,CA-MB,CA-MB-EL,Winnipeg
+CA,CA-MB,CA-MB-ET,North Interlake Area
+CA,CA-MB,CA-MB-FI,South West Westman
+CA,CA-MB,CA-MB-FN,Western Manitoba Westman
+CA,CA-MB,CA-MB-FO,Pilot Mound Area
+CA,CA-MB,CA-MB-FT,South Interlake
+CA,CA-MB,CA-MB-NI,Portage la Prairie Area
+CA,CA-MB,CA-MB-NT,North East Northern Region
+CA,CA-MB,CA-MB-ON,Eastern Manitoba - Eastman
+CA,CA-MB,CA-MB-SE,Brandon Area
+CA,CA-MB,CA-MB-SI,Virden Area
+CA,CA-MB,CA-MB-SN,Dauphin
+CA,CA-MB,CA-MB-ST,Roblin - Russell - Rossburn Area
+CA,CA-MB,CA-MB-TE,Whitehorse Plains
+CA,CA-MB,CA-MB-TN,Selkirk Area
+CA,CA-MB,CA-MB-TO,Flin Flon and North West
+CA,CA-MB,CA-MB-TR,Pembina Valley
+CA,CA-MB,CA-MB-TT,Swan River
+CA,CA-MB,CA-MB-TV,Beausejour Area
+CA,CA-MB,CA-MB-TW,Steinbach Area
+CA,CA-MB,CA-MB-TY,Thompson and North Central
+CA,CA-NB,CA-NB-AL,Albert
+CA,CA-NB,CA-NB-CA,Carleton
+CA,CA-NB,CA-NB-CH,Charlotte
+CA,CA-NB,CA-NB-GL,Gloucester
+CA,CA-NB,CA-NB-KE,Kent
+CA,CA-NB,CA-NB-KI,Kings
+CA,CA-NB,CA-NB-MA,Madawaska
+CA,CA-NB,CA-NB-NO,Northumberland
+CA,CA-NB,CA-NB-QU,Queens
+CA,CA-NB,CA-NB-RE,Restigouche
+CA,CA-NB,CA-NB-SJ,Saint John
+CA,CA-NB,CA-NB-SU,Sunbury
+CA,CA-NB,CA-NB-VI,Victoria
+CA,CA-NB,CA-NB-WE,Westmorland
+CA,CA-NB,CA-NB-YO,York
+CA,CA-NL,CA-NL-EI,Notre Dame Bay-Lewisporte
+CA,CA-NL,CA-NL-EL,Nunatsiavut-Nain
+CA,CA-NL,CA-NL-FI,Humber District-Corner Brook
+CA,CA-NL,CA-NL-FO,St. George's-Stephenville
+CA,CA-NL,CA-NL-NI,Northern Peninsula-St. Anthony
+CA,CA-NL,CA-NL-ON,Avalon Peninsula-St. John's
+CA,CA-NL,CA-NL-SE,Bonavista/Trinity-Clarenville
+CA,CA-NL,CA-NL-SI,Central Newfoundland-Grand Falls-Windsor
+CA,CA-NL,CA-NL-TE,Labrador-Happy Valley-Goose Bay
+CA,CA-NL,CA-NL-TR,South Coast-Channel-Port aux Basques
+CA,CA-NL,CA-NL-TW,Burin Peninsula-Marystown
+CA,CA-NS,CA-NS-AG,Antigonish
+CA,CA-NS,CA-NS-AP,Annapolis
+CA,CA-NS,CA-NS-CB,Cape Breton
+CA,CA-NS,CA-NS-CO,Colchester
+CA,CA-NS,CA-NS-CU,Cumberland
+CA,CA-NS,CA-NS-DI,Digby
+CA,CA-NS,CA-NS-GU,Guysborough
+CA,CA-NS,CA-NS-HL,Halifax
+CA,CA-NS,CA-NS-HN,Hants
+CA,CA-NS,CA-NS-IN,Inverness
+CA,CA-NS,CA-NS-KI,Kings
+CA,CA-NS,CA-NS-LU,Lunenburg
+CA,CA-NS,CA-NS-PI,Pictou
+CA,CA-NS,CA-NS-QU,Queens
+CA,CA-NS,CA-NS-RI,Richmond
+CA,CA-NS,CA-NS-SH,Shelburne
+CA,CA-NS,CA-NS-VI,Victoria
+CA,CA-NS,CA-NS-YA,Yarmouth
+CA,CA-NT,CA-NT-FS,Fort Smith
+CA,CA-NT,CA-NT-IN,Inuvik
+CA,CA-NU,CA-NU-KT,Kitikmeot
+CA,CA-NU,CA-NU-KV,Keewatin
+CA,CA-NU,CA-NU-QK,Baffin
+CA,CA-ON,CA-ON-AL,Algoma
+CA,CA-ON,CA-ON-BC,Bruce
+CA,CA-ON,CA-ON-BN,Brant
+CA,CA-ON,CA-ON-CO,Cochrane
+CA,CA-ON,CA-ON-DF,Dufferin
+CA,CA-ON,CA-ON-DR,Durham
+CA,CA-ON,CA-ON-EL,Elgin
+CA,CA-ON,CA-ON-ES,Essex
+CA,CA-ON,CA-ON-FR,Frontenac
+CA,CA-ON,CA-ON-GR,Grey
+CA,CA-ON,CA-ON-HA,Hamilton
+CA,CA-ON,CA-ON-HB,Haliburton
+CA,CA-ON,CA-ON-HD,Haldimand
+CA,CA-ON,CA-ON-HS,Hastings
+CA,CA-ON,CA-ON-HT,Halton
+CA,CA-ON,CA-ON-HU,Huron
+CA,CA-ON,CA-ON-KR,Kenora
+CA,CA-ON,CA-ON-KT,Chatham-Kent
+CA,CA-ON,CA-ON-LA,Lennox and Addington
+CA,CA-ON,CA-ON-LG,Leeds and Grenville
+CA,CA-ON,CA-ON-LM,Lambton
+CA,CA-ON,CA-ON-LN,Lanark
+CA,CA-ON,CA-ON-MA,Manitoulin
+CA,CA-ON,CA-ON-MI,Middlesex
+CA,CA-ON,CA-ON-MU,Muskoka
+CA,CA-ON,CA-ON-NF,Norfolk
+CA,CA-ON,CA-ON-NG,Niagara
+CA,CA-ON,CA-ON-NP,Nipissing
+CA,CA-ON,CA-ON-NU,Northumberland
+CA,CA-ON,CA-ON-OT,Ottawa
+CA,CA-ON,CA-ON-OX,Oxford
+CA,CA-ON,CA-ON-PB,Peterborough
+CA,CA-ON,CA-ON-PE,Prince Edward
+CA,CA-ON,CA-ON-PL,Peel
+CA,CA-ON,CA-ON-PR,Prescott and Russell
+CA,CA-ON,CA-ON-PS,Parry Sound
+CA,CA-ON,CA-ON-PT,Perth
+CA,CA-ON,CA-ON-RE,Renfrew
+CA,CA-ON,CA-ON-RR,Rainy River
+CA,CA-ON,CA-ON-SB,Sudbury
+CA,CA-ON,CA-ON-SC,Simcoe
+CA,CA-ON,CA-ON-SD,"Stormont, Dundas and Glengarry"
+CA,CA-ON,CA-ON-SU,Greater Sudbury
+CA,CA-ON,CA-ON-TB,Thunder Bay
+CA,CA-ON,CA-ON-TI,Timiskaming
+CA,CA-ON,CA-ON-TO,Toronto
+CA,CA-ON,CA-ON-VI,Kawartha Lakes
+CA,CA-ON,CA-ON-WL,Wellington
+CA,CA-ON,CA-ON-WT,Waterloo
+CA,CA-ON,CA-ON-YO,York
+CA,CA-PE,CA-PE-KI,Kings
+CA,CA-PE,CA-PE-PR,Prince
+CA,CA-PE,CA-PE-QU,Queens
+CA,CA-QC,CA-QC-AB,Abitibi
+CA,CA-QC,CA-QC-AC,Acton
+CA,CA-QC,CA-QC-AG,Argenteuil
+CA,CA-QC,CA-QC-AL,Antoine-Labelle
+CA,CA-QC,CA-QC-AN,L'Assomption
+CA,CA-QC,CA-QC-AO,Abitibi-Ouest
+CA,CA-QC,CA-QC-APP,Les Appalaches
+CA,CA-QC,CA-QC-AS,Les Sources
+CA,CA-QC,CA-QC-AT,Arthabaska
+CA,CA-QC,CA-QC-AV,Avignon
+CA,CA-QC,CA-QC-BA,Les Basques
+CA,CA-QC,CA-QC-BC,Bécancour
+CA,CA-QC,CA-QC-BH,Beauharnois-Salaberry
+CA,CA-QC,CA-QC-BL,Bellechasse
+CA,CA-QC,CA-QC-BM,Brome-Missisquoi
+CA,CA-QC,CA-QC-BO,Bonaventure
+CA,CA-QC,CA-QC-BR,Pierre-De Saurel
+CA,CA-QC,CA-QC-BS,Beauce-Sartigan
+CA,CA-QC,CA-QC-CAN,Caniapiscau
+CA,CA-QC,CA-QC-CB,La Côte-de-Beaupré
+CA,CA-QC,CA-QC-CE,Charlevoix-Est
+CA,CA-QC,CA-QC-CG,La Côte-de-Gaspé
+CA,CA-QC,CA-QC-CM,Shawinigan
+CA,CA-QC,CA-QC-CO,Les Collines-de-l'Outaouais
+CA,CA-QC,CA-QC-CP,Longueuil
+CA,CA-QC,CA-QC-CT,Coaticook
+CA,CA-QC,CA-QC-CV,Charlevoix
+CA,CA-QC,CA-QC-DA,D'Autray
+CA,CA-QC,CA-QC-DD,Le Domaine-du-Roy
+CA,CA-QC,CA-QC-DE,Lévis
+CA,CA-QC,CA-QC-DM,Deux-Montagnes
+CA,CA-QC,CA-QC-DR,La Haute-Gaspésie
+CA,CA-QC,CA-QC-DU,Drummond
+CA,CA-QC,CA-QC-ER,L'Érable
+CA,CA-QC,CA-QC-ET,Les Etchemins
+CA,CA-QC,CA-QC-FR,Trois-Rivières
+CA,CA-QC,CA-QC-FS,Le Fjord-du-Saguenay
+CA,CA-QC,CA-QC-GR,Le Granit
+CA,CA-QC,CA-QC-GSL,Le Golfe-du-Saint-Laurent
+CA,CA-QC,CA-QC-HC,La Haute-Côte-Nord
+CA,CA-QC,CA-QC-HF,Le Haut-Saint-François
+CA,CA-QC,CA-QC-HL,Le Haut-Saint-Laurent
+CA,CA-QC,CA-QC-HM,La Tuque
+CA,CA-QC,CA-QC-HR,Le Haut-Richelieu
+CA,CA-QC,CA-QC-HY,La Haute-Yamaska
+CA,CA-QC,CA-QC-IM,Les Îles-de-la-Madeleine
+CA,CA-QC,CA-QC-IO,L'Île-d'Orléans
+CA,CA-QC,CA-QC-IS,L'Islet
+CA,CA-QC,CA-QC-JAM,Jamésie
+CA,CA-QC,CA-QC-JC,La Jacques-Cartier
+CA,CA-QC,CA-QC-JN,Les Jardins-de-Napierville
+CA,CA-QC,CA-QC-JO,Joliette
+CA,CA-QC,CA-QC-KA,Kamouraska
+CA,CA-QC,CA-QC-LCH,Les Chenaux
+CA,CA-QC,CA-QC-LJ,Marguerite-D'Youville
+CA,CA-QC,CA-QC-LL,Les Laurentides
+CA,CA-QC,CA-QC-LO,Lotbinière
+CA,CA-QC,CA-QC-LS,Lac-Saint-Jean-Est
+CA,CA-QC,CA-QC-LV,Laval
+CA,CA-QC,CA-QC-MB,Minganie
+CA,CA-QC,CA-QC-MC,Maria-Chapdelaine
+CA,CA-QC,CA-QC-ME,Mékinac
+CA,CA-QC,CA-QC-MG,Memphrémagog
+CA,CA-QC,CA-QC-MI,La Mitis
+CA,CA-QC,CA-QC-MK,Les Maskoutains
+CA,CA-QC,CA-QC-ML,Mirabel
+CA,CA-QC,CA-QC-MM,Montmagny
+CA,CA-QC,CA-QC-MN,Manicouagan
+CA,CA-QC,CA-QC-MO,Montcalm
+CA,CA-QC,CA-QC-MP,La Matapédia
+CA,CA-QC,CA-QC-MR,Montréal
+CA,CA-QC,CA-QC-MS,Maskinongé
+CA,CA-QC,CA-QC-MT,La Matanie
+CA,CA-QC,CA-QC-MU,Les Moulins
+CA,CA-QC,CA-QC-MW,Matawinie
+CA,CA-QC,CA-QC-NB,La Nouvelle-Beauce
+CA,CA-QC,CA-QC-NQ,Kativik
+CA,CA-QC,CA-QC-NY,Nicolet-Yamaska
+CA,CA-QC,CA-QC-OU,Gatineau
+CA,CA-QC,CA-QC-PB,Le Rocher-Percé
+CA,CA-QC,CA-QC-PH,Les Pays-d'en-Haut
+CA,CA-QC,CA-QC-PN,Pontiac
+CA,CA-QC,CA-QC-PP,Papineau
+CA,CA-QC,CA-QC-PR,Portneuf
+CA,CA-QC,CA-QC-QU,Québec
+CA,CA-QC,CA-QC-RC,Robert-Cliche
+CA,CA-QC,CA-QC-RD,La Rivière-du-Nord
+CA,CA-QC,CA-QC-RL,Rivière-du-Loup
+CA,CA-QC,CA-QC-RM,Rimouski-Neigette
+CA,CA-QC,CA-QC-RN,Rouyn-Noranda
+CA,CA-QC,CA-QC-RS,Roussillon
+CA,CA-QC,CA-QC-RV,Rouville
+CA,CA-QC,CA-QC-SAG,Saguenay
+CA,CA-QC,CA-QC-SH,Sherbrooke
+CA,CA-QC,CA-QC-SR,Sept-Rivières
+CA,CA-QC,CA-QC-TB,Thérèse-De Blainville
+CA,CA-QC,CA-QC-TM,Témiscamingue
+CA,CA-QC,CA-QC-TT,Témiscouata
+CA,CA-QC,CA-QC-VF,Le Val-Saint-François
+CA,CA-QC,CA-QC-VG,La Vallée-de-la-Gatineau
+CA,CA-QC,CA-QC-VO,La Vallée-de-l'Or
+CA,CA-QC,CA-QC-VR,La Vallée-du-Richelieu
+CA,CA-QC,CA-QC-VS,Vaudreuil-Soulanges
+CA,CA-SK,CA-SK-EI,Swift Current
+CA,CA-SK,CA-SK-EL,Saskatoon
+CA,CA-SK,CA-SK-ET,La Ronge
+CA,CA-SK,CA-SK-FI,Melville
+CA,CA-SK,CA-SK-FN,Prince Albert
+CA,CA-SK,CA-SK-FO,Maple Creek
+CA,CA-SK,CA-SK-FT,Melfort
+CA,CA-SK,CA-SK-NI,Yorkton
+CA,CA-SK,CA-SK-ON,Estevan
+CA,CA-SK,CA-SK-SE,Moose Jaw
+CA,CA-SK,CA-SK-SI,Regina
+CA,CA-SK,CA-SK-SN,Lloydminster
+CA,CA-SK,CA-SK-ST,North Battleford
+CA,CA-SK,CA-SK-TE,Wynyard
+CA,CA-SK,CA-SK-TN,Kindersley
+CA,CA-SK,CA-SK-TR,Assiniboia
+CA,CA-SK,CA-SK-TV,Battleford
+CA,CA-SK,CA-SK-TW,Weyburn
+CA,CA-YT,CA-YT-YT,Yukon
+ES,ES-AN,ES-AN-AM,Almería
+ES,ES-AN,ES-AN-CD,Cádiz
+ES,ES-AN,ES-AN-CO,Córdoba
+ES,ES-AN,ES-AN-GD,Granada
+ES,ES-AN,ES-AN-HL,Huelva
+ES,ES-AN,ES-AN-JA,Jaén
+ES,ES-AN,ES-AN-MG,Málaga
+ES,ES-AN,ES-AN-SV,Sevilla
+ES,ES-AR,ES-AR-HS,Huesca
+ES,ES-AR,ES-AR-TE,Teruel
+ES,ES-AR,ES-AR-ZG,Zaragoza
+ES,ES-CL,ES-CL-AV,Ávila
+ES,ES-CL,ES-CL-BU,Burgos
+ES,ES-CL,ES-CL-LN,León
+ES,ES-CL,ES-CL-PL,Palencia
+ES,ES-CL,ES-CL-SG,Segovia
+ES,ES-CL,ES-CL-SL,Salamanca
+ES,ES-CL,ES-CL-SR,Soria
+ES,ES-CL,ES-CL-VD,Valladolid
+ES,ES-CL,ES-CL-ZM,Zamora
+ES,ES-CM,ES-CM-AB,Albacete
+ES,ES-CM,ES-CM-CR,Ciudad Real
+ES,ES-CM,ES-CM-CU,Cuenca
+ES,ES-CM,ES-CM-GJ,Guadalajara
+ES,ES-CM,ES-CM-TD,Toledo
+ES,ES-CT,ES-CT-BR,Barcelona
+ES,ES-CT,ES-CT-GN,Girona
+ES,ES-CT,ES-CT-LD,Lleida
+ES,ES-CT,ES-CT-TG,Tarragona
+ES,ES-EX,ES-EX-BD,Badajoz
+ES,ES-EX,ES-EX-CC,Cáceres
+ES,ES-GA,ES-GA-AC,A Coruña
+ES,ES-GA,ES-GA-LG,Lugo
+ES,ES-GA,ES-GA-OR,Ourense
+ES,ES-GA,ES-GA-PV,Pontevedra
+ES,ES-PV,ES-PV-AA,Araba
+ES,ES-PV,ES-PV-GP,Gipuzkoa
+ES,ES-PV,ES-PV-VZ,Bizkaia
+ES,ES-VC,ES-VC-AN,Alicante
+ES,ES-VC,ES-VC-CS,Castellón
+ES,ES-VC,ES-VC-VN,Valencia
+GB,GB-ENG,GB-ENG-BDF,Bedfordshire
+GB,GB-ENG,GB-ENG-BKM,Buckinghamshire
+GB,GB-ENG,GB-ENG-BNS,South Yorkshire
+GB,GB-ENG,GB-ENG-BRC,Berkshire
+GB,GB-ENG,GB-ENG-BST,Bristol
+GB,GB-ENG,GB-ENG-CAM,Cambridgeshire
+GB,GB-ENG,GB-ENG-CHS,Cheshire
+GB,GB-ENG,GB-ENG-CMA,Cumbria
+GB,GB-ENG,GB-ENG-CON,Cornwall
+GB,GB-ENG,GB-ENG-DBY,Derbyshire
+GB,GB-ENG,GB-ENG-DEV,Devon
+GB,GB-ENG,GB-ENG-DOR,Dorset
+GB,GB-ENG,GB-ENG-DUR,Durham
+GB,GB-ENG,GB-ENG-ERY,East Riding of Yorkshire
+GB,GB-ENG,GB-ENG-ESS,Essex
+GB,GB-ENG,GB-ENG-ESX,East Sussex
+GB,GB-ENG,GB-ENG-GAT,Tyne and Wear
+GB,GB-ENG,GB-ENG-GLS,Gloucestershire
+GB,GB-ENG,GB-ENG-HAL,Halton
+GB,GB-ENG,GB-ENG-HAM,Hampshire
+GB,GB-ENG,GB-ENG-HEF,Herefordshire
+GB,GB-ENG,GB-ENG-HRT,Hertfordshire
+GB,GB-ENG,GB-ENG-IOW,Isle of Wight
+GB,GB-ENG,GB-ENG-KEN,Kent
+GB,GB-ENG,GB-ENG-KWL,Merseyside
+GB,GB-ENG,GB-ENG-LAN,Lancashire
+GB,GB-ENG,GB-ENG-LEC,Leicestershire
+GB,GB-ENG,GB-ENG-LIN,Lincolnshire
+GB,GB-ENG,GB-ENG-LND,London
+GB,GB-ENG,GB-ENG-MAN,Manchester
+GB,GB-ENG,GB-ENG-NBL,Northumberland
+GB,GB-ENG,GB-ENG-NFK,Norfolk
+GB,GB-ENG,GB-ENG-NTH,Northamptonshire
+GB,GB-ENG,GB-ENG-NTT,Nottinghamshire
+GB,GB-ENG,GB-ENG-NYK,North Yorkshire
+GB,GB-ENG,GB-ENG-OXF,Oxfordshire
+GB,GB-ENG,GB-ENG-RUT,Rutland
+GB,GB-ENG,GB-ENG-SAW,West Midlands
+GB,GB-ENG,GB-ENG-SFK,Suffolk
+GB,GB-ENG,GB-ENG-SHR,Shropshire
+GB,GB-ENG,GB-ENG-SOM,Somerset
+GB,GB-ENG,GB-ENG-SRY,Surrey
+GB,GB-ENG,GB-ENG-STS,Staffordshire
+GB,GB-ENG,GB-ENG-STT,Stockton-on-Tees
+GB,GB-ENG,GB-ENG-WAR,Warwickshire
+GB,GB-ENG,GB-ENG-WIL,Wiltshire
+GB,GB-ENG,GB-ENG-WKF,West Yorkshire
+GB,GB-ENG,GB-ENG-WOR,Worcestershire
+GB,GB-ENG,GB-ENG-WSX,West Sussex
+GB,GB-NIR,GB-NIR-ANT,Antrim
+GB,GB-NIR,GB-NIR-ARM,Armagh
+GB,GB-NIR,GB-NIR-BFS,Belfast
+GB,GB-NIR,GB-NIR-DOW,Down
+GB,GB-NIR,GB-NIR-DRY,Derry
+GB,GB-NIR,GB-NIR-FER,Fermanagh
+GB,GB-NIR,GB-NIR-NYM,Newry and Mourne
+GB,GB-NIR,GB-NIR-OMH,Omagh
+GB,GB-SCT,GB-SCT-ABD,Aberdeenshire
+GB,GB-SCT,GB-SCT-ABE,Aberdeen
+GB,GB-SCT,GB-SCT-AGB,Argyll and Bute
+GB,GB-SCT,GB-SCT-ANS,Angus
+GB,GB-SCT,GB-SCT-CLK,Clackmannanshire
+GB,GB-SCT,GB-SCT-DGY,Dumfries and Galloway
+GB,GB-SCT,GB-SCT-DND,Dundee
+GB,GB-SCT,GB-SCT-EAY,East Ayrshire
+GB,GB-SCT,GB-SCT-EDH,Edinburgh
+GB,GB-SCT,GB-SCT-EDU,East Dunbartonshire
+GB,GB-SCT,GB-SCT-ELN,East Lothian
+GB,GB-SCT,GB-SCT-ELS,Eilean Siar
+GB,GB-SCT,GB-SCT-FAL,Falkirk
+GB,GB-SCT,GB-SCT-FIF,Fife
+GB,GB-SCT,GB-SCT-GLG,Glasgow
+GB,GB-SCT,GB-SCT-HLD,Highland
+GB,GB-SCT,GB-SCT-MLN,Midlothian
+GB,GB-SCT,GB-SCT-MRY,Moray
+GB,GB-SCT,GB-SCT-NAY,North Ayshire
+GB,GB-SCT,GB-SCT-NLK,North Lanarkshire
+GB,GB-SCT,GB-SCT-ORK,Orkney Islands
+GB,GB-SCT,GB-SCT-PKN,Perthshire and Kinross
+GB,GB-SCT,GB-SCT-RFW,Renfrewshire
+GB,GB-SCT,GB-SCT-SAY,South Ayrshire
+GB,GB-SCT,GB-SCT-SCB,Scottish Borders
+GB,GB-SCT,GB-SCT-SLK,South Lanarkshire
+GB,GB-SCT,GB-SCT-STG,Stirling
+GB,GB-SCT,GB-SCT-WDU,West Dunbartonshire
+GB,GB-SCT,GB-SCT-WLN,West Lothian
+GB,GB-SCT,GB-SCT-ZET,Shetland Islands
+GB,GB-WLS,GB-WLS-AGY,Anglesey
+GB,GB-WLS,GB-WLS-BGE,Bridgend
+GB,GB-WLS,GB-WLS-BGW,Blaenau Gwent
+GB,GB-WLS,GB-WLS-CAY,Caerphilly
+GB,GB-WLS,GB-WLS-CGN,Ceredigion
+GB,GB-WLS,GB-WLS-CMN,Carmarthenshire
+GB,GB-WLS,GB-WLS-CRF,Cardiff
+GB,GB-WLS,GB-WLS-CWY,Conwy
+GB,GB-WLS,GB-WLS-DEN,Denbighshire
+GB,GB-WLS,GB-WLS-FLN,Flintshire
+GB,GB-WLS,GB-WLS-GWN,Gwynedd
+GB,GB-WLS,GB-WLS-MON,Monmouthshire
+GB,GB-WLS,GB-WLS-MTY,Merthyr Tydfil
+GB,GB-WLS,GB-WLS-NTL,Neath Port Talbot
+GB,GB-WLS,GB-WLS-NWP,Newport
+GB,GB-WLS,GB-WLS-PEM,Pembrokeshire
+GB,GB-WLS,GB-WLS-POW,Powys
+GB,GB-WLS,GB-WLS-RCT,"Rhondda, Cynon, Taff"
+GB,GB-WLS,GB-WLS-SWA,Swansea
+GB,GB-WLS,GB-WLS-TOF,Torfaen
+GB,GB-WLS,GB-WLS-VGL,Vale of Glamorgan
+GB,GB-WLS,GB-WLS-WRX,Wrexham
+GQ,GQ-C,GQ-C-CS,Centro Sur
+GQ,GQ-C,GQ-C-KN,Kié-Ntem
+GQ,GQ-C,GQ-C-LI,Litoral
+GQ,GQ-C,GQ-C-WN,Wele-Nzas
+GQ,GQ-I,GQ-I-AN,Annobón
+GQ,GQ-I,GQ-I-BN,Bioko Norte
+GQ,GQ-I,GQ-I-BS,Bioko Sur
+ID,ID-IJ,ID-IJ-PA,Papua
+ID,ID-IJ,ID-IJ-PB,Papua Barat
+ID,ID-JW,ID-JW-BT,Banten
+ID,ID-JW,ID-JW-JB,Jawa Barat
+ID,ID-JW,ID-JW-JI,Jawa Timur
+ID,ID-JW,ID-JW-JK,Jakarta Raya
+ID,ID-JW,ID-JW-JT,Jawa Tengah
+ID,ID-JW,ID-JW-YO,Yogyakarta
+ID,ID-KA,ID-KA-KB,Kalimantan Barat
+ID,ID-KA,ID-KA-KI,Kalimantan Timur
+ID,ID-KA,ID-KA-KS,Kalimantan Selatan
+ID,ID-KA,ID-KA-KT,Kalimantan Tengah
+ID,ID-MA,ID-MA-MA,Maluku
+ID,ID-MA,ID-MA-MU,Maluku Utara
+ID,ID-NU,ID-NU-BA,Bali
+ID,ID-NU,ID-NU-NB,Nusa Tenggara Barat
+ID,ID-NU,ID-NU-NT,Nusa Tenggara Timur
+ID,ID-SL,ID-SL-GO,Gorontalo
+ID,ID-SL,ID-SL-SA,Sulawesi Utara
+ID,ID-SL,ID-SL-SG,Sulawesi Tenggara
+ID,ID-SL,ID-SL-SN,Sulawesi Selatan
+ID,ID-SL,ID-SL-SR,Sulawesi Barat
+ID,ID-SL,ID-SL-ST,Sulawesi Tengah
+ID,ID-SM,ID-SM-AC,Aceh
+ID,ID-SM,ID-SM-BB,Bangka Belitung
+ID,ID-SM,ID-SM-BE,Bengkulu
+ID,ID-SM,ID-SM-JA,Jambi
+ID,ID-SM,ID-SM-KR,Kepulauan Riau
+ID,ID-SM,ID-SM-LA,Lampung
+ID,ID-SM,ID-SM-RI,Riau
+ID,ID-SM,ID-SM-SB,Sumatera Barat
+ID,ID-SM,ID-SM-SS,Sumatera Selatan
+ID,ID-SM,ID-SM-SU,Sumatera Utara
+IE,IE-C,IE-C-GY,Galway
+IE,IE-C,IE-C-LM,Leitrim
+IE,IE-C,IE-C-MO,Mayo
+IE,IE-C,IE-C-RN,Roscommon
+IE,IE-C,IE-C-SO,Sligo
+IE,IE-L,IE-L-CW,Carlow
+IE,IE-L,IE-L-DN,Dublin
+IE,IE-L,IE-L-KE,Kildare
+IE,IE-L,IE-L-KK,Kilkenny
+IE,IE-L,IE-L-LD,Longford
+IE,IE-L,IE-L-LH,Louth
+IE,IE-L,IE-L-LS,Laoighis
+IE,IE-L,IE-L-MH,Meath
+IE,IE-L,IE-L-OY,Offaly
+IE,IE-L,IE-L-WH,Westmeath
+IE,IE-L,IE-L-WW,Wicklow
+IE,IE-L,IE-L-WX,Wexford
+IE,IE-M,IE-M-CE,Clare
+IE,IE-M,IE-M-CK,Cork
+IE,IE-M,IE-M-KY,Kerry
+IE,IE-M,IE-M-LK,Limerick
+IE,IE-M,IE-M-TY,Tipperary
+IE,IE-M,IE-M-WD,Waterford
+IE,IE-U,IE-U-CN,Cavan
+IE,IE-U,IE-U-DL,Donegal
+IE,IE-U,IE-U-MN,Monaghan
+IN,IN-AN,IN-AN-AN,North and Middle Andaman
+IN,IN-AN,IN-AN-AS,South Andaman
+IN,IN-AN,IN-AN-NI,Nicobar
+IN,IN-AP,IN-AP-AN,Anantapur
+IN,IN-AP,IN-AP-CH,Chittoor
+IN,IN-AP,IN-AP-CU,Kadapa
+IN,IN-AP,IN-AP-EG,East Godavari
+IN,IN-AP,IN-AP-GU,Guntur
+IN,IN-AP,IN-AP-KR,Krishna
+IN,IN-AP,IN-AP-KU,Kurnool
+IN,IN-AP,IN-AP-NE,Sri Potti Sriramulu Nellore
+IN,IN-AP,IN-AP-NI,Nizamabad
+IN,IN-AP,IN-AP-PR,Prakasam
+IN,IN-AP,IN-AP-SR,Srikakulam
+IN,IN-AP,IN-AP-VS,Visakhapatnam
+IN,IN-AP,IN-AP-VZ,Vizianagaram
+IN,IN-AP,IN-AP-WG,West Godavari
+IN,IN-AR,IN-AR-AN,Anjaw
+IN,IN-AR,IN-AR-CH,Changlang
+IN,IN-AR,IN-AR-EK,East Kameng
+IN,IN-AR,IN-AR-ES,East Siang
+IN,IN-AR,IN-AR-KK,Kurung Kumey
+IN,IN-AR,IN-AR-LB,Lower Subansiri
+IN,IN-AR,IN-AR-LD,Lower Dibang Valley
+IN,IN-AR,IN-AR-LO,Lohit
+IN,IN-AR,IN-AR-PA,Papum Pare
+IN,IN-AR,IN-AR-TA,Tawang
+IN,IN-AR,IN-AR-TI,Tirap
+IN,IN-AR,IN-AR-UB,Upper Subansiri
+IN,IN-AR,IN-AR-UD,Dibang Valley
+IN,IN-AR,IN-AR-US,Upper Siang
+IN,IN-AR,IN-AR-WK,West Kameng
+IN,IN-AR,IN-AR-WS,West Siang
+IN,IN-AS,IN-AS-BA,Barpeta
+IN,IN-AS,IN-AS-BK,Baksa
+IN,IN-AS,IN-AS-BO,Bongaigaon
+IN,IN-AS,IN-AS-CA,Cachar
+IN,IN-AS,IN-AS-CR,Chirang
+IN,IN-AS,IN-AS-DA,Darrang
+IN,IN-AS,IN-AS-DB,Dhubri
+IN,IN-AS,IN-AS-DI,Dibrugarh
+IN,IN-AS,IN-AS-DM,Dhemaji
+IN,IN-AS,IN-AS-GG,Golaghat
+IN,IN-AS,IN-AS-GP,Goalpara
+IN,IN-AS,IN-AS-HA,Hailakandi
+IN,IN-AS,IN-AS-JO,Jorhat
+IN,IN-AS,IN-AS-KA,Karbi Anglong
+IN,IN-AS,IN-AS-KK,Kokrajhar
+IN,IN-AS,IN-AS-KM,Kamrup Metropolitan
+IN,IN-AS,IN-AS-KP,Kamrup
+IN,IN-AS,IN-AS-KR,Karimganj
+IN,IN-AS,IN-AS-LA,Lakhimpur
+IN,IN-AS,IN-AS-MA,Marigaon
+IN,IN-AS,IN-AS-NC,Dima Hasao
+IN,IN-AS,IN-AS-NG,Nagaon
+IN,IN-AS,IN-AS-NL,Nalbari
+IN,IN-AS,IN-AS-SI,Sivasagar
+IN,IN-AS,IN-AS-SO,Sonitpur
+IN,IN-AS,IN-AS-TI,Tinsukia
+IN,IN-AS,IN-AS-UD,Udalguri
+IN,IN-BR,IN-BR-AR,Araria
+IN,IN-BR,IN-BR-AU,Aurangabad
+IN,IN-BR,IN-BR-AW,Arwal
+IN,IN-BR,IN-BR-BA,Banka
+IN,IN-BR,IN-BR-BE,Begusarai
+IN,IN-BR,IN-BR-BG,Bhagalpur
+IN,IN-BR,IN-BR-BJ,Bhojpur
+IN,IN-BR,IN-BR-BU,Buxar
+IN,IN-BR,IN-BR-DA,Darbhanga
+IN,IN-BR,IN-BR-EC,Purba Champaran
+IN,IN-BR,IN-BR-GA,Gaya
+IN,IN-BR,IN-BR-GO,Gopalganj
+IN,IN-BR,IN-BR-JA,Jamui
+IN,IN-BR,IN-BR-JE,Jehanabad
+IN,IN-BR,IN-BR-KH,Khagaria
+IN,IN-BR,IN-BR-KI,Kishanganj
+IN,IN-BR,IN-BR-KM,Kaimur (bhabua)
+IN,IN-BR,IN-BR-KT,Katihar
+IN,IN-BR,IN-BR-LA,Lakhisarai
+IN,IN-BR,IN-BR-MB,Madhubani
+IN,IN-BR,IN-BR-MG,Munger
+IN,IN-BR,IN-BR-MP,Madhepura
+IN,IN-BR,IN-BR-MZ,Muzaffarpur
+IN,IN-BR,IN-BR-NL,Nalanda
+IN,IN-BR,IN-BR-NW,Nawada
+IN,IN-BR,IN-BR-PA,Patna
+IN,IN-BR,IN-BR-PU,Purnia
+IN,IN-BR,IN-BR-RO,Rohtas
+IN,IN-BR,IN-BR-SH,Saharsa
+IN,IN-BR,IN-BR-SM,Samastipur
+IN,IN-BR,IN-BR-SO,Sheohar
+IN,IN-BR,IN-BR-SP,Sheikhpura
+IN,IN-BR,IN-BR-SR,Saran (chhapra)
+IN,IN-BR,IN-BR-ST,Sitamarhi
+IN,IN-BR,IN-BR-SU,Supaul
+IN,IN-BR,IN-BR-SW,Siwan
+IN,IN-BR,IN-BR-VA,Vaishali
+IN,IN-BR,IN-BR-WC,Pashchim Champaran
+IN,IN-CH,IN-CH-CH,Chandigarh
+IN,IN-CT,IN-CT-BA,Bastar
+IN,IN-CT,IN-CT-BI,Bilaspur
+IN,IN-CT,IN-CT-BJ,Bijapur
+IN,IN-CT,IN-CT-DA,Dakshin Bastar Dantewada
+IN,IN-CT,IN-CT-DH,Dhamtari
+IN,IN-CT,IN-CT-DU,Durg
+IN,IN-CT,IN-CT-JA,Jashpur
+IN,IN-CT,IN-CT-JC,Janjgir-champa
+IN,IN-CT,IN-CT-KB,Korba
+IN,IN-CT,IN-CT-KJ,Koriya
+IN,IN-CT,IN-CT-KK,Uttar Bastar Kanker
+IN,IN-CT,IN-CT-KW,Kabeerdham
+IN,IN-CT,IN-CT-MA,Mahasamund
+IN,IN-CT,IN-CT-NA,Narayanpur
+IN,IN-CT,IN-CT-RG,Raigarh
+IN,IN-CT,IN-CT-RN,Rajnandgaon
+IN,IN-CT,IN-CT-RP,Raipur
+IN,IN-CT,IN-CT-SU,Surguja
+IN,IN-DD,IN-DD-DA,Daman
+IN,IN-DD,IN-DD-DI,Diu
+IN,IN-DL,IN-DL-CE,Central Delhi
+IN,IN-DL,IN-DL-EA,East Delhi
+IN,IN-DL,IN-DL-ND,New Delhi
+IN,IN-DL,IN-DL-NE,North East Delhi
+IN,IN-DL,IN-DL-NO,North Delhi
+IN,IN-DL,IN-DL-NW,North West Delhi
+IN,IN-DL,IN-DL-SO,South Delhi
+IN,IN-DL,IN-DL-SW,South West Delhi
+IN,IN-DL,IN-DL-WE,West Delhi
+IN,IN-DN,IN-DN-DN,Dadra and Nagar Haveli
+IN,IN-GA,IN-GA-NG,North Goa
+IN,IN-GA,IN-GA-SG,South Goa
+IN,IN-GJ,IN-GJ-AH,Ahmadabad
+IN,IN-GJ,IN-GJ-AM,Amreli
+IN,IN-GJ,IN-GJ-AN,Anand
+IN,IN-GJ,IN-GJ-BK,Banas Kantha
+IN,IN-GJ,IN-GJ-BR,Bharuch
+IN,IN-GJ,IN-GJ-BV,Bhavnagar
+IN,IN-GJ,IN-GJ-DA,Dohad
+IN,IN-GJ,IN-GJ-DG,The Dangs
+IN,IN-GJ,IN-GJ-GA,Gandhinagar
+IN,IN-GJ,IN-GJ-JA,Jamnagar
+IN,IN-GJ,IN-GJ-JU,Junagadh
+IN,IN-GJ,IN-GJ-KA,Kachchh
+IN,IN-GJ,IN-GJ-KH,Kheda
+IN,IN-GJ,IN-GJ-MA,Mahesana
+IN,IN-GJ,IN-GJ-NR,Narmada
+IN,IN-GJ,IN-GJ-NV,Navsari
+IN,IN-GJ,IN-GJ-PA,Patan
+IN,IN-GJ,IN-GJ-PM,Panch Mahals
+IN,IN-GJ,IN-GJ-PO,Porbandar
+IN,IN-GJ,IN-GJ-RA,Rajkot
+IN,IN-GJ,IN-GJ-SK,Sabar Kantha
+IN,IN-GJ,IN-GJ-SN,Surendranagar
+IN,IN-GJ,IN-GJ-ST,Surat
+IN,IN-GJ,IN-GJ-TA,Tapi
+IN,IN-GJ,IN-GJ-VD,Vadodara
+IN,IN-GJ,IN-GJ-VL,Valsad
+IN,IN-HP,IN-HP-BI,Bilaspur
+IN,IN-HP,IN-HP-CH,Chamba
+IN,IN-HP,IN-HP-HA,Hamirpur
+IN,IN-HP,IN-HP-KA,Kangra
+IN,IN-HP,IN-HP-KI,Kinnaur
+IN,IN-HP,IN-HP-KU,Kullu
+IN,IN-HP,IN-HP-LS,Lahul and Spiti
+IN,IN-HP,IN-HP-MA,Mandi
+IN,IN-HP,IN-HP-SH,Shimla
+IN,IN-HP,IN-HP-SI,Sirmaur
+IN,IN-HP,IN-HP-SO,Solan
+IN,IN-HP,IN-HP-UN,Una
+IN,IN-HR,IN-HR-AM,Ambala
+IN,IN-HR,IN-HR-BH,Bhiwani
+IN,IN-HR,IN-HR-FR,Faridabad
+IN,IN-HR,IN-HR-FT,Fatehabad
+IN,IN-HR,IN-HR-GU,Gurgaon
+IN,IN-HR,IN-HR-HI,Hisar
+IN,IN-HR,IN-HR-JH,Jhajjar
+IN,IN-HR,IN-HR-JI,Jind
+IN,IN-HR,IN-HR-KR,Karnal
+IN,IN-HR,IN-HR-KT,Kaithal
+IN,IN-HR,IN-HR-KU,Kurukshetra
+IN,IN-HR,IN-HR-MA,Mahendragarh
+IN,IN-HR,IN-HR-ME,Mewat
+IN,IN-HR,IN-HR-PK,Panchkula
+IN,IN-HR,IN-HR-PL,Palwal
+IN,IN-HR,IN-HR-PP,Panipat
+IN,IN-HR,IN-HR-RE,Rewari
+IN,IN-HR,IN-HR-RO,Rohtak
+IN,IN-HR,IN-HR-SI,Sirsa
+IN,IN-HR,IN-HR-SO,Sonipat
+IN,IN-HR,IN-HR-YN,Yamunanagar
+IN,IN-JH,IN-JH-BO,Bokaro
+IN,IN-JH,IN-JH-CH,Chatra
+IN,IN-JH,IN-JH-DE,Deoghar
+IN,IN-JH,IN-JH-DH,Dhanbad
+IN,IN-JH,IN-JH-DU,Dumka
+IN,IN-JH,IN-JH-ES,Purbi Singhbhum
+IN,IN-JH,IN-JH-GA,Garhwa
+IN,IN-JH,IN-JH-GI,Giridih
+IN,IN-JH,IN-JH-GO,Godda
+IN,IN-JH,IN-JH-GU,Gumla
+IN,IN-JH,IN-JH-HA,Hazaribagh
+IN,IN-JH,IN-JH-JA,Jamtara
+IN,IN-JH,IN-JH-KH,Khunti
+IN,IN-JH,IN-JH-KO,Kodarma
+IN,IN-JH,IN-JH-LA,Latehar
+IN,IN-JH,IN-JH-LO,Lohardaga
+IN,IN-JH,IN-JH-PK,Pakur
+IN,IN-JH,IN-JH-PL,Palamu
+IN,IN-JH,IN-JH-RA,Ranchi
+IN,IN-JH,IN-JH-RM,Ramgarh
+IN,IN-JH,IN-JH-SA,Sahibganj
+IN,IN-JH,IN-JH-SI,Simdega
+IN,IN-JH,IN-JH-SR,Saraikela-kharsawan
+IN,IN-JH,IN-JH-WS,Pashchimi Singhbhum
+IN,IN-JK,IN-JK-AN,Anantnag
+IN,IN-JK,IN-JK-BD,Badgam
+IN,IN-JK,IN-JK-BN,Bandipore
+IN,IN-JK,IN-JK-BR,Baramula
+IN,IN-JK,IN-JK-DO,Doda
+IN,IN-JK,IN-JK-GN,Ganderbal
+IN,IN-JK,IN-JK-JA,Jammu
+IN,IN-JK,IN-JK-KL,Kulgam
+IN,IN-JK,IN-JK-KM,Pakistan-administered Kashmir
+IN,IN-JK,IN-JK-KR,Kargil
+IN,IN-JK,IN-JK-KS,Kishtwar
+IN,IN-JK,IN-JK-KT,Kathua
+IN,IN-JK,IN-JK-KU,Kupwara
+IN,IN-JK,IN-JK-LE,Leh (ladakh)
+IN,IN-JK,IN-JK-PO,Punch
+IN,IN-JK,IN-JK-PU,Pulwama
+IN,IN-JK,IN-JK-RA,Rajouri
+IN,IN-JK,IN-JK-RE,Reasi
+IN,IN-JK,IN-JK-RM,Ramban
+IN,IN-JK,IN-JK-SA,Samba
+IN,IN-JK,IN-JK-SH,Shupiyan
+IN,IN-JK,IN-JK-SR,Srinagar
+IN,IN-JK,IN-JK-UD,Udhampur
+IN,IN-KA,IN-KA-BD,Bidar
+IN,IN-KA,IN-KA-BG,Belgaum
+IN,IN-KA,IN-KA-BJ,Bijapur
+IN,IN-KA,IN-KA-BK,Bagalkot
+IN,IN-KA,IN-KA-BL,Bellary
+IN,IN-KA,IN-KA-BN,Bangalore
+IN,IN-KA,IN-KA-BR,Bangalore Rural
+IN,IN-KA,IN-KA-CH,Chikkaballapura
+IN,IN-KA,IN-KA-CJ,Chamrajnagar
+IN,IN-KA,IN-KA-CK,Chikmagalur
+IN,IN-KA,IN-KA-CT,Chitradurga
+IN,IN-KA,IN-KA-DA,Davanagere
+IN,IN-KA,IN-KA-DH,Dharwad
+IN,IN-KA,IN-KA-DK,Dakshina Kannada
+IN,IN-KA,IN-KA-GA,Gadag
+IN,IN-KA,IN-KA-GU,Gulbarga
+IN,IN-KA,IN-KA-HS,Hassan
+IN,IN-KA,IN-KA-HV,Haveri
+IN,IN-KA,IN-KA-KD,Kodagu
+IN,IN-KA,IN-KA-KL,Kolar
+IN,IN-KA,IN-KA-KP,Koppal
+IN,IN-KA,IN-KA-MA,Mandya
+IN,IN-KA,IN-KA-MY,Mysore
+IN,IN-KA,IN-KA-RA,Raichur
+IN,IN-KA,IN-KA-RM,Ramanagara
+IN,IN-KA,IN-KA-SH,Shimoga
+IN,IN-KA,IN-KA-TU,Tumkur
+IN,IN-KA,IN-KA-UD,Udupi
+IN,IN-KA,IN-KA-UK,Uttara Kannada
+IN,IN-KA,IN-KA-YD,Yadgir
+IN,IN-KL,IN-KL-AL,Alappuzha
+IN,IN-KL,IN-KL-ER,Ernakulam
+IN,IN-KL,IN-KL-ID,Idukki
+IN,IN-KL,IN-KL-KL,Kollam
+IN,IN-KL,IN-KL-KN,Kannur
+IN,IN-KL,IN-KL-KS,Kasaragod
+IN,IN-KL,IN-KL-KT,Kottayam
+IN,IN-KL,IN-KL-KZ,Kozhikode
+IN,IN-KL,IN-KL-MA,Malappuram
+IN,IN-KL,IN-KL-PL,Palakkad
+IN,IN-KL,IN-KL-PT,Pathanamthitta
+IN,IN-KL,IN-KL-TS,Thrissur
+IN,IN-KL,IN-KL-TV,Thiruvananthapuram
+IN,IN-KL,IN-KL-WA,Wayanad
+IN,IN-LD,IN-LD-LD,Lakshadweep
+IN,IN-MH,IN-MH-AH,Ahmadnagar
+IN,IN-MH,IN-MH-AK,Akola
+IN,IN-MH,IN-MH-AM,Amravati
+IN,IN-MH,IN-MH-AU,Aurangabad
+IN,IN-MH,IN-MH-BH,Bhandara
+IN,IN-MH,IN-MH-BI,Bid
+IN,IN-MH,IN-MH-BU,Buldana
+IN,IN-MH,IN-MH-CH,Chandrapur
+IN,IN-MH,IN-MH-DH,Dhule
+IN,IN-MH,IN-MH-GA,Garhchiroli
+IN,IN-MH,IN-MH-GO,Gondiya
+IN,IN-MH,IN-MH-HI,Hingoli
+IN,IN-MH,IN-MH-JG,Jalgaon
+IN,IN-MH,IN-MH-JN,Jalna
+IN,IN-MH,IN-MH-KO,Kolhapur
+IN,IN-MH,IN-MH-LA,Latur
+IN,IN-MH,IN-MH-MC,Mumbai
+IN,IN-MH,IN-MH-MS,Mumbai Suburban
+IN,IN-MH,IN-MH-NB,Nandurbar
+IN,IN-MH,IN-MH-ND,Nanded
+IN,IN-MH,IN-MH-NG,Nagpur
+IN,IN-MH,IN-MH-NS,Nashik
+IN,IN-MH,IN-MH-OS,Osmanabad
+IN,IN-MH,IN-MH-PA,Parbhani
+IN,IN-MH,IN-MH-PU,Pune
+IN,IN-MH,IN-MH-RG,Raigarh
+IN,IN-MH,IN-MH-RT,Ratnagiri
+IN,IN-MH,IN-MH-SI,Sindhudurg
+IN,IN-MH,IN-MH-SN,Sangli
+IN,IN-MH,IN-MH-SO,Solapur
+IN,IN-MH,IN-MH-ST,Satara
+IN,IN-MH,IN-MH-TH,Thane
+IN,IN-MH,IN-MH-WR,Wardha
+IN,IN-MH,IN-MH-WS,Washim
+IN,IN-MH,IN-MH-YA,Yavatmal
+IN,IN-ML,IN-ML-EG,East Garo Hills
+IN,IN-ML,IN-ML-EK,East Khasi Hills
+IN,IN-ML,IN-ML-JH,Jaintia Hills
+IN,IN-ML,IN-ML-RB,Ri Bhoi
+IN,IN-ML,IN-ML-SG,South Garo Hills
+IN,IN-ML,IN-ML-WG,West Garo Hills
+IN,IN-ML,IN-ML-WK,West Khasi Hills
+IN,IN-MN,IN-MN-BI,Bishnupur
+IN,IN-MN,IN-MN-CC,Churachandpur
+IN,IN-MN,IN-MN-CD,Chandel
+IN,IN-MN,IN-MN-EI,Imphal East
+IN,IN-MN,IN-MN-SE,Senapati
+IN,IN-MN,IN-MN-TA,Tamenglong
+IN,IN-MN,IN-MN-TH,Thoubal
+IN,IN-MN,IN-MN-UK,Ukhrul
+IN,IN-MN,IN-MN-WI,Imphal West
+IN,IN-MP,IN-MP-AL,Alirajpur
+IN,IN-MP,IN-MP-AN,Anuppur
+IN,IN-MP,IN-MP-AS,Ashoknagar
+IN,IN-MP,IN-MP-BD,Bhind
+IN,IN-MP,IN-MP-BE,Betul
+IN,IN-MP,IN-MP-BL,Balaghat
+IN,IN-MP,IN-MP-BP,Bhopal
+IN,IN-MP,IN-MP-BR,Barwani
+IN,IN-MP,IN-MP-BU,Burhanpur
+IN,IN-MP,IN-MP-CN,Chhindwara
+IN,IN-MP,IN-MP-CT,Chhatarpur
+IN,IN-MP,IN-MP-DE,Dewas
+IN,IN-MP,IN-MP-DH,Dhar
+IN,IN-MP,IN-MP-DI,Dindori
+IN,IN-MP,IN-MP-DM,Damoh
+IN,IN-MP,IN-MP-DT,Datia
+IN,IN-MP,IN-MP-EN,East Nimar
+IN,IN-MP,IN-MP-GU,Guna
+IN,IN-MP,IN-MP-GW,Gwalior
+IN,IN-MP,IN-MP-HA,Harda
+IN,IN-MP,IN-MP-HO,Hoshangabad
+IN,IN-MP,IN-MP-IN,Indore
+IN,IN-MP,IN-MP-JA,Jabalpur
+IN,IN-MP,IN-MP-JH,Jhabua
+IN,IN-MP,IN-MP-KA,Katni
+IN,IN-MP,IN-MP-ML,Mandla
+IN,IN-MP,IN-MP-MO,Morena
+IN,IN-MP,IN-MP-MS,Mandsaur
+IN,IN-MP,IN-MP-NA,Narsimhapur
+IN,IN-MP,IN-MP-NE,Neemuch
+IN,IN-MP,IN-MP-PA,Panna
+IN,IN-MP,IN-MP-RE,Rewa
+IN,IN-MP,IN-MP-RG,Rajgarh
+IN,IN-MP,IN-MP-RL,Ratlam
+IN,IN-MP,IN-MP-RS,Raisen
+IN,IN-MP,IN-MP-SG,Sagar
+IN,IN-MP,IN-MP-SH,Shahdol
+IN,IN-MP,IN-MP-SI,Sidhi
+IN,IN-MP,IN-MP-SJ,Shajapur
+IN,IN-MP,IN-MP-SN,Singrauli
+IN,IN-MP,IN-MP-SO,Seoni
+IN,IN-MP,IN-MP-SP,Sheopur
+IN,IN-MP,IN-MP-SR,Sehore
+IN,IN-MP,IN-MP-ST,Satna
+IN,IN-MP,IN-MP-SV,Shivpuri
+IN,IN-MP,IN-MP-TI,Tikamgarh
+IN,IN-MP,IN-MP-UJ,Ujjain
+IN,IN-MP,IN-MP-UM,Umaria
+IN,IN-MP,IN-MP-VI,Vidisha
+IN,IN-MP,IN-MP-WN,West Nimar
+IN,IN-MZ,IN-MZ-AI,Aizawl
+IN,IN-MZ,IN-MZ-CH,Champhai
+IN,IN-MZ,IN-MZ-KO,Kolasib
+IN,IN-MZ,IN-MZ-LA,Lawangtlai
+IN,IN-MZ,IN-MZ-LU,Lunglei
+IN,IN-MZ,IN-MZ-MA,Mamit
+IN,IN-MZ,IN-MZ-SA,Saiha
+IN,IN-MZ,IN-MZ-SE,Serchhip
+IN,IN-NL,IN-NL-DI,Dimapur
+IN,IN-NL,IN-NL-KI,Kiphire
+IN,IN-NL,IN-NL-KO,Kohima
+IN,IN-NL,IN-NL-LO,Longleng
+IN,IN-NL,IN-NL-MK,Mokokchung
+IN,IN-NL,IN-NL-MN,Mon
+IN,IN-NL,IN-NL-PE,Peren
+IN,IN-NL,IN-NL-PH,Phek
+IN,IN-NL,IN-NL-TU,Tuensang
+IN,IN-NL,IN-NL-WO,Wokha
+IN,IN-NL,IN-NL-ZU,Zunheboto
+IN,IN-OR,IN-OR-AN,Anugul
+IN,IN-OR,IN-OR-BD,Bauda
+IN,IN-OR,IN-OR-BH,Bhadrak
+IN,IN-OR,IN-OR-BL,Balangir
+IN,IN-OR,IN-OR-BR,Bargarh
+IN,IN-OR,IN-OR-BW,Baleshwar
+IN,IN-OR,IN-OR-CU,Cuttack
+IN,IN-OR,IN-OR-DE,Debagarh
+IN,IN-OR,IN-OR-DH,Dhenkanal
+IN,IN-OR,IN-OR-GN,Ganjam
+IN,IN-OR,IN-OR-GP,Gajapati
+IN,IN-OR,IN-OR-JH,Jharsuguda
+IN,IN-OR,IN-OR-JP,Jajapur
+IN,IN-OR,IN-OR-JS,Jagatsinghapur
+IN,IN-OR,IN-OR-KH,Khordha
+IN,IN-OR,IN-OR-KJ,Kendujhar
+IN,IN-OR,IN-OR-KL,Kalahandi
+IN,IN-OR,IN-OR-KN,Kandhamal
+IN,IN-OR,IN-OR-KO,Koraput
+IN,IN-OR,IN-OR-KP,Kendrapara
+IN,IN-OR,IN-OR-ML,Malkangiri
+IN,IN-OR,IN-OR-MY,Mayurbhanj
+IN,IN-OR,IN-OR-NB,Nabarangapur
+IN,IN-OR,IN-OR-NU,Nuapada
+IN,IN-OR,IN-OR-NY,Nayagarh
+IN,IN-OR,IN-OR-PU,Puri
+IN,IN-OR,IN-OR-RA,Rayagada
+IN,IN-OR,IN-OR-SA,Sambalpur
+IN,IN-OR,IN-OR-SO,Subarnapur
+IN,IN-OR,IN-OR-SU,Sundargarh
+IN,IN-PB,IN-PB-AM,Amritsar
+IN,IN-PB,IN-PB-BA,Bathinda
+IN,IN-PB,IN-PB-BR,Barnala
+IN,IN-PB,IN-PB-FI,Firozpur
+IN,IN-PB,IN-PB-FR,Faridkot
+IN,IN-PB,IN-PB-FT,Fatehgarh Sahib
+IN,IN-PB,IN-PB-GU,Gurdaspur
+IN,IN-PB,IN-PB-HO,Hoshiarpur
+IN,IN-PB,IN-PB-JA,Jalandhar
+IN,IN-PB,IN-PB-KA,Kapurthala
+IN,IN-PB,IN-PB-LU,Ludhiana
+IN,IN-PB,IN-PB-MA,Mansa
+IN,IN-PB,IN-PB-MO,Moga
+IN,IN-PB,IN-PB-MU,Muktsar
+IN,IN-PB,IN-PB-NS,Shahid Bhagat Singh Nagar
+IN,IN-PB,IN-PB-PA,Patiala
+IN,IN-PB,IN-PB-RU,Rupnagar
+IN,IN-PB,IN-PB-SA,Sangrur
+IN,IN-PB,IN-PB-SH,Sahibzada Ajit Singh Nagar
+IN,IN-PB,IN-PB-TA,Tarn Taran
+IN,IN-PY,IN-PY-KA,Karaikal
+IN,IN-PY,IN-PY-MA,Mahe
+IN,IN-PY,IN-PY-PO,Puducherry
+IN,IN-PY,IN-PY-YA,Yanam
+IN,IN-RJ,IN-RJ-AJ,Ajmer
+IN,IN-RJ,IN-RJ-AL,Alwar
+IN,IN-RJ,IN-RJ-BI,Bikaner
+IN,IN-RJ,IN-RJ-BM,Barmer
+IN,IN-RJ,IN-RJ-BN,Banswara
+IN,IN-RJ,IN-RJ-BP,Bharatpur
+IN,IN-RJ,IN-RJ-BR,Baran
+IN,IN-RJ,IN-RJ-BU,Bundi
+IN,IN-RJ,IN-RJ-BW,Bhilwara
+IN,IN-RJ,IN-RJ-CR,Churu
+IN,IN-RJ,IN-RJ-CT,Chittaurgarh
+IN,IN-RJ,IN-RJ-DA,Dausa
+IN,IN-RJ,IN-RJ-DH,Dhaulpur
+IN,IN-RJ,IN-RJ-DU,Dungarpur
+IN,IN-RJ,IN-RJ-GA,Ganganagar
+IN,IN-RJ,IN-RJ-HA,Hanumangarh
+IN,IN-RJ,IN-RJ-JJ,Jhunjhunun
+IN,IN-RJ,IN-RJ-JL,Jalor
+IN,IN-RJ,IN-RJ-JO,Jodhpur
+IN,IN-RJ,IN-RJ-JP,Jaipur
+IN,IN-RJ,IN-RJ-JS,Jaisalmer
+IN,IN-RJ,IN-RJ-JW,Jhalawar
+IN,IN-RJ,IN-RJ-KA,Karauli
+IN,IN-RJ,IN-RJ-KO,Kota
+IN,IN-RJ,IN-RJ-NA,Nagaur
+IN,IN-RJ,IN-RJ-PA,Pali
+IN,IN-RJ,IN-RJ-PR,Pratapgarh
+IN,IN-RJ,IN-RJ-RA,Rajsamand
+IN,IN-RJ,IN-RJ-SK,Sikar
+IN,IN-RJ,IN-RJ-SM,Sawai Madhopur
+IN,IN-RJ,IN-RJ-SR,Sirohi
+IN,IN-RJ,IN-RJ-TO,Tonk
+IN,IN-RJ,IN-RJ-UD,Udaipur
+IN,IN-SK,IN-SK-ES,East Sikkim
+IN,IN-SK,IN-SK-NS,North Sikkim
+IN,IN-SK,IN-SK-SS,South Sikkim
+IN,IN-SK,IN-SK-WS,West Sikkim
+IN,IN-TN,IN-TN-AR,Ariyalur
+IN,IN-TN,IN-TN-CH,Chennai
+IN,IN-TN,IN-TN-CO,Coimbatore
+IN,IN-TN,IN-TN-CU,Cuddalore
+IN,IN-TN,IN-TN-DH,Dharmapuri
+IN,IN-TN,IN-TN-DI,Dindigul
+IN,IN-TN,IN-TN-ER,Erode
+IN,IN-TN,IN-TN-KC,Kancheepuram
+IN,IN-TN,IN-TN-KK,Kanniyakumari
+IN,IN-TN,IN-TN-KR,Karur
+IN,IN-TN,IN-TN-KS,Krishnagiri
+IN,IN-TN,IN-TN-MA,Madurai
+IN,IN-TN,IN-TN-NG,Nagappattinam
+IN,IN-TN,IN-TN-NI,The Nilgiris
+IN,IN-TN,IN-TN-NM,Namakkal
+IN,IN-TN,IN-TN-PE,Perambalur
+IN,IN-TN,IN-TN-PU,Pudukkottai
+IN,IN-TN,IN-TN-RA,Ramanathapuram
+IN,IN-TN,IN-TN-SA,Salem
+IN,IN-TN,IN-TN-SI,Sivaganga
+IN,IN-TN,IN-TN-TC,Tiruchirappalli
+IN,IN-TN,IN-TN-TH,Theni
+IN,IN-TN,IN-TN-TI,Tirunelveli
+IN,IN-TN,IN-TN-TJ,Thanjavur
+IN,IN-TN,IN-TN-TK,Thoothukkudi
+IN,IN-TN,IN-TN-TL,Thiruvallur
+IN,IN-TN,IN-TN-TP,Tiruppur
+IN,IN-TN,IN-TN-TR,Thiruvarur
+IN,IN-TN,IN-TN-TV,Tiruvannamalai
+IN,IN-TN,IN-TN-VE,Vellore
+IN,IN-TN,IN-TN-VL,Viluppuram
+IN,IN-TN,IN-TN-VR,Virudunagar
+IN,IN-TR,IN-TR-DH,Dhalai
+IN,IN-TR,IN-TR-NT,North Tripura
+IN,IN-TR,IN-TR-ST,South Tripura
+IN,IN-TR,IN-TR-WT,West Tripura
+IN,IN-TS,IN-TS-AD,Adilabad
+IN,IN-TS,IN-TS-HY,Hyderabad
+IN,IN-TS,IN-TS-KA,Karimnagar
+IN,IN-TS,IN-TS-KH,Khammam
+IN,IN-TS,IN-TS-MA,Mahbubnagar
+IN,IN-TS,IN-TS-ME,Medak
+IN,IN-TS,IN-TS-NA,Nalgonda
+IN,IN-TS,IN-TS-RA,Rangareddy
+IN,IN-TS,IN-TS-WA,Warangal
+IN,IN-UL,IN-UL-AL,Almora
+IN,IN-UL,IN-UL-BA,Bageshwar
+IN,IN-UL,IN-UL-CL,Chamoli
+IN,IN-UL,IN-UL-CP,Champawat
+IN,IN-UL,IN-UL-DD,Dehradun
+IN,IN-UL,IN-UL-HA,Hardwar
+IN,IN-UL,IN-UL-NA,Nainital
+IN,IN-UL,IN-UL-PG,Garhwal
+IN,IN-UL,IN-UL-PI,Pithoragarh
+IN,IN-UL,IN-UL-RP,Rudraprayag
+IN,IN-UL,IN-UL-TG,Tehri Garhwal
+IN,IN-UL,IN-UL-US,Udham Singh Nagar
+IN,IN-UL,IN-UL-UT,Uttarkashi
+IN,IN-UP,IN-UP-AG,Agra
+IN,IN-UP,IN-UP-AH,Allahabad
+IN,IN-UP,IN-UP-AL,Aligarh
+IN,IN-UP,IN-UP-AN,Ambedkar Nagar
+IN,IN-UP,IN-UP-AU,Auraiya
+IN,IN-UP,IN-UP-AZ,Azamgarh
+IN,IN-UP,IN-UP-BB,Bara Banki
+IN,IN-UP,IN-UP-BD,Budaun
+IN,IN-UP,IN-UP-BG,Baghpat
+IN,IN-UP,IN-UP-BH,Bahraich
+IN,IN-UP,IN-UP-BI,Bijnor
+IN,IN-UP,IN-UP-BL,Ballia
+IN,IN-UP,IN-UP-BN,Banda
+IN,IN-UP,IN-UP-BP,Balrampur
+IN,IN-UP,IN-UP-BR,Bareilly
+IN,IN-UP,IN-UP-BS,Basti
+IN,IN-UP,IN-UP-BU,Bulandshahr
+IN,IN-UP,IN-UP-CD,Chandauli
+IN,IN-UP,IN-UP-CT,Chitrakoot
+IN,IN-UP,IN-UP-DE,Deoria
+IN,IN-UP,IN-UP-ET,Etah
+IN,IN-UP,IN-UP-EW,Etawah
+IN,IN-UP,IN-UP-FI,Firozabad
+IN,IN-UP,IN-UP-FR,Farrukhabad
+IN,IN-UP,IN-UP-FT,Fatehpur
+IN,IN-UP,IN-UP-FZ,Faizabad
+IN,IN-UP,IN-UP-GB,Gautam Buddha Nagar
+IN,IN-UP,IN-UP-GN,Gonda
+IN,IN-UP,IN-UP-GP,Ghazipur
+IN,IN-UP,IN-UP-GR,Gorakhpur
+IN,IN-UP,IN-UP-GZ,Ghaziabad
+IN,IN-UP,IN-UP-HM,Hamirpur
+IN,IN-UP,IN-UP-HR,Hardoi
+IN,IN-UP,IN-UP-HT,Mahamaya Nagar
+IN,IN-UP,IN-UP-JH,Jhansi
+IN,IN-UP,IN-UP-JL,Jalaun
+IN,IN-UP,IN-UP-JP,Jyotiba Phule Nagar
+IN,IN-UP,IN-UP-JU,Jaunpur
+IN,IN-UP,IN-UP-KD,Kanpur Dehat
+IN,IN-UP,IN-UP-KJ,Kannauj
+IN,IN-UP,IN-UP-KM,Kansiram Nagar
+IN,IN-UP,IN-UP-KN,Kanpur Nagar
+IN,IN-UP,IN-UP-KS,Kaushambi
+IN,IN-UP,IN-UP-KU,Kushinagar
+IN,IN-UP,IN-UP-LA,Lalitpur
+IN,IN-UP,IN-UP-LK,Kheri
+IN,IN-UP,IN-UP-LU,Lucknow
+IN,IN-UP,IN-UP-MA,Mau
+IN,IN-UP,IN-UP-ME,Meerut
+IN,IN-UP,IN-UP-MG,Maharajganj
+IN,IN-UP,IN-UP-MH,Mahoba
+IN,IN-UP,IN-UP-MI,Mirzapur
+IN,IN-UP,IN-UP-MO,Moradabad
+IN,IN-UP,IN-UP-MP,Mainpuri
+IN,IN-UP,IN-UP-MT,Mathura
+IN,IN-UP,IN-UP-MU,Muzaffarnagar
+IN,IN-UP,IN-UP-PI,Pilibhit
+IN,IN-UP,IN-UP-PR,Pratapgarh
+IN,IN-UP,IN-UP-RA,Rampur
+IN,IN-UP,IN-UP-RB,Rae Bareli
+IN,IN-UP,IN-UP-SA,Saharanpur
+IN,IN-UP,IN-UP-SI,Sitapur
+IN,IN-UP,IN-UP-SJ,Shahjahanpur
+IN,IN-UP,IN-UP-SK,Sant Kabir Nagar
+IN,IN-UP,IN-UP-SN,Siddharth Nagar
+IN,IN-UP,IN-UP-SO,Sonbhadra
+IN,IN-UP,IN-UP-SR,Sant Ravi Das Nagar(bhadohi)
+IN,IN-UP,IN-UP-SU,Sultanpur
+IN,IN-UP,IN-UP-SV,Shrawasti
+IN,IN-UP,IN-UP-UN,Unnao
+IN,IN-UP,IN-UP-VA,Varanasi
+IN,IN-WB,IN-WB-BI,Birbhum
+IN,IN-WB,IN-WB-BN,Bankura
+IN,IN-WB,IN-WB-BR,Barddhaman
+IN,IN-WB,IN-WB-DA,Darjiling
+IN,IN-WB,IN-WB-DD,Dakshin Dinajpur
+IN,IN-WB,IN-WB-HG,Hooghly
+IN,IN-WB,IN-WB-HR,Haora
+IN,IN-WB,IN-WB-JA,Jalpaiguri
+IN,IN-WB,IN-WB-KB,Koch Bihar
+IN,IN-WB,IN-WB-KO,Kolkata
+IN,IN-WB,IN-WB-MA,Maldah
+IN,IN-WB,IN-WB-ME,Purba Medinipur
+IN,IN-WB,IN-WB-MU,Murshidabad
+IN,IN-WB,IN-WB-MW,Pashchim Medinipur
+IN,IN-WB,IN-WB-NA,Nadia
+IN,IN-WB,IN-WB-PN,North 24 Parganas
+IN,IN-WB,IN-WB-PS,South 24 Parganas
+IN,IN-WB,IN-WB-PU,Puruliya
+IN,IN-WB,IN-WB-UD,Uttar Dinajpur
+NZ,NZ-AUK,NZ-AUK-004,Rodney District
+NZ,NZ-AUK,NZ-AUK-005,North Shore City
+NZ,NZ-AUK,NZ-AUK-006,Waitakere City
+NZ,NZ-AUK,NZ-AUK-007,Auckland City
+NZ,NZ-AUK,NZ-AUK-008,Manukau City
+NZ,NZ-AUK,NZ-AUK-009,Papakura District
+NZ,NZ-AUK,NZ-AUK-010,Franklin District
+NZ,NZ-BOP,NZ-BOP-021,Taupo District
+NZ,NZ-BOP,NZ-BOP-022,Western Bay of Plenty District
+NZ,NZ-BOP,NZ-BOP-023,Tauranga City
+NZ,NZ-BOP,NZ-BOP-024,Rotorua District
+NZ,NZ-BOP,NZ-BOP-025,Whakatane District
+NZ,NZ-BOP,NZ-BOP-026,Kawerau District
+NZ,NZ-BOP,NZ-BOP-027,Opotiki District
+NZ,NZ-CAN,NZ-CAN-054,Kaikoura District
+NZ,NZ-CAN,NZ-CAN-058,Hurunui District
+NZ,NZ-CAN,NZ-CAN-059,Waimakariri District
+NZ,NZ-CAN,NZ-CAN-060,Christchurch City
+NZ,NZ-CAN,NZ-CAN-062,Selwyn District
+NZ,NZ-CAN,NZ-CAN-063,Ashburton District
+NZ,NZ-CAN,NZ-CAN-064,Timaru District
+NZ,NZ-CAN,NZ-CAN-065,Mackenzie District
+NZ,NZ-CAN,NZ-CAN-066,Waimate District
+NZ,NZ-CAN,NZ-CAN-068,Waitaki District
+NZ,NZ-GIS,NZ-GIS-028,Gisborne District
+NZ,NZ-HKB,NZ-HKB-021,Taupo District
+NZ,NZ-HKB,NZ-HKB-029,Wairoa District
+NZ,NZ-HKB,NZ-HKB-030,Hastings District
+NZ,NZ-HKB,NZ-HKB-031,Napier City
+NZ,NZ-HKB,NZ-HKB-032,Central Hawke's Bay District
+NZ,NZ-HKB,NZ-HKB-038,Rangitikei District
+NZ,NZ-MBH,NZ-MBH-053,Marlborough District
+NZ,NZ-MWT,NZ-MWT-020,Waitomo District
+NZ,NZ-MWT,NZ-MWT-021,Taupo District
+NZ,NZ-MWT,NZ-MWT-034,Stratford District
+NZ,NZ-MWT,NZ-MWT-036,Ruapehu District
+NZ,NZ-MWT,NZ-MWT-037,Wanganui District
+NZ,NZ-MWT,NZ-MWT-038,Rangitikei District
+NZ,NZ-MWT,NZ-MWT-039,Manawatu District
+NZ,NZ-MWT,NZ-MWT-040,Palmerston North City
+NZ,NZ-MWT,NZ-MWT-041,Tararua District
+NZ,NZ-MWT,NZ-MWT-042,Horowhenua District
+NZ,NZ-NSN,NZ-NSN-052,Nelson City
+NZ,NZ-NTL,NZ-NTL-001,Far North District
+NZ,NZ-NTL,NZ-NTL-002,Whangarei District
+NZ,NZ-NTL,NZ-NTL-003,Kaipara District
+NZ,NZ-OTA,NZ-OTA-068,Waitaki District
+NZ,NZ-OTA,NZ-OTA-069,Central Otago District
+NZ,NZ-OTA,NZ-OTA-070,Queenstown-Lakes District
+NZ,NZ-OTA,NZ-OTA-071,Dunedin City
+NZ,NZ-OTA,NZ-OTA-072,Clutha District
+NZ,NZ-STL,NZ-STL-073,Southland District
+NZ,NZ-STL,NZ-STL-074,Gore District
+NZ,NZ-STL,NZ-STL-075,Invercargill City
+NZ,NZ-TAS,NZ-TAS-051,Tasman District
+NZ,NZ-TKI,NZ-TKI-033,New Plymouth District
+NZ,NZ-TKI,NZ-TKI-034,Stratford District
+NZ,NZ-TKI,NZ-TKI-035,South Taranaki District
+NZ,NZ-WGN,NZ-WGN-041,Tararua District
+NZ,NZ-WGN,NZ-WGN-043,Kapiti Coast District
+NZ,NZ-WGN,NZ-WGN-044,Porirua City
+NZ,NZ-WGN,NZ-WGN-045,Upper Hutt City
+NZ,NZ-WGN,NZ-WGN-046,Lower Hutt City
+NZ,NZ-WGN,NZ-WGN-047,Wellington City
+NZ,NZ-WGN,NZ-WGN-048,Masterton District
+NZ,NZ-WGN,NZ-WGN-049,Carterton District
+NZ,NZ-WGN,NZ-WGN-050,South Wairarapa District
+NZ,NZ-WKO,NZ-WKO-010,Franklin District
+NZ,NZ-WKO,NZ-WKO-011,Thames-Coromandel District
+NZ,NZ-WKO,NZ-WKO-012,Hauraki District
+NZ,NZ-WKO,NZ-WKO-013,Waikato District
+NZ,NZ-WKO,NZ-WKO-015,Matamata-Piako District
+NZ,NZ-WKO,NZ-WKO-016,Hamilton City
+NZ,NZ-WKO,NZ-WKO-017,Waipa District
+NZ,NZ-WKO,NZ-WKO-018,Otorohanga District
+NZ,NZ-WKO,NZ-WKO-019,South Waikato District
+NZ,NZ-WKO,NZ-WKO-020,Waitomo District
+NZ,NZ-WKO,NZ-WKO-021,Taupo District
+NZ,NZ-WKO,NZ-WKO-024,Rotorua District
+NZ,NZ-WTC,NZ-WTC-055,Buller District
+NZ,NZ-WTC,NZ-WTC-056,Grey District
+NZ,NZ-WTC,NZ-WTC-057,Westland District
+PT,PT-01,PT-01-AG,Águeda
+PT,PT-01,PT-01-AL,Albergaria-a-Velha
+PT,PT-01,PT-01-AN,Anadia
+PT,PT-01,PT-01-AR,Arouca
+PT,PT-01,PT-01-AV,Aveiro
+PT,PT-01,PT-01-CP,Castelo de Paiva
+PT,PT-01,PT-01-EN,Espinho
+PT,PT-01,PT-01-ER,Estarreja
+PT,PT-01,PT-01-IL,Ílhavo
+PT,PT-01,PT-01-ME,Mealhada
+PT,PT-01,PT-01-MU,Murtosa
+PT,PT-01,PT-01-OA,Oliveira de Azeméis
+PT,PT-01,PT-01-OB,Oliveira do Bairro
+PT,PT-01,PT-01-OV,Ovar
+PT,PT-01,PT-01-SJ,São João da Madeira
+PT,PT-01,PT-01-SM,Santa Maria da Feira
+PT,PT-01,PT-01-SV,Sever do Vouga
+PT,PT-01,PT-01-VC,Vale de Cambra
+PT,PT-01,PT-01-VG,Vagos
+PT,PT-02,PT-02-AJ,Aljustrel
+PT,PT-02,PT-02-AM,Almodôvar
+PT,PT-02,PT-02-AV,Alvito
+PT,PT-02,PT-02-BA,Barrancos
+PT,PT-02,PT-02-BE,Beja
+PT,PT-02,PT-02-CU,Cuba
+PT,PT-02,PT-02-CV,Castro Verde
+PT,PT-02,PT-02-FA,Ferreira do Alentejo
+PT,PT-02,PT-02-ME,Mértola
+PT,PT-02,PT-02-MO,Moura
+PT,PT-02,PT-02-OD,Odemira
+PT,PT-02,PT-02-OU,Ourique
+PT,PT-02,PT-02-SE,Serpa
+PT,PT-02,PT-02-VI,Vidigueira
+PT,PT-03,PT-03-AM,Amares
+PT,PT-03,PT-03-BA,Barcelos
+PT,PT-03,PT-03-BR,Braga
+PT,PT-03,PT-03-CB,Cabeceiras de Basto
+PT,PT-03,PT-03-CL,Celorico de Basto
+PT,PT-03,PT-03-ES,Esposende
+PT,PT-03,PT-03-FA,Fafe
+PT,PT-03,PT-03-GU,Guimarães
+PT,PT-03,PT-03-PL,Póvoa de Lanhoso
+PT,PT-03,PT-03-TB,Terras de Bouro
+PT,PT-03,PT-03-VF,Vila Nova de Famalicão
+PT,PT-03,PT-03-VM,Vieira do Minho
+PT,PT-03,PT-03-VV,Vila Verde
+PT,PT-03,PT-03-VZ,Vizela
+PT,PT-04,PT-04-AF,Alfândega da Fé
+PT,PT-04,PT-04-BR,Bragança
+PT,PT-04,PT-04-CA,Carrazeda de Ansiães
+PT,PT-04,PT-04-FE,Freixo de Espada à Cinta
+PT,PT-04,PT-04-MC,Macedo de Cavaleiros
+PT,PT-04,PT-04-MD,Miranda do Douro
+PT,PT-04,PT-04-MI,Mirandela
+PT,PT-04,PT-04-MO,Mogadouro
+PT,PT-04,PT-04-TM,Torre de Moncorvo
+PT,PT-04,PT-04-VF,Vila Flor
+PT,PT-04,PT-04-VM,Vimioso
+PT,PT-04,PT-04-VN,Vinhais
+PT,PT-05,PT-05-BE,Belmonte
+PT,PT-05,PT-05-CB,Castelo Branco
+PT,PT-05,PT-05-CO,Covilhã
+PT,PT-05,PT-05-FU,Fundão
+PT,PT-05,PT-05-IN,Idanha-a-Nova
+PT,PT-05,PT-05-OL,Oleiros
+PT,PT-05,PT-05-PE,Penamacor
+PT,PT-05,PT-05-PN,Proença-a-Nova
+PT,PT-05,PT-05-SE,Sertã
+PT,PT-05,PT-05-VR,Vila de Rei
+PT,PT-05,PT-05-VV,Vila Velha de Ródão
+PT,PT-06,PT-06-AR,Arganil
+PT,PT-06,PT-06-CA,Cantanhede
+PT,PT-06,PT-06-CN,Condeixa-a-Nova
+PT,PT-06,PT-06-CO,Coimbra
+PT,PT-06,PT-06-FF,Figueira da Foz
+PT,PT-06,PT-06-GO,Góis
+PT,PT-06,PT-06-LO,Lousã
+PT,PT-06,PT-06-MC,Miranda do Corvo
+PT,PT-06,PT-06-MI,Mira
+PT,PT-06,PT-06-MV,Montemor-o-Velho
+PT,PT-06,PT-06-OH,Oliveira do Hospital
+PT,PT-06,PT-06-PC,Penacova
+PT,PT-06,PT-06-PL,Penela
+PT,PT-06,PT-06-PS,Pampilhosa da Serra
+PT,PT-06,PT-06-SO,Soure
+PT,PT-06,PT-06-TA,Tábua
+PT,PT-06,PT-06-VP,Vila Nova de Poiares
+PT,PT-07,PT-07-AL,Alandroal
+PT,PT-07,PT-07-AR,Arraiolos
+PT,PT-07,PT-07-BO,Borba
+PT,PT-07,PT-07-ES,Estremoz
+PT,PT-07,PT-07-EV,Évora
+PT,PT-07,PT-07-MN,Montemor-o-Novo
+PT,PT-07,PT-07-MO,Mourão
+PT,PT-07,PT-07-MR,Mora
+PT,PT-07,PT-07-PO,Portel
+PT,PT-07,PT-07-RD,Redondo
+PT,PT-07,PT-07-RM,Reguengos de Monsaraz
+PT,PT-07,PT-07-VA,Viana do Alentejo
+PT,PT-07,PT-07-VN,Vendas Novas
+PT,PT-07,PT-07-VV,Vila Viçosa
+PT,PT-08,PT-08-AB,Albufeira
+PT,PT-08,PT-08-AC,Alcoutim
+PT,PT-08,PT-08-AJ,Aljezur
+PT,PT-08,PT-08-CM,Castro Marim
+PT,PT-08,PT-08-FA,Faro
+PT,PT-08,PT-08-LA,Lagoa
+PT,PT-08,PT-08-LO,Loulé
+PT,PT-08,PT-08-LS,Lagos
+PT,PT-08,PT-08-MO,Monchique
+PT,PT-08,PT-08-OL,Olhão
+PT,PT-08,PT-08-PO,Portimão
+PT,PT-08,PT-08-SB,São Brás de Alportel
+PT,PT-08,PT-08-SI,Silves
+PT,PT-08,PT-08-TA,Tavira
+PT,PT-08,PT-08-VB,Vila do Bispo
+PT,PT-08,PT-08-VS,Vila Real de Santo António
+PT,PT-09,PT-09-AB,Aguiar da Beira
+PT,PT-09,PT-09-AL,Almeida
+PT,PT-09,PT-09-CB,Celorico da Beira
+PT,PT-09,PT-09-FA,Fornos de Algodres
+PT,PT-09,PT-09-FC,Figueira de Castelo Rodrigo
+PT,PT-09,PT-09-GO,Gouveia
+PT,PT-09,PT-09-GU,Guarda
+PT,PT-09,PT-09-MA,Manteigas
+PT,PT-09,PT-09-ME,Mêda
+PT,PT-09,PT-09-PI,Pinhel
+PT,PT-09,PT-09-SA,Sabugal
+PT,PT-09,PT-09-SE,Seia
+PT,PT-09,PT-09-TR,Trancoso
+PT,PT-09,PT-09-VF,Vila Nova de Foz Côa
+PT,PT-10,PT-10-AC,Alcobaça
+PT,PT-10,PT-10-AN,Ansião
+PT,PT-10,PT-10-AV,Alvaiázere
+PT,PT-10,PT-10-BA,Batalha
+PT,PT-10,PT-10-BO,Bombarral
+PT,PT-10,PT-10-CP,Castanheira de Pêra
+PT,PT-10,PT-10-CR,Caldas da Rainha
+PT,PT-10,PT-10-FV,Figueiró dos Vinhos
+PT,PT-10,PT-10-LE,Leiria
+PT,PT-10,PT-10-MG,Marinha Grande
+PT,PT-10,PT-10-NA,Nazaré
+PT,PT-10,PT-10-OB,Óbidos
+PT,PT-10,PT-10-PB,Pombal
+PT,PT-10,PT-10-PG,Pedrógão Grande
+PT,PT-10,PT-10-PM,Porto de Mós
+PT,PT-10,PT-10-PN,Peniche
+PT,PT-11,PT-11-AL,Alenquer
+PT,PT-11,PT-11-AM,Amadora
+PT,PT-11,PT-11-AV,Arruda dos Vinhos
+PT,PT-11,PT-11-AZ,Azambuja
+PT,PT-11,PT-11-CD,Cadaval
+PT,PT-11,PT-11-CS,Cascais
+PT,PT-11,PT-11-LI,Lisboa
+PT,PT-11,PT-11-LN,Lourinhã
+PT,PT-11,PT-11-LS,Loures
+PT,PT-11,PT-11-MA,Mafra
+PT,PT-11,PT-11-OD,Odivelas
+PT,PT-11,PT-11-OE,Oeiras
+PT,PT-11,PT-11-SI,Sintra
+PT,PT-11,PT-11-SM,Sobral de Monte Agraço
+PT,PT-11,PT-11-TV,Torres Vedras
+PT,PT-11,PT-11-VX,Vila Franca de Xira
+PT,PT-12,PT-12-AC,Alter do Chão
+PT,PT-12,PT-12-AR,Arronches
+PT,PT-12,PT-12-AV,Avis
+PT,PT-12,PT-12-CM,Campo Maior
+PT,PT-12,PT-12-CR,Crato
+PT,PT-12,PT-12-CV,Castelo de Vide
+PT,PT-12,PT-12-EL,Elvas
+PT,PT-12,PT-12-FR,Fronteira
+PT,PT-12,PT-12-GA,Gavião
+PT,PT-12,PT-12-MA,Marvão
+PT,PT-12,PT-12-MO,Monforte
+PT,PT-12,PT-12-NI,Nisa
+PT,PT-12,PT-12-PA,Portalegre
+PT,PT-12,PT-12-PS,Ponte de Sôr
+PT,PT-12,PT-12-SO,Sousel
+PT,PT-13,PT-13-AM,Amarante
+PT,PT-13,PT-13-BA,Baião
+PT,PT-13,PT-13-FE,Felgueiras
+PT,PT-13,PT-13-GO,Gondomar
+PT,PT-13,PT-13-LO,Lousada
+PT,PT-13,PT-13-MC,Marco de Canaveses
+PT,PT-13,PT-13-MI,Maia
+PT,PT-13,PT-13-MT,Matosinhos
+PT,PT-13,PT-13-PA,Paredes
+PT,PT-13,PT-13-PE,Penafiel
+PT,PT-13,PT-13-PF,Paços de Ferreira
+PT,PT-13,PT-13-PO,Porto
+PT,PT-13,PT-13-PV,Póvoa de Varzim
+PT,PT-13,PT-13-ST,Santo Tirso
+PT,PT-13,PT-13-TR,Trofa
+PT,PT-13,PT-13-VA,Valongo
+PT,PT-13,PT-13-VC,Vila do Conde
+PT,PT-13,PT-13-VG,Vila Nova de Gaia
+PT,PT-14,PT-14-AB,Abrantes
+PT,PT-14,PT-14-AC,Alcanena
+PT,PT-14,PT-14-AM,Almeirim
+PT,PT-14,PT-14-AP,Alpiarça
+PT,PT-14,PT-14-BE,Benavente
+PT,PT-14,PT-14-CA,Cartaxo
+PT,PT-14,PT-14-CH,Chamusca
+PT,PT-14,PT-14-CN,Constância
+PT,PT-14,PT-14-CR,Coruche
+PT,PT-14,PT-14-EN,Entroncamento
+PT,PT-14,PT-14-FZ,Ferreira do Zêzere
+PT,PT-14,PT-14-GO,Golegã
+PT,PT-14,PT-14-MA,Mação
+PT,PT-14,PT-14-OU,Ourém
+PT,PT-14,PT-14-RM,Rio Maior
+PT,PT-14,PT-14-SA,Santarém
+PT,PT-14,PT-14-SD,Sardoal
+PT,PT-14,PT-14-SM,Salvaterra de Magos
+PT,PT-14,PT-14-TM,Tomar
+PT,PT-14,PT-14-TN,Torres Novas
+PT,PT-14,PT-14-VB,Vila Nova da Barquinha
+PT,PT-15,PT-15-AC,Alcochete
+PT,PT-15,PT-15-AM,Almada
+PT,PT-15,PT-15-AS,Alcácer do Sal
+PT,PT-15,PT-15-BA,Barreiro
+PT,PT-15,PT-15-GR,Grândola
+PT,PT-15,PT-15-MN,Montijo
+PT,PT-15,PT-15-MT,Moita
+PT,PT-15,PT-15-PA,Palmela
+PT,PT-15,PT-15-SC,Santiago do Cacém
+PT,PT-15,PT-15-SE,Setúbal
+PT,PT-15,PT-15-SI,Sines
+PT,PT-15,PT-15-SS,Sesimbra
+PT,PT-15,PT-15-SX,Seixal
+PT,PT-16,PT-16-AV,Arcos de Valdevez
+PT,PT-16,PT-16-CA,Caminha
+PT,PT-16,PT-16-ME,Melgaço
+PT,PT-16,PT-16-MO,Monção
+PT,PT-16,PT-16-PB,Ponte da Barca
+PT,PT-16,PT-16-PC,Paredes de Coura
+PT,PT-16,PT-16-PL,Ponte de Lima
+PT,PT-16,PT-16-VA,Valença
+PT,PT-16,PT-16-VC,Viana do Castelo
+PT,PT-16,PT-16-VN,Vila Nova de Cerveira
+PT,PT-17,PT-17-AL,Alijó
+PT,PT-17,PT-17-BO,Boticas
+PT,PT-17,PT-17-CH,Chaves
+PT,PT-17,PT-17-MB,Mondim de Basto
+PT,PT-17,PT-17-MF,Mesão Frio
+PT,PT-17,PT-17-MT,Montalegre
+PT,PT-17,PT-17-MU,Murça
+PT,PT-17,PT-17-PR,Peso da Régua
+PT,PT-17,PT-17-RP,Ribeira de Pena
+PT,PT-17,PT-17-SA,Sabrosa
+PT,PT-17,PT-17-SM,Santa Marta de Penaguião
+PT,PT-17,PT-17-VA,Valpaços
+PT,PT-17,PT-17-VP,Vila Pouca de Aguiar
+PT,PT-17,PT-17-VR,Vila Real
+PT,PT-18,PT-18-AR,Armamar
+PT,PT-18,PT-18-CD,Castro Daire
+PT,PT-18,PT-18-CI,Cinfães
+PT,PT-18,PT-18-CS,Carregal do Sal
+PT,PT-18,PT-18-LA,Lamego
+PT,PT-18,PT-18-MA,Mangualde
+PT,PT-18,PT-18-MB,Moimenta da Beira
+PT,PT-18,PT-18-MR,Mortágua
+PT,PT-18,PT-18-NE,Nelas
+PT,PT-18,PT-18-OF,Oliveira de Frades
+PT,PT-18,PT-18-PC,Penalva do Castelo
+PT,PT-18,PT-18-PE,Penedono
+PT,PT-18,PT-18-RE,Resende
+PT,PT-18,PT-18-SC,Santa Comba Dão
+PT,PT-18,PT-18-SE,Sernancelhe
+PT,PT-18,PT-18-SJ,São João da Pesqueira
+PT,PT-18,PT-18-SP,São Pedro do Sul
+PT,PT-18,PT-18-ST,Sátão
+PT,PT-18,PT-18-TB,Tabuaço
+PT,PT-18,PT-18-TO,Tondela
+PT,PT-18,PT-18-TR,Tarouca
+PT,PT-18,PT-18-VO,Vouzela
+PT,PT-18,PT-18-VP,Vila Nova de Paiva
+PT,PT-18,PT-18-VS,Viseu
+PT,PT-20,PT-20-AH,Angra do Heroísmo
+PT,PT-20,PT-20-CA,Calheta
+PT,PT-20,PT-20-CO,Corvo
+PT,PT-20,PT-20-HO,Horta
+PT,PT-20,PT-20-LF,Lajes das Flores
+PT,PT-20,PT-20-LG,Lagoa
+PT,PT-20,PT-20-LP,Lajes do Pico
+PT,PT-20,PT-20-MA,Madalena
+PT,PT-20,PT-20-NO,Nordeste
+PT,PT-20,PT-20-PC,Povoação
+PT,PT-20,PT-20-PD,Ponta Delgada
+PT,PT-20,PT-20-PV,Praia da Vitória
+PT,PT-20,PT-20-RG,Ribeira Grande
+PT,PT-20,PT-20-SF,Santa Cruz das Flores
+PT,PT-20,PT-20-SG,Santa Cruz da Graciosa
+PT,PT-20,PT-20-SP,São Roque do Pico
+PT,PT-20,PT-20-VC,Vila Franca do Campo
+PT,PT-20,PT-20-VE,Velas
+PT,PT-20,PT-20-VP,Vila do Porto
+PT,PT-30,PT-30-CL,Câmara de Lobos
+PT,PT-30,PT-30-CT,Calheta
+PT,PT-30,PT-30-FU,Funchal
+PT,PT-30,PT-30-MA,Machico
+PT,PT-30,PT-30-PD,Ponta do Sol
+PT,PT-30,PT-30-PM,Porto Moniz
+PT,PT-30,PT-30-PS,Porto Santo
+PT,PT-30,PT-30-RB,Ribeira Brava
+PT,PT-30,PT-30-SA,Santana
+PT,PT-30,PT-30-SC,Santa Cruz
+PT,PT-30,PT-30-SV,São Vicente
+US,US-AK,US-AK-013,Aleutians East
+US,US-AK,US-AK-016,Aleutians West
+US,US-AK,US-AK-020,Anchorage
+US,US-AK,US-AK-050,Bethel
+US,US-AK,US-AK-060,Bristol Bay
+US,US-AK,US-AK-068,Denali
+US,US-AK,US-AK-070,Dillingham
+US,US-AK,US-AK-090,Fairbanks North Star
+US,US-AK,US-AK-100,Haines
+US,US-AK,US-AK-110,Juneau
+US,US-AK,US-AK-122,Kenai Peninsula
+US,US-AK,US-AK-130,Ketchikan Gateway
+US,US-AK,US-AK-150,Kodiak Island
+US,US-AK,US-AK-164,Lake and Peninsula
+US,US-AK,US-AK-170,Matanuska-Susitna
+US,US-AK,US-AK-180,Nome
+US,US-AK,US-AK-185,North Slope
+US,US-AK,US-AK-188,Northwest Arctic
+US,US-AK,US-AK-201,Prince of Wales-Outer Ketchikan
+US,US-AK,US-AK-220,Sitka
+US,US-AK,US-AK-232,Skagway-Hoonah-Angoon
+US,US-AK,US-AK-240,Southeast Fairbanks
+US,US-AK,US-AK-261,Valdez-Cordova
+US,US-AK,US-AK-270,Wade Hampton
+US,US-AK,US-AK-280,Wrangell-Petersburg
+US,US-AK,US-AK-282,Yakutat
+US,US-AK,US-AK-290,Yukon-Koyukuk
+US,US-AL,US-AL-001,Autauga
+US,US-AL,US-AL-003,Baldwin
+US,US-AL,US-AL-005,Barbour
+US,US-AL,US-AL-007,Bibb
+US,US-AL,US-AL-009,Blount
+US,US-AL,US-AL-011,Bullock
+US,US-AL,US-AL-013,Butler
+US,US-AL,US-AL-015,Calhoun
+US,US-AL,US-AL-017,Chambers
+US,US-AL,US-AL-019,Cherokee
+US,US-AL,US-AL-021,Chilton
+US,US-AL,US-AL-023,Choctaw
+US,US-AL,US-AL-025,Clarke
+US,US-AL,US-AL-027,Clay
+US,US-AL,US-AL-029,Cleburne
+US,US-AL,US-AL-031,Coffee
+US,US-AL,US-AL-033,Colbert
+US,US-AL,US-AL-035,Conecuh
+US,US-AL,US-AL-037,Coosa
+US,US-AL,US-AL-039,Covington
+US,US-AL,US-AL-041,Crenshaw
+US,US-AL,US-AL-043,Cullman
+US,US-AL,US-AL-045,Dale
+US,US-AL,US-AL-047,Dallas
+US,US-AL,US-AL-049,DeKalb
+US,US-AL,US-AL-051,Elmore
+US,US-AL,US-AL-053,Escambia
+US,US-AL,US-AL-055,Etowah
+US,US-AL,US-AL-057,Fayette
+US,US-AL,US-AL-059,Franklin
+US,US-AL,US-AL-061,Geneva
+US,US-AL,US-AL-063,Greene
+US,US-AL,US-AL-065,Hale
+US,US-AL,US-AL-067,Henry
+US,US-AL,US-AL-069,Houston
+US,US-AL,US-AL-071,Jackson
+US,US-AL,US-AL-073,Jefferson
+US,US-AL,US-AL-075,Lamar
+US,US-AL,US-AL-077,Lauderdale
+US,US-AL,US-AL-079,Lawrence
+US,US-AL,US-AL-081,Lee
+US,US-AL,US-AL-083,Limestone
+US,US-AL,US-AL-085,Lowndes
+US,US-AL,US-AL-087,Macon
+US,US-AL,US-AL-089,Madison
+US,US-AL,US-AL-091,Marengo
+US,US-AL,US-AL-093,Marion
+US,US-AL,US-AL-095,Marshall
+US,US-AL,US-AL-097,Mobile
+US,US-AL,US-AL-099,Monroe
+US,US-AL,US-AL-101,Montgomery
+US,US-AL,US-AL-103,Morgan
+US,US-AL,US-AL-105,Perry
+US,US-AL,US-AL-107,Pickens
+US,US-AL,US-AL-109,Pike
+US,US-AL,US-AL-111,Randolph
+US,US-AL,US-AL-113,Russell
+US,US-AL,US-AL-115,St. Clair
+US,US-AL,US-AL-117,Shelby
+US,US-AL,US-AL-119,Sumter
+US,US-AL,US-AL-121,Talladega
+US,US-AL,US-AL-123,Tallapoosa
+US,US-AL,US-AL-125,Tuscaloosa
+US,US-AL,US-AL-127,Walker
+US,US-AL,US-AL-129,Washington
+US,US-AL,US-AL-131,Wilcox
+US,US-AL,US-AL-133,Winston
+US,US-AR,US-AR-001,Arkansas
+US,US-AR,US-AR-003,Ashley
+US,US-AR,US-AR-005,Baxter
+US,US-AR,US-AR-007,Benton
+US,US-AR,US-AR-009,Boone
+US,US-AR,US-AR-011,Bradley
+US,US-AR,US-AR-013,Calhoun
+US,US-AR,US-AR-015,Carroll
+US,US-AR,US-AR-017,Chicot
+US,US-AR,US-AR-019,Clark
+US,US-AR,US-AR-021,Clay
+US,US-AR,US-AR-023,Cleburne
+US,US-AR,US-AR-025,Cleveland
+US,US-AR,US-AR-027,Columbia
+US,US-AR,US-AR-029,Conway
+US,US-AR,US-AR-031,Craighead
+US,US-AR,US-AR-033,Crawford
+US,US-AR,US-AR-035,Crittenden
+US,US-AR,US-AR-037,Cross
+US,US-AR,US-AR-039,Dallas
+US,US-AR,US-AR-041,Desha
+US,US-AR,US-AR-043,Drew
+US,US-AR,US-AR-045,Faulkner
+US,US-AR,US-AR-047,Franklin
+US,US-AR,US-AR-049,Fulton
+US,US-AR,US-AR-051,Garland
+US,US-AR,US-AR-053,Grant
+US,US-AR,US-AR-055,Greene
+US,US-AR,US-AR-057,Hempstead
+US,US-AR,US-AR-059,Hot Spring
+US,US-AR,US-AR-061,Howard
+US,US-AR,US-AR-063,Independence
+US,US-AR,US-AR-065,Izard
+US,US-AR,US-AR-067,Jackson
+US,US-AR,US-AR-069,Jefferson
+US,US-AR,US-AR-071,Johnson
+US,US-AR,US-AR-073,Lafayette
+US,US-AR,US-AR-075,Lawrence
+US,US-AR,US-AR-077,Lee
+US,US-AR,US-AR-079,Lincoln
+US,US-AR,US-AR-081,Little River
+US,US-AR,US-AR-083,Logan
+US,US-AR,US-AR-085,Lonoke
+US,US-AR,US-AR-087,Madison
+US,US-AR,US-AR-089,Marion
+US,US-AR,US-AR-091,Miller
+US,US-AR,US-AR-093,Mississippi
+US,US-AR,US-AR-095,Monroe
+US,US-AR,US-AR-097,Montgomery
+US,US-AR,US-AR-099,Nevada
+US,US-AR,US-AR-101,Newton
+US,US-AR,US-AR-103,Ouachita
+US,US-AR,US-AR-105,Perry
+US,US-AR,US-AR-107,Phillips
+US,US-AR,US-AR-109,Pike
+US,US-AR,US-AR-111,Poinsett
+US,US-AR,US-AR-113,Polk
+US,US-AR,US-AR-115,Pope
+US,US-AR,US-AR-117,Prairie
+US,US-AR,US-AR-119,Pulaski
+US,US-AR,US-AR-121,Randolph
+US,US-AR,US-AR-123,St. Francis
+US,US-AR,US-AR-125,Saline
+US,US-AR,US-AR-127,Scott
+US,US-AR,US-AR-129,Searcy
+US,US-AR,US-AR-131,Sebastian
+US,US-AR,US-AR-133,Sevier
+US,US-AR,US-AR-135,Sharp
+US,US-AR,US-AR-137,Stone
+US,US-AR,US-AR-139,Union
+US,US-AR,US-AR-141,Van Buren
+US,US-AR,US-AR-143,Washington
+US,US-AR,US-AR-145,White
+US,US-AR,US-AR-147,Woodruff
+US,US-AR,US-AR-149,Yell
+US,US-AZ,US-AZ-001,Apache
+US,US-AZ,US-AZ-003,Cochise
+US,US-AZ,US-AZ-005,Coconino
+US,US-AZ,US-AZ-007,Gila
+US,US-AZ,US-AZ-009,Graham
+US,US-AZ,US-AZ-011,Greenlee
+US,US-AZ,US-AZ-012,La Paz
+US,US-AZ,US-AZ-013,Maricopa
+US,US-AZ,US-AZ-015,Mohave
+US,US-AZ,US-AZ-017,Navajo
+US,US-AZ,US-AZ-019,Pima
+US,US-AZ,US-AZ-021,Pinal
+US,US-AZ,US-AZ-023,Santa Cruz
+US,US-AZ,US-AZ-025,Yavapai
+US,US-AZ,US-AZ-027,Yuma
+US,US-CA,US-CA-001,Alameda
+US,US-CA,US-CA-003,Alpine
+US,US-CA,US-CA-005,Amador
+US,US-CA,US-CA-007,Butte
+US,US-CA,US-CA-009,Calaveras
+US,US-CA,US-CA-011,Colusa
+US,US-CA,US-CA-013,Contra Costa
+US,US-CA,US-CA-015,Del Norte
+US,US-CA,US-CA-017,El Dorado
+US,US-CA,US-CA-019,Fresno
+US,US-CA,US-CA-021,Glenn
+US,US-CA,US-CA-023,Humboldt
+US,US-CA,US-CA-025,Imperial
+US,US-CA,US-CA-027,Inyo
+US,US-CA,US-CA-029,Kern
+US,US-CA,US-CA-031,Kings
+US,US-CA,US-CA-033,Lake
+US,US-CA,US-CA-035,Lassen
+US,US-CA,US-CA-037,Los Angeles
+US,US-CA,US-CA-039,Madera
+US,US-CA,US-CA-041,Marin
+US,US-CA,US-CA-043,Mariposa
+US,US-CA,US-CA-045,Mendocino
+US,US-CA,US-CA-047,Merced
+US,US-CA,US-CA-049,Modoc
+US,US-CA,US-CA-051,Mono
+US,US-CA,US-CA-053,Monterey
+US,US-CA,US-CA-055,Napa
+US,US-CA,US-CA-057,Nevada
+US,US-CA,US-CA-059,Orange
+US,US-CA,US-CA-061,Placer
+US,US-CA,US-CA-063,Plumas
+US,US-CA,US-CA-065,Riverside
+US,US-CA,US-CA-067,Sacramento
+US,US-CA,US-CA-069,San Benito
+US,US-CA,US-CA-071,San Bernardino
+US,US-CA,US-CA-073,San Diego
+US,US-CA,US-CA-075,San Francisco
+US,US-CA,US-CA-077,San Joaquin
+US,US-CA,US-CA-079,San Luis Obispo
+US,US-CA,US-CA-081,San Mateo
+US,US-CA,US-CA-083,Santa Barbara
+US,US-CA,US-CA-085,Santa Clara
+US,US-CA,US-CA-087,Santa Cruz
+US,US-CA,US-CA-089,Shasta
+US,US-CA,US-CA-091,Sierra
+US,US-CA,US-CA-093,Siskiyou
+US,US-CA,US-CA-095,Solano
+US,US-CA,US-CA-097,Sonoma
+US,US-CA,US-CA-099,Stanislaus
+US,US-CA,US-CA-101,Sutter
+US,US-CA,US-CA-103,Tehama
+US,US-CA,US-CA-105,Trinity
+US,US-CA,US-CA-107,Tulare
+US,US-CA,US-CA-109,Tuolumne
+US,US-CA,US-CA-111,Ventura
+US,US-CA,US-CA-113,Yolo
+US,US-CA,US-CA-115,Yuba
+US,US-CO,US-CO-001,Adams
+US,US-CO,US-CO-003,Alamosa
+US,US-CO,US-CO-005,Arapahoe
+US,US-CO,US-CO-007,Archuleta
+US,US-CO,US-CO-009,Baca
+US,US-CO,US-CO-011,Bent
+US,US-CO,US-CO-013,Boulder
+US,US-CO,US-CO-014,Broomfield
+US,US-CO,US-CO-015,Chaffee
+US,US-CO,US-CO-017,Cheyenne
+US,US-CO,US-CO-019,Clear Creek
+US,US-CO,US-CO-021,Conejos
+US,US-CO,US-CO-023,Costilla
+US,US-CO,US-CO-025,Crowley
+US,US-CO,US-CO-027,Custer
+US,US-CO,US-CO-029,Delta
+US,US-CO,US-CO-031,Denver
+US,US-CO,US-CO-033,Dolores
+US,US-CO,US-CO-035,Douglas
+US,US-CO,US-CO-037,Eagle
+US,US-CO,US-CO-039,Elbert
+US,US-CO,US-CO-041,El Paso
+US,US-CO,US-CO-043,Fremont
+US,US-CO,US-CO-045,Garfield
+US,US-CO,US-CO-047,Gilpin
+US,US-CO,US-CO-049,Grand
+US,US-CO,US-CO-051,Gunnison
+US,US-CO,US-CO-053,Hinsdale
+US,US-CO,US-CO-055,Huerfano
+US,US-CO,US-CO-057,Jackson
+US,US-CO,US-CO-059,Jefferson
+US,US-CO,US-CO-061,Kiowa
+US,US-CO,US-CO-063,Kit Carson
+US,US-CO,US-CO-065,Lake
+US,US-CO,US-CO-067,La Plata
+US,US-CO,US-CO-069,Larimer
+US,US-CO,US-CO-071,Las Animas
+US,US-CO,US-CO-073,Lincoln
+US,US-CO,US-CO-075,Logan
+US,US-CO,US-CO-077,Mesa
+US,US-CO,US-CO-079,Mineral
+US,US-CO,US-CO-081,Moffat
+US,US-CO,US-CO-083,Montezuma
+US,US-CO,US-CO-085,Montrose
+US,US-CO,US-CO-087,Morgan
+US,US-CO,US-CO-089,Otero
+US,US-CO,US-CO-091,Ouray
+US,US-CO,US-CO-093,Park
+US,US-CO,US-CO-095,Phillips
+US,US-CO,US-CO-097,Pitkin
+US,US-CO,US-CO-099,Prowers
+US,US-CO,US-CO-101,Pueblo
+US,US-CO,US-CO-103,Rio Blanco
+US,US-CO,US-CO-105,Rio Grande
+US,US-CO,US-CO-107,Routt
+US,US-CO,US-CO-109,Saguache
+US,US-CO,US-CO-111,San Juan
+US,US-CO,US-CO-113,San Miguel
+US,US-CO,US-CO-115,Sedgwick
+US,US-CO,US-CO-117,Summit
+US,US-CO,US-CO-119,Teller
+US,US-CO,US-CO-121,Washington
+US,US-CO,US-CO-123,Weld
+US,US-CO,US-CO-125,Yuma
+US,US-CT,US-CT-001,Fairfield
+US,US-CT,US-CT-003,Hartford
+US,US-CT,US-CT-005,Litchfield
+US,US-CT,US-CT-007,Middlesex
+US,US-CT,US-CT-009,New Haven
+US,US-CT,US-CT-011,New London
+US,US-CT,US-CT-013,Tolland
+US,US-CT,US-CT-015,Windham
+US,US-DC,US-DC-001,District of Columbia
+US,US-DE,US-DE-001,Kent
+US,US-DE,US-DE-003,New Castle
+US,US-DE,US-DE-005,Sussex
+US,US-FL,US-FL-001,Alachua
+US,US-FL,US-FL-003,Baker
+US,US-FL,US-FL-005,Bay
+US,US-FL,US-FL-007,Bradford
+US,US-FL,US-FL-009,Brevard
+US,US-FL,US-FL-011,Broward
+US,US-FL,US-FL-013,Calhoun
+US,US-FL,US-FL-015,Charlotte
+US,US-FL,US-FL-017,Citrus
+US,US-FL,US-FL-019,Clay
+US,US-FL,US-FL-021,Collier
+US,US-FL,US-FL-023,Columbia
+US,US-FL,US-FL-027,DeSoto
+US,US-FL,US-FL-029,Dixie
+US,US-FL,US-FL-031,Duval
+US,US-FL,US-FL-033,Escambia
+US,US-FL,US-FL-035,Flagler
+US,US-FL,US-FL-037,Franklin
+US,US-FL,US-FL-039,Gadsden
+US,US-FL,US-FL-041,Gilchrist
+US,US-FL,US-FL-043,Glades
+US,US-FL,US-FL-045,Gulf
+US,US-FL,US-FL-047,Hamilton
+US,US-FL,US-FL-049,Hardee
+US,US-FL,US-FL-051,Hendry
+US,US-FL,US-FL-053,Hernando
+US,US-FL,US-FL-055,Highlands
+US,US-FL,US-FL-057,Hillsborough
+US,US-FL,US-FL-059,Holmes
+US,US-FL,US-FL-061,Indian River
+US,US-FL,US-FL-063,Jackson
+US,US-FL,US-FL-065,Jefferson
+US,US-FL,US-FL-067,Lafayette
+US,US-FL,US-FL-069,Lake
+US,US-FL,US-FL-071,Lee
+US,US-FL,US-FL-073,Leon
+US,US-FL,US-FL-075,Levy
+US,US-FL,US-FL-077,Liberty
+US,US-FL,US-FL-079,Madison
+US,US-FL,US-FL-081,Manatee
+US,US-FL,US-FL-083,Marion
+US,US-FL,US-FL-085,Martin
+US,US-FL,US-FL-086,Miami-Dade
+US,US-FL,US-FL-087,Monroe
+US,US-FL,US-FL-089,Nassau
+US,US-FL,US-FL-091,Okaloosa
+US,US-FL,US-FL-093,Okeechobee
+US,US-FL,US-FL-095,Orange
+US,US-FL,US-FL-097,Osceola
+US,US-FL,US-FL-099,Palm Beach
+US,US-FL,US-FL-101,Pasco
+US,US-FL,US-FL-103,Pinellas
+US,US-FL,US-FL-105,Polk
+US,US-FL,US-FL-107,Putnam
+US,US-FL,US-FL-109,St. Johns
+US,US-FL,US-FL-111,St. Lucie
+US,US-FL,US-FL-113,Santa Rosa
+US,US-FL,US-FL-115,Sarasota
+US,US-FL,US-FL-117,Seminole
+US,US-FL,US-FL-119,Sumter
+US,US-FL,US-FL-121,Suwannee
+US,US-FL,US-FL-123,Taylor
+US,US-FL,US-FL-125,Union
+US,US-FL,US-FL-127,Volusia
+US,US-FL,US-FL-129,Wakulla
+US,US-FL,US-FL-131,Walton
+US,US-FL,US-FL-133,Washington
+US,US-GA,US-GA-001,Appling
+US,US-GA,US-GA-003,Atkinson
+US,US-GA,US-GA-005,Bacon
+US,US-GA,US-GA-007,Baker
+US,US-GA,US-GA-009,Baldwin
+US,US-GA,US-GA-011,Banks
+US,US-GA,US-GA-013,Barrow
+US,US-GA,US-GA-015,Bartow
+US,US-GA,US-GA-017,Ben Hill
+US,US-GA,US-GA-019,Berrien
+US,US-GA,US-GA-021,Bibb
+US,US-GA,US-GA-023,Bleckley
+US,US-GA,US-GA-025,Brantley
+US,US-GA,US-GA-027,Brooks
+US,US-GA,US-GA-029,Bryan
+US,US-GA,US-GA-031,Bulloch
+US,US-GA,US-GA-033,Burke
+US,US-GA,US-GA-035,Butts
+US,US-GA,US-GA-037,Calhoun
+US,US-GA,US-GA-039,Camden
+US,US-GA,US-GA-043,Candler
+US,US-GA,US-GA-045,Carroll
+US,US-GA,US-GA-047,Catoosa
+US,US-GA,US-GA-049,Charlton
+US,US-GA,US-GA-051,Chatham
+US,US-GA,US-GA-053,Chattahoochee
+US,US-GA,US-GA-055,Chattooga
+US,US-GA,US-GA-057,Cherokee
+US,US-GA,US-GA-059,Clarke
+US,US-GA,US-GA-061,Clay
+US,US-GA,US-GA-063,Clayton
+US,US-GA,US-GA-065,Clinch
+US,US-GA,US-GA-067,Cobb
+US,US-GA,US-GA-069,Coffee
+US,US-GA,US-GA-071,Colquitt
+US,US-GA,US-GA-073,Columbia
+US,US-GA,US-GA-075,Cook
+US,US-GA,US-GA-077,Coweta
+US,US-GA,US-GA-079,Crawford
+US,US-GA,US-GA-081,Crisp
+US,US-GA,US-GA-083,Dade
+US,US-GA,US-GA-085,Dawson
+US,US-GA,US-GA-087,Decatur
+US,US-GA,US-GA-089,DeKalb
+US,US-GA,US-GA-091,Dodge
+US,US-GA,US-GA-093,Dooly
+US,US-GA,US-GA-095,Dougherty
+US,US-GA,US-GA-097,Douglas
+US,US-GA,US-GA-099,Early
+US,US-GA,US-GA-101,Echols
+US,US-GA,US-GA-103,Effingham
+US,US-GA,US-GA-105,Elbert
+US,US-GA,US-GA-107,Emanuel
+US,US-GA,US-GA-109,Evans
+US,US-GA,US-GA-111,Fannin
+US,US-GA,US-GA-113,Fayette
+US,US-GA,US-GA-115,Floyd
+US,US-GA,US-GA-117,Forsyth
+US,US-GA,US-GA-119,Franklin
+US,US-GA,US-GA-121,Fulton
+US,US-GA,US-GA-123,Gilmer
+US,US-GA,US-GA-125,Glascock
+US,US-GA,US-GA-127,Glynn
+US,US-GA,US-GA-129,Gordon
+US,US-GA,US-GA-131,Grady
+US,US-GA,US-GA-133,Greene
+US,US-GA,US-GA-135,Gwinnett
+US,US-GA,US-GA-137,Habersham
+US,US-GA,US-GA-139,Hall
+US,US-GA,US-GA-141,Hancock
+US,US-GA,US-GA-143,Haralson
+US,US-GA,US-GA-145,Harris
+US,US-GA,US-GA-147,Hart
+US,US-GA,US-GA-149,Heard
+US,US-GA,US-GA-151,Henry
+US,US-GA,US-GA-153,Houston
+US,US-GA,US-GA-155,Irwin
+US,US-GA,US-GA-157,Jackson
+US,US-GA,US-GA-159,Jasper
+US,US-GA,US-GA-161,Jeff Davis
+US,US-GA,US-GA-163,Jefferson
+US,US-GA,US-GA-165,Jenkins
+US,US-GA,US-GA-167,Johnson
+US,US-GA,US-GA-169,Jones
+US,US-GA,US-GA-171,Lamar
+US,US-GA,US-GA-173,Lanier
+US,US-GA,US-GA-175,Laurens
+US,US-GA,US-GA-177,Lee
+US,US-GA,US-GA-179,Liberty
+US,US-GA,US-GA-181,Lincoln
+US,US-GA,US-GA-183,Long
+US,US-GA,US-GA-185,Lowndes
+US,US-GA,US-GA-187,Lumpkin
+US,US-GA,US-GA-189,McDuffie
+US,US-GA,US-GA-191,McIntosh
+US,US-GA,US-GA-193,Macon
+US,US-GA,US-GA-195,Madison
+US,US-GA,US-GA-197,Marion
+US,US-GA,US-GA-199,Meriwether
+US,US-GA,US-GA-201,Miller
+US,US-GA,US-GA-205,Mitchell
+US,US-GA,US-GA-207,Monroe
+US,US-GA,US-GA-209,Montgomery
+US,US-GA,US-GA-211,Morgan
+US,US-GA,US-GA-213,Murray
+US,US-GA,US-GA-215,Muscogee
+US,US-GA,US-GA-217,Newton
+US,US-GA,US-GA-219,Oconee
+US,US-GA,US-GA-221,Oglethorpe
+US,US-GA,US-GA-223,Paulding
+US,US-GA,US-GA-225,Peach
+US,US-GA,US-GA-227,Pickens
+US,US-GA,US-GA-229,Pierce
+US,US-GA,US-GA-231,Pike
+US,US-GA,US-GA-233,Polk
+US,US-GA,US-GA-235,Pulaski
+US,US-GA,US-GA-237,Putnam
+US,US-GA,US-GA-239,Quitman
+US,US-GA,US-GA-241,Rabun
+US,US-GA,US-GA-243,Randolph
+US,US-GA,US-GA-245,Richmond
+US,US-GA,US-GA-247,Rockdale
+US,US-GA,US-GA-249,Schley
+US,US-GA,US-GA-251,Screven
+US,US-GA,US-GA-253,Seminole
+US,US-GA,US-GA-255,Spalding
+US,US-GA,US-GA-257,Stephens
+US,US-GA,US-GA-259,Stewart
+US,US-GA,US-GA-261,Sumter
+US,US-GA,US-GA-263,Talbot
+US,US-GA,US-GA-265,Taliaferro
+US,US-GA,US-GA-267,Tattnall
+US,US-GA,US-GA-269,Taylor
+US,US-GA,US-GA-271,Telfair
+US,US-GA,US-GA-273,Terrell
+US,US-GA,US-GA-275,Thomas
+US,US-GA,US-GA-277,Tift
+US,US-GA,US-GA-279,Toombs
+US,US-GA,US-GA-281,Towns
+US,US-GA,US-GA-283,Treutlen
+US,US-GA,US-GA-285,Troup
+US,US-GA,US-GA-287,Turner
+US,US-GA,US-GA-289,Twiggs
+US,US-GA,US-GA-291,Union
+US,US-GA,US-GA-293,Upson
+US,US-GA,US-GA-295,Walker
+US,US-GA,US-GA-297,Walton
+US,US-GA,US-GA-299,Ware
+US,US-GA,US-GA-301,Warren
+US,US-GA,US-GA-303,Washington
+US,US-GA,US-GA-305,Wayne
+US,US-GA,US-GA-307,Webster
+US,US-GA,US-GA-309,Wheeler
+US,US-GA,US-GA-311,White
+US,US-GA,US-GA-313,Whitfield
+US,US-GA,US-GA-315,Wilcox
+US,US-GA,US-GA-317,Wilkes
+US,US-GA,US-GA-319,Wilkinson
+US,US-GA,US-GA-321,Worth
+US,US-HI,US-HI-001,Hawaii
+US,US-HI,US-HI-003,Honolulu
+US,US-HI,US-HI-005,Kalawao
+US,US-HI,US-HI-007,Kauai
+US,US-HI,US-HI-009,Maui
+US,US-IA,US-IA-001,Adair
+US,US-IA,US-IA-003,Adams
+US,US-IA,US-IA-005,Allamakee
+US,US-IA,US-IA-007,Appanoose
+US,US-IA,US-IA-009,Audubon
+US,US-IA,US-IA-011,Benton
+US,US-IA,US-IA-013,Black Hawk
+US,US-IA,US-IA-015,Boone
+US,US-IA,US-IA-017,Bremer
+US,US-IA,US-IA-019,Buchanan
+US,US-IA,US-IA-021,Buena Vista
+US,US-IA,US-IA-023,Butler
+US,US-IA,US-IA-025,Calhoun
+US,US-IA,US-IA-027,Carroll
+US,US-IA,US-IA-029,Cass
+US,US-IA,US-IA-031,Cedar
+US,US-IA,US-IA-033,Cerro Gordo
+US,US-IA,US-IA-035,Cherokee
+US,US-IA,US-IA-037,Chickasaw
+US,US-IA,US-IA-039,Clarke
+US,US-IA,US-IA-041,Clay
+US,US-IA,US-IA-043,Clayton
+US,US-IA,US-IA-045,Clinton
+US,US-IA,US-IA-047,Crawford
+US,US-IA,US-IA-049,Dallas
+US,US-IA,US-IA-051,Davis
+US,US-IA,US-IA-053,Decatur
+US,US-IA,US-IA-055,Delaware
+US,US-IA,US-IA-057,Des Moines
+US,US-IA,US-IA-059,Dickinson
+US,US-IA,US-IA-061,Dubuque
+US,US-IA,US-IA-063,Emmet
+US,US-IA,US-IA-065,Fayette
+US,US-IA,US-IA-067,Floyd
+US,US-IA,US-IA-069,Franklin
+US,US-IA,US-IA-071,Fremont
+US,US-IA,US-IA-073,Greene
+US,US-IA,US-IA-075,Grundy
+US,US-IA,US-IA-077,Guthrie
+US,US-IA,US-IA-079,Hamilton
+US,US-IA,US-IA-081,Hancock
+US,US-IA,US-IA-083,Hardin
+US,US-IA,US-IA-085,Harrison
+US,US-IA,US-IA-087,Henry
+US,US-IA,US-IA-089,Howard
+US,US-IA,US-IA-091,Humboldt
+US,US-IA,US-IA-093,Ida
+US,US-IA,US-IA-095,Iowa
+US,US-IA,US-IA-097,Jackson
+US,US-IA,US-IA-099,Jasper
+US,US-IA,US-IA-101,Jefferson
+US,US-IA,US-IA-103,Johnson
+US,US-IA,US-IA-105,Jones
+US,US-IA,US-IA-107,Keokuk
+US,US-IA,US-IA-109,Kossuth
+US,US-IA,US-IA-111,Lee
+US,US-IA,US-IA-113,Linn
+US,US-IA,US-IA-115,Louisa
+US,US-IA,US-IA-117,Lucas
+US,US-IA,US-IA-119,Lyon
+US,US-IA,US-IA-121,Madison
+US,US-IA,US-IA-123,Mahaska
+US,US-IA,US-IA-125,Marion
+US,US-IA,US-IA-127,Marshall
+US,US-IA,US-IA-129,Mills
+US,US-IA,US-IA-131,Mitchell
+US,US-IA,US-IA-133,Monona
+US,US-IA,US-IA-135,Monroe
+US,US-IA,US-IA-137,Montgomery
+US,US-IA,US-IA-139,Muscatine
+US,US-IA,US-IA-141,O'Brien
+US,US-IA,US-IA-143,Osceola
+US,US-IA,US-IA-145,Page
+US,US-IA,US-IA-147,Palo Alto
+US,US-IA,US-IA-149,Plymouth
+US,US-IA,US-IA-151,Pocahontas
+US,US-IA,US-IA-153,Polk
+US,US-IA,US-IA-155,Pottawattamie
+US,US-IA,US-IA-157,Poweshiek
+US,US-IA,US-IA-159,Ringgold
+US,US-IA,US-IA-161,Sac
+US,US-IA,US-IA-163,Scott
+US,US-IA,US-IA-165,Shelby
+US,US-IA,US-IA-167,Sioux
+US,US-IA,US-IA-169,Story
+US,US-IA,US-IA-171,Tama
+US,US-IA,US-IA-173,Taylor
+US,US-IA,US-IA-175,Union
+US,US-IA,US-IA-177,Van Buren
+US,US-IA,US-IA-179,Wapello
+US,US-IA,US-IA-181,Warren
+US,US-IA,US-IA-183,Washington
+US,US-IA,US-IA-185,Wayne
+US,US-IA,US-IA-187,Webster
+US,US-IA,US-IA-189,Winnebago
+US,US-IA,US-IA-191,Winneshiek
+US,US-IA,US-IA-193,Woodbury
+US,US-IA,US-IA-195,Worth
+US,US-IA,US-IA-197,Wright
+US,US-ID,US-ID-001,Ada
+US,US-ID,US-ID-003,Adams
+US,US-ID,US-ID-005,Bannock
+US,US-ID,US-ID-007,Bear Lake
+US,US-ID,US-ID-009,Benewah
+US,US-ID,US-ID-011,Bingham
+US,US-ID,US-ID-013,Blaine
+US,US-ID,US-ID-015,Boise
+US,US-ID,US-ID-017,Bonner
+US,US-ID,US-ID-019,Bonneville
+US,US-ID,US-ID-021,Boundary
+US,US-ID,US-ID-023,Butte
+US,US-ID,US-ID-025,Camas
+US,US-ID,US-ID-027,Canyon
+US,US-ID,US-ID-029,Caribou
+US,US-ID,US-ID-031,Cassia
+US,US-ID,US-ID-033,Clark
+US,US-ID,US-ID-035,Clearwater
+US,US-ID,US-ID-037,Custer
+US,US-ID,US-ID-039,Elmore
+US,US-ID,US-ID-041,Franklin
+US,US-ID,US-ID-043,Fremont
+US,US-ID,US-ID-045,Gem
+US,US-ID,US-ID-047,Gooding
+US,US-ID,US-ID-049,Idaho
+US,US-ID,US-ID-051,Jefferson
+US,US-ID,US-ID-053,Jerome
+US,US-ID,US-ID-055,Kootenai
+US,US-ID,US-ID-057,Latah
+US,US-ID,US-ID-059,Lemhi
+US,US-ID,US-ID-061,Lewis
+US,US-ID,US-ID-063,Lincoln
+US,US-ID,US-ID-065,Madison
+US,US-ID,US-ID-067,Minidoka
+US,US-ID,US-ID-069,Nez Perce
+US,US-ID,US-ID-071,Oneida
+US,US-ID,US-ID-073,Owyhee
+US,US-ID,US-ID-075,Payette
+US,US-ID,US-ID-077,Power
+US,US-ID,US-ID-079,Shoshone
+US,US-ID,US-ID-081,Teton
+US,US-ID,US-ID-083,Twin Falls
+US,US-ID,US-ID-085,Valley
+US,US-ID,US-ID-087,Washington
+US,US-IL,US-IL-001,Adams
+US,US-IL,US-IL-003,Alexander
+US,US-IL,US-IL-005,Bond
+US,US-IL,US-IL-007,Boone
+US,US-IL,US-IL-009,Brown
+US,US-IL,US-IL-011,Bureau
+US,US-IL,US-IL-013,Calhoun
+US,US-IL,US-IL-015,Carroll
+US,US-IL,US-IL-017,Cass
+US,US-IL,US-IL-019,Champaign
+US,US-IL,US-IL-021,Christian
+US,US-IL,US-IL-023,Clark
+US,US-IL,US-IL-025,Clay
+US,US-IL,US-IL-027,Clinton
+US,US-IL,US-IL-029,Coles
+US,US-IL,US-IL-031,Cook
+US,US-IL,US-IL-033,Crawford
+US,US-IL,US-IL-035,Cumberland
+US,US-IL,US-IL-037,DeKalb
+US,US-IL,US-IL-039,De Witt
+US,US-IL,US-IL-041,Douglas
+US,US-IL,US-IL-043,DuPage
+US,US-IL,US-IL-045,Edgar
+US,US-IL,US-IL-047,Edwards
+US,US-IL,US-IL-049,Effingham
+US,US-IL,US-IL-051,Fayette
+US,US-IL,US-IL-053,Ford
+US,US-IL,US-IL-055,Franklin
+US,US-IL,US-IL-057,Fulton
+US,US-IL,US-IL-059,Gallatin
+US,US-IL,US-IL-061,Greene
+US,US-IL,US-IL-063,Grundy
+US,US-IL,US-IL-065,Hamilton
+US,US-IL,US-IL-067,Hancock
+US,US-IL,US-IL-069,Hardin
+US,US-IL,US-IL-071,Henderson
+US,US-IL,US-IL-073,Henry
+US,US-IL,US-IL-075,Iroquois
+US,US-IL,US-IL-077,Jackson
+US,US-IL,US-IL-079,Jasper
+US,US-IL,US-IL-081,Jefferson
+US,US-IL,US-IL-083,Jersey
+US,US-IL,US-IL-085,Jo Daviess
+US,US-IL,US-IL-087,Johnson
+US,US-IL,US-IL-089,Kane
+US,US-IL,US-IL-091,Kankakee
+US,US-IL,US-IL-093,Kendall
+US,US-IL,US-IL-095,Knox
+US,US-IL,US-IL-097,Lake
+US,US-IL,US-IL-099,La Salle
+US,US-IL,US-IL-101,Lawrence
+US,US-IL,US-IL-103,Lee
+US,US-IL,US-IL-105,Livingston
+US,US-IL,US-IL-107,Logan
+US,US-IL,US-IL-109,McDonough
+US,US-IL,US-IL-111,McHenry
+US,US-IL,US-IL-113,McLean
+US,US-IL,US-IL-115,Macon
+US,US-IL,US-IL-117,Macoupin
+US,US-IL,US-IL-119,Madison
+US,US-IL,US-IL-121,Marion
+US,US-IL,US-IL-123,Marshall
+US,US-IL,US-IL-125,Mason
+US,US-IL,US-IL-127,Massac
+US,US-IL,US-IL-129,Menard
+US,US-IL,US-IL-131,Mercer
+US,US-IL,US-IL-133,Monroe
+US,US-IL,US-IL-135,Montgomery
+US,US-IL,US-IL-137,Morgan
+US,US-IL,US-IL-139,Moultrie
+US,US-IL,US-IL-141,Ogle
+US,US-IL,US-IL-143,Peoria
+US,US-IL,US-IL-145,Perry
+US,US-IL,US-IL-147,Piatt
+US,US-IL,US-IL-149,Pike
+US,US-IL,US-IL-151,Pope
+US,US-IL,US-IL-153,Pulaski
+US,US-IL,US-IL-155,Putnam
+US,US-IL,US-IL-157,Randolph
+US,US-IL,US-IL-159,Richland
+US,US-IL,US-IL-161,Rock Island
+US,US-IL,US-IL-163,St. Clair
+US,US-IL,US-IL-165,Saline
+US,US-IL,US-IL-167,Sangamon
+US,US-IL,US-IL-169,Schuyler
+US,US-IL,US-IL-171,Scott
+US,US-IL,US-IL-173,Shelby
+US,US-IL,US-IL-175,Stark
+US,US-IL,US-IL-177,Stephenson
+US,US-IL,US-IL-179,Tazewell
+US,US-IL,US-IL-181,Union
+US,US-IL,US-IL-183,Vermilion
+US,US-IL,US-IL-185,Wabash
+US,US-IL,US-IL-187,Warren
+US,US-IL,US-IL-189,Washington
+US,US-IL,US-IL-191,Wayne
+US,US-IL,US-IL-193,White
+US,US-IL,US-IL-195,Whiteside
+US,US-IL,US-IL-197,Will
+US,US-IL,US-IL-199,Williamson
+US,US-IL,US-IL-201,Winnebago
+US,US-IL,US-IL-203,Woodford
+US,US-IN,US-IN-001,Adams
+US,US-IN,US-IN-003,Allen
+US,US-IN,US-IN-005,Bartholomew
+US,US-IN,US-IN-007,Benton
+US,US-IN,US-IN-009,Blackford
+US,US-IN,US-IN-011,Boone
+US,US-IN,US-IN-013,Brown
+US,US-IN,US-IN-015,Carroll
+US,US-IN,US-IN-017,Cass
+US,US-IN,US-IN-019,Clark
+US,US-IN,US-IN-021,Clay
+US,US-IN,US-IN-023,Clinton
+US,US-IN,US-IN-025,Crawford
+US,US-IN,US-IN-027,Daviess
+US,US-IN,US-IN-029,Dearborn
+US,US-IN,US-IN-031,Decatur
+US,US-IN,US-IN-033,DeKalb
+US,US-IN,US-IN-035,Delaware
+US,US-IN,US-IN-037,Dubois
+US,US-IN,US-IN-039,Elkhart
+US,US-IN,US-IN-041,Fayette
+US,US-IN,US-IN-043,Floyd
+US,US-IN,US-IN-045,Fountain
+US,US-IN,US-IN-047,Franklin
+US,US-IN,US-IN-049,Fulton
+US,US-IN,US-IN-051,Gibson
+US,US-IN,US-IN-053,Grant
+US,US-IN,US-IN-055,Greene
+US,US-IN,US-IN-057,Hamilton
+US,US-IN,US-IN-059,Hancock
+US,US-IN,US-IN-061,Harrison
+US,US-IN,US-IN-063,Hendricks
+US,US-IN,US-IN-065,Henry
+US,US-IN,US-IN-067,Howard
+US,US-IN,US-IN-069,Huntington
+US,US-IN,US-IN-071,Jackson
+US,US-IN,US-IN-073,Jasper
+US,US-IN,US-IN-075,Jay
+US,US-IN,US-IN-077,Jefferson
+US,US-IN,US-IN-079,Jennings
+US,US-IN,US-IN-081,Johnson
+US,US-IN,US-IN-083,Knox
+US,US-IN,US-IN-085,Kosciusko
+US,US-IN,US-IN-087,LaGrange
+US,US-IN,US-IN-089,Lake
+US,US-IN,US-IN-091,LaPorte
+US,US-IN,US-IN-093,Lawrence
+US,US-IN,US-IN-095,Madison
+US,US-IN,US-IN-097,Marion
+US,US-IN,US-IN-099,Marshall
+US,US-IN,US-IN-101,Martin
+US,US-IN,US-IN-103,Miami
+US,US-IN,US-IN-105,Monroe
+US,US-IN,US-IN-107,Montgomery
+US,US-IN,US-IN-109,Morgan
+US,US-IN,US-IN-111,Newton
+US,US-IN,US-IN-113,Noble
+US,US-IN,US-IN-115,Ohio
+US,US-IN,US-IN-117,Orange
+US,US-IN,US-IN-119,Owen
+US,US-IN,US-IN-121,Parke
+US,US-IN,US-IN-123,Perry
+US,US-IN,US-IN-125,Pike
+US,US-IN,US-IN-127,Porter
+US,US-IN,US-IN-129,Posey
+US,US-IN,US-IN-131,Pulaski
+US,US-IN,US-IN-133,Putnam
+US,US-IN,US-IN-135,Randolph
+US,US-IN,US-IN-137,Ripley
+US,US-IN,US-IN-139,Rush
+US,US-IN,US-IN-141,St. Joseph
+US,US-IN,US-IN-143,Scott
+US,US-IN,US-IN-145,Shelby
+US,US-IN,US-IN-147,Spencer
+US,US-IN,US-IN-149,Starke
+US,US-IN,US-IN-151,Steuben
+US,US-IN,US-IN-153,Sullivan
+US,US-IN,US-IN-155,Switzerland
+US,US-IN,US-IN-157,Tippecanoe
+US,US-IN,US-IN-159,Tipton
+US,US-IN,US-IN-161,Union
+US,US-IN,US-IN-163,Vanderburgh
+US,US-IN,US-IN-165,Vermillion
+US,US-IN,US-IN-167,Vigo
+US,US-IN,US-IN-169,Wabash
+US,US-IN,US-IN-171,Warren
+US,US-IN,US-IN-173,Warrick
+US,US-IN,US-IN-175,Washington
+US,US-IN,US-IN-177,Wayne
+US,US-IN,US-IN-179,Wells
+US,US-IN,US-IN-181,White
+US,US-IN,US-IN-183,Whitley
+US,US-KS,US-KS-001,Allen
+US,US-KS,US-KS-003,Anderson
+US,US-KS,US-KS-005,Atchison
+US,US-KS,US-KS-007,Barber
+US,US-KS,US-KS-009,Barton
+US,US-KS,US-KS-011,Bourbon
+US,US-KS,US-KS-013,Brown
+US,US-KS,US-KS-015,Butler
+US,US-KS,US-KS-017,Chase
+US,US-KS,US-KS-019,Chautauqua
+US,US-KS,US-KS-021,Cherokee
+US,US-KS,US-KS-023,Cheyenne
+US,US-KS,US-KS-025,Clark
+US,US-KS,US-KS-027,Clay
+US,US-KS,US-KS-029,Cloud
+US,US-KS,US-KS-031,Coffey
+US,US-KS,US-KS-033,Comanche
+US,US-KS,US-KS-035,Cowley
+US,US-KS,US-KS-037,Crawford
+US,US-KS,US-KS-039,Decatur
+US,US-KS,US-KS-041,Dickinson
+US,US-KS,US-KS-043,Doniphan
+US,US-KS,US-KS-045,Douglas
+US,US-KS,US-KS-047,Edwards
+US,US-KS,US-KS-049,Elk
+US,US-KS,US-KS-051,Ellis
+US,US-KS,US-KS-053,Ellsworth
+US,US-KS,US-KS-055,Finney
+US,US-KS,US-KS-057,Ford
+US,US-KS,US-KS-059,Franklin
+US,US-KS,US-KS-061,Geary
+US,US-KS,US-KS-063,Gove
+US,US-KS,US-KS-065,Graham
+US,US-KS,US-KS-067,Grant
+US,US-KS,US-KS-069,Gray
+US,US-KS,US-KS-071,Greeley
+US,US-KS,US-KS-073,Greenwood
+US,US-KS,US-KS-075,Hamilton
+US,US-KS,US-KS-077,Harper
+US,US-KS,US-KS-079,Harvey
+US,US-KS,US-KS-081,Haskell
+US,US-KS,US-KS-083,Hodgeman
+US,US-KS,US-KS-085,Jackson
+US,US-KS,US-KS-087,Jefferson
+US,US-KS,US-KS-089,Jewell
+US,US-KS,US-KS-091,Johnson
+US,US-KS,US-KS-093,Kearny
+US,US-KS,US-KS-095,Kingman
+US,US-KS,US-KS-097,Kiowa
+US,US-KS,US-KS-099,Labette
+US,US-KS,US-KS-101,Lane
+US,US-KS,US-KS-103,Leavenworth
+US,US-KS,US-KS-105,Lincoln
+US,US-KS,US-KS-107,Linn
+US,US-KS,US-KS-109,Logan
+US,US-KS,US-KS-111,Lyon
+US,US-KS,US-KS-113,McPherson
+US,US-KS,US-KS-115,Marion
+US,US-KS,US-KS-117,Marshall
+US,US-KS,US-KS-119,Meade
+US,US-KS,US-KS-121,Miami
+US,US-KS,US-KS-123,Mitchell
+US,US-KS,US-KS-125,Montgomery
+US,US-KS,US-KS-127,Morris
+US,US-KS,US-KS-129,Morton
+US,US-KS,US-KS-131,Nemaha
+US,US-KS,US-KS-133,Neosho
+US,US-KS,US-KS-135,Ness
+US,US-KS,US-KS-137,Norton
+US,US-KS,US-KS-139,Osage
+US,US-KS,US-KS-141,Osborne
+US,US-KS,US-KS-143,Ottawa
+US,US-KS,US-KS-145,Pawnee
+US,US-KS,US-KS-147,Phillips
+US,US-KS,US-KS-149,Pottawatomie
+US,US-KS,US-KS-151,Pratt
+US,US-KS,US-KS-153,Rawlins
+US,US-KS,US-KS-155,Reno
+US,US-KS,US-KS-157,Republic
+US,US-KS,US-KS-159,Rice
+US,US-KS,US-KS-161,Riley
+US,US-KS,US-KS-163,Rooks
+US,US-KS,US-KS-165,Rush
+US,US-KS,US-KS-167,Russell
+US,US-KS,US-KS-169,Saline
+US,US-KS,US-KS-171,Scott
+US,US-KS,US-KS-173,Sedgwick
+US,US-KS,US-KS-175,Seward
+US,US-KS,US-KS-177,Shawnee
+US,US-KS,US-KS-179,Sheridan
+US,US-KS,US-KS-181,Sherman
+US,US-KS,US-KS-183,Smith
+US,US-KS,US-KS-185,Stafford
+US,US-KS,US-KS-187,Stanton
+US,US-KS,US-KS-189,Stevens
+US,US-KS,US-KS-191,Sumner
+US,US-KS,US-KS-193,Thomas
+US,US-KS,US-KS-195,Trego
+US,US-KS,US-KS-197,Wabaunsee
+US,US-KS,US-KS-199,Wallace
+US,US-KS,US-KS-201,Washington
+US,US-KS,US-KS-203,Wichita
+US,US-KS,US-KS-205,Wilson
+US,US-KS,US-KS-207,Woodson
+US,US-KS,US-KS-209,Wyandotte
+US,US-KY,US-KY-001,Adair
+US,US-KY,US-KY-003,Allen
+US,US-KY,US-KY-005,Anderson
+US,US-KY,US-KY-007,Ballard
+US,US-KY,US-KY-009,Barren
+US,US-KY,US-KY-011,Bath
+US,US-KY,US-KY-013,Bell
+US,US-KY,US-KY-015,Boone
+US,US-KY,US-KY-017,Bourbon
+US,US-KY,US-KY-019,Boyd
+US,US-KY,US-KY-021,Boyle
+US,US-KY,US-KY-023,Bracken
+US,US-KY,US-KY-025,Breathitt
+US,US-KY,US-KY-027,Breckinridge
+US,US-KY,US-KY-029,Bullitt
+US,US-KY,US-KY-031,Butler
+US,US-KY,US-KY-033,Caldwell
+US,US-KY,US-KY-035,Calloway
+US,US-KY,US-KY-037,Campbell
+US,US-KY,US-KY-039,Carlisle
+US,US-KY,US-KY-041,Carroll
+US,US-KY,US-KY-043,Carter
+US,US-KY,US-KY-045,Casey
+US,US-KY,US-KY-047,Christian
+US,US-KY,US-KY-049,Clark
+US,US-KY,US-KY-051,Clay
+US,US-KY,US-KY-053,Clinton
+US,US-KY,US-KY-055,Crittenden
+US,US-KY,US-KY-057,Cumberland
+US,US-KY,US-KY-059,Daviess
+US,US-KY,US-KY-061,Edmonson
+US,US-KY,US-KY-063,Elliott
+US,US-KY,US-KY-065,Estill
+US,US-KY,US-KY-067,Fayette
+US,US-KY,US-KY-069,Fleming
+US,US-KY,US-KY-071,Floyd
+US,US-KY,US-KY-073,Franklin
+US,US-KY,US-KY-075,Fulton
+US,US-KY,US-KY-077,Gallatin
+US,US-KY,US-KY-079,Garrard
+US,US-KY,US-KY-081,Grant
+US,US-KY,US-KY-083,Graves
+US,US-KY,US-KY-085,Grayson
+US,US-KY,US-KY-087,Green
+US,US-KY,US-KY-089,Greenup
+US,US-KY,US-KY-091,Hancock
+US,US-KY,US-KY-093,Hardin
+US,US-KY,US-KY-095,Harlan
+US,US-KY,US-KY-097,Harrison
+US,US-KY,US-KY-099,Hart
+US,US-KY,US-KY-101,Henderson
+US,US-KY,US-KY-103,Henry
+US,US-KY,US-KY-105,Hickman
+US,US-KY,US-KY-107,Hopkins
+US,US-KY,US-KY-109,Jackson
+US,US-KY,US-KY-111,Jefferson
+US,US-KY,US-KY-113,Jessamine
+US,US-KY,US-KY-115,Johnson
+US,US-KY,US-KY-117,Kenton
+US,US-KY,US-KY-119,Knott
+US,US-KY,US-KY-121,Knox
+US,US-KY,US-KY-123,Larue
+US,US-KY,US-KY-125,Laurel
+US,US-KY,US-KY-127,Lawrence
+US,US-KY,US-KY-129,Lee
+US,US-KY,US-KY-131,Leslie
+US,US-KY,US-KY-133,Letcher
+US,US-KY,US-KY-135,Lewis
+US,US-KY,US-KY-137,Lincoln
+US,US-KY,US-KY-139,Livingston
+US,US-KY,US-KY-141,Logan
+US,US-KY,US-KY-143,Lyon
+US,US-KY,US-KY-145,McCracken
+US,US-KY,US-KY-147,McCreary
+US,US-KY,US-KY-149,McLean
+US,US-KY,US-KY-151,Madison
+US,US-KY,US-KY-153,Magoffin
+US,US-KY,US-KY-155,Marion
+US,US-KY,US-KY-157,Marshall
+US,US-KY,US-KY-159,Martin
+US,US-KY,US-KY-161,Mason
+US,US-KY,US-KY-163,Meade
+US,US-KY,US-KY-165,Menifee
+US,US-KY,US-KY-167,Mercer
+US,US-KY,US-KY-169,Metcalfe
+US,US-KY,US-KY-171,Monroe
+US,US-KY,US-KY-173,Montgomery
+US,US-KY,US-KY-175,Morgan
+US,US-KY,US-KY-177,Muhlenberg
+US,US-KY,US-KY-179,Nelson
+US,US-KY,US-KY-181,Nicholas
+US,US-KY,US-KY-183,Ohio
+US,US-KY,US-KY-185,Oldham
+US,US-KY,US-KY-187,Owen
+US,US-KY,US-KY-189,Owsley
+US,US-KY,US-KY-191,Pendleton
+US,US-KY,US-KY-193,Perry
+US,US-KY,US-KY-195,Pike
+US,US-KY,US-KY-197,Powell
+US,US-KY,US-KY-199,Pulaski
+US,US-KY,US-KY-201,Robertson
+US,US-KY,US-KY-203,Rockcastle
+US,US-KY,US-KY-205,Rowan
+US,US-KY,US-KY-207,Russell
+US,US-KY,US-KY-209,Scott
+US,US-KY,US-KY-211,Shelby
+US,US-KY,US-KY-213,Simpson
+US,US-KY,US-KY-215,Spencer
+US,US-KY,US-KY-217,Taylor
+US,US-KY,US-KY-219,Todd
+US,US-KY,US-KY-221,Trigg
+US,US-KY,US-KY-223,Trimble
+US,US-KY,US-KY-225,Union
+US,US-KY,US-KY-227,Warren
+US,US-KY,US-KY-229,Washington
+US,US-KY,US-KY-231,Wayne
+US,US-KY,US-KY-233,Webster
+US,US-KY,US-KY-235,Whitley
+US,US-KY,US-KY-237,Wolfe
+US,US-KY,US-KY-239,Woodford
+US,US-LA,US-LA-001,Acadia
+US,US-LA,US-LA-003,Allen
+US,US-LA,US-LA-005,Ascension
+US,US-LA,US-LA-007,Assumption
+US,US-LA,US-LA-009,Avoyelles
+US,US-LA,US-LA-011,Beauregard
+US,US-LA,US-LA-013,Bienville
+US,US-LA,US-LA-015,Bossier
+US,US-LA,US-LA-017,Caddo
+US,US-LA,US-LA-019,Calcasieu
+US,US-LA,US-LA-021,Caldwell
+US,US-LA,US-LA-023,Cameron
+US,US-LA,US-LA-025,Catahoula
+US,US-LA,US-LA-027,Claiborne
+US,US-LA,US-LA-029,Concordia
+US,US-LA,US-LA-031,De Soto
+US,US-LA,US-LA-033,East Baton Rouge
+US,US-LA,US-LA-035,East Carroll
+US,US-LA,US-LA-037,East Feliciana
+US,US-LA,US-LA-039,Evangeline
+US,US-LA,US-LA-041,Franklin
+US,US-LA,US-LA-043,Grant
+US,US-LA,US-LA-045,Iberia
+US,US-LA,US-LA-047,Iberville
+US,US-LA,US-LA-049,Jackson
+US,US-LA,US-LA-051,Jefferson
+US,US-LA,US-LA-053,Jefferson Davis
+US,US-LA,US-LA-055,Lafayette
+US,US-LA,US-LA-057,Lafourche
+US,US-LA,US-LA-059,La Salle
+US,US-LA,US-LA-061,Lincoln
+US,US-LA,US-LA-063,Livingston
+US,US-LA,US-LA-065,Madison
+US,US-LA,US-LA-067,Morehouse
+US,US-LA,US-LA-069,Natchitoches
+US,US-LA,US-LA-071,Orleans
+US,US-LA,US-LA-073,Ouachita
+US,US-LA,US-LA-075,Plaquemines
+US,US-LA,US-LA-077,Pointe Coupee
+US,US-LA,US-LA-079,Rapides
+US,US-LA,US-LA-081,Red River
+US,US-LA,US-LA-083,Richland
+US,US-LA,US-LA-085,Sabine
+US,US-LA,US-LA-087,St. Bernard
+US,US-LA,US-LA-089,St. Charles
+US,US-LA,US-LA-091,St. Helena
+US,US-LA,US-LA-093,St. James
+US,US-LA,US-LA-095,St. John the Baptist
+US,US-LA,US-LA-097,St. Landry
+US,US-LA,US-LA-099,St. Martin
+US,US-LA,US-LA-101,St. Mary
+US,US-LA,US-LA-103,St. Tammany
+US,US-LA,US-LA-105,Tangipahoa
+US,US-LA,US-LA-107,Tensas
+US,US-LA,US-LA-109,Terrebonne
+US,US-LA,US-LA-111,Union
+US,US-LA,US-LA-113,Vermilion
+US,US-LA,US-LA-115,Vernon
+US,US-LA,US-LA-117,Washington
+US,US-LA,US-LA-119,Webster
+US,US-LA,US-LA-121,West Baton Rouge
+US,US-LA,US-LA-123,West Carroll
+US,US-LA,US-LA-125,West Feliciana
+US,US-LA,US-LA-127,Winn
+US,US-MA,US-MA-001,Barnstable
+US,US-MA,US-MA-003,Berkshire
+US,US-MA,US-MA-005,Bristol
+US,US-MA,US-MA-007,Dukes
+US,US-MA,US-MA-009,Essex
+US,US-MA,US-MA-011,Franklin
+US,US-MA,US-MA-013,Hampden
+US,US-MA,US-MA-015,Hampshire
+US,US-MA,US-MA-017,Middlesex
+US,US-MA,US-MA-019,Nantucket
+US,US-MA,US-MA-021,Norfolk
+US,US-MA,US-MA-023,Plymouth
+US,US-MA,US-MA-025,Suffolk
+US,US-MA,US-MA-027,Worcester
+US,US-MD,US-MD-001,Allegany
+US,US-MD,US-MD-003,Anne Arundel
+US,US-MD,US-MD-005,Baltimore
+US,US-MD,US-MD-009,Calvert
+US,US-MD,US-MD-011,Caroline
+US,US-MD,US-MD-013,Carroll
+US,US-MD,US-MD-015,Cecil
+US,US-MD,US-MD-017,Charles
+US,US-MD,US-MD-019,Dorchester
+US,US-MD,US-MD-021,Frederick
+US,US-MD,US-MD-023,Garrett
+US,US-MD,US-MD-025,Harford
+US,US-MD,US-MD-027,Howard
+US,US-MD,US-MD-029,Kent
+US,US-MD,US-MD-031,Montgomery
+US,US-MD,US-MD-033,Prince George's
+US,US-MD,US-MD-035,Queen Anne's
+US,US-MD,US-MD-037,St. Mary's
+US,US-MD,US-MD-039,Somerset
+US,US-MD,US-MD-041,Talbot
+US,US-MD,US-MD-043,Washington
+US,US-MD,US-MD-045,Wicomico
+US,US-MD,US-MD-047,Worcester
+US,US-ME,US-ME-001,Androscoggin
+US,US-ME,US-ME-003,Aroostook
+US,US-ME,US-ME-005,Cumberland
+US,US-ME,US-ME-007,Franklin
+US,US-ME,US-ME-009,Hancock
+US,US-ME,US-ME-011,Kennebec
+US,US-ME,US-ME-013,Knox
+US,US-ME,US-ME-015,Lincoln
+US,US-ME,US-ME-017,Oxford
+US,US-ME,US-ME-019,Penobscot
+US,US-ME,US-ME-021,Piscataquis
+US,US-ME,US-ME-023,Sagadahoc
+US,US-ME,US-ME-025,Somerset
+US,US-ME,US-ME-027,Waldo
+US,US-ME,US-ME-029,Washington
+US,US-ME,US-ME-031,York
+US,US-MI,US-MI-001,Alcona
+US,US-MI,US-MI-003,Alger
+US,US-MI,US-MI-005,Allegan
+US,US-MI,US-MI-007,Alpena
+US,US-MI,US-MI-009,Antrim
+US,US-MI,US-MI-011,Arenac
+US,US-MI,US-MI-013,Baraga
+US,US-MI,US-MI-015,Barry
+US,US-MI,US-MI-017,Bay
+US,US-MI,US-MI-019,Benzie
+US,US-MI,US-MI-021,Berrien
+US,US-MI,US-MI-023,Branch
+US,US-MI,US-MI-025,Calhoun
+US,US-MI,US-MI-027,Cass
+US,US-MI,US-MI-029,Charlevoix
+US,US-MI,US-MI-031,Cheboygan
+US,US-MI,US-MI-033,Chippewa
+US,US-MI,US-MI-035,Clare
+US,US-MI,US-MI-037,Clinton
+US,US-MI,US-MI-039,Crawford
+US,US-MI,US-MI-041,Delta
+US,US-MI,US-MI-043,Dickinson
+US,US-MI,US-MI-045,Eaton
+US,US-MI,US-MI-047,Emmet
+US,US-MI,US-MI-049,Genesee
+US,US-MI,US-MI-051,Gladwin
+US,US-MI,US-MI-053,Gogebic
+US,US-MI,US-MI-055,Grand Traverse
+US,US-MI,US-MI-057,Gratiot
+US,US-MI,US-MI-059,Hillsdale
+US,US-MI,US-MI-061,Houghton
+US,US-MI,US-MI-063,Huron
+US,US-MI,US-MI-065,Ingham
+US,US-MI,US-MI-067,Ionia
+US,US-MI,US-MI-069,Iosco
+US,US-MI,US-MI-071,Iron
+US,US-MI,US-MI-073,Isabella
+US,US-MI,US-MI-075,Jackson
+US,US-MI,US-MI-077,Kalamazoo
+US,US-MI,US-MI-079,Kalkaska
+US,US-MI,US-MI-081,Kent
+US,US-MI,US-MI-083,Keweenaw
+US,US-MI,US-MI-085,Lake
+US,US-MI,US-MI-087,Lapeer
+US,US-MI,US-MI-089,Leelanau
+US,US-MI,US-MI-091,Lenawee
+US,US-MI,US-MI-093,Livingston
+US,US-MI,US-MI-095,Luce
+US,US-MI,US-MI-097,Mackinac
+US,US-MI,US-MI-099,Macomb
+US,US-MI,US-MI-101,Manistee
+US,US-MI,US-MI-103,Marquette
+US,US-MI,US-MI-105,Mason
+US,US-MI,US-MI-107,Mecosta
+US,US-MI,US-MI-109,Menominee
+US,US-MI,US-MI-111,Midland
+US,US-MI,US-MI-113,Missaukee
+US,US-MI,US-MI-115,Monroe
+US,US-MI,US-MI-117,Montcalm
+US,US-MI,US-MI-119,Montmorency
+US,US-MI,US-MI-121,Muskegon
+US,US-MI,US-MI-123,Newaygo
+US,US-MI,US-MI-125,Oakland
+US,US-MI,US-MI-127,Oceana
+US,US-MI,US-MI-129,Ogemaw
+US,US-MI,US-MI-131,Ontonagon
+US,US-MI,US-MI-133,Osceola
+US,US-MI,US-MI-135,Oscoda
+US,US-MI,US-MI-137,Otsego
+US,US-MI,US-MI-139,Ottawa
+US,US-MI,US-MI-141,Presque Isle
+US,US-MI,US-MI-143,Roscommon
+US,US-MI,US-MI-145,Saginaw
+US,US-MI,US-MI-147,St. Clair
+US,US-MI,US-MI-149,St. Joseph
+US,US-MI,US-MI-151,Sanilac
+US,US-MI,US-MI-153,Schoolcraft
+US,US-MI,US-MI-155,Shiawassee
+US,US-MI,US-MI-157,Tuscola
+US,US-MI,US-MI-159,Van Buren
+US,US-MI,US-MI-161,Washtenaw
+US,US-MI,US-MI-163,Wayne
+US,US-MI,US-MI-165,Wexford
+US,US-MN,US-MN-001,Aitkin
+US,US-MN,US-MN-003,Anoka
+US,US-MN,US-MN-005,Becker
+US,US-MN,US-MN-007,Beltrami
+US,US-MN,US-MN-009,Benton
+US,US-MN,US-MN-011,Big Stone
+US,US-MN,US-MN-013,Blue Earth
+US,US-MN,US-MN-015,Brown
+US,US-MN,US-MN-017,Carlton
+US,US-MN,US-MN-019,Carver
+US,US-MN,US-MN-021,Cass
+US,US-MN,US-MN-023,Chippewa
+US,US-MN,US-MN-025,Chisago
+US,US-MN,US-MN-027,Clay
+US,US-MN,US-MN-029,Clearwater
+US,US-MN,US-MN-031,Cook
+US,US-MN,US-MN-033,Cottonwood
+US,US-MN,US-MN-035,Crow Wing
+US,US-MN,US-MN-037,Dakota
+US,US-MN,US-MN-039,Dodge
+US,US-MN,US-MN-041,Douglas
+US,US-MN,US-MN-043,Faribault
+US,US-MN,US-MN-045,Fillmore
+US,US-MN,US-MN-047,Freeborn
+US,US-MN,US-MN-049,Goodhue
+US,US-MN,US-MN-051,Grant
+US,US-MN,US-MN-053,Hennepin
+US,US-MN,US-MN-055,Houston
+US,US-MN,US-MN-057,Hubbard
+US,US-MN,US-MN-059,Isanti
+US,US-MN,US-MN-061,Itasca
+US,US-MN,US-MN-063,Jackson
+US,US-MN,US-MN-065,Kanabec
+US,US-MN,US-MN-067,Kandiyohi
+US,US-MN,US-MN-069,Kittson
+US,US-MN,US-MN-071,Koochiching
+US,US-MN,US-MN-073,Lac qui Parle
+US,US-MN,US-MN-075,Lake
+US,US-MN,US-MN-077,Lake of the Woods
+US,US-MN,US-MN-079,Le Sueur
+US,US-MN,US-MN-081,Lincoln
+US,US-MN,US-MN-083,Lyon
+US,US-MN,US-MN-085,McLeod
+US,US-MN,US-MN-087,Mahnomen
+US,US-MN,US-MN-089,Marshall
+US,US-MN,US-MN-091,Martin
+US,US-MN,US-MN-093,Meeker
+US,US-MN,US-MN-095,Mille Lacs
+US,US-MN,US-MN-097,Morrison
+US,US-MN,US-MN-099,Mower
+US,US-MN,US-MN-101,Murray
+US,US-MN,US-MN-103,Nicollet
+US,US-MN,US-MN-105,Nobles
+US,US-MN,US-MN-107,Norman
+US,US-MN,US-MN-109,Olmsted
+US,US-MN,US-MN-111,Otter Tail
+US,US-MN,US-MN-113,Pennington
+US,US-MN,US-MN-115,Pine
+US,US-MN,US-MN-117,Pipestone
+US,US-MN,US-MN-119,Polk
+US,US-MN,US-MN-121,Pope
+US,US-MN,US-MN-123,Ramsey
+US,US-MN,US-MN-125,Red Lake
+US,US-MN,US-MN-127,Redwood
+US,US-MN,US-MN-129,Renville
+US,US-MN,US-MN-131,Rice
+US,US-MN,US-MN-133,Rock
+US,US-MN,US-MN-135,Roseau
+US,US-MN,US-MN-137,St. Louis
+US,US-MN,US-MN-139,Scott
+US,US-MN,US-MN-141,Sherburne
+US,US-MN,US-MN-143,Sibley
+US,US-MN,US-MN-145,Stearns
+US,US-MN,US-MN-147,Steele
+US,US-MN,US-MN-149,Stevens
+US,US-MN,US-MN-151,Swift
+US,US-MN,US-MN-153,Todd
+US,US-MN,US-MN-155,Traverse
+US,US-MN,US-MN-157,Wabasha
+US,US-MN,US-MN-159,Wadena
+US,US-MN,US-MN-161,Waseca
+US,US-MN,US-MN-163,Washington
+US,US-MN,US-MN-165,Watonwan
+US,US-MN,US-MN-167,Wilkin
+US,US-MN,US-MN-169,Winona
+US,US-MN,US-MN-171,Wright
+US,US-MN,US-MN-173,Yellow Medicine
+US,US-MO,US-MO-001,Adair
+US,US-MO,US-MO-003,Andrew
+US,US-MO,US-MO-005,Atchison
+US,US-MO,US-MO-007,Audrain
+US,US-MO,US-MO-009,Barry
+US,US-MO,US-MO-011,Barton
+US,US-MO,US-MO-013,Bates
+US,US-MO,US-MO-015,Benton
+US,US-MO,US-MO-017,Bollinger
+US,US-MO,US-MO-019,Boone
+US,US-MO,US-MO-021,Buchanan
+US,US-MO,US-MO-023,Butler
+US,US-MO,US-MO-025,Caldwell
+US,US-MO,US-MO-027,Callaway
+US,US-MO,US-MO-029,Camden
+US,US-MO,US-MO-031,Cape Girardeau
+US,US-MO,US-MO-033,Carroll
+US,US-MO,US-MO-035,Carter
+US,US-MO,US-MO-037,Cass
+US,US-MO,US-MO-039,Cedar
+US,US-MO,US-MO-041,Chariton
+US,US-MO,US-MO-043,Christian
+US,US-MO,US-MO-045,Clark
+US,US-MO,US-MO-047,Clay
+US,US-MO,US-MO-049,Clinton
+US,US-MO,US-MO-051,Cole
+US,US-MO,US-MO-053,Cooper
+US,US-MO,US-MO-055,Crawford
+US,US-MO,US-MO-057,Dade
+US,US-MO,US-MO-059,Dallas
+US,US-MO,US-MO-061,Daviess
+US,US-MO,US-MO-063,DeKalb
+US,US-MO,US-MO-065,Dent
+US,US-MO,US-MO-067,Douglas
+US,US-MO,US-MO-069,Dunklin
+US,US-MO,US-MO-071,Franklin
+US,US-MO,US-MO-073,Gasconade
+US,US-MO,US-MO-075,Gentry
+US,US-MO,US-MO-077,Greene
+US,US-MO,US-MO-079,Grundy
+US,US-MO,US-MO-081,Harrison
+US,US-MO,US-MO-083,Henry
+US,US-MO,US-MO-085,Hickory
+US,US-MO,US-MO-087,Holt
+US,US-MO,US-MO-089,Howard
+US,US-MO,US-MO-091,Howell
+US,US-MO,US-MO-093,Iron
+US,US-MO,US-MO-095,Jackson
+US,US-MO,US-MO-097,Jasper
+US,US-MO,US-MO-099,Jefferson
+US,US-MO,US-MO-101,Johnson
+US,US-MO,US-MO-103,Knox
+US,US-MO,US-MO-105,Laclede
+US,US-MO,US-MO-107,Lafayette
+US,US-MO,US-MO-109,Lawrence
+US,US-MO,US-MO-111,Lewis
+US,US-MO,US-MO-113,Lincoln
+US,US-MO,US-MO-115,Linn
+US,US-MO,US-MO-117,Livingston
+US,US-MO,US-MO-119,McDonald
+US,US-MO,US-MO-121,Macon
+US,US-MO,US-MO-123,Madison
+US,US-MO,US-MO-125,Maries
+US,US-MO,US-MO-127,Marion
+US,US-MO,US-MO-129,Mercer
+US,US-MO,US-MO-131,Miller
+US,US-MO,US-MO-133,Mississippi
+US,US-MO,US-MO-135,Moniteau
+US,US-MO,US-MO-137,Monroe
+US,US-MO,US-MO-139,Montgomery
+US,US-MO,US-MO-141,Morgan
+US,US-MO,US-MO-143,New Madrid
+US,US-MO,US-MO-145,Newton
+US,US-MO,US-MO-147,Nodaway
+US,US-MO,US-MO-149,Oregon
+US,US-MO,US-MO-151,Osage
+US,US-MO,US-MO-153,Ozark
+US,US-MO,US-MO-155,Pemiscot
+US,US-MO,US-MO-157,Perry
+US,US-MO,US-MO-159,Pettis
+US,US-MO,US-MO-161,Phelps
+US,US-MO,US-MO-163,Pike
+US,US-MO,US-MO-165,Platte
+US,US-MO,US-MO-167,Polk
+US,US-MO,US-MO-169,Pulaski
+US,US-MO,US-MO-171,Putnam
+US,US-MO,US-MO-173,Ralls
+US,US-MO,US-MO-175,Randolph
+US,US-MO,US-MO-177,Ray
+US,US-MO,US-MO-179,Reynolds
+US,US-MO,US-MO-181,Ripley
+US,US-MO,US-MO-183,St. Charles
+US,US-MO,US-MO-185,St. Clair
+US,US-MO,US-MO-186,Ste. Genevieve
+US,US-MO,US-MO-187,St. Francois
+US,US-MO,US-MO-189,St. Louis
+US,US-MO,US-MO-195,Saline
+US,US-MO,US-MO-197,Schuyler
+US,US-MO,US-MO-199,Scotland
+US,US-MO,US-MO-201,Scott
+US,US-MO,US-MO-203,Shannon
+US,US-MO,US-MO-205,Shelby
+US,US-MO,US-MO-207,Stoddard
+US,US-MO,US-MO-209,Stone
+US,US-MO,US-MO-211,Sullivan
+US,US-MO,US-MO-213,Taney
+US,US-MO,US-MO-215,Texas
+US,US-MO,US-MO-217,Vernon
+US,US-MO,US-MO-219,Warren
+US,US-MO,US-MO-221,Washington
+US,US-MO,US-MO-223,Wayne
+US,US-MO,US-MO-225,Webster
+US,US-MO,US-MO-227,Worth
+US,US-MO,US-MO-229,Wright
+US,US-MO,US-MO-510,St. Louis City
+US,US-MS,US-MS-001,Adams
+US,US-MS,US-MS-003,Alcorn
+US,US-MS,US-MS-005,Amite
+US,US-MS,US-MS-007,Attala
+US,US-MS,US-MS-009,Benton
+US,US-MS,US-MS-011,Bolivar
+US,US-MS,US-MS-013,Calhoun
+US,US-MS,US-MS-015,Carroll
+US,US-MS,US-MS-017,Chickasaw
+US,US-MS,US-MS-019,Choctaw
+US,US-MS,US-MS-021,Claiborne
+US,US-MS,US-MS-023,Clarke
+US,US-MS,US-MS-025,Clay
+US,US-MS,US-MS-027,Coahoma
+US,US-MS,US-MS-029,Copiah
+US,US-MS,US-MS-031,Covington
+US,US-MS,US-MS-033,DeSoto
+US,US-MS,US-MS-035,Forrest
+US,US-MS,US-MS-037,Franklin
+US,US-MS,US-MS-039,George
+US,US-MS,US-MS-041,Greene
+US,US-MS,US-MS-043,Grenada
+US,US-MS,US-MS-045,Hancock
+US,US-MS,US-MS-047,Harrison
+US,US-MS,US-MS-049,Hinds
+US,US-MS,US-MS-051,Holmes
+US,US-MS,US-MS-053,Humphreys
+US,US-MS,US-MS-055,Issaquena
+US,US-MS,US-MS-057,Itawamba
+US,US-MS,US-MS-059,Jackson
+US,US-MS,US-MS-061,Jasper
+US,US-MS,US-MS-063,Jefferson
+US,US-MS,US-MS-065,Jefferson Davis
+US,US-MS,US-MS-067,Jones
+US,US-MS,US-MS-069,Kemper
+US,US-MS,US-MS-071,Lafayette
+US,US-MS,US-MS-073,Lamar
+US,US-MS,US-MS-075,Lauderdale
+US,US-MS,US-MS-077,Lawrence
+US,US-MS,US-MS-079,Leake
+US,US-MS,US-MS-081,Lee
+US,US-MS,US-MS-083,Leflore
+US,US-MS,US-MS-085,Lincoln
+US,US-MS,US-MS-087,Lowndes
+US,US-MS,US-MS-089,Madison
+US,US-MS,US-MS-091,Marion
+US,US-MS,US-MS-093,Marshall
+US,US-MS,US-MS-095,Monroe
+US,US-MS,US-MS-097,Montgomery
+US,US-MS,US-MS-099,Neshoba
+US,US-MS,US-MS-101,Newton
+US,US-MS,US-MS-103,Noxubee
+US,US-MS,US-MS-105,Oktibbeha
+US,US-MS,US-MS-107,Panola
+US,US-MS,US-MS-109,Pearl River
+US,US-MS,US-MS-111,Perry
+US,US-MS,US-MS-113,Pike
+US,US-MS,US-MS-115,Pontotoc
+US,US-MS,US-MS-117,Prentiss
+US,US-MS,US-MS-119,Quitman
+US,US-MS,US-MS-121,Rankin
+US,US-MS,US-MS-123,Scott
+US,US-MS,US-MS-125,Sharkey
+US,US-MS,US-MS-127,Simpson
+US,US-MS,US-MS-129,Smith
+US,US-MS,US-MS-131,Stone
+US,US-MS,US-MS-133,Sunflower
+US,US-MS,US-MS-135,Tallahatchie
+US,US-MS,US-MS-137,Tate
+US,US-MS,US-MS-139,Tippah
+US,US-MS,US-MS-141,Tishomingo
+US,US-MS,US-MS-143,Tunica
+US,US-MS,US-MS-145,Union
+US,US-MS,US-MS-147,Walthall
+US,US-MS,US-MS-149,Warren
+US,US-MS,US-MS-151,Washington
+US,US-MS,US-MS-153,Wayne
+US,US-MS,US-MS-155,Webster
+US,US-MS,US-MS-157,Wilkinson
+US,US-MS,US-MS-159,Winston
+US,US-MS,US-MS-161,Yalobusha
+US,US-MS,US-MS-163,Yazoo
+US,US-MT,US-MT-001,Beaverhead
+US,US-MT,US-MT-003,Big Horn
+US,US-MT,US-MT-005,Blaine
+US,US-MT,US-MT-007,Broadwater
+US,US-MT,US-MT-009,Carbon
+US,US-MT,US-MT-011,Carter
+US,US-MT,US-MT-013,Cascade
+US,US-MT,US-MT-015,Chouteau
+US,US-MT,US-MT-017,Custer
+US,US-MT,US-MT-019,Daniels
+US,US-MT,US-MT-021,Dawson
+US,US-MT,US-MT-023,Deer Lodge
+US,US-MT,US-MT-025,Fallon
+US,US-MT,US-MT-027,Fergus
+US,US-MT,US-MT-029,Flathead
+US,US-MT,US-MT-031,Gallatin
+US,US-MT,US-MT-033,Garfield
+US,US-MT,US-MT-035,Glacier
+US,US-MT,US-MT-037,Golden Valley
+US,US-MT,US-MT-039,Granite
+US,US-MT,US-MT-041,Hill
+US,US-MT,US-MT-043,Jefferson
+US,US-MT,US-MT-045,Judith Basin
+US,US-MT,US-MT-047,Lake
+US,US-MT,US-MT-049,Lewis and Clark
+US,US-MT,US-MT-051,Liberty
+US,US-MT,US-MT-053,Lincoln
+US,US-MT,US-MT-055,McCone
+US,US-MT,US-MT-057,Madison
+US,US-MT,US-MT-059,Meagher
+US,US-MT,US-MT-061,Mineral
+US,US-MT,US-MT-063,Missoula
+US,US-MT,US-MT-065,Musselshell
+US,US-MT,US-MT-067,Park
+US,US-MT,US-MT-069,Petroleum
+US,US-MT,US-MT-071,Phillips
+US,US-MT,US-MT-073,Pondera
+US,US-MT,US-MT-075,Powder River
+US,US-MT,US-MT-077,Powell
+US,US-MT,US-MT-079,Prairie
+US,US-MT,US-MT-081,Ravalli
+US,US-MT,US-MT-083,Richland
+US,US-MT,US-MT-085,Roosevelt
+US,US-MT,US-MT-087,Rosebud
+US,US-MT,US-MT-089,Sanders
+US,US-MT,US-MT-091,Sheridan
+US,US-MT,US-MT-093,Silver Bow
+US,US-MT,US-MT-095,Stillwater
+US,US-MT,US-MT-097,Sweet Grass
+US,US-MT,US-MT-099,Teton
+US,US-MT,US-MT-101,Toole
+US,US-MT,US-MT-103,Treasure
+US,US-MT,US-MT-105,Valley
+US,US-MT,US-MT-107,Wheatland
+US,US-MT,US-MT-109,Wibaux
+US,US-MT,US-MT-111,Yellowstone
+US,US-NC,US-NC-001,Alamance
+US,US-NC,US-NC-003,Alexander
+US,US-NC,US-NC-005,Alleghany
+US,US-NC,US-NC-007,Anson
+US,US-NC,US-NC-009,Ashe
+US,US-NC,US-NC-011,Avery
+US,US-NC,US-NC-013,Beaufort
+US,US-NC,US-NC-015,Bertie
+US,US-NC,US-NC-017,Bladen
+US,US-NC,US-NC-019,Brunswick
+US,US-NC,US-NC-021,Buncombe
+US,US-NC,US-NC-023,Burke
+US,US-NC,US-NC-025,Cabarrus
+US,US-NC,US-NC-027,Caldwell
+US,US-NC,US-NC-029,Camden
+US,US-NC,US-NC-031,Carteret
+US,US-NC,US-NC-033,Caswell
+US,US-NC,US-NC-035,Catawba
+US,US-NC,US-NC-037,Chatham
+US,US-NC,US-NC-039,Cherokee
+US,US-NC,US-NC-041,Chowan
+US,US-NC,US-NC-043,Clay
+US,US-NC,US-NC-045,Cleveland
+US,US-NC,US-NC-047,Columbus
+US,US-NC,US-NC-049,Craven
+US,US-NC,US-NC-051,Cumberland
+US,US-NC,US-NC-053,Currituck
+US,US-NC,US-NC-055,Dare
+US,US-NC,US-NC-057,Davidson
+US,US-NC,US-NC-059,Davie
+US,US-NC,US-NC-061,Duplin
+US,US-NC,US-NC-063,Durham
+US,US-NC,US-NC-065,Edgecombe
+US,US-NC,US-NC-067,Forsyth
+US,US-NC,US-NC-069,Franklin
+US,US-NC,US-NC-071,Gaston
+US,US-NC,US-NC-073,Gates
+US,US-NC,US-NC-075,Graham
+US,US-NC,US-NC-077,Granville
+US,US-NC,US-NC-079,Greene
+US,US-NC,US-NC-081,Guilford
+US,US-NC,US-NC-083,Halifax
+US,US-NC,US-NC-085,Harnett
+US,US-NC,US-NC-087,Haywood
+US,US-NC,US-NC-089,Henderson
+US,US-NC,US-NC-091,Hertford
+US,US-NC,US-NC-093,Hoke
+US,US-NC,US-NC-095,Hyde
+US,US-NC,US-NC-097,Iredell
+US,US-NC,US-NC-099,Jackson
+US,US-NC,US-NC-101,Johnston
+US,US-NC,US-NC-103,Jones
+US,US-NC,US-NC-105,Lee
+US,US-NC,US-NC-107,Lenoir
+US,US-NC,US-NC-109,Lincoln
+US,US-NC,US-NC-111,McDowell
+US,US-NC,US-NC-113,Macon
+US,US-NC,US-NC-115,Madison
+US,US-NC,US-NC-117,Martin
+US,US-NC,US-NC-119,Mecklenburg
+US,US-NC,US-NC-121,Mitchell
+US,US-NC,US-NC-123,Montgomery
+US,US-NC,US-NC-125,Moore
+US,US-NC,US-NC-127,Nash
+US,US-NC,US-NC-129,New Hanover
+US,US-NC,US-NC-131,Northampton
+US,US-NC,US-NC-133,Onslow
+US,US-NC,US-NC-135,Orange
+US,US-NC,US-NC-137,Pamlico
+US,US-NC,US-NC-139,Pasquotank
+US,US-NC,US-NC-141,Pender
+US,US-NC,US-NC-143,Perquimans
+US,US-NC,US-NC-145,Person
+US,US-NC,US-NC-147,Pitt
+US,US-NC,US-NC-149,Polk
+US,US-NC,US-NC-151,Randolph
+US,US-NC,US-NC-153,Richmond
+US,US-NC,US-NC-155,Robeson
+US,US-NC,US-NC-157,Rockingham
+US,US-NC,US-NC-159,Rowan
+US,US-NC,US-NC-161,Rutherford
+US,US-NC,US-NC-163,Sampson
+US,US-NC,US-NC-165,Scotland
+US,US-NC,US-NC-167,Stanly
+US,US-NC,US-NC-169,Stokes
+US,US-NC,US-NC-171,Surry
+US,US-NC,US-NC-173,Swain
+US,US-NC,US-NC-175,Transylvania
+US,US-NC,US-NC-177,Tyrrell
+US,US-NC,US-NC-179,Union
+US,US-NC,US-NC-181,Vance
+US,US-NC,US-NC-183,Wake
+US,US-NC,US-NC-185,Warren
+US,US-NC,US-NC-187,Washington
+US,US-NC,US-NC-189,Watauga
+US,US-NC,US-NC-191,Wayne
+US,US-NC,US-NC-193,Wilkes
+US,US-NC,US-NC-195,Wilson
+US,US-NC,US-NC-197,Yadkin
+US,US-NC,US-NC-199,Yancey
+US,US-ND,US-ND-001,Adams
+US,US-ND,US-ND-003,Barnes
+US,US-ND,US-ND-005,Benson
+US,US-ND,US-ND-007,Billings
+US,US-ND,US-ND-009,Bottineau
+US,US-ND,US-ND-011,Bowman
+US,US-ND,US-ND-013,Burke
+US,US-ND,US-ND-015,Burleigh
+US,US-ND,US-ND-017,Cass
+US,US-ND,US-ND-019,Cavalier
+US,US-ND,US-ND-021,Dickey
+US,US-ND,US-ND-023,Divide
+US,US-ND,US-ND-025,Dunn
+US,US-ND,US-ND-027,Eddy
+US,US-ND,US-ND-029,Emmons
+US,US-ND,US-ND-031,Foster
+US,US-ND,US-ND-033,Golden Valley
+US,US-ND,US-ND-035,Grand Forks
+US,US-ND,US-ND-037,Grant
+US,US-ND,US-ND-039,Griggs
+US,US-ND,US-ND-041,Hettinger
+US,US-ND,US-ND-043,Kidder
+US,US-ND,US-ND-045,LaMoure
+US,US-ND,US-ND-047,Logan
+US,US-ND,US-ND-049,McHenry
+US,US-ND,US-ND-051,McIntosh
+US,US-ND,US-ND-053,McKenzie
+US,US-ND,US-ND-055,McLean
+US,US-ND,US-ND-057,Mercer
+US,US-ND,US-ND-059,Morton
+US,US-ND,US-ND-061,Mountrail
+US,US-ND,US-ND-063,Nelson
+US,US-ND,US-ND-065,Oliver
+US,US-ND,US-ND-067,Pembina
+US,US-ND,US-ND-069,Pierce
+US,US-ND,US-ND-071,Ramsey
+US,US-ND,US-ND-073,Ransom
+US,US-ND,US-ND-075,Renville
+US,US-ND,US-ND-077,Richland
+US,US-ND,US-ND-079,Rolette
+US,US-ND,US-ND-081,Sargent
+US,US-ND,US-ND-083,Sheridan
+US,US-ND,US-ND-085,Sioux
+US,US-ND,US-ND-087,Slope
+US,US-ND,US-ND-089,Stark
+US,US-ND,US-ND-091,Steele
+US,US-ND,US-ND-093,Stutsman
+US,US-ND,US-ND-095,Towner
+US,US-ND,US-ND-097,Traill
+US,US-ND,US-ND-099,Walsh
+US,US-ND,US-ND-101,Ward
+US,US-ND,US-ND-103,Wells
+US,US-ND,US-ND-105,Williams
+US,US-NE,US-NE-001,Adams
+US,US-NE,US-NE-003,Antelope
+US,US-NE,US-NE-005,Arthur
+US,US-NE,US-NE-007,Banner
+US,US-NE,US-NE-009,Blaine
+US,US-NE,US-NE-011,Boone
+US,US-NE,US-NE-013,Box Butte
+US,US-NE,US-NE-015,Boyd
+US,US-NE,US-NE-017,Brown
+US,US-NE,US-NE-019,Buffalo
+US,US-NE,US-NE-021,Burt
+US,US-NE,US-NE-023,Butler
+US,US-NE,US-NE-025,Cass
+US,US-NE,US-NE-027,Cedar
+US,US-NE,US-NE-029,Chase
+US,US-NE,US-NE-031,Cherry
+US,US-NE,US-NE-033,Cheyenne
+US,US-NE,US-NE-035,Clay
+US,US-NE,US-NE-037,Colfax
+US,US-NE,US-NE-039,Cuming
+US,US-NE,US-NE-041,Custer
+US,US-NE,US-NE-043,Dakota
+US,US-NE,US-NE-045,Dawes
+US,US-NE,US-NE-047,Dawson
+US,US-NE,US-NE-049,Deuel
+US,US-NE,US-NE-051,Dixon
+US,US-NE,US-NE-053,Dodge
+US,US-NE,US-NE-055,Douglas
+US,US-NE,US-NE-057,Dundy
+US,US-NE,US-NE-059,Fillmore
+US,US-NE,US-NE-061,Franklin
+US,US-NE,US-NE-063,Frontier
+US,US-NE,US-NE-065,Furnas
+US,US-NE,US-NE-067,Gage
+US,US-NE,US-NE-069,Garden
+US,US-NE,US-NE-071,Garfield
+US,US-NE,US-NE-073,Gosper
+US,US-NE,US-NE-075,Grant
+US,US-NE,US-NE-077,Greeley
+US,US-NE,US-NE-079,Hall
+US,US-NE,US-NE-081,Hamilton
+US,US-NE,US-NE-083,Harlan
+US,US-NE,US-NE-085,Hayes
+US,US-NE,US-NE-087,Hitchcock
+US,US-NE,US-NE-089,Holt
+US,US-NE,US-NE-091,Hooker
+US,US-NE,US-NE-093,Howard
+US,US-NE,US-NE-095,Jefferson
+US,US-NE,US-NE-097,Johnson
+US,US-NE,US-NE-099,Kearney
+US,US-NE,US-NE-101,Keith
+US,US-NE,US-NE-103,Keya Paha
+US,US-NE,US-NE-105,Kimball
+US,US-NE,US-NE-107,Knox
+US,US-NE,US-NE-109,Lancaster
+US,US-NE,US-NE-111,Lincoln
+US,US-NE,US-NE-113,Logan
+US,US-NE,US-NE-115,Loup
+US,US-NE,US-NE-117,McPherson
+US,US-NE,US-NE-119,Madison
+US,US-NE,US-NE-121,Merrick
+US,US-NE,US-NE-123,Morrill
+US,US-NE,US-NE-125,Nance
+US,US-NE,US-NE-127,Nemaha
+US,US-NE,US-NE-129,Nuckolls
+US,US-NE,US-NE-131,Otoe
+US,US-NE,US-NE-133,Pawnee
+US,US-NE,US-NE-135,Perkins
+US,US-NE,US-NE-137,Phelps
+US,US-NE,US-NE-139,Pierce
+US,US-NE,US-NE-141,Platte
+US,US-NE,US-NE-143,Polk
+US,US-NE,US-NE-145,Red Willow
+US,US-NE,US-NE-147,Richardson
+US,US-NE,US-NE-149,Rock
+US,US-NE,US-NE-151,Saline
+US,US-NE,US-NE-153,Sarpy
+US,US-NE,US-NE-155,Saunders
+US,US-NE,US-NE-157,Scotts Bluff
+US,US-NE,US-NE-159,Seward
+US,US-NE,US-NE-161,Sheridan
+US,US-NE,US-NE-163,Sherman
+US,US-NE,US-NE-165,Sioux
+US,US-NE,US-NE-167,Stanton
+US,US-NE,US-NE-169,Thayer
+US,US-NE,US-NE-171,Thomas
+US,US-NE,US-NE-173,Thurston
+US,US-NE,US-NE-175,Valley
+US,US-NE,US-NE-177,Washington
+US,US-NE,US-NE-179,Wayne
+US,US-NE,US-NE-181,Webster
+US,US-NE,US-NE-183,Wheeler
+US,US-NE,US-NE-185,York
+US,US-NH,US-NH-001,Belknap
+US,US-NH,US-NH-003,Carroll
+US,US-NH,US-NH-005,Cheshire
+US,US-NH,US-NH-007,Coos
+US,US-NH,US-NH-009,Grafton
+US,US-NH,US-NH-011,Hillsborough
+US,US-NH,US-NH-013,Merrimack
+US,US-NH,US-NH-015,Rockingham
+US,US-NH,US-NH-017,Strafford
+US,US-NH,US-NH-019,Sullivan
+US,US-NJ,US-NJ-001,Atlantic
+US,US-NJ,US-NJ-003,Bergen
+US,US-NJ,US-NJ-005,Burlington
+US,US-NJ,US-NJ-007,Camden
+US,US-NJ,US-NJ-009,Cape May
+US,US-NJ,US-NJ-011,Cumberland
+US,US-NJ,US-NJ-013,Essex
+US,US-NJ,US-NJ-015,Gloucester
+US,US-NJ,US-NJ-017,Hudson
+US,US-NJ,US-NJ-019,Hunterdon
+US,US-NJ,US-NJ-021,Mercer
+US,US-NJ,US-NJ-023,Middlesex
+US,US-NJ,US-NJ-025,Monmouth
+US,US-NJ,US-NJ-027,Morris
+US,US-NJ,US-NJ-029,Ocean
+US,US-NJ,US-NJ-031,Passaic
+US,US-NJ,US-NJ-033,Salem
+US,US-NJ,US-NJ-035,Somerset
+US,US-NJ,US-NJ-037,Sussex
+US,US-NJ,US-NJ-039,Union
+US,US-NJ,US-NJ-041,Warren
+US,US-NM,US-NM-001,Bernalillo
+US,US-NM,US-NM-003,Catron
+US,US-NM,US-NM-005,Chaves
+US,US-NM,US-NM-006,Cibola
+US,US-NM,US-NM-007,Colfax
+US,US-NM,US-NM-009,Curry
+US,US-NM,US-NM-011,De Baca
+US,US-NM,US-NM-013,Dona Ana
+US,US-NM,US-NM-015,Eddy
+US,US-NM,US-NM-017,Grant
+US,US-NM,US-NM-019,Guadalupe
+US,US-NM,US-NM-021,Harding
+US,US-NM,US-NM-023,Hidalgo
+US,US-NM,US-NM-025,Lea
+US,US-NM,US-NM-027,Lincoln
+US,US-NM,US-NM-028,Los Alamos
+US,US-NM,US-NM-029,Luna
+US,US-NM,US-NM-031,McKinley
+US,US-NM,US-NM-033,Mora
+US,US-NM,US-NM-035,Otero
+US,US-NM,US-NM-037,Quay
+US,US-NM,US-NM-039,Rio Arriba
+US,US-NM,US-NM-041,Roosevelt
+US,US-NM,US-NM-043,Sandoval
+US,US-NM,US-NM-045,San Juan
+US,US-NM,US-NM-047,San Miguel
+US,US-NM,US-NM-049,Santa Fe
+US,US-NM,US-NM-051,Sierra
+US,US-NM,US-NM-053,Socorro
+US,US-NM,US-NM-055,Taos
+US,US-NM,US-NM-057,Torrance
+US,US-NM,US-NM-059,Union
+US,US-NM,US-NM-061,Valencia
+US,US-NV,US-NV-001,Churchill
+US,US-NV,US-NV-003,Clark
+US,US-NV,US-NV-005,Douglas
+US,US-NV,US-NV-007,Elko
+US,US-NV,US-NV-009,Esmeralda
+US,US-NV,US-NV-011,Eureka
+US,US-NV,US-NV-013,Humboldt
+US,US-NV,US-NV-015,Lander
+US,US-NV,US-NV-017,Lincoln
+US,US-NV,US-NV-019,Lyon
+US,US-NV,US-NV-021,Mineral
+US,US-NV,US-NV-023,Nye
+US,US-NV,US-NV-027,Pershing
+US,US-NV,US-NV-029,Storey
+US,US-NV,US-NV-031,Washoe
+US,US-NV,US-NV-033,White Pine
+US,US-NV,US-NV-510,Carson City
+US,US-NY,US-NY-001,Albany
+US,US-NY,US-NY-003,Allegany
+US,US-NY,US-NY-005,Bronx
+US,US-NY,US-NY-007,Broome
+US,US-NY,US-NY-009,Cattaraugus
+US,US-NY,US-NY-011,Cayuga
+US,US-NY,US-NY-013,Chautauqua
+US,US-NY,US-NY-015,Chemung
+US,US-NY,US-NY-017,Chenango
+US,US-NY,US-NY-019,Clinton
+US,US-NY,US-NY-021,Columbia
+US,US-NY,US-NY-023,Cortland
+US,US-NY,US-NY-025,Delaware
+US,US-NY,US-NY-027,Dutchess
+US,US-NY,US-NY-029,Erie
+US,US-NY,US-NY-031,Essex
+US,US-NY,US-NY-033,Franklin
+US,US-NY,US-NY-035,Fulton
+US,US-NY,US-NY-037,Genesee
+US,US-NY,US-NY-039,Greene
+US,US-NY,US-NY-041,Hamilton
+US,US-NY,US-NY-043,Herkimer
+US,US-NY,US-NY-045,Jefferson
+US,US-NY,US-NY-047,Kings
+US,US-NY,US-NY-049,Lewis
+US,US-NY,US-NY-051,Livingston
+US,US-NY,US-NY-053,Madison
+US,US-NY,US-NY-055,Monroe
+US,US-NY,US-NY-057,Montgomery
+US,US-NY,US-NY-059,Nassau
+US,US-NY,US-NY-061,New York
+US,US-NY,US-NY-063,Niagara
+US,US-NY,US-NY-065,Oneida
+US,US-NY,US-NY-067,Onondaga
+US,US-NY,US-NY-069,Ontario
+US,US-NY,US-NY-071,Orange
+US,US-NY,US-NY-073,Orleans
+US,US-NY,US-NY-075,Oswego
+US,US-NY,US-NY-077,Otsego
+US,US-NY,US-NY-079,Putnam
+US,US-NY,US-NY-081,Queens
+US,US-NY,US-NY-083,Rensselaer
+US,US-NY,US-NY-085,Richmond
+US,US-NY,US-NY-087,Rockland
+US,US-NY,US-NY-089,St. Lawrence
+US,US-NY,US-NY-091,Saratoga
+US,US-NY,US-NY-093,Schenectady
+US,US-NY,US-NY-095,Schoharie
+US,US-NY,US-NY-097,Schuyler
+US,US-NY,US-NY-099,Seneca
+US,US-NY,US-NY-101,Steuben
+US,US-NY,US-NY-103,Suffolk
+US,US-NY,US-NY-105,Sullivan
+US,US-NY,US-NY-107,Tioga
+US,US-NY,US-NY-109,Tompkins
+US,US-NY,US-NY-111,Ulster
+US,US-NY,US-NY-113,Warren
+US,US-NY,US-NY-115,Washington
+US,US-NY,US-NY-117,Wayne
+US,US-NY,US-NY-119,Westchester
+US,US-NY,US-NY-121,Wyoming
+US,US-NY,US-NY-123,Yates
+US,US-OH,US-OH-001,Adams
+US,US-OH,US-OH-003,Allen
+US,US-OH,US-OH-005,Ashland
+US,US-OH,US-OH-007,Ashtabula
+US,US-OH,US-OH-009,Athens
+US,US-OH,US-OH-011,Auglaize
+US,US-OH,US-OH-013,Belmont
+US,US-OH,US-OH-015,Brown
+US,US-OH,US-OH-017,Butler
+US,US-OH,US-OH-019,Carroll
+US,US-OH,US-OH-021,Champaign
+US,US-OH,US-OH-023,Clark
+US,US-OH,US-OH-025,Clermont
+US,US-OH,US-OH-027,Clinton
+US,US-OH,US-OH-029,Columbiana
+US,US-OH,US-OH-031,Coshocton
+US,US-OH,US-OH-033,Crawford
+US,US-OH,US-OH-035,Cuyahoga
+US,US-OH,US-OH-037,Darke
+US,US-OH,US-OH-039,Defiance
+US,US-OH,US-OH-041,Delaware
+US,US-OH,US-OH-043,Erie
+US,US-OH,US-OH-045,Fairfield
+US,US-OH,US-OH-047,Fayette
+US,US-OH,US-OH-049,Franklin
+US,US-OH,US-OH-051,Fulton
+US,US-OH,US-OH-053,Gallia
+US,US-OH,US-OH-055,Geauga
+US,US-OH,US-OH-057,Greene
+US,US-OH,US-OH-059,Guernsey
+US,US-OH,US-OH-061,Hamilton
+US,US-OH,US-OH-063,Hancock
+US,US-OH,US-OH-065,Hardin
+US,US-OH,US-OH-067,Harrison
+US,US-OH,US-OH-069,Henry
+US,US-OH,US-OH-071,Highland
+US,US-OH,US-OH-073,Hocking
+US,US-OH,US-OH-075,Holmes
+US,US-OH,US-OH-077,Huron
+US,US-OH,US-OH-079,Jackson
+US,US-OH,US-OH-081,Jefferson
+US,US-OH,US-OH-083,Knox
+US,US-OH,US-OH-085,Lake
+US,US-OH,US-OH-087,Lawrence
+US,US-OH,US-OH-089,Licking
+US,US-OH,US-OH-091,Logan
+US,US-OH,US-OH-093,Lorain
+US,US-OH,US-OH-095,Lucas
+US,US-OH,US-OH-097,Madison
+US,US-OH,US-OH-099,Mahoning
+US,US-OH,US-OH-101,Marion
+US,US-OH,US-OH-103,Medina
+US,US-OH,US-OH-105,Meigs
+US,US-OH,US-OH-107,Mercer
+US,US-OH,US-OH-109,Miami
+US,US-OH,US-OH-111,Monroe
+US,US-OH,US-OH-113,Montgomery
+US,US-OH,US-OH-115,Morgan
+US,US-OH,US-OH-117,Morrow
+US,US-OH,US-OH-119,Muskingum
+US,US-OH,US-OH-121,Noble
+US,US-OH,US-OH-123,Ottawa
+US,US-OH,US-OH-125,Paulding
+US,US-OH,US-OH-127,Perry
+US,US-OH,US-OH-129,Pickaway
+US,US-OH,US-OH-131,Pike
+US,US-OH,US-OH-133,Portage
+US,US-OH,US-OH-135,Preble
+US,US-OH,US-OH-137,Putnam
+US,US-OH,US-OH-139,Richland
+US,US-OH,US-OH-141,Ross
+US,US-OH,US-OH-143,Sandusky
+US,US-OH,US-OH-145,Scioto
+US,US-OH,US-OH-147,Seneca
+US,US-OH,US-OH-149,Shelby
+US,US-OH,US-OH-151,Stark
+US,US-OH,US-OH-153,Summit
+US,US-OH,US-OH-155,Trumbull
+US,US-OH,US-OH-157,Tuscarawas
+US,US-OH,US-OH-159,Union
+US,US-OH,US-OH-161,Van Wert
+US,US-OH,US-OH-163,Vinton
+US,US-OH,US-OH-165,Warren
+US,US-OH,US-OH-167,Washington
+US,US-OH,US-OH-169,Wayne
+US,US-OH,US-OH-171,Williams
+US,US-OH,US-OH-173,Wood
+US,US-OH,US-OH-175,Wyandot
+US,US-OK,US-OK-001,Adair
+US,US-OK,US-OK-003,Alfalfa
+US,US-OK,US-OK-005,Atoka
+US,US-OK,US-OK-007,Beaver
+US,US-OK,US-OK-009,Beckham
+US,US-OK,US-OK-011,Blaine
+US,US-OK,US-OK-013,Bryan
+US,US-OK,US-OK-015,Caddo
+US,US-OK,US-OK-017,Canadian
+US,US-OK,US-OK-019,Carter
+US,US-OK,US-OK-021,Cherokee
+US,US-OK,US-OK-023,Choctaw
+US,US-OK,US-OK-025,Cimarron
+US,US-OK,US-OK-027,Cleveland
+US,US-OK,US-OK-029,Coal
+US,US-OK,US-OK-031,Comanche
+US,US-OK,US-OK-033,Cotton
+US,US-OK,US-OK-035,Craig
+US,US-OK,US-OK-037,Creek
+US,US-OK,US-OK-039,Custer
+US,US-OK,US-OK-041,Delaware
+US,US-OK,US-OK-043,Dewey
+US,US-OK,US-OK-045,Ellis
+US,US-OK,US-OK-047,Garfield
+US,US-OK,US-OK-049,Garvin
+US,US-OK,US-OK-051,Grady
+US,US-OK,US-OK-053,Grant
+US,US-OK,US-OK-055,Greer
+US,US-OK,US-OK-057,Harmon
+US,US-OK,US-OK-059,Harper
+US,US-OK,US-OK-061,Haskell
+US,US-OK,US-OK-063,Hughes
+US,US-OK,US-OK-065,Jackson
+US,US-OK,US-OK-067,Jefferson
+US,US-OK,US-OK-069,Johnston
+US,US-OK,US-OK-071,Kay
+US,US-OK,US-OK-073,Kingfisher
+US,US-OK,US-OK-075,Kiowa
+US,US-OK,US-OK-077,Latimer
+US,US-OK,US-OK-079,Le Flore
+US,US-OK,US-OK-081,Lincoln
+US,US-OK,US-OK-083,Logan
+US,US-OK,US-OK-085,Love
+US,US-OK,US-OK-087,McClain
+US,US-OK,US-OK-089,McCurtain
+US,US-OK,US-OK-091,McIntosh
+US,US-OK,US-OK-093,Major
+US,US-OK,US-OK-095,Marshall
+US,US-OK,US-OK-097,Mayes
+US,US-OK,US-OK-099,Murray
+US,US-OK,US-OK-101,Muskogee
+US,US-OK,US-OK-103,Noble
+US,US-OK,US-OK-105,Nowata
+US,US-OK,US-OK-107,Okfuskee
+US,US-OK,US-OK-109,Oklahoma
+US,US-OK,US-OK-111,Okmulgee
+US,US-OK,US-OK-113,Osage
+US,US-OK,US-OK-115,Ottawa
+US,US-OK,US-OK-117,Pawnee
+US,US-OK,US-OK-119,Payne
+US,US-OK,US-OK-121,Pittsburg
+US,US-OK,US-OK-123,Pontotoc
+US,US-OK,US-OK-125,Pottawatomie
+US,US-OK,US-OK-127,Pushmataha
+US,US-OK,US-OK-129,Roger Mills
+US,US-OK,US-OK-131,Rogers
+US,US-OK,US-OK-133,Seminole
+US,US-OK,US-OK-135,Sequoyah
+US,US-OK,US-OK-137,Stephens
+US,US-OK,US-OK-139,Texas
+US,US-OK,US-OK-141,Tillman
+US,US-OK,US-OK-143,Tulsa
+US,US-OK,US-OK-145,Wagoner
+US,US-OK,US-OK-147,Washington
+US,US-OK,US-OK-149,Washita
+US,US-OK,US-OK-151,Woods
+US,US-OK,US-OK-153,Woodward
+US,US-OR,US-OR-001,Baker
+US,US-OR,US-OR-003,Benton
+US,US-OR,US-OR-005,Clackamas
+US,US-OR,US-OR-007,Clatsop
+US,US-OR,US-OR-009,Columbia
+US,US-OR,US-OR-011,Coos
+US,US-OR,US-OR-013,Crook
+US,US-OR,US-OR-015,Curry
+US,US-OR,US-OR-017,Deschutes
+US,US-OR,US-OR-019,Douglas
+US,US-OR,US-OR-021,Gilliam
+US,US-OR,US-OR-023,Grant
+US,US-OR,US-OR-025,Harney
+US,US-OR,US-OR-027,Hood River
+US,US-OR,US-OR-029,Jackson
+US,US-OR,US-OR-031,Jefferson
+US,US-OR,US-OR-033,Josephine
+US,US-OR,US-OR-035,Klamath
+US,US-OR,US-OR-037,Lake
+US,US-OR,US-OR-039,Lane
+US,US-OR,US-OR-041,Lincoln
+US,US-OR,US-OR-043,Linn
+US,US-OR,US-OR-045,Malheur
+US,US-OR,US-OR-047,Marion
+US,US-OR,US-OR-049,Morrow
+US,US-OR,US-OR-051,Multnomah
+US,US-OR,US-OR-053,Polk
+US,US-OR,US-OR-055,Sherman
+US,US-OR,US-OR-057,Tillamook
+US,US-OR,US-OR-059,Umatilla
+US,US-OR,US-OR-061,Union
+US,US-OR,US-OR-063,Wallowa
+US,US-OR,US-OR-065,Wasco
+US,US-OR,US-OR-067,Washington
+US,US-OR,US-OR-069,Wheeler
+US,US-OR,US-OR-071,Yamhill
+US,US-PA,US-PA-001,Adams
+US,US-PA,US-PA-003,Allegheny
+US,US-PA,US-PA-005,Armstrong
+US,US-PA,US-PA-007,Beaver
+US,US-PA,US-PA-009,Bedford
+US,US-PA,US-PA-011,Berks
+US,US-PA,US-PA-013,Blair
+US,US-PA,US-PA-015,Bradford
+US,US-PA,US-PA-017,Bucks
+US,US-PA,US-PA-019,Butler
+US,US-PA,US-PA-021,Cambria
+US,US-PA,US-PA-023,Cameron
+US,US-PA,US-PA-025,Carbon
+US,US-PA,US-PA-027,Centre
+US,US-PA,US-PA-029,Chester
+US,US-PA,US-PA-031,Clarion
+US,US-PA,US-PA-033,Clearfield
+US,US-PA,US-PA-035,Clinton
+US,US-PA,US-PA-037,Columbia
+US,US-PA,US-PA-039,Crawford
+US,US-PA,US-PA-041,Cumberland
+US,US-PA,US-PA-043,Dauphin
+US,US-PA,US-PA-045,Delaware
+US,US-PA,US-PA-047,Elk
+US,US-PA,US-PA-049,Erie
+US,US-PA,US-PA-051,Fayette
+US,US-PA,US-PA-053,Forest
+US,US-PA,US-PA-055,Franklin
+US,US-PA,US-PA-057,Fulton
+US,US-PA,US-PA-059,Greene
+US,US-PA,US-PA-061,Huntingdon
+US,US-PA,US-PA-063,Indiana
+US,US-PA,US-PA-065,Jefferson
+US,US-PA,US-PA-067,Juniata
+US,US-PA,US-PA-069,Lackawanna
+US,US-PA,US-PA-071,Lancaster
+US,US-PA,US-PA-073,Lawrence
+US,US-PA,US-PA-075,Lebanon
+US,US-PA,US-PA-077,Lehigh
+US,US-PA,US-PA-079,Luzerne
+US,US-PA,US-PA-081,Lycoming
+US,US-PA,US-PA-083,McKean
+US,US-PA,US-PA-085,Mercer
+US,US-PA,US-PA-087,Mifflin
+US,US-PA,US-PA-089,Monroe
+US,US-PA,US-PA-091,Montgomery
+US,US-PA,US-PA-093,Montour
+US,US-PA,US-PA-095,Northampton
+US,US-PA,US-PA-097,Northumberland
+US,US-PA,US-PA-099,Perry
+US,US-PA,US-PA-101,Philadelphia
+US,US-PA,US-PA-103,Pike
+US,US-PA,US-PA-105,Potter
+US,US-PA,US-PA-107,Schuylkill
+US,US-PA,US-PA-109,Snyder
+US,US-PA,US-PA-111,Somerset
+US,US-PA,US-PA-113,Sullivan
+US,US-PA,US-PA-115,Susquehanna
+US,US-PA,US-PA-117,Tioga
+US,US-PA,US-PA-119,Union
+US,US-PA,US-PA-121,Venango
+US,US-PA,US-PA-123,Warren
+US,US-PA,US-PA-125,Washington
+US,US-PA,US-PA-127,Wayne
+US,US-PA,US-PA-129,Westmoreland
+US,US-PA,US-PA-131,Wyoming
+US,US-PA,US-PA-133,York
+US,US-RI,US-RI-001,Bristol
+US,US-RI,US-RI-003,Kent
+US,US-RI,US-RI-005,Newport
+US,US-RI,US-RI-007,Providence
+US,US-RI,US-RI-009,Washington
+US,US-SC,US-SC-001,Abbeville
+US,US-SC,US-SC-003,Aiken
+US,US-SC,US-SC-005,Allendale
+US,US-SC,US-SC-007,Anderson
+US,US-SC,US-SC-009,Bamberg
+US,US-SC,US-SC-011,Barnwell
+US,US-SC,US-SC-013,Beaufort
+US,US-SC,US-SC-015,Berkeley
+US,US-SC,US-SC-017,Calhoun
+US,US-SC,US-SC-019,Charleston
+US,US-SC,US-SC-021,Cherokee
+US,US-SC,US-SC-023,Chester
+US,US-SC,US-SC-025,Chesterfield
+US,US-SC,US-SC-027,Clarendon
+US,US-SC,US-SC-029,Colleton
+US,US-SC,US-SC-031,Darlington
+US,US-SC,US-SC-033,Dillon
+US,US-SC,US-SC-035,Dorchester
+US,US-SC,US-SC-037,Edgefield
+US,US-SC,US-SC-039,Fairfield
+US,US-SC,US-SC-041,Florence
+US,US-SC,US-SC-043,Georgetown
+US,US-SC,US-SC-045,Greenville
+US,US-SC,US-SC-047,Greenwood
+US,US-SC,US-SC-049,Hampton
+US,US-SC,US-SC-051,Horry
+US,US-SC,US-SC-053,Jasper
+US,US-SC,US-SC-055,Kershaw
+US,US-SC,US-SC-057,Lancaster
+US,US-SC,US-SC-059,Laurens
+US,US-SC,US-SC-061,Lee
+US,US-SC,US-SC-063,Lexington
+US,US-SC,US-SC-065,McCormick
+US,US-SC,US-SC-067,Marion
+US,US-SC,US-SC-069,Marlboro
+US,US-SC,US-SC-071,Newberry
+US,US-SC,US-SC-073,Oconee
+US,US-SC,US-SC-075,Orangeburg
+US,US-SC,US-SC-077,Pickens
+US,US-SC,US-SC-079,Richland
+US,US-SC,US-SC-081,Saluda
+US,US-SC,US-SC-083,Spartanburg
+US,US-SC,US-SC-085,Sumter
+US,US-SC,US-SC-087,Union
+US,US-SC,US-SC-089,Williamsburg
+US,US-SC,US-SC-091,York
+US,US-SD,US-SD-003,Aurora
+US,US-SD,US-SD-005,Beadle
+US,US-SD,US-SD-007,Bennett
+US,US-SD,US-SD-009,Bon Homme
+US,US-SD,US-SD-011,Brookings
+US,US-SD,US-SD-013,Brown
+US,US-SD,US-SD-015,Brule
+US,US-SD,US-SD-017,Buffalo
+US,US-SD,US-SD-019,Butte
+US,US-SD,US-SD-021,Campbell
+US,US-SD,US-SD-023,Charles Mix
+US,US-SD,US-SD-025,Clark
+US,US-SD,US-SD-027,Clay
+US,US-SD,US-SD-029,Codington
+US,US-SD,US-SD-031,Corson
+US,US-SD,US-SD-033,Custer
+US,US-SD,US-SD-035,Davison
+US,US-SD,US-SD-037,Day
+US,US-SD,US-SD-039,Deuel
+US,US-SD,US-SD-041,Dewey
+US,US-SD,US-SD-043,Douglas
+US,US-SD,US-SD-045,Edmunds
+US,US-SD,US-SD-047,Fall River
+US,US-SD,US-SD-049,Faulk
+US,US-SD,US-SD-051,Grant
+US,US-SD,US-SD-053,Gregory
+US,US-SD,US-SD-055,Haakon
+US,US-SD,US-SD-057,Hamlin
+US,US-SD,US-SD-059,Hand
+US,US-SD,US-SD-061,Hanson
+US,US-SD,US-SD-063,Harding
+US,US-SD,US-SD-065,Hughes
+US,US-SD,US-SD-067,Hutchinson
+US,US-SD,US-SD-069,Hyde
+US,US-SD,US-SD-071,Jackson
+US,US-SD,US-SD-073,Jerauld
+US,US-SD,US-SD-075,Jones
+US,US-SD,US-SD-077,Kingsbury
+US,US-SD,US-SD-079,Lake
+US,US-SD,US-SD-081,Lawrence
+US,US-SD,US-SD-083,Lincoln
+US,US-SD,US-SD-085,Lyman
+US,US-SD,US-SD-087,McCook
+US,US-SD,US-SD-089,McPherson
+US,US-SD,US-SD-091,Marshall
+US,US-SD,US-SD-093,Meade
+US,US-SD,US-SD-095,Mellette
+US,US-SD,US-SD-097,Miner
+US,US-SD,US-SD-099,Minnehaha
+US,US-SD,US-SD-101,Moody
+US,US-SD,US-SD-103,Pennington
+US,US-SD,US-SD-105,Perkins
+US,US-SD,US-SD-107,Potter
+US,US-SD,US-SD-109,Roberts
+US,US-SD,US-SD-111,Sanborn
+US,US-SD,US-SD-113,Shannon
+US,US-SD,US-SD-115,Spink
+US,US-SD,US-SD-117,Stanley
+US,US-SD,US-SD-119,Sully
+US,US-SD,US-SD-121,Todd
+US,US-SD,US-SD-123,Tripp
+US,US-SD,US-SD-125,Turner
+US,US-SD,US-SD-127,Union
+US,US-SD,US-SD-129,Walworth
+US,US-SD,US-SD-135,Yankton
+US,US-SD,US-SD-137,Ziebach
+US,US-TN,US-TN-001,Anderson
+US,US-TN,US-TN-003,Bedford
+US,US-TN,US-TN-005,Benton
+US,US-TN,US-TN-007,Bledsoe
+US,US-TN,US-TN-009,Blount
+US,US-TN,US-TN-011,Bradley
+US,US-TN,US-TN-013,Campbell
+US,US-TN,US-TN-015,Cannon
+US,US-TN,US-TN-017,Carroll
+US,US-TN,US-TN-019,Carter
+US,US-TN,US-TN-021,Cheatham
+US,US-TN,US-TN-023,Chester
+US,US-TN,US-TN-025,Claiborne
+US,US-TN,US-TN-027,Clay
+US,US-TN,US-TN-029,Cocke
+US,US-TN,US-TN-031,Coffee
+US,US-TN,US-TN-033,Crockett
+US,US-TN,US-TN-035,Cumberland
+US,US-TN,US-TN-037,Davidson
+US,US-TN,US-TN-039,Decatur
+US,US-TN,US-TN-041,DeKalb
+US,US-TN,US-TN-043,Dickson
+US,US-TN,US-TN-045,Dyer
+US,US-TN,US-TN-047,Fayette
+US,US-TN,US-TN-049,Fentress
+US,US-TN,US-TN-051,Franklin
+US,US-TN,US-TN-053,Gibson
+US,US-TN,US-TN-055,Giles
+US,US-TN,US-TN-057,Grainger
+US,US-TN,US-TN-059,Greene
+US,US-TN,US-TN-061,Grundy
+US,US-TN,US-TN-063,Hamblen
+US,US-TN,US-TN-065,Hamilton
+US,US-TN,US-TN-067,Hancock
+US,US-TN,US-TN-069,Hardeman
+US,US-TN,US-TN-071,Hardin
+US,US-TN,US-TN-073,Hawkins
+US,US-TN,US-TN-075,Haywood
+US,US-TN,US-TN-077,Henderson
+US,US-TN,US-TN-079,Henry
+US,US-TN,US-TN-081,Hickman
+US,US-TN,US-TN-083,Houston
+US,US-TN,US-TN-085,Humphreys
+US,US-TN,US-TN-087,Jackson
+US,US-TN,US-TN-089,Jefferson
+US,US-TN,US-TN-091,Johnson
+US,US-TN,US-TN-093,Knox
+US,US-TN,US-TN-095,Lake
+US,US-TN,US-TN-097,Lauderdale
+US,US-TN,US-TN-099,Lawrence
+US,US-TN,US-TN-101,Lewis
+US,US-TN,US-TN-103,Lincoln
+US,US-TN,US-TN-105,Loudon
+US,US-TN,US-TN-107,McMinn
+US,US-TN,US-TN-109,McNairy
+US,US-TN,US-TN-111,Macon
+US,US-TN,US-TN-113,Madison
+US,US-TN,US-TN-115,Marion
+US,US-TN,US-TN-117,Marshall
+US,US-TN,US-TN-119,Maury
+US,US-TN,US-TN-121,Meigs
+US,US-TN,US-TN-123,Monroe
+US,US-TN,US-TN-125,Montgomery
+US,US-TN,US-TN-127,Moore
+US,US-TN,US-TN-129,Morgan
+US,US-TN,US-TN-131,Obion
+US,US-TN,US-TN-133,Overton
+US,US-TN,US-TN-135,Perry
+US,US-TN,US-TN-137,Pickett
+US,US-TN,US-TN-139,Polk
+US,US-TN,US-TN-141,Putnam
+US,US-TN,US-TN-143,Rhea
+US,US-TN,US-TN-145,Roane
+US,US-TN,US-TN-147,Robertson
+US,US-TN,US-TN-149,Rutherford
+US,US-TN,US-TN-151,Scott
+US,US-TN,US-TN-153,Sequatchie
+US,US-TN,US-TN-155,Sevier
+US,US-TN,US-TN-157,Shelby
+US,US-TN,US-TN-159,Smith
+US,US-TN,US-TN-161,Stewart
+US,US-TN,US-TN-163,Sullivan
+US,US-TN,US-TN-165,Sumner
+US,US-TN,US-TN-167,Tipton
+US,US-TN,US-TN-169,Trousdale
+US,US-TN,US-TN-171,Unicoi
+US,US-TN,US-TN-173,Union
+US,US-TN,US-TN-175,Van Buren
+US,US-TN,US-TN-177,Warren
+US,US-TN,US-TN-179,Washington
+US,US-TN,US-TN-181,Wayne
+US,US-TN,US-TN-183,Weakley
+US,US-TN,US-TN-185,White
+US,US-TN,US-TN-187,Williamson
+US,US-TN,US-TN-189,Wilson
+US,US-TX,US-TX-001,Anderson
+US,US-TX,US-TX-003,Andrews
+US,US-TX,US-TX-005,Angelina
+US,US-TX,US-TX-007,Aransas
+US,US-TX,US-TX-009,Archer
+US,US-TX,US-TX-011,Armstrong
+US,US-TX,US-TX-013,Atascosa
+US,US-TX,US-TX-015,Austin
+US,US-TX,US-TX-017,Bailey
+US,US-TX,US-TX-019,Bandera
+US,US-TX,US-TX-021,Bastrop
+US,US-TX,US-TX-023,Baylor
+US,US-TX,US-TX-025,Bee
+US,US-TX,US-TX-027,Bell
+US,US-TX,US-TX-029,Bexar
+US,US-TX,US-TX-031,Blanco
+US,US-TX,US-TX-033,Borden
+US,US-TX,US-TX-035,Bosque
+US,US-TX,US-TX-037,Bowie
+US,US-TX,US-TX-039,Brazoria
+US,US-TX,US-TX-041,Brazos
+US,US-TX,US-TX-043,Brewster
+US,US-TX,US-TX-045,Briscoe
+US,US-TX,US-TX-047,Brooks
+US,US-TX,US-TX-049,Brown
+US,US-TX,US-TX-051,Burleson
+US,US-TX,US-TX-053,Burnet
+US,US-TX,US-TX-055,Caldwell
+US,US-TX,US-TX-057,Calhoun
+US,US-TX,US-TX-059,Callahan
+US,US-TX,US-TX-061,Cameron
+US,US-TX,US-TX-063,Camp
+US,US-TX,US-TX-065,Carson
+US,US-TX,US-TX-067,Cass
+US,US-TX,US-TX-069,Castro
+US,US-TX,US-TX-071,Chambers
+US,US-TX,US-TX-073,Cherokee
+US,US-TX,US-TX-075,Childress
+US,US-TX,US-TX-077,Clay
+US,US-TX,US-TX-079,Cochran
+US,US-TX,US-TX-081,Coke
+US,US-TX,US-TX-083,Coleman
+US,US-TX,US-TX-085,Collin
+US,US-TX,US-TX-087,Collingsworth
+US,US-TX,US-TX-089,Colorado
+US,US-TX,US-TX-091,Comal
+US,US-TX,US-TX-093,Comanche
+US,US-TX,US-TX-095,Concho
+US,US-TX,US-TX-097,Cooke
+US,US-TX,US-TX-099,Coryell
+US,US-TX,US-TX-101,Cottle
+US,US-TX,US-TX-103,Crane
+US,US-TX,US-TX-105,Crockett
+US,US-TX,US-TX-107,Crosby
+US,US-TX,US-TX-109,Culberson
+US,US-TX,US-TX-111,Dallam
+US,US-TX,US-TX-113,Dallas
+US,US-TX,US-TX-115,Dawson
+US,US-TX,US-TX-117,Deaf Smith
+US,US-TX,US-TX-119,Delta
+US,US-TX,US-TX-121,Denton
+US,US-TX,US-TX-123,DeWitt
+US,US-TX,US-TX-125,Dickens
+US,US-TX,US-TX-127,Dimmit
+US,US-TX,US-TX-129,Donley
+US,US-TX,US-TX-131,Duval
+US,US-TX,US-TX-133,Eastland
+US,US-TX,US-TX-135,Ector
+US,US-TX,US-TX-137,Edwards
+US,US-TX,US-TX-139,Ellis
+US,US-TX,US-TX-141,El Paso
+US,US-TX,US-TX-143,Erath
+US,US-TX,US-TX-145,Falls
+US,US-TX,US-TX-147,Fannin
+US,US-TX,US-TX-149,Fayette
+US,US-TX,US-TX-151,Fisher
+US,US-TX,US-TX-153,Floyd
+US,US-TX,US-TX-155,Foard
+US,US-TX,US-TX-157,Fort Bend
+US,US-TX,US-TX-159,Franklin
+US,US-TX,US-TX-161,Freestone
+US,US-TX,US-TX-163,Frio
+US,US-TX,US-TX-165,Gaines
+US,US-TX,US-TX-167,Galveston
+US,US-TX,US-TX-169,Garza
+US,US-TX,US-TX-171,Gillespie
+US,US-TX,US-TX-173,Glasscock
+US,US-TX,US-TX-175,Goliad
+US,US-TX,US-TX-177,Gonzales
+US,US-TX,US-TX-179,Gray
+US,US-TX,US-TX-181,Grayson
+US,US-TX,US-TX-183,Gregg
+US,US-TX,US-TX-185,Grimes
+US,US-TX,US-TX-187,Guadalupe
+US,US-TX,US-TX-189,Hale
+US,US-TX,US-TX-191,Hall
+US,US-TX,US-TX-193,Hamilton
+US,US-TX,US-TX-195,Hansford
+US,US-TX,US-TX-197,Hardeman
+US,US-TX,US-TX-199,Hardin
+US,US-TX,US-TX-201,Harris
+US,US-TX,US-TX-203,Harrison
+US,US-TX,US-TX-205,Hartley
+US,US-TX,US-TX-207,Haskell
+US,US-TX,US-TX-209,Hays
+US,US-TX,US-TX-211,Hemphill
+US,US-TX,US-TX-213,Henderson
+US,US-TX,US-TX-215,Hidalgo
+US,US-TX,US-TX-217,Hill
+US,US-TX,US-TX-219,Hockley
+US,US-TX,US-TX-221,Hood
+US,US-TX,US-TX-223,Hopkins
+US,US-TX,US-TX-225,Houston
+US,US-TX,US-TX-227,Howard
+US,US-TX,US-TX-229,Hudspeth
+US,US-TX,US-TX-231,Hunt
+US,US-TX,US-TX-233,Hutchinson
+US,US-TX,US-TX-235,Irion
+US,US-TX,US-TX-237,Jack
+US,US-TX,US-TX-239,Jackson
+US,US-TX,US-TX-241,Jasper
+US,US-TX,US-TX-243,Jeff Davis
+US,US-TX,US-TX-245,Jefferson
+US,US-TX,US-TX-247,Jim Hogg
+US,US-TX,US-TX-249,Jim Wells
+US,US-TX,US-TX-251,Johnson
+US,US-TX,US-TX-253,Jones
+US,US-TX,US-TX-255,Karnes
+US,US-TX,US-TX-257,Kaufman
+US,US-TX,US-TX-259,Kendall
+US,US-TX,US-TX-261,Kenedy
+US,US-TX,US-TX-263,Kent
+US,US-TX,US-TX-265,Kerr
+US,US-TX,US-TX-267,Kimble
+US,US-TX,US-TX-269,King
+US,US-TX,US-TX-271,Kinney
+US,US-TX,US-TX-273,Kleberg
+US,US-TX,US-TX-275,Knox
+US,US-TX,US-TX-277,Lamar
+US,US-TX,US-TX-279,Lamb
+US,US-TX,US-TX-281,Lampasas
+US,US-TX,US-TX-283,La Salle
+US,US-TX,US-TX-285,Lavaca
+US,US-TX,US-TX-287,Lee
+US,US-TX,US-TX-289,Leon
+US,US-TX,US-TX-291,Liberty
+US,US-TX,US-TX-293,Limestone
+US,US-TX,US-TX-295,Lipscomb
+US,US-TX,US-TX-297,Live Oak
+US,US-TX,US-TX-299,Llano
+US,US-TX,US-TX-301,Loving
+US,US-TX,US-TX-303,Lubbock
+US,US-TX,US-TX-305,Lynn
+US,US-TX,US-TX-307,McCulloch
+US,US-TX,US-TX-309,McLennan
+US,US-TX,US-TX-311,McMullen
+US,US-TX,US-TX-313,Madison
+US,US-TX,US-TX-315,Marion
+US,US-TX,US-TX-317,Martin
+US,US-TX,US-TX-319,Mason
+US,US-TX,US-TX-321,Matagorda
+US,US-TX,US-TX-323,Maverick
+US,US-TX,US-TX-325,Medina
+US,US-TX,US-TX-327,Menard
+US,US-TX,US-TX-329,Midland
+US,US-TX,US-TX-331,Milam
+US,US-TX,US-TX-333,Mills
+US,US-TX,US-TX-335,Mitchell
+US,US-TX,US-TX-337,Montague
+US,US-TX,US-TX-339,Montgomery
+US,US-TX,US-TX-341,Moore
+US,US-TX,US-TX-343,Morris
+US,US-TX,US-TX-345,Motley
+US,US-TX,US-TX-347,Nacogdoches
+US,US-TX,US-TX-349,Navarro
+US,US-TX,US-TX-351,Newton
+US,US-TX,US-TX-353,Nolan
+US,US-TX,US-TX-355,Nueces
+US,US-TX,US-TX-357,Ochiltree
+US,US-TX,US-TX-359,Oldham
+US,US-TX,US-TX-361,Orange
+US,US-TX,US-TX-363,Palo Pinto
+US,US-TX,US-TX-365,Panola
+US,US-TX,US-TX-367,Parker
+US,US-TX,US-TX-369,Parmer
+US,US-TX,US-TX-371,Pecos
+US,US-TX,US-TX-373,Polk
+US,US-TX,US-TX-375,Potter
+US,US-TX,US-TX-377,Presidio
+US,US-TX,US-TX-379,Rains
+US,US-TX,US-TX-381,Randall
+US,US-TX,US-TX-383,Reagan
+US,US-TX,US-TX-385,Real
+US,US-TX,US-TX-387,Red River
+US,US-TX,US-TX-389,Reeves
+US,US-TX,US-TX-391,Refugio
+US,US-TX,US-TX-393,Roberts
+US,US-TX,US-TX-395,Robertson
+US,US-TX,US-TX-397,Rockwall
+US,US-TX,US-TX-399,Runnels
+US,US-TX,US-TX-401,Rusk
+US,US-TX,US-TX-403,Sabine
+US,US-TX,US-TX-405,San Augustine
+US,US-TX,US-TX-407,San Jacinto
+US,US-TX,US-TX-409,San Patricio
+US,US-TX,US-TX-411,San Saba
+US,US-TX,US-TX-413,Schleicher
+US,US-TX,US-TX-415,Scurry
+US,US-TX,US-TX-417,Shackelford
+US,US-TX,US-TX-419,Shelby
+US,US-TX,US-TX-421,Sherman
+US,US-TX,US-TX-423,Smith
+US,US-TX,US-TX-425,Somervell
+US,US-TX,US-TX-427,Starr
+US,US-TX,US-TX-429,Stephens
+US,US-TX,US-TX-431,Sterling
+US,US-TX,US-TX-433,Stonewall
+US,US-TX,US-TX-435,Sutton
+US,US-TX,US-TX-437,Swisher
+US,US-TX,US-TX-439,Tarrant
+US,US-TX,US-TX-441,Taylor
+US,US-TX,US-TX-443,Terrell
+US,US-TX,US-TX-445,Terry
+US,US-TX,US-TX-447,Throckmorton
+US,US-TX,US-TX-449,Titus
+US,US-TX,US-TX-451,Tom Green
+US,US-TX,US-TX-453,Travis
+US,US-TX,US-TX-455,Trinity
+US,US-TX,US-TX-457,Tyler
+US,US-TX,US-TX-459,Upshur
+US,US-TX,US-TX-461,Upton
+US,US-TX,US-TX-463,Uvalde
+US,US-TX,US-TX-465,Val Verde
+US,US-TX,US-TX-467,Van Zandt
+US,US-TX,US-TX-469,Victoria
+US,US-TX,US-TX-471,Walker
+US,US-TX,US-TX-473,Waller
+US,US-TX,US-TX-475,Ward
+US,US-TX,US-TX-477,Washington
+US,US-TX,US-TX-479,Webb
+US,US-TX,US-TX-481,Wharton
+US,US-TX,US-TX-483,Wheeler
+US,US-TX,US-TX-485,Wichita
+US,US-TX,US-TX-487,Wilbarger
+US,US-TX,US-TX-489,Willacy
+US,US-TX,US-TX-491,Williamson
+US,US-TX,US-TX-493,Wilson
+US,US-TX,US-TX-495,Winkler
+US,US-TX,US-TX-497,Wise
+US,US-TX,US-TX-499,Wood
+US,US-TX,US-TX-501,Yoakum
+US,US-TX,US-TX-503,Young
+US,US-TX,US-TX-505,Zapata
+US,US-TX,US-TX-507,Zavala
+US,US-UT,US-UT-001,Beaver
+US,US-UT,US-UT-003,Box Elder
+US,US-UT,US-UT-005,Cache
+US,US-UT,US-UT-007,Carbon
+US,US-UT,US-UT-009,Daggett
+US,US-UT,US-UT-011,Davis
+US,US-UT,US-UT-013,Duchesne
+US,US-UT,US-UT-015,Emery
+US,US-UT,US-UT-017,Garfield
+US,US-UT,US-UT-019,Grand
+US,US-UT,US-UT-021,Iron
+US,US-UT,US-UT-023,Juab
+US,US-UT,US-UT-025,Kane
+US,US-UT,US-UT-027,Millard
+US,US-UT,US-UT-029,Morgan
+US,US-UT,US-UT-031,Piute
+US,US-UT,US-UT-033,Rich
+US,US-UT,US-UT-035,Salt Lake
+US,US-UT,US-UT-037,San Juan
+US,US-UT,US-UT-039,Sanpete
+US,US-UT,US-UT-041,Sevier
+US,US-UT,US-UT-043,Summit
+US,US-UT,US-UT-045,Tooele
+US,US-UT,US-UT-047,Uintah
+US,US-UT,US-UT-049,Utah
+US,US-UT,US-UT-051,Wasatch
+US,US-UT,US-UT-053,Washington
+US,US-UT,US-UT-055,Wayne
+US,US-UT,US-UT-057,Weber
+US,US-VA,US-VA-001,Accomack
+US,US-VA,US-VA-003,Albemarle
+US,US-VA,US-VA-005,Alleghany
+US,US-VA,US-VA-007,Amelia
+US,US-VA,US-VA-009,Amherst
+US,US-VA,US-VA-011,Appomattox
+US,US-VA,US-VA-013,Arlington
+US,US-VA,US-VA-015,Augusta
+US,US-VA,US-VA-017,Bath
+US,US-VA,US-VA-019,Bedford
+US,US-VA,US-VA-021,Bland
+US,US-VA,US-VA-023,Botetourt
+US,US-VA,US-VA-025,Brunswick
+US,US-VA,US-VA-027,Buchanan
+US,US-VA,US-VA-029,Buckingham
+US,US-VA,US-VA-031,Campbell
+US,US-VA,US-VA-033,Caroline
+US,US-VA,US-VA-035,Carroll
+US,US-VA,US-VA-036,Charles City
+US,US-VA,US-VA-037,Charlotte
+US,US-VA,US-VA-041,Chesterfield
+US,US-VA,US-VA-043,Clarke
+US,US-VA,US-VA-045,Craig
+US,US-VA,US-VA-047,Culpeper
+US,US-VA,US-VA-049,Cumberland
+US,US-VA,US-VA-051,Dickenson
+US,US-VA,US-VA-053,Dinwiddie
+US,US-VA,US-VA-057,Essex
+US,US-VA,US-VA-059,Fairfax
+US,US-VA,US-VA-061,Fauquier
+US,US-VA,US-VA-063,Floyd
+US,US-VA,US-VA-065,Fluvanna
+US,US-VA,US-VA-067,Franklin
+US,US-VA,US-VA-069,Frederick
+US,US-VA,US-VA-071,Giles
+US,US-VA,US-VA-073,Gloucester
+US,US-VA,US-VA-075,Goochland
+US,US-VA,US-VA-077,Grayson
+US,US-VA,US-VA-079,Greene
+US,US-VA,US-VA-081,Greensville
+US,US-VA,US-VA-083,Halifax
+US,US-VA,US-VA-085,Hanover
+US,US-VA,US-VA-087,Henrico
+US,US-VA,US-VA-089,Henry
+US,US-VA,US-VA-091,Highland
+US,US-VA,US-VA-093,Isle of Wight
+US,US-VA,US-VA-095,James City
+US,US-VA,US-VA-097,King and Queen
+US,US-VA,US-VA-099,King George
+US,US-VA,US-VA-101,King William
+US,US-VA,US-VA-103,Lancaster
+US,US-VA,US-VA-105,Lee
+US,US-VA,US-VA-107,Loudoun
+US,US-VA,US-VA-109,Louisa
+US,US-VA,US-VA-111,Lunenburg
+US,US-VA,US-VA-113,Madison
+US,US-VA,US-VA-115,Mathews
+US,US-VA,US-VA-117,Mecklenburg
+US,US-VA,US-VA-119,Middlesex
+US,US-VA,US-VA-121,Montgomery
+US,US-VA,US-VA-125,Nelson
+US,US-VA,US-VA-127,New Kent
+US,US-VA,US-VA-131,Northampton
+US,US-VA,US-VA-133,Northumberland
+US,US-VA,US-VA-135,Nottoway
+US,US-VA,US-VA-137,Orange
+US,US-VA,US-VA-139,Page
+US,US-VA,US-VA-141,Patrick
+US,US-VA,US-VA-143,Pittsylvania
+US,US-VA,US-VA-145,Powhatan
+US,US-VA,US-VA-147,Prince Edward
+US,US-VA,US-VA-149,Prince George
+US,US-VA,US-VA-153,Prince William
+US,US-VA,US-VA-155,Pulaski
+US,US-VA,US-VA-157,Rappahannock
+US,US-VA,US-VA-159,Richmond
+US,US-VA,US-VA-161,Roanoke
+US,US-VA,US-VA-163,Rockbridge
+US,US-VA,US-VA-165,Rockingham
+US,US-VA,US-VA-167,Russell
+US,US-VA,US-VA-169,Scott
+US,US-VA,US-VA-171,Shenandoah
+US,US-VA,US-VA-173,Smyth
+US,US-VA,US-VA-175,Southampton
+US,US-VA,US-VA-177,Spotsylvania
+US,US-VA,US-VA-179,Stafford
+US,US-VA,US-VA-181,Surry
+US,US-VA,US-VA-183,Sussex
+US,US-VA,US-VA-185,Tazewell
+US,US-VA,US-VA-187,Warren
+US,US-VA,US-VA-191,Washington
+US,US-VA,US-VA-193,Westmoreland
+US,US-VA,US-VA-195,Wise
+US,US-VA,US-VA-197,Wythe
+US,US-VA,US-VA-199,York
+US,US-VA,US-VA-510,Alexandria
+US,US-VA,US-VA-520,Bristol
+US,US-VA,US-VA-530,Buena Vista
+US,US-VA,US-VA-540,Charlottesville
+US,US-VA,US-VA-550,Chesapeake
+US,US-VA,US-VA-570,Colonial Heights
+US,US-VA,US-VA-580,Covington
+US,US-VA,US-VA-590,Danville
+US,US-VA,US-VA-595,Emporia
+US,US-VA,US-VA-600,Fairfax City
+US,US-VA,US-VA-610,Falls Church
+US,US-VA,US-VA-620,Franklin City
+US,US-VA,US-VA-630,Fredericksburg
+US,US-VA,US-VA-640,Galax
+US,US-VA,US-VA-650,Hampton
+US,US-VA,US-VA-660,Harrisonburg
+US,US-VA,US-VA-670,Hopewell
+US,US-VA,US-VA-678,Lexington
+US,US-VA,US-VA-680,Lynchburg
+US,US-VA,US-VA-683,Manassas
+US,US-VA,US-VA-685,Manassas Park
+US,US-VA,US-VA-690,Martinsville
+US,US-VA,US-VA-700,Newport News
+US,US-VA,US-VA-710,Norfolk
+US,US-VA,US-VA-720,Norton
+US,US-VA,US-VA-730,Petersburg
+US,US-VA,US-VA-735,Poquoson
+US,US-VA,US-VA-740,Portsmouth
+US,US-VA,US-VA-750,Radford
+US,US-VA,US-VA-760,Richmond City
+US,US-VA,US-VA-770,Roanoke City
+US,US-VA,US-VA-775,Salem
+US,US-VA,US-VA-790,Staunton
+US,US-VA,US-VA-800,Suffolk
+US,US-VA,US-VA-810,Virginia Beach
+US,US-VA,US-VA-820,Waynesboro
+US,US-VA,US-VA-830,Williamsburg
+US,US-VA,US-VA-840,Winchester
+US,US-VT,US-VT-001,Addison
+US,US-VT,US-VT-003,Bennington
+US,US-VT,US-VT-005,Caledonia
+US,US-VT,US-VT-007,Chittenden
+US,US-VT,US-VT-009,Essex
+US,US-VT,US-VT-011,Franklin
+US,US-VT,US-VT-013,Grand Isle
+US,US-VT,US-VT-015,Lamoille
+US,US-VT,US-VT-017,Orange
+US,US-VT,US-VT-019,Orleans
+US,US-VT,US-VT-021,Rutland
+US,US-VT,US-VT-023,Washington
+US,US-VT,US-VT-025,Windham
+US,US-VT,US-VT-027,Windsor
+US,US-WA,US-WA-001,Adams
+US,US-WA,US-WA-003,Asotin
+US,US-WA,US-WA-005,Benton
+US,US-WA,US-WA-007,Chelan
+US,US-WA,US-WA-009,Clallam
+US,US-WA,US-WA-011,Clark
+US,US-WA,US-WA-013,Columbia
+US,US-WA,US-WA-015,Cowlitz
+US,US-WA,US-WA-017,Douglas
+US,US-WA,US-WA-019,Ferry
+US,US-WA,US-WA-021,Franklin
+US,US-WA,US-WA-023,Garfield
+US,US-WA,US-WA-025,Grant
+US,US-WA,US-WA-027,Grays Harbor
+US,US-WA,US-WA-029,Island
+US,US-WA,US-WA-031,Jefferson
+US,US-WA,US-WA-033,King
+US,US-WA,US-WA-035,Kitsap
+US,US-WA,US-WA-037,Kittitas
+US,US-WA,US-WA-039,Klickitat
+US,US-WA,US-WA-041,Lewis
+US,US-WA,US-WA-043,Lincoln
+US,US-WA,US-WA-045,Mason
+US,US-WA,US-WA-047,Okanogan
+US,US-WA,US-WA-049,Pacific
+US,US-WA,US-WA-051,Pend Oreille
+US,US-WA,US-WA-053,Pierce
+US,US-WA,US-WA-055,San Juan
+US,US-WA,US-WA-057,Skagit
+US,US-WA,US-WA-059,Skamania
+US,US-WA,US-WA-061,Snohomish
+US,US-WA,US-WA-063,Spokane
+US,US-WA,US-WA-065,Stevens
+US,US-WA,US-WA-067,Thurston
+US,US-WA,US-WA-069,Wahkiakum
+US,US-WA,US-WA-071,Walla Walla
+US,US-WA,US-WA-073,Whatcom
+US,US-WA,US-WA-075,Whitman
+US,US-WA,US-WA-077,Yakima
+US,US-WI,US-WI-001,Adams
+US,US-WI,US-WI-003,Ashland
+US,US-WI,US-WI-005,Barron
+US,US-WI,US-WI-007,Bayfield
+US,US-WI,US-WI-009,Brown
+US,US-WI,US-WI-011,Buffalo
+US,US-WI,US-WI-013,Burnett
+US,US-WI,US-WI-015,Calumet
+US,US-WI,US-WI-017,Chippewa
+US,US-WI,US-WI-019,Clark
+US,US-WI,US-WI-021,Columbia
+US,US-WI,US-WI-023,Crawford
+US,US-WI,US-WI-025,Dane
+US,US-WI,US-WI-027,Dodge
+US,US-WI,US-WI-029,Door
+US,US-WI,US-WI-031,Douglas
+US,US-WI,US-WI-033,Dunn
+US,US-WI,US-WI-035,Eau Claire
+US,US-WI,US-WI-037,Florence
+US,US-WI,US-WI-039,Fond du Lac
+US,US-WI,US-WI-041,Forest
+US,US-WI,US-WI-043,Grant
+US,US-WI,US-WI-045,Green
+US,US-WI,US-WI-047,Green Lake
+US,US-WI,US-WI-049,Iowa
+US,US-WI,US-WI-051,Iron
+US,US-WI,US-WI-053,Jackson
+US,US-WI,US-WI-055,Jefferson
+US,US-WI,US-WI-057,Juneau
+US,US-WI,US-WI-059,Kenosha
+US,US-WI,US-WI-061,Kewaunee
+US,US-WI,US-WI-063,La Crosse
+US,US-WI,US-WI-065,Lafayette
+US,US-WI,US-WI-067,Langlade
+US,US-WI,US-WI-069,Lincoln
+US,US-WI,US-WI-071,Manitowoc
+US,US-WI,US-WI-073,Marathon
+US,US-WI,US-WI-075,Marinette
+US,US-WI,US-WI-077,Marquette
+US,US-WI,US-WI-078,Menominee
+US,US-WI,US-WI-079,Milwaukee
+US,US-WI,US-WI-081,Monroe
+US,US-WI,US-WI-083,Oconto
+US,US-WI,US-WI-085,Oneida
+US,US-WI,US-WI-087,Outagamie
+US,US-WI,US-WI-089,Ozaukee
+US,US-WI,US-WI-091,Pepin
+US,US-WI,US-WI-093,Pierce
+US,US-WI,US-WI-095,Polk
+US,US-WI,US-WI-097,Portage
+US,US-WI,US-WI-099,Price
+US,US-WI,US-WI-101,Racine
+US,US-WI,US-WI-103,Richland
+US,US-WI,US-WI-105,Rock
+US,US-WI,US-WI-107,Rusk
+US,US-WI,US-WI-109,St. Croix
+US,US-WI,US-WI-111,Sauk
+US,US-WI,US-WI-113,Sawyer
+US,US-WI,US-WI-115,Shawano
+US,US-WI,US-WI-117,Sheboygan
+US,US-WI,US-WI-119,Taylor
+US,US-WI,US-WI-121,Trempealeau
+US,US-WI,US-WI-123,Vernon
+US,US-WI,US-WI-125,Vilas
+US,US-WI,US-WI-127,Walworth
+US,US-WI,US-WI-129,Washburn
+US,US-WI,US-WI-131,Washington
+US,US-WI,US-WI-133,Waukesha
+US,US-WI,US-WI-135,Waupaca
+US,US-WI,US-WI-137,Waushara
+US,US-WI,US-WI-139,Winnebago
+US,US-WI,US-WI-141,Wood
+US,US-WV,US-WV-001,Barbour
+US,US-WV,US-WV-003,Berkeley
+US,US-WV,US-WV-005,Boone
+US,US-WV,US-WV-007,Braxton
+US,US-WV,US-WV-009,Brooke
+US,US-WV,US-WV-011,Cabell
+US,US-WV,US-WV-013,Calhoun
+US,US-WV,US-WV-015,Clay
+US,US-WV,US-WV-017,Doddridge
+US,US-WV,US-WV-019,Fayette
+US,US-WV,US-WV-021,Gilmer
+US,US-WV,US-WV-023,Grant
+US,US-WV,US-WV-025,Greenbrier
+US,US-WV,US-WV-027,Hampshire
+US,US-WV,US-WV-029,Hancock
+US,US-WV,US-WV-031,Hardy
+US,US-WV,US-WV-033,Harrison
+US,US-WV,US-WV-035,Jackson
+US,US-WV,US-WV-037,Jefferson
+US,US-WV,US-WV-039,Kanawha
+US,US-WV,US-WV-041,Lewis
+US,US-WV,US-WV-043,Lincoln
+US,US-WV,US-WV-045,Logan
+US,US-WV,US-WV-047,McDowell
+US,US-WV,US-WV-049,Marion
+US,US-WV,US-WV-051,Marshall
+US,US-WV,US-WV-053,Mason
+US,US-WV,US-WV-055,Mercer
+US,US-WV,US-WV-057,Mineral
+US,US-WV,US-WV-059,Mingo
+US,US-WV,US-WV-061,Monongalia
+US,US-WV,US-WV-063,Monroe
+US,US-WV,US-WV-065,Morgan
+US,US-WV,US-WV-067,Nicholas
+US,US-WV,US-WV-069,Ohio
+US,US-WV,US-WV-071,Pendleton
+US,US-WV,US-WV-073,Pleasants
+US,US-WV,US-WV-075,Pocahontas
+US,US-WV,US-WV-077,Preston
+US,US-WV,US-WV-079,Putnam
+US,US-WV,US-WV-081,Raleigh
+US,US-WV,US-WV-083,Randolph
+US,US-WV,US-WV-085,Ritchie
+US,US-WV,US-WV-087,Roane
+US,US-WV,US-WV-089,Summers
+US,US-WV,US-WV-091,Taylor
+US,US-WV,US-WV-093,Tucker
+US,US-WV,US-WV-095,Tyler
+US,US-WV,US-WV-097,Upshur
+US,US-WV,US-WV-099,Wayne
+US,US-WV,US-WV-101,Webster
+US,US-WV,US-WV-103,Wetzel
+US,US-WV,US-WV-105,Wirt
+US,US-WV,US-WV-107,Wood
+US,US-WV,US-WV-109,Wyoming
+US,US-WY,US-WY-001,Albany
+US,US-WY,US-WY-003,Big Horn
+US,US-WY,US-WY-005,Campbell
+US,US-WY,US-WY-007,Carbon
+US,US-WY,US-WY-009,Converse
+US,US-WY,US-WY-011,Crook
+US,US-WY,US-WY-013,Fremont
+US,US-WY,US-WY-015,Goshen
+US,US-WY,US-WY-017,Hot Springs
+US,US-WY,US-WY-019,Johnson
+US,US-WY,US-WY-021,Laramie
+US,US-WY,US-WY-023,Lincoln
+US,US-WY,US-WY-025,Natrona
+US,US-WY,US-WY-027,Niobrara
+US,US-WY,US-WY-029,Park
+US,US-WY,US-WY-031,Platte
+US,US-WY,US-WY-033,Sheridan
+US,US-WY,US-WY-035,Sublette
+US,US-WY,US-WY-037,Sweetwater
+US,US-WY,US-WY-039,Teton
+US,US-WY,US-WY-041,Uinta
+US,US-WY,US-WY-043,Washakie
+US,US-WY,US-WY-045,Weston

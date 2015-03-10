@@ -39,5 +39,18 @@ class Region < ActiveRecord::Base
   end
 
   def ebird_query_string
+    base_url = "http://ebird.org/ws1.1/data/obs/region_spp/recent?"
+    query_end = "&back=30&maxResults=10000&includeProvisional=false"
+
+    if self.county
+      region = "rtype=subnational2"
+
+    elsif self.state
+      region = "rtype=subnational1"
+
+    else
+      region = "rtype=country"
+
+    end
   end
 end
