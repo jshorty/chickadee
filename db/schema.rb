@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310180223) do
+ActiveRecord::Schema.define(version: 20150310181402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20150310180223) do
 
   add_index "birds", ["common_name"], name: "index_birds_on_common_name", unique: true, using: :btree
   add_index "birds", ["sci_name"], name: "index_birds_on_sci_name", unique: true, using: :btree
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "county"
+    t.string   "state"
+    t.string   "country",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
