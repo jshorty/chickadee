@@ -25,6 +25,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -32,6 +33,10 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'quiet_assets'
+end
+
+group :test do
+  gem 'guard-rspec'
 end
 
 # Required by Heroku for serving assets in production, logging to stdout
