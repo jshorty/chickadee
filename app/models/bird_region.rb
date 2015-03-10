@@ -1,6 +1,6 @@
 class BirdRegion < ActiveRecord::Base
   validates :region_id, :bird_id, presence: true
-  validates :bird_id, uniqueness: {scope: :region_id}
+  validates :bird_id, uniqueness: { scope: :region_id }
 
   belongs_to :region,
     class_name: "Region",

@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
   validate :email_must_have_valid_format
   after_initialize :ensure_session_token
 
+  has_many :user_regions,
+    class_name: "UserRegion",
+    primary_key: :id,
+    foreign_key: :user_id,
+    dependent: :destroy
+
+  has_many :regions, through: :user_regions, source: :region
+
   def email_must_have_valid_format
     if self.email
       unless self.email.match(/[\w|\-|\.]+@[\w|\-]+\.\w+/)

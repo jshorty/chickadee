@@ -5,6 +5,7 @@ class Bird < ActiveRecord::Base
     class_name: "BirdRegion",
     primary_key: :id,
     foreign_key: :bird_id
+    dependent: :destroy
 
   has_many :regions, through: :bird_regions, source: :region
 

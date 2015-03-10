@@ -6,9 +6,18 @@ class Region < ActiveRecord::Base
   has_many :bird_regions,
     class_name: "BirdRegion",
     primary_key: :id,
-    foreign_key: :region_id
+    foreign_key: :region_id,
+    dependent: :destroy
+
+  has_many :user_regions,
+    class_name: "UserRegion",
+    primary_key: :id,
+    foreign_key: :region_id,
+    dependent: :destroy
 
   has_many :birds, through: :bird_regions, source: :bird
+
+  has_many :users, through: :user_regions, source: :user
 
   def region_has_clear_specificity
     if self.county && !self.state
