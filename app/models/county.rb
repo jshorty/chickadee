@@ -1,4 +1,5 @@
 class County < ActiveRecord::Base
-  validates :name, :code, :state, :country, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: {scope: :state}
+  validates :code, presence: true, uniqueness: true
 
 end

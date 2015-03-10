@@ -1,4 +1,4 @@
-class County < ActiveRecord::Base
-  validates :name, :code, :country, presence: true, uniqueness: true
-
+class State < ActiveRecord::Base
+  validates :name, presence: true
+  validates :code, presence: true, uniqueness: true
 end
