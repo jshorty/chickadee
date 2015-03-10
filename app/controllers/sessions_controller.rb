@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
 
     if @user
       log_in!(@user)
-      debugger
       redirect_to user_url(@user)
     else
       flash.now[:errors] = ["Invalid email or password."]
