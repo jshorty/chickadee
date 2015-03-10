@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   def email_must_have_valid_format
-    unless this.email.match(/[\w|\-|\.]+@[\w|\-]+\.\w+/)
-      errors.add(:email, "must be a valid email address")
+    if self.email
+      unless self.email.match(/[\w|\-|\.]+@[\w|\-]+\.\w+/)
+        errors.add(:email, "must be a valid email address")
+      end
     end
   end
 

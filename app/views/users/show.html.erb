@@ -1,0 +1,12 @@
+<h1>My Profile</h1>
+
+<br>
+
+<p>Email: <%= @user.email %><p>
+<p>Name: <%= @user.alias %><p>
+
+
+<a href="<%= edit_user_url(@user) %>">Edit</a>
+<br>
+<br>
+<a href="<%= users_url %>"><< back to Index</a>

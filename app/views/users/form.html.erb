@@ -1,0 +1,36 @@
+<% header = @user.new_record? ? "Sign Up" : "Edit My Profile" %>
+<% url = @user.new_record? ? users_url : user_url(@user) %>
+<% button = @user.new_record? ? "Sign Up!": "Update!" %>
+
+<h1><%= header %></h1>
+
+<form action="<%= url %>" method="post">
+
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<% unless @user.new_record? %>
+  <input type="hidden" name="_method" value="PATCH">
+<% end %>
+
+
+<label for="user_email">Email</label>
+<input type="text" name="user[email]" id="user_email" value="<%= @user.email %>">
+
+<br>
+
+<label for="user_name">Name (optional)</label>
+<input type="text" name="user[alias]" id="user_name" value="<%= @user.alias %>">
+
+<br>
+
+<label for="user_password">Password (8+ characters)</label>
+<input type="password" name="user[password]" id="user_password">
+
+<br>
+
+<button><%= button %></button>
+</form>
+
+<br>
+<br>
+<a href="<%= users_url %>">Index</a>
