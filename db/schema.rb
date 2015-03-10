@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310174658) do
+ActiveRecord::Schema.define(version: 20150310180223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "birds", force: :cascade do |t|
-    t.string   "common_name",      null: false
-    t.string   "scientific_name",  null: false
-    t.string   "song_description"
+    t.string   "common_name", null: false
+    t.string   "sci_name",    null: false
+    t.string   "song_desc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "birds", ["common_name"], name: "index_birds_on_common_name", unique: true, using: :btree
-  add_index "birds", ["scientific_name"], name: "index_birds_on_scientific_name", unique: true, using: :btree
+  add_index "birds", ["sci_name"], name: "index_birds_on_sci_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
