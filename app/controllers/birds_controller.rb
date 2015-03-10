@@ -16,6 +16,6 @@ class BirdsController < ApplicationController
   private
 
     def bird_params
-      params.require(:bird).permit(:common_name, :sci_name, :song_desc)
+      params.require(:bird).permit(:id, :common_name, :sci_name, :song_desc)
     end
 end

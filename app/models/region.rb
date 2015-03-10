@@ -1,5 +1,6 @@
 class Region < ActiveRecord::Base
   validates :country, presence: true
+  validates :county, uniqueness: {scope: :state}
   validate :region_has_clear_specificity
 
   def region_has_clear_specificity
@@ -9,13 +10,12 @@ class Region < ActiveRecord::Base
   end
 
   def region_is_unique_by_scope
-    valid = true
-    if self.county
-      return Region.none? do |region|
-          self.county == region.county && self.state == region.state &&
-          self.country == region.country
-        end
-    elsif self.state
+    # if self.county
+    #   return Region.none? do |region|
+    #       self.county == region.county && self.state == region.state &&
+    #       self.country == region.country
+    #     end
+    if self.state
       return Region.none? do |region|
           !region.county && self.state == region.state &&
           self.country == region.country
