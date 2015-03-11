@@ -62,7 +62,7 @@ class Region < ActiveRecord::Base
                   .code
     else
       region = "country&r="
-      code = Country.all.where({name: this.country}).first.code
+      code = Country.all.where({name: self.country}).first.code
     end
 
     base_url + region + code + query_end
