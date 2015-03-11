@@ -48,8 +48,16 @@ class Region < ActiveRecord::Base
     end
   end
 
-  def region_matches_to_ebird_code
-    
+  def region_matches_to_ebird_codes
+    unless Country.find_by(name: self.country)
+      errors.add(:country, "doesn't match eBird region data")
+    end
+    unless !self.state || State.find_by(name: self.state)
+      errors.add(:state, "doesn't match eBird region data")
+    end
+    unless !self.county || County.find_by(name: self.county)
+      errors.add(:county, "doesn't match eBird region data")
+    end
   end
 
   def ebird_url #builds query string from seeded eBird tables
