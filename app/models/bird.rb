@@ -1,5 +1,6 @@
 class Bird < ActiveRecord::Base
-  validates :common_name, :sci_name, presence: true, uniqueness: true
+  validates :common_name, :sci_name, presence: true
+  validates :sci_name, uniqueness: true
 
   has_many :bird_regions,
     class_name: "BirdRegion",

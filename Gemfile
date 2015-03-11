@@ -20,6 +20,7 @@ end
 
 group :test do
   gem 'guard-rspec'
+  gem 'faker'
 end
 
 group :development, :test do
@@ -27,6 +28,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :production do

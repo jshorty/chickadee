@@ -41,11 +41,11 @@ class Region < ActiveRecord::Base
   end
 
   def ebird_url #builds query string from seeded eBird tables
-    base_url = "http://ebird.org/ws1.1/data/obs/region/recent?"
+    base_url = "http://ebird.org/ws1.1/data/obs/region/recent?rtype="
     query_end = "&back=30&maxResults=10000&includeProvisional=false"
 
     if self.county
-      region = "rtype=subnational2&r="
+      region = "subnational2&r="
       code =  County.all
                     .joins("JOIN states ON counties.state = states.code")
                     .where(["states.name = ? AND counties.name = ?",
@@ -53,7 +53,7 @@ class Region < ActiveRecord::Base
                     .first
                     .code
     elsif self.state #several countries have two state entries w/ same name
-      region = "rtype=subnational1&r="
+      region = "subnational1&r="
       code = State.all
                   .joins("JOIN countries ON states.country = countries.code")
                   .where(["states.name = ? AND countries.name = ?",
@@ -61,7 +61,7 @@ class Region < ActiveRecord::Base
                   .first
                   .code
     else
-      region = "rtype=country&r="
+      region = "country&r="
       code = Country.all.where({name: this.country}).first.code
     end
 
@@ -69,11 +69,28 @@ class Region < ActiveRecord::Base
   end
 
   def query_ebird
-    raw_xml = nil
-    open(ebird_url) do |f|
-      return nil unless f.status == ["200", "OK"]
-      raw_xml = Nokogiri::XML(f)
+    open(ebird_url) do |response|
+      return nil unless response.status == ["200", "OK"]
+      xml_doc = Nokogiri::XML(response)
+      return xml_doc
     end
-    return raw_xml
+  end
+
+  def parse_birds_from_ebird_data
+    doc = query_ebird
+    common_names = doc.xpath("//com-name").children
+    sci_names = doc.xpath("//sci-name").children
+    birds = self.birds.dup
+
+    common_names.length.times do |i|
+      #filters out hybrids, and vaguely identified birds
+      next if common_names[i].text.match(/sp.|\/| x /)
+
+      bird = Bird.new(common_name: common_names[i].text,
+                      sci_name: sci_names[i].text)
+      if bird.save
+        BirdRegion.create(bird_id: bird.id, region_id: self.id)
+      end
+    end
   end
 end
