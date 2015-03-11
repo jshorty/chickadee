@@ -15,7 +15,7 @@ File.readlines(Rails.root.to_s + "/db/seeds/ebird_api_county.csv").each do |line
     saved += 1
   end
 end
-puts processed.to_s + " counties processed."
+puts (processed - 1).to_s + " counties processed."
 puts saved.to_s + " counties saved."
 
 processed = 0
@@ -32,7 +32,7 @@ File.readlines(Rails.root.to_s + "/db/seeds/ebird_api_state.csv").each do |line|
     saved += 1
   end
 end
-puts processed.to_s + " states processed."
+puts (processed - 1).to_s + " states processed."
 puts saved.to_s + " states saved."
 
 processed = 0
@@ -49,5 +49,5 @@ File.readlines(Rails.root.to_s + "/db/seeds/ebird_api_country.csv").each do |lin
     saved += 1
   end
 end
-puts processed.to_s + " countries processed."
+puts (processed - 1).to_s + " countries processed."
 puts saved.to_s + " countries saved."
