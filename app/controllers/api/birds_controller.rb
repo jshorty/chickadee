@@ -2,12 +2,22 @@ module Api
   class BirdsController < ApiController
     def show
       @bird = Bird.find(params[:id])
-      render json: @bird
+      render :show
     end
 
     def index
       @region = Region.find(params[:region_id])
       @birds = @region.birds
+      render :index
+    end
+
+    def quiz_question
+      @birds = []
+      region_birds = Region.find(params[:region_id]).birds
+
+      indices = (0..(region_birds.length - 1)).to_a
+      indices.sample(4).each { |i| @birds.push(region_birds[i]) }
+
       render json: @birds
     end
 
