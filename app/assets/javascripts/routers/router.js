@@ -4,7 +4,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
-    this.regions.fetch();
   },
 
   routes: {
@@ -13,6 +12,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   regionsIndex: function () {
+    this.regions.fetch();
     this._swapView(new Chickadee.Views.RegionsIndex({
       collection: this.regions
     }));

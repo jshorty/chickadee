@@ -26,7 +26,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     this.model.save(attr, {
       success: function () {
         Chickadee.Collections.regions.add(this.model)
-        Backbone.history.navigate("regions")
+        Backbone.history.navigate("regions", {trigger: true})
       },
       error: function (model, response) {
         view.displayErrors(response.responseJSON);

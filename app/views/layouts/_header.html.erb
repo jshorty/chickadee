@@ -6,8 +6,8 @@
       window.currentUser = {id: <%= current_user.id %>}
     </script>
 
-    <a href="#regions">Home</a>
-    <a href="#birds">Birds</a>
+    <a href="/#regions">Home</a>
+    <a href="/#birds">Birds</a>
 
     <p>logged in as <%= current_user.email %></p>
 
@@ -24,6 +24,7 @@
   <% else %>
 
     <a href="<%= new_session_url %>">Log In</a>
+    <a href="<%= new_user_url %>">Sign Up</a>
   <% end %>
   <hr>
 </header>
