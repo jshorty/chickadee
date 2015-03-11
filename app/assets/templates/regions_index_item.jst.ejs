@@ -1,3 +1,3 @@
-<h4>
-  RegionsIndexItem: <%= region.get('county') + region.get('state') + region.get('country') %>
-</h4>
+<a href="#/regions/<%= region.id %>">
+  <%= region.get('county') + region.get('state') + region.get('country') %>
+</a>

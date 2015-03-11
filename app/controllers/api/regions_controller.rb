@@ -24,13 +24,13 @@ module Api
     end
 
     def show
-      @region = Region.find(params[:id])
-      render json: @region
+      @region = Region.includes(:birds).find(params[:id])
+      render :show
     end
 
     def index
       @regions = current_user.regions
-      render json: @regions
+      render :index
     end
 
     private
