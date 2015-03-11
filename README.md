@@ -2,11 +2,11 @@
 
 [Heroku link][heroku]
 
-[heroku]: https://agile-garden-1772.herokuapp.com/
+[heroku]: https://chickadee.herokuapp.com/
 
 ## Minimum Viable Product
 Chickadee is a clone of the language-learning app Duolingo, used for learning to identify birds by song. It's built on Rails and Backbone.  With Chickadee, users can:
-- [ ] Sign up, log in, and log out
+- [X] Sign up, log in, and log out
 - [ ] Edit user profile
 - [ ] Create birds
 - [ ] Create regions
