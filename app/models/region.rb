@@ -21,6 +21,13 @@ class Region < ActiveRecord::Base
 
   has_many :users, through: :user_regions, source: :user
 
+  def name
+    county_name = self.county ? "#{self.county}, " : ""
+    state_name = self.state ? "#{self.state}, " : ""
+
+    county_name + state_name + this.country
+  end
+
   def region_has_clear_specificity
     if self.county && !self.state
       errors.add(:state, "must specify a state when selecting a county")

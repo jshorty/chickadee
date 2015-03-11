@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root "static_pages#public"
+  get "/", to: "static_pages#public", as: "public"
+  get "/private", to: "static_pages#private", as: "private"
 
   resources :users
   resource :session, only: [:new, :create, :destroy]

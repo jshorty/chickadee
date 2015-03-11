@@ -1,7 +1,14 @@
 <header>
   <h1>Chickadee</h1>
+
   <% if logged_in? %>
+
+    <script type="text/javascript">
+      window.currentUser = {id: <%= current_user.id %>}
+    </script>
+
     <p>logged in as <%= current_user.email %></p>
+
     <form action="<%= session_url %>" method="post">
       <input type="hidden" name="authenticity_token"
           value="<%= form_authenticity_token%>">
@@ -10,7 +17,9 @@
 
       <button>Log Out</button>
     </form>
+
   <% else %>
     <a href="<%= new_session_url %>">Log In</a>
   <% end %>
+
 </header>
