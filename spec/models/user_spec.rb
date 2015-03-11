@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   it "requires valid email format" do
     user = User.new(password: "password")
     bad_email1 = "xyzabc"
