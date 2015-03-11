@@ -1,5 +1,19 @@
 <h2>
-  <%= region.get('county') %>,
-  <%= region.get('state') %>,
-  <%= region.get('country') %>
+  <%= region.name() %>
 </h2>
+
+<section class="region-sidepanel">
+  <% regions.each(function (regionModel) { %>
+
+    <% if (regionModel.name() === region.name()) { %>
+      <button class="selected region-button" data-id="<%= regionModel.id %>">
+    <% } else { %>
+      <button class="region-button" data-id="<%= regionModel.id %>">
+    <% } %>
+      <%= regionModel.name() %>
+    </button>
+
+  <% }) %>
+</section>
+
+<section class="bird-list"></section>

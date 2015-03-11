@@ -15,4 +15,20 @@ Chickadee.Models.Region = Backbone.Model.extend({
     }
     return payload;
   },
+
+  name: function () {
+    var county = this.get('county');
+    var state = this.get('state');
+    var country = this.get('country')
+
+    if (!state) {
+      return country;
+    } else if (!county) {
+      return state + ", " + country;
+    } else {
+      return county + ", " + state + ", " + country;
+    }
+  }
 });
+
+Chickadee.Models.world = new Chickadee.Models.Region()

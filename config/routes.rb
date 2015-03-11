@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :birds, only: [:create, :show, :index]
-    resources :regions, only: [:create, :show, :index]
+    get "/birds_all", to: "birds#world_index"
+    get "/birds_quiz", to: "birds#quiz_question"
+    resources :regions, only: [:show, :index]
   end
 
 end

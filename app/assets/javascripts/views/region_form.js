@@ -49,5 +49,6 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     this.subviews.forEach(function (subview) {
       subview.remove();
     });
+    this.subviews = [];
   }
 })

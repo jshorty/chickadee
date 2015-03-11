@@ -1,3 +1,3 @@
-<a href="#/regions/birds<%= region.id %>">
-  <%= region.get('county') + region.get('state') + region.get('country') %>
+<a href="#/regions/<%= region.id %>/birds">
+  <%= region.name() %>
 </a>

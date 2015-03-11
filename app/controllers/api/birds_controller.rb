@@ -11,6 +11,11 @@ module Api
       render :index
     end
 
+    def world_index
+      @birds = current_user.birds
+      render :index
+    end
+
     def quiz_question
       @birds = []
       region_birds = Region.find(params[:region_id]).birds
