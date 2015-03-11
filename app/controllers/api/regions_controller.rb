@@ -13,9 +13,13 @@ module Api
           render json: @region.errors.full_messages, status: :unprocessable_entity
         end
       else
-        UserRegion.create(user_id: current_user.id, region_id: @region.id)
-        @region.parse_birds_from_ebird_data
-        render json: @region
+        if UserRegion.new.save(user_id: current_user.id, region_id: @region.id)
+          @region.parse_birds_from_ebird_data
+          render json: @region
+        else
+          render json: ["You are already studying that region"], status:
+          :unprocessable_entity
+        end
       end
     end
 

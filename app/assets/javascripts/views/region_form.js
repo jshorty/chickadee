@@ -35,6 +35,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   },
 
   displayErrors: function (errors) {
+    this.removeSubviews();
     var subview = new Chickadee.Views.Errors({errors: errors});
     this.subviews.push(subview)
     this.$el.append(subview.render().el)
