@@ -1,0 +1,25 @@
+<h2>Add a new study region!</h2>
+<p>Be as specific as you like, but make sure to at least choose a country!</p>
+
+<label for="new-region-county">County</label>
+<input type="text"
+       name="region[county]"
+       id="new-region-county"
+       value='<% region.get('county') %>'>
+<br>
+
+<label for="new-region-state">State</label>
+<input type="text"
+       name="region[state]"
+       id="new-region-state"
+       value='<%= region.get('state') %>'>
+<br>
+
+<label for="new-region-country">Country</label>
+<input type="text"
+       name="region[country]"
+       id="new-region-country"
+       value='<%= region.get('country') %>'>
+<br>
+
+<button>Submit</button>

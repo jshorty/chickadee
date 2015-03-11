@@ -5,11 +5,22 @@ module Api
 
       if @region.nil?
         @region = Region.new(region_params)
+        puts
+        puts region_params
+        puts
+        print "PARAMS: "
+
+        puts
+        print "REGION MODEL: "
+        puts @region.attributes
+        puts
+        puts
         if @region.save
           UserRegion.create(user_id: current_user.id, region_id: @region.id)
           @region.parse_birds_from_ebird_data
           render json: @region
         else
+          puts "SAVE FAIL"
           render json: @region.errors.full_messages, status: :unprocessable_entity
         end
       else
@@ -32,6 +43,9 @@ module Api
     private
 
       def region_params
+        params[:region][:county] = nil if params[:region][:county] == ""
+        params[:region][:state] = nil if params[:region][:state] == ""
+        params[:region][:country] = nil if params[:region][:country] == ""
         params.require(:region).permit(:id, :county, :state, :country)
       end
   end

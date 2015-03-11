@@ -4,6 +4,7 @@ class Region < ActiveRecord::Base
   validates :country, presence: true
   validate :region_has_clear_specificity
   validate :region_is_unique_by_scope
+  validate :region_matches_to_ebird_codes
 
   has_many :bird_regions,
     class_name: "BirdRegion",
@@ -45,6 +46,10 @@ class Region < ActiveRecord::Base
         county: nil, state: nil, country: self.country}).any?
       errors[:base] << "region already exists in the database"
     end
+  end
+
+  def region_matches_to_ebird_code
+    
   end
 
   def ebird_url #builds query string from seeded eBird tables
@@ -93,12 +98,10 @@ class Region < ActiveRecord::Base
       #filters out hybrids and birds not identified to species
       next if common_names[i].text.match(/sp.|\/| x /)
 
-      bird = Bird.new(common_name: common_names[i].text,
-                      sci_name: sci_names[i].text)
+      bird = Bird.find_or_create_by(common_name: common_names[i].text,
+                                    sci_name: sci_names[i].text)
 
-      if bird.save
-        BirdRegion.create(bird_id: bird.id, region_id: self.id)
-      end
+      BirdRegion.create(bird_id: bird.id, region_id: self.id)
     end
   end
 end

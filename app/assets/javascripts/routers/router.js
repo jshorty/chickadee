@@ -8,13 +8,19 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "regions":"regionsIndex"
+    "regions":"regionsIndex",
+    "regions/new":"newRegion"
   },
 
   regionsIndex: function () {
     this._swapView(new Chickadee.Views.RegionsIndex({
       collection: this.regions
     }));
+  },
+
+  newRegion: function () {
+    var region = new Chickadee.Models.Region();
+    this._swapView(new Chickadee.Views.RegionForm({model: region}))
   },
 
   _swapView: function (view) {
