@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311132428) do
+ActiveRecord::Schema.define(version: 20150312155106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(version: 20150311132428) do
 
   add_index "countries", ["code"], name: "index_countries_on_code", using: :btree
   add_index "countries", ["name"], name: "index_countries_on_name", using: :btree
+
+  create_table "quizzes", force: :cascade do |t|
+    t.integer  "user_id",                null: false
+    t.integer  "region_id",              null: false
+    t.integer  "progress",   default: 0, null: false
+    t.integer  "score",      default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "quizzes", ["progress"], name: "index_quizzes_on_progress", using: :btree
+  add_index "quizzes", ["user_id"], name: "index_quizzes_on_user_id", using: :btree
 
   create_table "regions", force: :cascade do |t|
     t.string   "county"
