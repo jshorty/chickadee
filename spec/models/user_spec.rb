@@ -6,11 +6,13 @@ RSpec.describe User, type: :model do
     bad_email1 = "xyzabc"
     bad_email2 = "trickier@.."
     bad_email3 = "@amazon.com"
+    bad_email4 = "aa aa@website.com"
     good_email = "shouldwork@example.com"
 
     expect(user.update(email: bad_email1)).to be false
     expect(user.update(email: bad_email2)).to be false
     expect(user.update(email: bad_email3)).to be false
+    expect(user.update(email: bad_email4)).to be false
     expect(user.update(email: good_email)).to be true
   end
 

@@ -4,15 +4,23 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
-    this.regions.fetch()
+
+    //INSECURE
+    this.user = new Chickadee.Models.User({id: window.currentUserID});
   },
 
   routes: {
+    "profile":"userProfile"
     "birds":"regionShow",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow"
   },
+
+  userProfile: function () {
+    this.user.fetch();
+    this._swapView(new Chickadee.Views.UserProfile(model: this.user))
+  }
 
   regionsIndex: function () {
     this.regions.fetch();

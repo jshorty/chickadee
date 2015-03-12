@@ -1,0 +1,20 @@
+<form>
+<h1><%= user.alias %></h1>
+
+<label for="user_name">Name (optional)</label>
+<input type="text" name="user[alias]" id="user_name" value="<%= user.get('alias') %>">
+
+<br>
+
+<label for="user_email">Email</label>
+<input type="text" name="user[email]" id="user_email" value="<%= user.get('email') %>">
+
+<br>
+
+<label for="user_password">Password (8+ characters)</label>
+<input type="password" name="user[password]" id="user_password">
+
+<br>
+
+<button "update-user-profile">Update</button>
+<form>

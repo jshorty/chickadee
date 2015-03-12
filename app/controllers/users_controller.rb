@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save!
+    if @user.save
       log_in!(@user)
       redirect_to ("/#regions")
     else
@@ -49,6 +49,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
+      params[:user][:alias] = nil if params[:user][:alias] == ""
       params.require(:user).permit(:id, :email, :password, :alias)
     end
 end
