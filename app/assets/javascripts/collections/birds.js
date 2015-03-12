@@ -8,4 +8,4 @@ Chickadee.Collections.Birds = Backbone.Collection.extend({
   url: function () {
     return (this.world ? "/api/birds_all" : "/api/birds")
   },
-})
+});

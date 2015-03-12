@@ -18,8 +18,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   render: function () {
     this.removeSubviews();
-    console.log(this.model.name());
-    var content = this.template({region: this.model, regions: this.collection});
+
+    var content = this.template({region: this.model,
+                                 regions: this.collection});
     this.$el.html(content);
 
     var birdIndex = new Chickadee.Views.BirdIndex({
@@ -58,13 +59,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   swapBirdIndex: function (event) {
     var id = $(event.currentTarget).data("id")
     if (id === 0) {
-      // this.showAllUserBirds();
       Backbone.history.navigate("birds", { trigger: true })
     } else {
       var url = "regions/" + id + "/birds"
-      // this.model = new Chickadee.Models.Region({id: id});
-      // this.model.fetch();
-      // this.render();
       Backbone.history.navigate(url, { trigger: true })
     }
   }

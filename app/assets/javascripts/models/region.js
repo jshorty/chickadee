@@ -30,5 +30,3 @@ Chickadee.Models.Region = Backbone.Model.extend({
     }
   }
 });
-
-Chickadee.Models.world = new Chickadee.Models.Region()

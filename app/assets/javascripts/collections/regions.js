@@ -19,4 +19,4 @@ Chickadee.Collections.Regions = Backbone.Collection.extend({
 
     return model;
   }
-})
+});
