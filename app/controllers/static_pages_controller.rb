@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def public
-    render :public
+  def root
+    render :root
   end
 end

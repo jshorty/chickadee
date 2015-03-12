@@ -25,5 +25,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     this.subviews.forEach(function (subview) {
       subview.remove();
     });
+
+    this.subviews = [];
   }
 })

@@ -8,9 +8,18 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
     //INSECURE
     this.user = new Chickadee.Models.User({id: window.currentUserID});
+    if (window.loggedIn) {
+      this.headerView = new Chickadee.Views.HeaderPrivate();
+      this.loggedIn = true
+    } else {
+      this.headerView = new Chickadee.Views.HeaderPublic();
+      this.loggedIn = false
+    }
+    this.$header.html(this.headerView.render().el)
   },
 
   routes: {
+    "":"rootView",
     "profile":"userProfile",
     "birds":"regionShow",
     "regions":"regionsIndex",
@@ -40,6 +49,14 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this._swapView(new Chickadee.Views.RegionShow({
       model: region, collection: this.regions
     }));
+  },
+
+  rootView: function () {
+    this.loggedIn ? this.regionsIndex() : this.welcome();
+  },
+
+  welcome: function () {
+    this._swapView(new Chickadee.Views.Welcome());
   },
 
   _swapView: function (view) {

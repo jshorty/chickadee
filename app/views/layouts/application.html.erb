@@ -9,15 +9,14 @@
   <script type="text/javascript">
   <% if logged_in? %>
       window.currentUserID = <%= current_user.id %>
-      window.loggedIN = true
+      window.loggedIn = true
   <% else %>
-      window.loggedIN = false
+      window.loggedIn = false
   <% end %>
   </script>
 </head>
 
 <body>
-  <%= render partial: "layouts/header" %>
   <%= yield %>
-  </body>
+</body>
 </html>
