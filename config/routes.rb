@@ -7,10 +7,13 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   namespace :api, defaults: { format: :json } do
+    resources :users, only: [:create, :update, :show]
+
+    resources :regions, only: [:show, :index]
+
     resources :birds, only: [:create, :show, :index]
     get "/birds_all", to: "birds#world_index"
     get "/birds_quiz", to: "birds#quiz_question"
-    resources :regions, only: [:show, :index]
   end
 
 end

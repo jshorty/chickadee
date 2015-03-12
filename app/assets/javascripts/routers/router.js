@@ -10,7 +10,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "profile":"userProfile"
+    "profile":"userProfile",
     "birds":"regionShow",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
@@ -19,8 +19,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   userProfile: function () {
     this.user.fetch();
-    this._swapView(new Chickadee.Views.UserProfile(model: this.user))
-  }
+    this._swapView(new Chickadee.Views.UserProfile({model: this.user}))
+  },
 
   regionsIndex: function () {
     this.regions.fetch();

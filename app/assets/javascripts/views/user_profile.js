@@ -4,7 +4,7 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   },
 
   events: {
-    "click .edit-user-profile":"renderForm"
+    "click .edit-user-profile":"renderForm",
     "click .update-user-profile":"updateProfile"
   },
 
