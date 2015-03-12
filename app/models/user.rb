@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
 
   def email_must_have_valid_format
     if self.email
+      if self.email.match(" ")
+        errors.add(:email, "must be a valid email address")
+      end
       unless self.email.match(/[\w|\-|\.]+@[\w|\-]+\.\w+/)
         errors.add(:email, "must be a valid email address")
       end
