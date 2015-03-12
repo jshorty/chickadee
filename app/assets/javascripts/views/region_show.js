@@ -1,10 +1,13 @@
 Chickadee.Views.RegionShow = Backbone.View.extend({
   initialize: function (options) {
-    if (!options.model) {
-      // this.model =
-    }
     this.subviews = [];
-    this.listenTo(this.model, "sync", this.render)
+
+    if (!options.model) {
+      this.showAllUserBirds();
+    }
+
+    this.listenTo(this.model.birds(), "sync", this.render);
+    this.listenTo(this.model, "sync", this.render);
   },
 
   template: JST["region_show"],
@@ -15,7 +18,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   render: function () {
     this.removeSubviews();
-
+    console.log(this.model.name());
     var content = this.template({region: this.model, regions: this.collection});
     this.$el.html(content);
 
@@ -39,8 +42,30 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     this.subviews = [];
   },
 
-  swapBirdIndex: function (event) {
-    this.removeSubviews();
+  showAllUserBirds: function () {
+    this.model = new Chickadee.Models.Region()
+    this.model.name = function () {
+      return "All Birds";
+    }
 
+    var birds = new Chickadee.Collections.Birds({world: true})
+    birds.fetch();
+    this.model.birds = function () {
+      return birds;
+    };
+  },
+
+  swapBirdIndex: function (event) {
+    var id = $(event.currentTarget).data("id")
+    if (id === 0) {
+      // this.showAllUserBirds();
+      Backbone.history.navigate("birds", { trigger: true })
+    } else {
+      var url = "regions/" + id + "/birds"
+      // this.model = new Chickadee.Models.Region({id: id});
+      // this.model.fetch();
+      // this.render();
+      Backbone.history.navigate(url, { trigger: true })
+    }
   }
 })

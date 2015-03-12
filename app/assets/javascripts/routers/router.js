@@ -4,7 +4,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
-    this.regions.fetch()
+    this.regions.fetch();
   },
 
   routes: {

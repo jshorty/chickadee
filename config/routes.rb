@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :birds, only: [:create, :show, :index]
     get "/birds_all", to: "birds#world_index"
     get "/birds_quiz", to: "birds#quiz_question"
-    resources :regions, only: [:show, :index]
+    resources :regions, only: [:show, :index, :create]
   end
 
 end
