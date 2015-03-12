@@ -6,16 +6,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
 
-    //INSECURE
-    this.user = new Chickadee.Models.User({id: window.currentUserID});
-    if (window.loggedIn) {
-      this.headerView = new Chickadee.Views.HeaderPrivate();
-      this.loggedIn = true
-    } else {
-      this.headerView = new Chickadee.Views.HeaderPublic();
-      this.loggedIn = false
-    }
-    this.$header.html(this.headerView.render().el)
+    this.$header.html(new Chickadee.Views.Header().checkLoggedIn().el)
   },
 
   routes: {

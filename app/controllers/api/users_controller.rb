@@ -8,7 +8,7 @@ module Api
         log_in!(@user)
         redirect_to ("/#regions")
       else
-        render json: @region.errors.full_messages, status: :unprocessable_entity
+        render json: @region.errors.full_messages, status: 422
       end
     end
 
@@ -17,7 +17,7 @@ module Api
       if @user.update(user_params)
         render :show
       else
-        render json: @user.errors.full_messages, status: :unprocessable_entity
+        render json: @user.errors.full_messages, status: 422
       end
     end
 
@@ -29,7 +29,7 @@ module Api
     private
       def confirm_user_id
         unless (params[:id] || user_params[:id]) == current_user.id.to_s
-          render json: ["There was an error with your request"], status: :not_found
+          render json: ["There was an error with your request"], status: 404
         end
       end
 

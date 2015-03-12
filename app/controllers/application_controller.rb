@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    redirect_to new_session_url unless logged_in?
+    redirect_to ("/") unless logged_in?
   end
 
   helper_method :logged_in?, :current_user
