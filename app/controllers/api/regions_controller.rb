@@ -1,5 +1,7 @@
 module Api
-  class RegionsController < ApiController
+  class RegionsController < ApplicationController
+    before_action :require_logged_in
+
     def create
       @region = Region.find_by(region_params)
       if !@region

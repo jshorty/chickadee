@@ -1,11 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_logged_in, only: [:edit, :update, :destroy, :show, :index]
 
-  def new
-    @user = User.new
-    render :form
-  end
-
   def create
     @user = User.new(user_params)
     if @user.save
@@ -49,7 +44,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params[:user][:alias] = nil if params[:user][:alias] == ""
-      params.require(:user).permit(:id, :email, :password, :alias)
+      params[:user][:alias] = nil if params[:user] && params[:user][:alias] == ""
+      params.require(:user).permit(:email, :password, :alias)
     end
 end

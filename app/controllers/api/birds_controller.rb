@@ -1,5 +1,7 @@
 module Api
-  class BirdsController < ApiController
+  class BirdsController < ApplicationController
+    before_action :require_logged_in
+    
     def show
       @bird = Bird.find(params[:id])
       render :show

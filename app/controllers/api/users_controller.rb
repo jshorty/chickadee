@@ -1,5 +1,5 @@
 module Api
-  class UsersController < ApiController
+  class UsersController < ApplicationController
     before_action :confirm_user_id, only: [:update, :show]
 
     def create
