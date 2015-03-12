@@ -1,10 +1,10 @@
 class Region < ActiveRecord::Base
   require 'open-uri'
 
-  validates :country, presence: true
+  validates :country, :code, presence: true
+  validates :code, uniqueness: true
   validate :region_has_clear_specificity
   validate :region_is_unique_by_scope
-  validate :region_matches_to_ebird_codes
 
   has_many :bird_regions,
     class_name: "BirdRegion",
@@ -25,8 +25,7 @@ class Region < ActiveRecord::Base
   def name
     county_name = self.county ? "#{self.county}, " : ""
     state_name = self.state ? "#{self.state}, " : ""
-
-    county_name + state_name + this.country
+    county_name + state_name + self.country
   end
 
   def region_has_clear_specificity
@@ -38,54 +37,29 @@ class Region < ActiveRecord::Base
   def region_is_unique_by_scope
     if self.county && Region.all.where({
         county: self.county, state: self.state, country: self.country}).any?
-      errors[:base] << "region already exists in the database"
-    elsif self.state && Region.all.where({
+      errors[:base] << "this county is already in the database for this state"
+    elsif !self.county && self.state && Region.all.where({
         county: nil, state: self.state, country: self.country}).any?
-      errors[:base] << "region already exists in the database"
-    elsif Region.all.where({
+      errors[:base] << "this state is already in the database for this country"
+    elsif !self.county && !self.state && Region.all.where({
         county: nil, state: nil, country: self.country}).any?
-      errors[:base] << "region already exists in the database"
+      errors[:base] << "this country is already in the database"
     end
   end
 
-  def region_matches_to_ebird_codes
-    # unless Country.find_by(name: self.country)
-    #   errors.add(:country, "doesn't match eBird region data")
-    # end
-    # unless !self.state || State.find_by(name: self.state)
-    #   errors.add(:state, "doesn't match eBird region data")
-    # end
-    # unless !self.county || County.find_by(name: self.county)
-    #   errors.add(:county, "doesn't match eBird region data")
-    # end
-  end
-
-  def ebird_url #builds query string from seeded eBird tables
+  def ebird_url
     base_url = "http://ebird.org/ws1.1/data/obs/region/recent?rtype="
     query_end = "&back=30&maxResults=10000&includeProvisional=false"
 
     if self.county
       region = "subnational2&r="
-      code =  County.all
-                    .joins("JOIN states ON counties.state = states.code")
-                    .where(["states.name = ? AND counties.name = ?",
-                            self.state, self.county])
-                    .first
-                    .code
-    elsif self.state #several countries have two state entries w/ same name
+    elsif self.state
       region = "subnational1&r="
-      code = State.all
-                  .joins("JOIN countries ON states.country = countries.code")
-                  .where(["states.name = ? AND countries.name = ?",
-                          self.state, self.country])
-                  .first
-                  .code
     else
       region = "country&r="
-      code = Country.all.where({name: self.country}).first.code
     end
 
-    base_url + region + code + query_end
+    base_url + region + self.code + query_end
   end
 
   def query_ebird
