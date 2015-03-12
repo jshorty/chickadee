@@ -11,7 +11,7 @@ RSpec.describe Region, type: :model do
     region4 = Region.new(state: "Arkansas", country: "United States")
     region5 = Region.new(country: "United States")
 
-    expect(region.save).to be true
+    expect(region.save!).to be true
     expect(region1.save).to be false
     expect(region2.save).to be false
     expect(region3.save).to be false
@@ -27,7 +27,7 @@ RSpec.describe Region, type: :model do
     region5 = Region.new(country: "United States")
     region6 = Region.new(country: "United States")
 
-    expect(region.save).to be true
+    expect(region.save!).to be true
     expect(region2.save).to be false
     expect(region3.save).to be true
     expect(region4.save).to be false
