@@ -3,9 +3,7 @@
 
   <nav>
   <% if logged_in? %>
-    <script type="text/javascript">
-      window.currentUserID = <%= current_user.id %>
-    </script>
+
     <form action="<%= session_url %>" method="post">
       <input type="hidden" name="authenticity_token"
           value="<%= form_authenticity_token%>">
@@ -26,7 +24,6 @@
       <a href="/#logout" class="logout">Logout</a>
       <a href="/#profile">My Profile</a>
     </section>
-
 
   <% else %>
 

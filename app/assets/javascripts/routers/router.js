@@ -1,6 +1,7 @@
 Chickadee.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
-    this.$main = options.$main
+    this.$main = options.$main;
+    this.$header = options.$header;
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;

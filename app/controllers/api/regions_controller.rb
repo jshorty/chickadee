@@ -1,26 +1,26 @@
 module Api
   class RegionsController < ApiController
     def create
-      @region = Region.find_by(region_params)
-
-      if @region.nil?
-        @region = Region.new(region_params)
-        if @region.save
-          UserRegion.create(user_id: current_user.id, region_id: @region.id)
-          @region.parse_birds_from_ebird_data
-          render json: @region
-        else
-          render json: @region.errors.full_messages, status: :unprocessable_entity
-        end
-      else
-        if UserRegion.new.save(user_id: current_user.id, region_id: @region.id)
-          @region.parse_birds_from_ebird_data
-          render json: @region
-        else
-          render json: ["You are already studying that region"], status:
-          :unprocessable_entity
-        end
-      end
+      # @region = Region.find_by(region_params)
+      # @user_region = UserRegion.find_by(region_params)
+      # if @region.nil?
+      #   @region = Region.new(region_params)
+      #   if @region.save
+      #     UserRegion.create(user_id: current_user.id, region_id: @region.id)
+      #     @region.parse_birds_from_ebird_data
+      #     render json: @region
+      #   else
+      #     render json: @region.errors.full_messages, status: :unprocessable_entity
+      #   end
+      # else
+      #   if UserRegion.new.save(user_id: current_user.id, region_id: @region.id)
+      #     @region.parse_birds_from_ebird_data
+      #     render json: @region
+      #   else
+      #     render json: ["You are already studying that region"], status:
+      #     :unprocessable_entity
+      #   end
+      # end
     end
 
     def show

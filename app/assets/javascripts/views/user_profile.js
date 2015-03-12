@@ -1,19 +1,21 @@
 Chickadee.Views.UserProfile = Backbone.View.extend({
   initialize: function () {
-    this.subviews = []
+    this.subviews = [];
+    this.listenTo(this.model, "sync", this.render)
   },
 
   events: {
     "click .edit-user-profile":"renderForm",
-    "click .update-user-profile":"updateProfile"
+    "submit form":"updateProfile"
   },
 
-  template: JST["user_profile"],
+  template: JST["user_show"],
 
   render: function () {
     this.removeSubviews();
     var content = this.template({user: this.model});
     this.$el.html(content);
+    console.log(this.model);
     return this;
   },
 

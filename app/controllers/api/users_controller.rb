@@ -17,7 +17,7 @@ module Api
       if @user.update(user_params)
         render :show
       else
-        render json: @region.errors.full_messages, status: :unprocessable_entity
+        render json: @user.errors.full_messages, status: :unprocessable_entity
       end
     end
 
@@ -28,14 +28,14 @@ module Api
 
     private
       def confirm_user_id
-        unless user_params[:id] == current_user.id
+        unless (params[:id] || user_params[:id]) == current_user.id.to_s
           render json: ["There was an error with your request"], status: :not_found
         end
       end
 
       def user_params
-        params[:user][:alias] = nil if params[:user][:alias] == ""
-        params.require(:user).permit(:id, :email, :password, :alias)
+        params[:user][:alias] = nil if params[:user] && params[:user][:alias] == ""
+        params.require(:user).permit(:email, :password, :alias)
       end
   end
 end
