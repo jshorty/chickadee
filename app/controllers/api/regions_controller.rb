@@ -1,26 +1,21 @@
 module Api
   class RegionsController < ApiController
     def create
-      # @region = Region.find_by(region_params)
-      # @user_region = UserRegion.find_by(region_params)
-      # if @region.nil?
-      #   @region = Region.new(region_params)
-      #   if @region.save
-      #     UserRegion.create(user_id: current_user.id, region_id: @region.id)
-      #     @region.parse_birds_from_ebird_data
-      #     render json: @region
-      #   else
-      #     render json: @region.errors.full_messages, status: :unprocessable_entity
-      #   end
-      # else
-      #   if UserRegion.new.save(user_id: current_user.id, region_id: @region.id)
-      #     @region.parse_birds_from_ebird_data
-      #     render json: @region
-      #   else
-      #     render json: ["You are already studying that region"], status:
-      #     :unprocessable_entity
-      #   end
-      # end
+      @region = Region.find_by(region_params)
+      if !@region
+        render json: ["Region doesn't exist in the database"], status: 404
+      elsif @region.users.include?(current_user)
+        render json: ["You are already studying that region"], status: 422
+      else
+        @user_region = UserRegion.new(region_id: @region.id,
+                                      user_id: current_user.id)
+        if @user_region.save
+          @region.parse_birds_from_ebird_data
+          render json: @region
+        else
+          render json: @user_region.errors.full_messages, status: 422
+        end
+      end
     end
 
     def show
