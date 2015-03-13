@@ -1,12 +1,10 @@
 Chickadee.Views.Header = Backbone.View.extend({
   initialize: function () {
-    console.log("header loaded");
     this.subviews = [];
 
     this.model = Chickadee.Models.session;
-    this.model.fetch();
 
-    this.listenTo(this.model, "sync", this.checkLoggedIn);
+    this.listenTo(this.model, "sync", this.render);
   },
 
   template: JST["header_public"],
@@ -17,25 +15,14 @@ Chickadee.Views.Header = Backbone.View.extend({
     "submit form":"login",
   },
 
-  checkLoggedIn: function () {
-    console.log("session sync detected!");
-    if (this.model.get('logged_in') === true) {
-      console.log("current user detected!");
-      var options = {user: this.model.get('user')};
-      this.template = JST["header_private"];
-      return this.render(options);
-    } else {
-      this.template = JST["header_public"];
-      return this.render();
-    }
+  render: function (options) {
+    var content = this.checkLoggedIn();
+    this.$el.html(content);
+    return this;
   },
 
-  render: function (options) {
-    console.log("header rendering");
-    console.log(this.model.attributes);
-    console.log(this.model.get('logged_in'));
-    this.$el.html(this.template(options));
-    return this;
+  remove: function () {
+    Chickadee.Views.RegionsIndex.prototype.remove.call(this)
   },
 
   openLoginWindow: function (event) {
@@ -44,27 +31,34 @@ Chickadee.Views.Header = Backbone.View.extend({
     this.$el.append(subview.render().el);
   },
 
-  remove: function () {
-    Chickadee.Views.RegionsIndex.protoype.remove.call(this)
+  checkLoggedIn: function () {
+    if (this.model.get('logged_in') === true) {
+      var userData = this.model.get('user')
+      var user = new Chickadee.Models.User(userData);
+      return JST["header_private"]({user: user});
+    } else {
+      return JST["header_public"]();
+    }
   },
 
   login: function (event) {
+    event.preventDefault();
     var data = $(event.currentTarget).serializeJSON();
     this.model = new Chickadee.Models.Session(data);
-    this.model.save({
+    this.model.save({}, {
       success: function () {
-        this.template = JST["header_private"];
+        this.render();
         Backbone.history.navigate("#regions", { trigger: true });
       }.bind(this),
       error: function () {
+        console.log("Error signing in.");
       }
     })
   },
 
   logout: function (event) {
-    this.model.destroy();
-    this.template = JST["header_public"];
-    this.render();
+    $.ajax({url: "/api/session", method: 'DELETE'})
+    this.model.fetch();
     Backbone.history.navigate("", { trigger: true });
   }
-})
+});

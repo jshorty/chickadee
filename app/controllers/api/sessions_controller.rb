@@ -18,7 +18,7 @@ module Api
 
     def destroy
       log_out!
-      redirect_to root_url
+      render :current_user
     end
   end
 end

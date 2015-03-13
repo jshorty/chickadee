@@ -3,10 +3,15 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.$main = options.$main;
     this.$header = options.$header;
 
+    this.session = Chickadee.Models.session;
+    this.session.fetch();
+
+    this.user = new Chickadee.Models.User(this.session.get('user'));
+
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
 
-    this.$header.html(new Chickadee.Views.Header().checkLoggedIn().el)
+    this.$header.html(new Chickadee.Views.Header().render().el)
   },
 
   routes: {
@@ -19,7 +24,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   userProfile: function () {
-    this.user.fetch();
     this._swapView(new Chickadee.Views.UserProfile({model: this.user}))
   },
 

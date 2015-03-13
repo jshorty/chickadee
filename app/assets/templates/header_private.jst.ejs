@@ -4,10 +4,14 @@
   <a href="/#regions">Home</a>
   <a href="/#birds">Birds</a>
 
-  <a><%= if (user) { user %></a>
+  <% if (user) { %>
+    <a class="current-user"><%= user.name() %></a>
+  <% } else { %>
+    <a class="current-user">no username</a>
+  <% } %>
 
   <section class="nav-dropdown">
-    <a href="/#logout" class="logout">Logout</a>
+    <a class="logout">Logout</a>
     <a href="/#profile">My Profile</a>
   </section>
 </nav>

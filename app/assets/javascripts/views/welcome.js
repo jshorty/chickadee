@@ -15,7 +15,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   },
 
   remove: function () {
-    Chickadee.Views.RegionsIndex.protoype.remove.call(this)
+    Chickadee.Views.RegionsIndex.prototype.remove.call(this)
   },
 
   openSignUpWindow: function (event) {

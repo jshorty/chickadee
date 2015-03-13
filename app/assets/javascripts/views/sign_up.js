@@ -16,7 +16,7 @@ Chickadee.Views.SignUp = Backbone.View.extend({
     var data = $(event.currentTarget).serializeJSON();
     var user = new Chickadee.Models.User(data);
     var view = this;
-    user.save({
+    user.save({}, {
       success: function () {
         view.remove();
         Backbone.history.navigate("", { trigger: true });

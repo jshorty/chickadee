@@ -8,7 +8,7 @@ module Api
         log_in!(@user)
         redirect_to ("/#regions")
       else
-        render json: @region.errors.full_messages, status: 422
+        render json: @user.errors.full_messages, status: 422
       end
     end
 
