@@ -34,8 +34,4 @@ class Bird < ActiveRecord::Base
     names = self.sci_name.split(" ")
     names.length > 2 ? names[2] : nil
   end
-
-  def self.quiz_question(region_id)
-    BirdRegion.all.where(region_id: region_id).birds.to_a.sample(4)
-  end
 end

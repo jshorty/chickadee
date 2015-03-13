@@ -40,8 +40,23 @@ class Quiz < ActiveRecord::Base
   end
 
   def seed_questions
-    10.times do
-      bird = self.birds.to_a.sample
-      Question.create(quiz_id: self.id, bird_id: bird.id)
+    10.times do |i|
+      birds = self.region.quiz_question
+      Question.create(quiz_id: self.id,
+                      bird_id: birds[0].id,
+                      choice_a: birds[1].id,
+                      choice_b: birds[2].id,
+                      choice_c: birds[3].id)
+    end
+  end
+
+  def correct!
+    self.update(score: (self.score + 1), progress: (self.progress + 1))
+    quiz.questions.destroy_all if self.progress == 10
+  end
+
+  def incorrect!
+    self.update(progress: (self.progress + 1))
+    quiz.questions.destroy_all if self.progress == 10
   end
 end

@@ -2,10 +2,6 @@
   <% birds.each(function (bird) { %>
     <li><%= bird.get('common_name') %> (<%= bird.get('sci_name') %>)
   <% }) %>
-  <br>
-  <br>
-  <br>
-  <a class="quiz-start">Study!</a>
 <% } else { %>
   <p>No birds to display
 <% } %>

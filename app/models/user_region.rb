@@ -11,5 +11,4 @@ class UserRegion < ActiveRecord::Base
     class_name: "Region",
     primary_key: :id,
     foreign_key: :region_id
-
 end

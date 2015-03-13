@@ -14,7 +14,8 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   events: {
     "click .region-button":"swapBirdIndex",
-    "click .region-update":"reloadRegionBirds"
+    "click .region-update":"reloadRegionBirds",
+    "click .quiz-start":"goToQuiz"
   },
 
   render: function () {
@@ -69,5 +70,10 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   reloadRegionBirds: function (event) {
     this.model.fetch({data: {requery: true}});
+  },
+
+  goToQuiz: function (event) {
+    var region_id = $(event.currentTarget).data("id");
+    Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
   }
 })

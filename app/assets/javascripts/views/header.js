@@ -33,6 +33,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   openMyProfile: function (event) {
+    event.preventDefault();
     Backbone.history.navigate(
       "profile/" + this.model.get('user').id, {trigger: true}
     );

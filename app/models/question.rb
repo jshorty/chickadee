@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  validates :quiz_id, :bird_id, presence: true
+  validates :quiz_id, :bird_id, :choice_a, :choice_b, :choice_c, presence: true
   validate :question_is_incorrect_if_unanswered
 
   belongs_to :quiz,
@@ -11,6 +11,10 @@ class Question < ActiveRecord::Base
     class_name: "Bird",
     primary_key: :id,
     foreign_key: :bird_id
+
+  has_one :user,
+    through: :quiz,
+    source: :user
 
   def question_is_incorrect_if_unanswered
     if self.correct && !self.answered

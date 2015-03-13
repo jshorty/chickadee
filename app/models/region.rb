@@ -96,4 +96,12 @@ class Region < ActiveRecord::Base
       BirdRegion.create(bird_id: bird.id, region_id: self.id)
     end
   end
+
+  def quiz_question
+    birds = self.birds.to_a.sample(4)
+    unless birds.length == 4
+      raise InvalidQuizError.new("Not enough birds for a quiz.")
+    end
+    birds
+  end
 end
