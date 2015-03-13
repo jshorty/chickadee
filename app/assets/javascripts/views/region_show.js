@@ -13,7 +13,8 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   template: JST["region_show"],
 
   events: {
-    "click .region-button":"swapBirdIndex"
+    "click .region-button":"swapBirdIndex",
+    "click .region-update":"reloadRegionBirds"
   },
 
   render: function () {
@@ -28,7 +29,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     });
     this.subviews.push(birdIndex);
     this.$el.find(".bird-list").html(birdIndex.render().el);
-    
+
     return this;
   },
 
@@ -64,5 +65,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
       var url = "regions/" + id + "/birds"
       Backbone.history.navigate(url, { trigger: true })
     }
+  },
+
+  reloadRegionBirds: function (event) {
+    this.model.fetch({data: {requery: true}});
   }
 })

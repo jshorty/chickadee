@@ -1,8 +1,11 @@
-<h2>
-  <%= region.name() %>
-</h2>
-<h4><%= regions.models.count %></h4>
-
+<h2><%= region.name() %></h2>
+<h6>
+  <% if (region.name() != "All Birds") { %>
+      reported species from <%= region.get('start_date') %> to
+      <%= region.get('updated_at') %>
+  <% } %>
+    <button class='region-update'>Update</button>
+</h6>
 <section class="region-sidepanel">
   <% regions.each(function (regionModel) { %>
 
