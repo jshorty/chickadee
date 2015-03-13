@@ -6,8 +6,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.session = Chickadee.Models.session;
     this.session.fetch();
 
-    this.user = new Chickadee.Models.User(this.session.get('user'));
-
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
 
@@ -16,15 +14,17 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "":"rootView",
-    "profile":"userProfile",
+    "profile/:id":"userProfile",
     "birds":"regionShow",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow"
   },
 
-  userProfile: function () {
-    this._swapView(new Chickadee.Views.UserProfile({model: this.user}))
+  userProfile: function (id) {
+    var user = new Chickadee.Models.User({id: id})
+    user.fetch();
+    this._swapView(new Chickadee.Views.UserProfile({model: user}))
   },
 
   regionsIndex: function () {

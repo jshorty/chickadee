@@ -6,13 +6,11 @@
 
   <% if (user) { %>
     <a class="current-user"><%= user.name() %></a>
-  <% } else { %>
-    <a class="current-user">no username</a>
   <% } %>
 
   <section class="nav-dropdown">
     <a class="logout">Logout</a>
-    <a href="/#profile">My Profile</a>
+    <a class="profile">My Profile</a>
   </section>
 </nav>
 

@@ -1,5 +1,5 @@
 <form>
-<h1><%= user.alias %></h1>
+<h1><%= user.name() %></h1>
 
 <label for="user_name">Name (optional)</label>
 <input type="text" name="user[alias]" id="user_name" value="<%= user.get('alias') %>">

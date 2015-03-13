@@ -13,6 +13,7 @@ Chickadee.Views.Header = Backbone.View.extend({
     "click .login":"openLoginWindow",
     "click .logout":"logout",
     "submit form":"login",
+    "click .profile":"openMyProfile"
   },
 
   render: function (options) {
@@ -29,6 +30,12 @@ Chickadee.Views.Header = Backbone.View.extend({
     var subview = new Chickadee.Views.Login();
     this.subviews.push(subview);
     this.$el.append(subview.render().el);
+  },
+
+  openMyProfile: function (event) {
+    Backbone.history.navigate(
+      "profile/" + this.model.get('user').id, {trigger: true}
+    );
   },
 
   checkLoggedIn: function () {

@@ -15,7 +15,6 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
     this.removeSubviews();
     var content = this.template({user: this.model});
     this.$el.html(content);
-    console.log(this.model);
     return this;
   },
 
