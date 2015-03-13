@@ -1,36 +1,31 @@
 Chickadee.Views.Welcome = Backbone.View.extend({
-  initialize: function () {
+  initialize: function(){
     this.subviews = [];
-    this.checkLoggedIn();
-    this.listenTo(this.model, "sync", this.checkLoggedIn)
+    this.listenTo(this.model, "signIn", "goToIndex");
   },
 
   template: JST["welcome"],
 
   events: {
-      "click .sign-up":"openSignUpWindow",
+    "click .sign-up":"openSignUpWindow",
   },
 
-  render: function () {
-    console.log("WELCOME");
+  render: function(){
     this.$el.html(this.template());
     return this;
   },
 
-  remove: function () {
+  remove: function(){
     Chickadee.Views.RegionsIndex.prototype.remove.call(this)
   },
 
-  openSignUpWindow: function (event) {
+  goToIndex: function(){
+    Backbone.history.navigate("regions", {trigger:true})
+  },
+
+  openSignUpWindow: function(event){
     var subview = new Chickadee.Views.SignUp();
     this.subviews.push(subview);
     this.$el.append(subview.render().el);
   },
-
-  checkLoggedIn: function (event) {
-    if (this.model.get('logged_in') === true) {
-      this.remove();
-      Backbone.history.navigate("regions", {trigger: true});
-    }
-  }
 });

@@ -3,12 +3,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.$main = options.$main;
     this.$header = options.$header;
 
-    this.session = Chickadee.Models.session;
-    this.session.fetch();
-
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
-    this.regions.fetch();
 
     this.headerView = new Chickadee.Views.Header()
     this.$header.html(this.headerView.render().el);
@@ -16,7 +12,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "":"welcome",
-    "profile/:id":"userProfile",
+    "profile":"userProfile",
     "birds":"regionShow",
     "quiz/:regionId":"questionShow",
     "regions":"regionsIndex",
@@ -25,57 +21,68 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "*nomatch":"notFound"
   },
 
-  userProfile: function (id) {
-    this.session.fetch();
-    var user = new Chickadee.Models.User({id: id})
-    user.fetch();
-    this._swapView(new Chickadee.Views.UserProfile({model: user}))
-  },
-
-  regionsIndex: function () {
-    this.session.fetch();
-    this.regions.fetch();
-    this._swapView(new Chickadee.Views.RegionsIndex({
-      collection: this.regions
-    }));
-  },
-
   newRegion: function () {
-    var region = new Chickadee.Models.Region();
-    this._swapView(new Chickadee.Views.RegionForm({model: region}));
+    if (this._requireLoggedIn()) {
+      var region = new Chickadee.Models.Region();
+      this._swapView(new Chickadee.Views.RegionForm({model: region}));
+    } else {
+      this._swapView(new Chickadee.Views.Welcome());
+    }
   },
 
   notFound: function () {
     this._swapView(new Chickadee.Views.NotFound());
   },
 
-  regionShow: function (id) {
-    var region = (id ? this.regions.getOrFetch(id) : null)
-    this._swapView(new Chickadee.Views.RegionShow({
-      model: region, collection: this.regions
-    }));
+  regionsIndex: function () {
+    if (this._requireLoggedIn()) {
+      this.regions.fetch();
+      this._swapView(new Chickadee.Views.RegionsIndex({
+        collection: this.regions
+      }));
+    } else {
+      this._swapView(new Chickadee.Views.Welcome());
+    }
   },
 
-  root: function () {
-    if (this.session.get('loggedIn')) {
-      return this.regionsIndex();
+  regionShow: function (id) {
+    if (this._requireLoggedIn()) {
+      var region = (id ? this.regions.getOrFetch(id) : null)
+      this._swapView(new Chickadee.Views.RegionShow({
+        model: region, collection: this.regions
+      }));
     } else {
-      return this.welcome();
+      this._swapView(new Chickadee.Views.Welcome());
+    }
+  },
+
+  userProfile: function () {
+    if (this._requireLoggedIn()) {
+      this._swapView(new Chickadee.Views.UserProfile({
+        model: Chickadee.Models.currentUser
+      }));
+    } else {
+      this._swapView(new Chickadee.Views.Welcome());
     }
   },
 
   welcome: function () {
-    this.session.fetch({
-      success: function () {
-        if (this.session.get('logged_in') == true) {
-          Backbone.history.navigate("regions", { trigger: true });
-        }
-      }.bind(this),
-      error: function () {
-        this._swapView(new Chickadee.Views.Welcome({model: this.session}));
-      }.bind(this)
-    });
-    this._swapView(new Chickadee.Views.Welcome({model: this.session}));
+    if (this._requireLoggedOut()) {
+      Backbone.history.navigate("regions", {trigger: true})
+    } else {
+    this._swapView(new Chickadee.Views.Welcome({
+      model: Chickadee.Models.currentUser}));
+    }
+  },
+
+  _requireLoggedIn: function () {
+    var loggedIn = (!!Chickadee.Models.currentUser.isLoggedIn() ? true : false);
+    return loggedIn;
+  },
+
+  _requireLoggedOut: function () {
+    var loggedOut = (!Chickadee.Models.currentUser.isLoggedIn() ? true : false);
+    return loggedOut;
   },
 
   _swapView: function (view) {
