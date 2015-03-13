@@ -21,10 +21,12 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "quiz/:regionId":"questionShow",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
-    "regions/:id/birds":"regionShow"
+    "regions/:id/birds":"regionShow",
+    "*nomatch":"notFound"
   },
 
   userProfile: function (id) {
+    this.session.fetch();
     var user = new Chickadee.Models.User({id: id})
     user.fetch();
     this._swapView(new Chickadee.Views.UserProfile({model: user}))
@@ -41,6 +43,10 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   newRegion: function () {
     var region = new Chickadee.Models.Region();
     this._swapView(new Chickadee.Views.RegionForm({model: region}));
+  },
+
+  notFound: function () {
+    this._swapView(new Chickadee.Views.NotFound());
   },
 
   regionShow: function (id) {
@@ -61,9 +67,12 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   welcome: function () {
     this.session.fetch({
       success: function () {
-        if (this.session.get('logged_in' == true)) {
-          this.regionsIndex();
+        if (this.session.get('logged_in') == true) {
+          Backbone.history.navigate("regions", { trigger: true });
         }
+      }.bind(this),
+      error: function () {
+        this._swapView(new Chickadee.Views.Welcome({model: this.session}));
       }.bind(this)
     });
     this._swapView(new Chickadee.Views.Welcome({model: this.session}));
@@ -73,6 +82,5 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.currentView && this.currentView.remove();
     this.currentView = view;
     this.$main.html(this.currentView.render().el);
-  }
-
+  },
 });
