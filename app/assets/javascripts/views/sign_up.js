@@ -19,7 +19,8 @@ Chickadee.Views.SignUp = Backbone.View.extend({
     user.save({}, {
       success: function () {
         view.remove();
-        Backbone.history.navigate("", { trigger: true });
+        Chickadee.Models.session.u
+        Backbone.history.navigate("regions", { trigger: true });
       },
       error: function (model, response) {
         var errors = response.responseJSON;

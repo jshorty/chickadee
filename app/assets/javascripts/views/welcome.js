@@ -7,7 +7,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   template: JST["welcome"],
 
   events: {
-      "click .sign-up":"openSignUpWindow"
+      "click .sign-up":"openSignUpWindow",
   },
 
   render: function () {
@@ -27,7 +27,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
 
   checkLoggedIn: function (event) {
     if (this.model.get('logged_in') === true) {
-      Backbone.history.navigate("#regions", {trigger: true});
+      Backbone.history.navigate("regions", {trigger: true});
     }
   }
 });

@@ -24,7 +24,7 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
     var data = $(this.$el.find("form")).serializeJSON();
     this.model.save(data, {
       success: function () {
-        view.render();
+        Backbone.history.navigate("profile", {trigger: true});
       },
       error: function (model, response) {
         view.displayErrors(response.responseJSON);

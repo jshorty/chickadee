@@ -10,7 +10,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.regions = Chickadee.Collections.regions;
     this.regions.fetch();
 
-    this.$header.html(new Chickadee.Views.Header().render().el);
+    this.headerView = new Chickadee.Views.Header()
+    this.$header.html(this.headerView.render().el);
   },
 
   routes: {
@@ -29,6 +30,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   regionsIndex: function () {
+    this.regions.fetch();
     this._swapView(new Chickadee.Views.RegionsIndex({
       collection: this.regions
     }));
@@ -61,6 +63,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   _swapView: function (view) {
     this.currentView && this.currentView.remove();
     this.currentView = view;
+    this.$header.html(this.headerView.render().el);
     this.$main.html(this.currentView.render().el);
   }
 
