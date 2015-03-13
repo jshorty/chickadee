@@ -1,6 +1,7 @@
 Chickadee.Views.Welcome = Backbone.View.extend({
   initialize: function () {
     this.subviews = [];
+    this.listenTo(this.model, "sync", this.checkLoggedIn)
   },
 
   template: JST["welcome"],
@@ -22,5 +23,11 @@ Chickadee.Views.Welcome = Backbone.View.extend({
     var subview = new Chickadee.Views.SignUp();
     this.subviews.push(subview);
     this.$el.append(subview.render().el);
+  },
+
+  checkLoggedIn: function (event) {
+    if (this.model.get('logged_in') === true) {
+      Backbone.history.navigate("#regions", {trigger: true});
+    }
   }
 });

@@ -7,11 +7,11 @@
 ## Minimum Viable Product
 Chickadee is a clone of the language-learning app Duolingo, used for learning to identify birds by song. It's built on Rails and Backbone.  With Chickadee, users can:
 - [X] Sign up, log in, and log out
-- [ ] Edit user profile
-- [ ] Create birds
-- [ ] Create regions
-- [ ] View birds
-- [ ] View regions
+- [X] Edit user profile
+- [X] Create birds
+- [X] Create regions
+- [X] View birds
+- [X] View regions
 - [ ] Take a quiz on a region's birdsongs (text description)
 - [ ] See their score on a quiz
 - [ ] Listen to the bird song for a given quiz question

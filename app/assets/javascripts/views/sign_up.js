@@ -22,7 +22,8 @@ Chickadee.Views.SignUp = Backbone.View.extend({
         Backbone.history.navigate("", { trigger: true });
       },
       error: function (model, response) {
-        view.displayErrors(response.responseJSON);
+        var errors = response.responseJSON;
+        view.$el.append(JST["errors"]({errors: errors}))
       }
     });
   }

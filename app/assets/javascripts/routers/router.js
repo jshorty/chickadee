@@ -8,12 +8,13 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions();
     this.regions = Chickadee.Collections.regions;
+    this.regions.fetch();
 
-    this.$header.html(new Chickadee.Views.Header().render().el)
+    this.$header.html(new Chickadee.Views.Header().render().el);
   },
 
   routes: {
-    "":"rootView",
+    "":"welcome",
     "profile/:id":"userProfile",
     "birds":"regionShow",
     "regions":"regionsIndex",
@@ -28,7 +29,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   regionsIndex: function () {
-    this.regions.fetch();
     this._swapView(new Chickadee.Views.RegionsIndex({
       collection: this.regions
     }));
@@ -46,12 +46,16 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     }));
   },
 
-  rootView: function () {
-    this.loggedIn ? this.regionsIndex() : this.welcome();
+  root: function () {
+    if (this.session.get('loggedIn')) {
+      return this.regionsIndex();
+    } else {
+      return this.welcome();
+    }
   },
 
   welcome: function () {
-    this._swapView(new Chickadee.Views.Welcome());
+    this._swapView(new Chickadee.Views.Welcome({model: this.session}));
   },
 
   _swapView: function (view) {

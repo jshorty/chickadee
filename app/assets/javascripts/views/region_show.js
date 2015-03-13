@@ -28,7 +28,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     });
     this.subviews.push(birdIndex);
     this.$el.find(".bird-list").html(birdIndex.render().el);
-
+    
     return this;
   },
 
