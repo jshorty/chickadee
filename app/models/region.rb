@@ -18,9 +18,19 @@ class Region < ActiveRecord::Base
     foreign_key: :region_id,
     dependent: :destroy
 
-  has_many :birds, through: :bird_regions, source: :bird
+  has_many :quizzes,
+    class_name: "Quiz",
+    primary_key: :id,
+    foreign_key: :region_id,
+    dependent: :destroy
 
-  has_many :users, through: :user_regions, source: :user
+  has_many :birds,
+    through: :bird_regions,
+    source: :bird
+
+  has_many :users,
+    through: :user_regions,
+     source: :user
 
   def name
     county_name = self.county ? "#{self.county}, " : ""

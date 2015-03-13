@@ -11,6 +11,12 @@ class User < ActiveRecord::Base
     foreign_key: :user_id,
     dependent: :destroy
 
+  has_many :quizzes,
+    class_name: "Quiz",
+    primary_key: :id,
+    foreign_key: :user_id,
+    dependent: :destroy
+
   has_many :regions, through: :user_regions, source: :region
   has_many :birds, through: :regions, source: :birds
 

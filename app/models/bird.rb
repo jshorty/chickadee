@@ -8,7 +8,19 @@ class Bird < ActiveRecord::Base
     foreign_key: :bird_id,
     dependent: :destroy
 
-  has_many :regions, through: :bird_regions, source: :region
+  has_many :quiz_questions,
+    class_name: "Question",
+    primary_key: :id,
+    foreign_key: :bird_id
+
+  has_many :regions,
+    through: :bird_regions,
+    source: :region
+
+  has_many :quizzes,
+    through: :quiz_questions,
+    source: :quiz,
+    dependent: :destroy
 
   def genus
     self.sci_name.split(" ")[0]

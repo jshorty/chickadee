@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312180228) do
+ActiveRecord::Schema.define(version: 20150313043452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20150312180228) do
 
   add_index "birds", ["common_name"], name: "index_birds_on_common_name", unique: true, using: :btree
   add_index "birds", ["sci_name"], name: "index_birds_on_sci_name", unique: true, using: :btree
+
+  create_table "questions", force: :cascade do |t|
+    t.integer  "quiz_id",                    null: false
+    t.integer  "bird_id",                    null: false
+    t.boolean  "answered",   default: false, null: false
+    t.boolean  "correct",    default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
 
   create_table "quizzes", force: :cascade do |t|
     t.integer  "user_id",                null: false
