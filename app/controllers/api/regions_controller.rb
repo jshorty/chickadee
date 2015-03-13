@@ -22,7 +22,10 @@ module Api
 
     def show
       @region = Region.includes(:birds).find(params[:id])
-      @region.parse_birds_from_ebird_data if params[:requery]
+      if params[:requery]
+        @region.bird_regions.destroy_all
+        @region.parse_birds_from_ebird_data
+      end
       render :show
     end
 

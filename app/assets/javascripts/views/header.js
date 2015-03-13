@@ -4,7 +4,7 @@ Chickadee.Views.Header = Backbone.View.extend({
 
     this.model = Chickadee.Models.session;
 
-    this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model, "change sync", this.render);
   },
 
   template: JST["header_public"],
@@ -39,7 +39,9 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   checkLoggedIn: function () {
+    console.log("checking if logged in");
     if (this.model.get('logged_in') === true) {
+      console.log(this);
       var userData = this.model.get('user')
       var user = new Chickadee.Models.User(userData);
       return JST["header_private"]({user: user});
@@ -51,7 +53,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   login: function (event) {
     event.preventDefault();
     var data = $(event.currentTarget).serializeJSON();
-    this.model = new Chickadee.Models.Session(data);
+    this.model.set(data);
     this.model.save({}, {
       success: function () {
         this.render();
@@ -64,8 +66,15 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   logout: function (event) {
-    $.ajax({url: "/api/session", method: 'DELETE'})
-    this.model.fetch();
-    Backbone.history.navigate("", { trigger: true });
+    event.preventDefault();
+    $.ajax({
+      url: "/api/session",
+      method: 'DELETE',
+      success: function () {
+        console.log("Success!");
+        this.model.clear();
+        Backbone.history.navigate("", { trigger: true });
+      }.bind(this)
+    });
   }
 });

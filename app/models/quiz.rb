@@ -1,6 +1,7 @@
 class Quiz < ActiveRecord::Base
   validates :user_id, :region_id, presence: true
   validate :one_active_quiz_per_region
+  validate :quiz_region_exists_for_user
 
   has_many :questions,
     class_name: "Question",
@@ -18,6 +19,10 @@ class Quiz < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :region_id
 
+  has_many :birds,
+    through: :region,
+    source: :birds
+
   def one_active_quiz_per_region
     if self.progress < 10 &&
         Quiz.where({user_id: self.user_id,
@@ -28,4 +33,15 @@ class Quiz < ActiveRecord::Base
     end
   end
 
+  def quiz_region_exists_for_user
+    unless UserRegion.find_by(user_id: self.user_id, region_id: self.region_id)
+      errors[:base] << "you aren't following this region"
+    end
+  end
+
+  def seed_questions
+    10.times do
+      bird = self.birds.to_a.sample
+      Question.create(quiz_id: self.id, bird_id: bird.id)
+  end
 end

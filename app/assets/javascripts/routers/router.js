@@ -63,7 +63,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   _swapView: function (view) {
     this.currentView && this.currentView.remove();
     this.currentView = view;
-    this.$header.html(this.headerView.render().el);
     this.$main.html(this.currentView.render().el);
   }
 
