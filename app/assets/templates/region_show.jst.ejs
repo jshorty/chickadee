@@ -31,4 +31,6 @@
 
 <section class="bird-list"></section>
 
-<a class="quiz-start" data-id="<%= region.id %>">Study!</a>
+<% if (region.id) { %>
+  <a class="quiz-start" data-id="<%= region.id %>">Study!</a>
+<% } %>

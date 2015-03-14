@@ -1,10 +1,5 @@
 Chickadee.Views.BirdIndex = Backbone.View.extend({
-  initialize: function () {},
-
   template: JST["bird_index"],
-
-  events: {
-  },
 
   tagName: "ul",
 

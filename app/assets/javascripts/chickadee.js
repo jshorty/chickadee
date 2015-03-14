@@ -7,6 +7,9 @@ window.Chickadee = {
     var $header = $("#header-content")
     var $main = $("#main-content");
 
+    Chickadee.Collections.regions = new Chickadee.Collections.Regions()
+    Chickadee.Collections.regions.fetch();
+
     Chickadee.Models.currentUser = new Chickadee.Models.CurrentUser();
     Chickadee.Models.currentUser.fetch({
       success: function () {

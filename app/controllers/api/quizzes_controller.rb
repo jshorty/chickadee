@@ -1,20 +1,30 @@
 module Api
-  class QuizController < ApplicationController
+  class QuizzesController < ApplicationController
     before_action :require_logged_in
 
     def create
-      @quiz = Quiz.new(user_id: current_user.id,
-                       region_id: params[:region_id])
-      if @quiz.save
-        begin
-          @quiz.seed_questions
-        rescue
-          render json: ["Region has too few birds for quiz"], status: 422
-        end
-        @quiz = Quiz.includes(:questions).find(@quiz.id)
+      @quiz = Quiz.includes(:region, questions:
+                  [:correct_answer, :answer_a, :answer_b, :answer_c])
+                  .where("quizzes.progress < 10")
+                  .find_by(region_id: params[:region_id])
+
+      if @quiz
         render :show
       else
-        render json: @quiz.errors.full_messages, status: 422
+        @quiz ||= Quiz.new(user_id: current_user.id,
+                           region_id: params[:region_id])
+        if @quiz.save
+          begin
+            @quiz.seed_questions
+          rescue
+            render json: ["Region has too few birds for quiz"],
+                         status: 422
+          end
+          @quiz = Quiz.includes(:questions).find(@quiz.id)
+          render :show
+        else
+          render json: @quiz.errors.full_messages, status: 422
+        end
       end
     end
 

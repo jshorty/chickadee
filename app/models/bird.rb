@@ -8,10 +8,10 @@ class Bird < ActiveRecord::Base
     foreign_key: :bird_id,
     dependent: :destroy
 
-  has_many :quiz_questions,
-    class_name: "Question",
-    primary_key: :id,
-    foreign_key: :bird_id
+  # has_many :quiz_questions,
+  #   class_name: "Question",
+  #   primary_key: :id,
+  #   foreign_key: :bird_id
 
   has_many :regions,
     through: :bird_regions,

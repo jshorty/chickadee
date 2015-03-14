@@ -81,6 +81,7 @@ class Region < ActiveRecord::Base
   end
 
   def parse_birds_from_ebird_data
+    self.touch
     doc = query_ebird
     common_names = doc.xpath("//com-name").children
     sci_names = doc.xpath("//sci-name").children

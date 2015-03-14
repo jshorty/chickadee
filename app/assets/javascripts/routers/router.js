@@ -1,21 +1,16 @@
 Chickadee.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
-
     this.$main = options.$main;
     this.$header = options.$header;
-
-    Chickadee.Collections.regions = new Chickadee.Collections.Regions();
+    this.$header.html(new Chickadee.Views.Header().render().el);
     this.regions = Chickadee.Collections.regions;
-
-    this.headerView = new Chickadee.Views.Header()
-    this.$header.html(this.headerView.render().el);
   },
 
   routes: {
     "":"welcome",
     "profile":"userProfile",
     "birds":"regionShow",
-    "quiz/:regionId":"questionShow",
+    "quiz/:regionId":"quizShow",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow",
@@ -33,6 +28,23 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   notFound: function () {
     this._swapView(new Chickadee.Views.NotFound());
+  },
+
+  quizShow: function (regionId) {
+    if (this._requireLoggedIn()) {
+      console.log("going!");
+      var quiz = new Chickadee.Models.Quiz();
+      console.log("about to save");
+      quiz.save({region_id: regionId}, {
+        success: function () {
+          console.log("successful save");
+          this._swapView(new Chickadee.Views.QuizShow({model: quiz}));
+        }.bind(this)
+      });
+      console.log("kept going past save");
+    } else {
+      this._swapView(new Chickadee.Views.Welcome());
+    }
   },
 
   regionsIndex: function () {
