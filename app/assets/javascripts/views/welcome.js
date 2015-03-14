@@ -1,7 +1,8 @@
 Chickadee.Views.Welcome = Backbone.View.extend({
   initialize: function(){
+    this.model = Chickadee.Models.currentUser;
     this.subviews = [];
-    this.listenTo(this.model, "signIn", "goToIndex");
+    this.listenTo(this.model, "login", this.goToIndex);
   },
 
   template: JST["welcome"],

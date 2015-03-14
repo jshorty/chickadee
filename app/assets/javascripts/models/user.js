@@ -1,4 +1,18 @@
 Chickadee.Models.User = Backbone.Model.extend({
+  urlRoot: "api/users",
+
+  name: function () {
+    if (this.get('alias')) {
+      return this.get('alias');
+    } else if (this.get('email')) {
+      return this.get('email');
+    } else {
+      return "anonymous user";
+    }
+  },
+});
+
+Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
   url: "api/session",
 
   initialize: function () {
@@ -9,12 +23,16 @@ Chickadee.Models.User = Backbone.Model.extend({
     return !this.isNew();
   },
 
-  login: function (credentials, success) {
+  login: function (credentials) {
     this.set(credentials);
     this.save({}, {
-      success: success,
+      success: function () {
+        Backbone.history.navigate("regions", {trigger:true})
+        return true
+      },
       error: function () {
         console.log("Error logging in.");
+        return false
       },
     });
   },
@@ -32,12 +50,10 @@ Chickadee.Models.User = Backbone.Model.extend({
   },
 
   checkLoggedIn: function () {
-    if (this.isNew()) {
+    if (!this.isNew()) {
       this.trigger("login");
     } else {
       this.trigger("logout");
     }
   }
 });
-
-Chickadee.Models.currentUser = new Chickadee.Models.User();

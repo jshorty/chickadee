@@ -14,12 +14,15 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   submit: function (event) {
     event.preventDefault();
     var data = $(event.currentTarget).serializeJSON();
-    var user = new Chickadee.Models.User(data);
     var view = this;
-    user.save({}, {
-      success: function () {
+    $.ajax({
+      url: "/api/users",
+      method: 'POST',
+      data: data,
+      success: function(newUserData) {
+        Chickadee.Models.currentUser;
+        Chickadee.Models.currentUser.login(data);
         view.remove();
-        Backbone.history.navigate("regions", { trigger: true });
       },
       error: function (model, response) {
         var errors = response.responseJSON;

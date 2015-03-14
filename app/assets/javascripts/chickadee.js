@@ -7,11 +7,16 @@ window.Chickadee = {
     var $header = $("#header-content")
     var $main = $("#main-content");
 
-    Chickadee.Routers.router = new Chickadee.Routers.Router({
-      $header: $header, $main: $main
-    })
+    Chickadee.Models.currentUser = new Chickadee.Models.CurrentUser();
+    Chickadee.Models.currentUser.fetch({
+      success: function () {
+        Chickadee.Routers.router = new Chickadee.Routers.Router({
+          $header: $header, $main: $main
+        })
 
-    Backbone.history.start();
+        Backbone.history.start();
+      }
+    });
   }
 };
 

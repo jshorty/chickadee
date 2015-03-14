@@ -12,13 +12,16 @@ module Api
     end
 
     def show
-      @user = current_user
-      render :current_user
+      if current_user
+        render :current_user
+      else
+        render json: {}
+      end
     end
 
     def destroy
       log_out!
-      render :current_user
+      render json: {}
     end
   end
 end

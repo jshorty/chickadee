@@ -1,5 +1,6 @@
 Chickadee.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
+
     this.$main = options.$main;
     this.$header = options.$header;
 
@@ -68,10 +69,11 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   welcome: function () {
     if (this._requireLoggedOut()) {
-      Backbone.history.navigate("regions", {trigger: true})
+      this._swapView(new Chickadee.Views.Welcome({
+        model: Chickadee.Models.currentUser
+      }));
     } else {
-    this._swapView(new Chickadee.Views.Welcome({
-      model: Chickadee.Models.currentUser}));
+    Backbone.history.navigate("regions", {trigger: true})
     }
   },
 

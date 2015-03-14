@@ -1,7 +1,7 @@
 Chickadee.Views.UserProfile = Backbone.View.extend({
   initialize: function () {
     this.subviews = [];
-    this.listenTo(this.model, "sync", this.render)
+    this.listenTo(this.model, "change sync", this.render)
   },
 
   events: {
@@ -22,13 +22,18 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
     event.preventDefault();
     var view = this;
     var data = $(this.$el.find("form")).serializeJSON();
-    this.model.save(data, {
+
+    $.ajax({
+      method: "PATCH",
+      url: "/api/users/" + this.model.id,
+      data: data,
       success: function () {
-        Backbone.history.navigate("profile/" + this.model.id, {trigger: true});
-      }.bind(this),
+        view.model.fetch();
+        view.render();
+      },
       error: function (model, response) {
         view.displayErrors(response.responseJSON);
-      }
+      },
     });
   },
 

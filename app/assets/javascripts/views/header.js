@@ -2,9 +2,9 @@ Chickadee.Views.Header = Backbone.View.extend({
   initialize: function () {
     this.subviews = [];
 
-    this.model = Chickadee.Models.session;
+    this.model = Chickadee.Models.currentUser;
 
-    this.listenTo(this.model, "change sync", this.render);
+    this.listenTo(this.model, "login logout sync", this.render);
   },
 
   template: JST["header_public"],
@@ -34,16 +34,12 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   openMyProfile: function (event) {
     event.preventDefault();
-    Backbone.history.navigate(
-      "profile/" + this.model.get('user').id, {trigger: true}
-    );
+    Backbone.history.navigate("profile", {trigger: true});
   },
 
   checkLoggedIn: function () {
-    if (this.model.get('logged_in') === true) {
-      var userData = this.model.get('user')
-      var user = new Chickadee.Models.User(userData);
-      return JST["header_private"]({user: user});
+    if (this.model.isLoggedIn()) {
+      return JST["header_private"]({user: this.model});
     } else {
       return JST["header_public"]();
     }
@@ -52,13 +48,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   login: function (event) {
     event.preventDefault();
     var credentials = $(event.currentTarget).serializeJSON();
-    this.model.login(
-      credentials,
-      function () {
-        this.render();
-        Backbone.history.navigate("regions", {trigger: true});
-      }.bind(this)
-    );
+    this.model.login(credentials);
   },
 
   logout: function (event) {

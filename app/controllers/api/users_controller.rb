@@ -5,6 +5,7 @@ module Api
     def create
       @user = User.new(user_params)
       if @user.save
+        puts "USER WAS SAVED SUCCESSFULLY!"
         log_in!(@user)
         render :show
       else
