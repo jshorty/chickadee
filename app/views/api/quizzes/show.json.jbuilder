@@ -1,4 +1,4 @@
-json.(@quiz, :id, :progress, :score, :questions)
+json.(@quiz, :id, :progress, :score, :region, :questions)
 
 json.extract! @quiz, :id, :progress, :score, :region_id
 

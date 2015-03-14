@@ -12,7 +12,6 @@ Chickadee.Models.Quiz = Backbone.Model.extend({
 
   parse: function(payload){
     if (payload.questions) {
-      debugger
       var questions = this.questions().set(payload.questions);
       delete payload.questions;
     }
