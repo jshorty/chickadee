@@ -33,16 +33,14 @@ module Api
       correct = params[:correct]
       @question = Question.find(id);
 
-      unless @question.user == current_user || question.answered
+      unless @question && (@question.user == current_user || @question.answered)
         render json: ["You don't have permission to do that"], status: 403
       end
 
       @question.update(correct: correct, answered: true)
-
       @quiz = @question.quiz
       correct ? @quiz.correct! : @quiz.incorrect!
       @question = @quiz.next_question
-
       render :show
     end
 
@@ -50,11 +48,5 @@ module Api
       @quiz = Quiz.includes(:questions).find(params[:id])
       render :show
     end
-
-    # private
-    #
-    #   def quiz_params
-    #     params.require(:quiz).permit(:region_id, :questions)
-    #   end
   end
 end
