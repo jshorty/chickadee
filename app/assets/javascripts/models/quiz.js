@@ -1,40 +1,18 @@
 Chickadee.Models.Quiz = Backbone.Model.extend({
   urlRoot: "/api/quizzes",
 
-  questions: function(){
-    if (!this._questions) {
-      this._questions = new Chickadee.Collections.Questions(
-        [], {quiz: this}
-      );
+  question: function(){
+    if (!this._question) {
+      this._question = new Chickadee.Models.Question();
     }
-    return this._questions;
+    return this._question;
   },
 
   parse: function(payload){
-    if (payload.questions) {
-      var questions = this.questions().set(payload.questions);
-      delete payload.questions;
+    if (payload.question) {
+      this.question().set(payload.question);
+      delete payload.question;
     }
     return payload;
   },
-
-  checkIfComplete: function () {
-    var complete = true;
-    this.questions().each(function(question){
-      if (!question.get('answered')) {
-        complete = false;
-      }
-    });
-    return complete;
-  },
-
-  nextQuestion: function () {
-    var next;
-    this.questions().each(function(question) {
-      if (question.get('answered') === false) {
-        next = question;
-      }
-    })
-    return next;
-  }
 });

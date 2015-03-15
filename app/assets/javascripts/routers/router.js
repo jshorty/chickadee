@@ -32,16 +32,12 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   quizShow: function (regionId) {
     if (this._requireLoggedIn()) {
-      console.log("going!");
       var quiz = new Chickadee.Models.Quiz();
-      console.log("about to save");
       quiz.save({region_id: regionId}, {
         success: function () {
-          console.log("successful save");
           this._swapView(new Chickadee.Views.QuizShow({model: quiz}));
         }.bind(this)
       });
-      console.log("kept going past save");
     } else {
       this._swapView(new Chickadee.Views.Welcome());
     }

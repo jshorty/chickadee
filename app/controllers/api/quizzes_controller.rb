@@ -3,12 +3,12 @@ module Api
     before_action :require_logged_in
 
     def create
-      @quiz = Quiz.includes(:region, questions:
-                  [:correct_answer, :answer_a, :answer_b, :answer_c])
+      @quiz = Quiz.includes(:region)
                   .where("quizzes.progress < 10")
                   .find_by(region_id: params[:region_id])
 
       if @quiz
+        @question = @quiz.next_question
         render :show
       else
         @quiz ||= Quiz.new(user_id: current_user.id,
@@ -20,7 +20,7 @@ module Api
             render json: ["Region has too few birds for quiz"],
                          status: 422
           end
-          @quiz = Quiz.includes(:questions).find(@quiz.id)
+          @question = @quiz.next_question
           render :show
         else
           render json: @quiz.errors.full_messages, status: 422
@@ -29,19 +29,21 @@ module Api
     end
 
     def update
-      params[:questions].each do |id, correct|
-        question = Question.find(id);
-        @quiz = question.quiz
+      id = params[:id]
+      correct = params[:correct]
+      @question = Question.find(id);
 
-        unless question.user == current_user || question.answered
-          render json: ["You don't have permission to do that"], status: 403
-        end
-
-        question.update(correct: correct, answered: true)
-        correct ? quiz.correct! : quiz.incorrect!
-
-        render json: @quiz
+      unless @question.user == current_user || question.answered
+        render json: ["You don't have permission to do that"], status: 403
       end
+
+      @question.update(correct: correct, answered: true)
+
+      @quiz = @question.quiz
+      correct ? @quiz.correct! : @quiz.incorrect!
+      @question = @quiz.next_question
+
+      render :show
     end
 
     def show

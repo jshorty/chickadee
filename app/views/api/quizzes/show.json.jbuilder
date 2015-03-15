@@ -1,9 +1,7 @@
-json.(@quiz, :id, :progress, :score, :region, :questions)
+json.(@quiz, :id, :progress, :score, :region)
 
-json.extract! @quiz, :id, :progress, :score, :region_id
-
-json.questions @quiz.questions do |question|
-  json.extract! question, :id, :quiz_id, :answered, :correct,
-                          :correct_answer, :answer_a,
-                          :answer_b, :answer_c
+if @question
+  json.question(@question, :id, :quiz_id, :answered, :correct,
+                           :correct_answer, :answer_a,
+                           :answer_b, :answer_c)
 end

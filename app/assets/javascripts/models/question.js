@@ -1,5 +1,13 @@
 Chickadee.Models.Question = Backbone.Model.extend({
-  urlRoot: "/api/quizzes",
+  url: "/api/quizzes/",
+
+  initialize: function () {
+    this.listenTo(this, "change", this.buildUrl)
+  },
+
+  buildUrl: function () {
+    this.url = "/api/quizzes/" + this.id
+  },
 
   answerChoices: function () {
     return _.shuffle([

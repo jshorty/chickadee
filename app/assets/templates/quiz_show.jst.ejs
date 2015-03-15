@@ -4,7 +4,7 @@
 
 <section class="quiz-window">
   <h4>Score: <%= quiz.escape('score') %></h4>
-  <h4>Progress: <%= quiz.escape('progress') %>/10</h4>
+  <h4>Progress: <%= parseInt(quiz.escape('progress')) + 1 %>/10</h4>
 
   <h2>
     <%= question.get('correct_answer').common_name %>'s song here
@@ -14,7 +14,7 @@
     <ul>
       <% question.answerChoices().forEach(function (answer) { %>
         <li>
-          <button class="answer">
+          <button class="answer" data-id="<%= answer.id %>">
             <%= answer.common_name %>
           </button>
         </li>

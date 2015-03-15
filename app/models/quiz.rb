@@ -52,11 +52,16 @@ class Quiz < ActiveRecord::Base
 
   def correct!
     self.update(score: (self.score + 1), progress: (self.progress + 1))
-    quiz.questions.destroy_all if self.progress == 10
+    self.questions.destroy_all if self.progress == 10
   end
 
   def incorrect!
     self.update(progress: (self.progress + 1))
     quiz.questions.destroy_all if self.progress == 10
+  end
+
+  def next_question
+    Question.includes([:correct_answer, :answer_a, :answer_b, :answer_c])
+            .find_by(quiz_id: self.id, answered: false)
   end
 end
