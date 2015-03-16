@@ -1,7 +1,7 @@
 Chickadee.Views.UserProfile = Backbone.View.extend({
   initialize: function () {
     this.subviews = [];
-    this.listenTo(this.model, "change sync", this.render)
+    this.listenTo(this.model, "sync", this.render)
   },
 
   events: {
@@ -13,19 +13,18 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   template: JST["user_show"],
 
   changeImage: function (event) {
+    event.preventDefault();
     var file = event.currentTarget.files[0];
 
-    debugger
-
     var fileReader = new FileReader();
-
     var view = this;
 
     fileReader.onloadend = function () {
-      debugger
       view.model.set("image", fileReader.result);
+      view.model.set("new_image", true);
+      view.$(".user-image").attr("src", fileReader.result)
     };
-    debugger
+
     fileReader.readAsDataURL(file);
   },
 
@@ -39,7 +38,11 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   updateProfile: function (event) {
     event.preventDefault();
     var view = this;
-    var data = $(this.$el.find("form")).serializeJSON();
+    var data = $(view.$el.find("form")).serializeJSON();
+
+    if (view.model.get('new_image')) {
+      data.user.image = view.model.get('image')
+    }
 
     $.ajax({
       method: "PATCH",
