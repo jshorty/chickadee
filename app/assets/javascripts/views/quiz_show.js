@@ -8,7 +8,10 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   },
 
   events: {
-    "click .answer":"handleAnswer"
+    "click .answer":"handleAnswer",
+    "click .quiz-again":function(){
+      Backbone.history.loadUrl();
+    },
   },
 
   template: JST["quiz_show"],

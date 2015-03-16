@@ -52,12 +52,18 @@ class Quiz < ActiveRecord::Base
 
   def correct!
     self.update(score: (self.score + 1), progress: (self.progress + 1))
-    self.questions.destroy_all if self.progress == 10
+    if self.progress == 10
+      self.questions.destroy_all
+      self.user.continue_streak
+    end
   end
 
   def incorrect!
     self.update(progress: (self.progress + 1))
-    self.questions.destroy_all if self.progress == 10
+    if self.progress == 10
+      self.questions.destroy_all
+      self.user.continue_streak
+    end
   end
 
   def next_question

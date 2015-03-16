@@ -63,4 +63,16 @@ class User < ActiveRecord::Base
     SecureRandom::urlsafe_base64
   end
 
+  def check_for_streak
+    if Date.today - 1 > self.last_quiz_date
+      self.update!({streak_count: 0})
+    end
+  end
+
+  def continue_streak
+    return if Date.today == self.last_quiz_date
+
+    self.update!(streak_count: self.streak_count += 1,
+                 last_quiz_date: Date.today)
+  end
 end

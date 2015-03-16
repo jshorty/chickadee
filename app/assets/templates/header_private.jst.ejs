@@ -6,6 +6,7 @@
 
   <% if (user) { %>
     <a class="current-user"><%= user.name() %></a>
+    <a class="streak-count"><%= user.escape('streak_count') %></a>
   <% } %>
 
   <section class="nav-dropdown">

@@ -1,1 +1,1 @@
-json.(current_user, :id, :email, :alias)
+json.(current_user, :id, :email, :alias, :streak_count)

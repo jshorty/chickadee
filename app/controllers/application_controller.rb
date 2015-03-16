@@ -2,9 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def log_in!(user)
-    puts
-    puts "****LOGIN FROM APPLICATION CONTROLLER****"
-    puts
+    user.check_streak
     user.reset_session_token!
     session[:token] = user.session_token
   end
