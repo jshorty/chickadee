@@ -1,7 +1,13 @@
-<form>
+<form enctype="multipart/form-data">
+<img src="<%= user.get('image_url') %>"
 <h1><%= user.name() %></h1>
 
-<label for="user_name">Name (optional)</label>
+<label for="user-image-input">Profile Image (optional)</label>
+<input type="file" name="user[image]" id="user-image-input">
+
+<br>
+
+<label for="user_name">Username (optional)</label>
 <input type="text" name="user[alias]" id="user_name" value="<%= user.get('alias') %>">
 
 <br>

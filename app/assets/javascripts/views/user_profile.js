@@ -6,10 +6,28 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
 
   events: {
     "click .edit-user-profile":"renderForm",
+    "change #user-image-input":"changeImage",
     "submit form":"updateProfile"
   },
 
   template: JST["user_show"],
+
+  changeImage: function (event) {
+    var file = event.currentTarget.files[0];
+
+    debugger
+
+    var fileReader = new FileReader();
+
+    var view = this;
+
+    fileReader.onloadend = function () {
+      debugger
+      view.model.set("image", fileReader.result);
+    };
+    debugger
+    fileReader.readAsDataURL(file);
+  },
 
   render: function () {
     this.removeSubviews();

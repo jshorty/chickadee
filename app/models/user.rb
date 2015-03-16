@@ -20,6 +20,11 @@ class User < ActiveRecord::Base
   has_many :regions, through: :user_regions, source: :region
   has_many :birds, through: :regions, source: :birds
 
+  has_attached_file :image,
+  default_url: "https://s3.amazonaws.com/chickadee-development/images/user_image.jpg",
+  :styles => {medium: "150x150>", thumb: "60x60>"}
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
   def email_must_have_valid_format
     if self.email
       if self.email.match(" ")
