@@ -13,3 +13,122 @@
  *= require_tree .
  *= require_self
  */
+
+/*RESET && CLEARFIX*/
+html, body, header, nav, h1, h2, h3, h4, h5, h6, a, ul, li, main,
+section, img, div, p, form, label, input, textarea, button, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  box-sizing: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+input, button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*HEADER*/
+
+header {
+  height: 70px;
+  background: #ccc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+header .logo {
+  font-size: 36px;
+  float: left;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+nav .nav-left {
+  display: block;
+  float: left;
+}
+
+nav .nav-right {
+  display: block;
+  float: right;
+  font-weight: 400;
+}
+
+nav .nav-left li {
+  float: left;
+  margin: 17px 10px 15px 10px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+}
+
+nav .nav-left li:hover {
+  background: #aaa;
+}
+
+nav .nav-right li {
+  float: left;
+  padding: 22px 20px 20px 20px;
+}
+
+nav .current-user {
+  position: relative;
+}
+
+nav li.streak-count {
+  font-size: 24px;
+  padding-top: 19px;
+}
+
+nav .current-user .dropdown {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  box-shadow: 0px 5px 5px 0px #555;
+  border-radius: 5px;
+}
+
+nav .current-user .dropdown li {
+  padding: 5px 10px;
+}
+
+nav .current-user .dropdown li:hover {
+  padding: 5px 10px;
+  color: #888;
+}
+
+nav .current-user:hover .dropdown {
+  background: #fff;
+  display: block;
+}
+
+nav .login {
+  font-weight: 700;
+  cursor: pointer;
+  margin: 17px 10px 15px 10px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+  background: #aaa
+}

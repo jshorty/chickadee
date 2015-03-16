@@ -64,7 +64,7 @@ class User < ActiveRecord::Base
   end
 
   def check_for_streak
-    if Date.today - 1 > self.last_quiz_date
+    if !self.last_quiz_date || Date.today - 1 > self.last_quiz_date
       self.update!({streak_count: 0})
     end
   end

@@ -1,18 +1,21 @@
-<h1>Chickadee</h1>
+<h1 class="logo">Chickadee</h1>
 
 <nav>
-  <a href="/#regions">Home</a>
-  <a href="/#birds">Birds</a>
+  <ul class="nav-left group">
+    <li><a href="/#regions">Home</a></li>
+    <li><a href="/#birds">Birds</a></li>
+  </ul>
 
-  <% if (user) { %>
-    <a class="current-user"><%= user.name() %></a>
-    <a class="streak-count"><%= user.escape('streak_count') %></a>
-  <% } %>
-
-  <section class="nav-dropdown">
-    <a href="#" class="logout">Logout</a>
-    <a href="#" class="profile">My Profile</a>
-  </section>
+  <ul class="nav-right group">
+    <li class="current-user">
+      <a><%= user.name() %>&nbsp&nbsp&#9662;</a>
+      <ul class="dropdown">
+        <li><a href="#" class="profile">My Profile</a></li>
+        <li><a href="#" class="logout">Logout</a></li>
+      </ul>
+    </li>
+    <li class="streak-count">
+      <a>&#x1f525;<%= user.escape('streak_count') %></a>
+    </li>
+  </ul>
 </nav>
-
-<hr>

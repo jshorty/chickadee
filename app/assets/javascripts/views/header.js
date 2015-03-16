@@ -7,6 +7,9 @@ Chickadee.Views.Header = Backbone.View.extend({
     this.listenTo(this.model, "login logout sync", this.render);
   },
 
+  tagName: "header",
+  className: "group",
+
   template: JST["header_public"],
 
   events: {
