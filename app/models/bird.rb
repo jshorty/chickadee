@@ -41,24 +41,30 @@ class Bird < ActiveRecord::Base
     base + sci_name
   end
 
-  def check_for_songs
+  def get_songs
     uri = URI.encode(self.xeno_canto_url)
     payload = JSON.parse(RestClient.get(uri, {:accept => :json}))
-    return payload
-    # if payload["numRecordings"] == "0"
+    number_of_recordings = payload["numRecordings"].to_i
 
-    # self.countries.each do |country|
-    #   query_url = (self.xeno_canto_url+"+cnt:#{country.gsub(" ", "+")}")
-    #   encoded_url = URI.encode(query_url)
-    #   payload = JSON.parse(RestClient.get(encoded_url, {:accept => :json}))
+
+    if number_of_recordings = 0
+      self.update!(has_songs: false)
+      return false
+    else
+      max_songs = 15
+      count = (number_of_recordings < max_songs) ? number_of_recordings : max_songs
+
+      songs = payload["recordings"].sample(count)
+      save_songs!(songs)
+      self.update!(has_songs: true)
+      return true
+    end
   end
 
-  def catch_redirect(url)
-    #
-    # resp = httpc.get(url)
-    # res = Net::HTTP.start(parsed_url.host, parsed_url.port) do |http|
-    #   http.get(url.request_uri)
-    # end
-    # res['location']
+  def save_songs!(songs)
+    songs.each do |song|
+      Song.create(id: self.id, info_url: song["url"],
+                  xeno_canto_url: song[:file], recordist: song["rec"])
+    end
   end
 end

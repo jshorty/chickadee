@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316131751) do
+ActiveRecord::Schema.define(version: 20150316205607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(version: 20150316131751) do
   add_index "bird_regions", ["region_id"], name: "index_bird_regions_on_region_id", using: :btree
 
   create_table "birds", force: :cascade do |t|
-    t.string "common_name", null: false
-    t.string "sci_name",    null: false
-    t.string "song_desc"
+    t.string  "common_name", null: false
+    t.string  "sci_name",    null: false
+    t.string  "song_desc"
+    t.boolean "has_songs"
   end
 
   add_index "birds", ["common_name"], name: "index_birds_on_common_name", unique: true, using: :btree
@@ -67,6 +68,18 @@ ActiveRecord::Schema.define(version: 20150316131751) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code",       null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.integer  "bird_id",                                null: false
+    t.boolean  "local",                  default: false
+    t.string   "info_url",                               null: false
+    t.string   "xeno_canto_url",                         null: false
+    t.string   "recordist"
+    t.string   "recording_file_name"
+    t.string   "recording_content_type"
+    t.integer  "recording_file_size"
+    t.datetime "recording_updated_at"
   end
 
   create_table "user_regions", force: :cascade do |t|

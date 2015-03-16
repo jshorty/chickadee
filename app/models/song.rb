@@ -1,0 +1,13 @@
+class Song < ActiveRecord::Base
+  validates :bird_id, :info_url, :xeno_canto_url, presence: true
+  validates :xeno_canto_url, uniqueness: true
+
+  belongs_to :bird,
+    class_name: "Bird",
+    primary_key: :id,
+    foreign_key: :bird_id,
+
+  has_attached_file :recording, path: "recordings/#{self.bird_id}/:filename"
+  validates_attachment_content_type :recording, content_type: "audio/mpeg"
+
+end
