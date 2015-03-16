@@ -87,6 +87,10 @@ nav .nav-left li:hover {
   background: #aaa;
 }
 
+nav .nav-left li.current {
+  background: #aaa;
+}
+
 nav .nav-right li {
   float: left;
   padding: 22px 20px 20px 20px;

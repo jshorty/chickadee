@@ -16,12 +16,23 @@ Chickadee.Views.Header = Backbone.View.extend({
     "click .login":"openLoginWindow",
     "click .logout":"logout",
     "submit form":"login",
-    "click .profile":"openMyProfile"
+    "click .profile":"openMyProfile",
+    "click .home-link":"goToHome",
+    "click .birds-link":"goToBirds"
   },
 
   render: function (options) {
     var content = this.checkLoggedIn();
     this.$el.html(content);
+
+    if (Backbone.history.fragment === "regions") {
+      this.$el.find(".home-link").parent().addClass("current");
+      this.$el.find(".birds-link").parent().removeClass("current");
+    } else {
+      this.$el.find(".birds-link").parent().addClass("current");
+      this.$el.find(".home-link").parent().removeClass("current");
+    }
+
     return this;
   },
 
@@ -38,6 +49,20 @@ Chickadee.Views.Header = Backbone.View.extend({
   openMyProfile: function (event) {
     event.preventDefault();
     Backbone.history.navigate("profile", {trigger: true});
+  },
+
+  goToHome: function (event) {
+    event.preventDefault();
+    this.$el.find(".home-link").parent().addClass("current");
+    this.$el.find(".birds-link").parent().removeClass("current");
+    Backbone.history.navigate("regions", {trigger: true})
+  },
+
+  goToBirds: function (event) {
+    event.preventDefault();
+    this.$el.find(".birds-link").parent().addClass("current");
+    this.$el.find(".home-link").parent().removeClass("current");
+    Backbone.history.navigate("birds", {trigger: true})
   },
 
   checkLoggedIn: function () {

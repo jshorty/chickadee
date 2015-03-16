@@ -15,7 +15,7 @@ Chickadee is a clone of the language-learning app Duolingo, used for learning to
 - [X] Take a quiz on a region's birdsongs (text description)
 - [X] See their score on a quiz
 - [ ] Listen to the bird song for a given quiz question
-- [ ] Upload a profile image
+- [X] Upload a profile image
 
 ## Design Docs
 * Wireframes were done with ink and paper! (Photos in [wireframe] directory)
