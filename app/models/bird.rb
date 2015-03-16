@@ -46,8 +46,7 @@ class Bird < ActiveRecord::Base
     payload = JSON.parse(RestClient.get(uri, {:accept => :json}))
     number_of_recordings = payload["numRecordings"].to_i
 
-
-    if number_of_recordings = 0
+    if number_of_recordings == 0
       self.update!(has_songs: false)
       return false
     else
@@ -63,8 +62,8 @@ class Bird < ActiveRecord::Base
 
   def save_songs!(songs)
     songs.each do |song|
-      Song.create(id: self.id, info_url: song["url"],
-                  xeno_canto_url: song[:file], recordist: song["rec"])
+      Song.create!(bird_id: self.id, info_url: song["url"],
+                  xeno_canto_url: song["file"], recordist: song["rec"])
     end
   end
 end
