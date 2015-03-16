@@ -16,7 +16,7 @@
 
 /*RESET && CLEARFIX*/
 html, body, header, nav, h1, h2, h3, h4, h5, h6, a, ul, li, main,
-section, img, div, p, form, label, input, textarea, button, footer {
+section, img, div, p, form, label, textarea, button, footer {
   margin: 0;
   padding: 0;
   border: 0;
@@ -92,6 +92,15 @@ nav .nav-right li {
   padding: 22px 20px 20px 20px;
 }
 
+nav .nav-right li.current-user-img {
+  padding: 9px 0px;
+}
+
+nav .nav-right li.current-user-img img {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
 nav .current-user {
   position: relative;
 }
@@ -99,6 +108,7 @@ nav .current-user {
 nav li.streak-count {
   font-size: 24px;
   padding-top: 19px;
+  cursor: help;
 }
 
 nav .current-user .dropdown {

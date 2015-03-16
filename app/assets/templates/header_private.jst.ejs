@@ -7,6 +7,9 @@
   </ul>
 
   <ul class="nav-right group">
+    <li class="current-user-img">
+      <img class "user-thumb" src="<%= user.get('image_url_thumb') %>">
+    </li>
     <li class="current-user">
       <a><%= user.name() %>&nbsp&nbsp&#9662;</a>
       <ul class="dropdown">
@@ -15,7 +18,7 @@
       </ul>
     </li>
     <li class="streak-count">
-      <a>&#x1f525;<%= user.escape('streak_count') %></a>
+      <a title="You're on a <%= user.escape('streak_count') %> day streak!">&#x1f525;<%= user.escape('streak_count') %></a>
     </li>
   </ul>
 </nav>

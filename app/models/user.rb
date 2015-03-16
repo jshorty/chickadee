@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :image,
   default_url: "https://s3.amazonaws.com/chickadee-development/images/user_image.jpg",
-  :styles => {medium: "150x150>", thumb: "60x60>"}
+  :styles => {medium: "150x150#", thumb: "50x50#"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def email_must_have_valid_format

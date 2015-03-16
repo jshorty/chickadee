@@ -1,5 +1,6 @@
 <form enctype="multipart/form-data">
-<img class="user-image" src="<%= user.get('image_url') %>"
+
+<img class="user-image" src="<%= user.get('image_url_medium') %>"
 <h1><%= user.name() %></h1>
 
 <label for="user-image-input">Profile Image (optional)</label>
@@ -20,6 +21,8 @@
 <label for="user_password">Password (8+ characters)</label>
 <input type="password" name="user[password]" id="user_password">
 
+<label for="user_password_confirm">Confirm Password</label>
+<input type="password" name="user[password]" id="user_password_confirm">
 <br>
 
 <button "update-user-profile">Update</button>
