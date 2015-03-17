@@ -32,11 +32,11 @@ section, img, div, p, form, label, textarea, button, footer {
 
 body {
   font-family: 'Asap', sans-serif;
-  background: #ddd;
+  background: #ccc;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 input, button {
@@ -48,6 +48,10 @@ input, button {
   content: "";
   display: block;
   clear: both;
+}
+
+strong {
+  font-weight: 700;
 }
 
 /*HEADER*/
@@ -88,7 +92,7 @@ nav .nav-left li {
 }
 
 nav .nav-left li:hover {
-  background: #777;
+  background: #666;
 }
 
 nav .nav-left li.current {

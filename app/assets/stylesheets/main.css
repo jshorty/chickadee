@@ -4,6 +4,48 @@
   width: 90%;
   margin: 20px auto;
   border-radius: 20px;
-  background: #ccc;
+  background: #eee;
   padding: 20px;
 }
+
+/*REGIONS PAGE*/
+#main-content > div {
+  width: 100%;
+}
+
+#main-content h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+#main-content p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+#main-content ul.region-menu {
+  text-align: center;
+  margin: 0 auto;
+  width: 450px;
+}
+
+#main-content li.region-item {
+  float: left;
+  width: 130px;
+  height: 200px;
+  padding: 0px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#main-content .region-img {
+  display: block;
+  margin: 0 auto 5px auto;
+  width: 110px;
+  height: 110px;
+  border: 5px solid #666;
+  border-radius: 20px;
+}
+
+/*NEW REGION PAGE*/
