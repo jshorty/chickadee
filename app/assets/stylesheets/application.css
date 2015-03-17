@@ -31,7 +31,8 @@ section, img, div, p, form, label, textarea, button, footer {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Asap', sans-serif;
+  background: #ddd;
 }
 
 ul {
@@ -53,7 +54,8 @@ input, button {
 
 header {
   height: 70px;
-  background: #ccc;
+  background: #333;
+  color: #fff;
   font-size: 18px;
   font-weight: 700;
 }
@@ -63,11 +65,13 @@ header .logo {
   float: left;
   padding: 10px 20px;
   cursor: pointer;
+  color: #fff;
 }
 
 nav .nav-left {
   display: block;
   float: left;
+  letter-spacing: 1px;
 }
 
 nav .nav-right {
@@ -84,11 +88,11 @@ nav .nav-left li {
 }
 
 nav .nav-left li:hover {
-  background: #aaa;
+  background: #777;
 }
 
 nav .nav-left li.current {
-  background: #aaa;
+  background: #666;
 }
 
 nav .nav-right li {
@@ -118,6 +122,7 @@ nav li.streak-count {
 nav .current-user .dropdown {
   display: none;
   position: absolute;
+  color: #000;
   left: 10px;
   top: 50px;
   box-shadow: 0px 5px 5px 0px #555;
@@ -130,11 +135,11 @@ nav .current-user .dropdown li {
 
 nav .current-user .dropdown li:hover {
   padding: 5px 10px;
-  color: #888;
+  color: #fff;
 }
 
 nav .current-user:hover .dropdown {
-  background: #fff;
+  background: #666;
   display: block;
 }
 
@@ -144,5 +149,7 @@ nav .login {
   margin: 17px 10px 15px 10px;
   padding: 5px 10px 5px 10px;
   border-radius: 50px;
-  background: #aaa
+  background: #666;
+  color: #fff;
+  letter-spacing: 1px;
 }

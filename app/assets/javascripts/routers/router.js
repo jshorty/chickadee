@@ -96,8 +96,12 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   _swapView: function (view) {
+    var curHeight = this.$main.height();
     this.currentView && this.currentView.remove();
     this.currentView = view;
     this.$main.html(this.currentView.render().el);
+    this.$main.css('height', 'auto')
+    var autoHeight = this.$main.height();
+    this.$main.height(curHeight).animate({height: autoHeight}, 500);
   },
 });
