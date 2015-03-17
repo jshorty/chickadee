@@ -1,13 +1,8 @@
-<img class="user-image" src="<%= user.get('image_url_medium') %>"
+<h1><%= user.name() %></h1>
 
-<h1><%= user.get('alias') %></h1>
+<img class="user-image" src="<%= user.get('image_url_medium') %>">
 
-<p>Username: <%= user.get('alias') %></p>
+<h2><strong>Username:</strong> <%= user.escape('alias') %></h2>
+<h2><strong>Email:</strong> <%= user.escape('email') %></h2>
 
-<br>
-
-<p>Email: <%= user.get('email') %></p>
-
-<br>
-
-<button class="edit-user-profile">Edit</button>
+<button class="go-button edit-user-profile">Edit</button>

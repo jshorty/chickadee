@@ -1,27 +1,18 @@
-<form enctype="multipart/form-data">
-
-<img class="user-image" src="<%= user.get('image_url_medium') %>"
 <h1><%= user.name() %></h1>
+<img class="user-image" src="<%= user.get('image_url_medium') %>">
 
-<label for="user-image-input">Profile Image (optional)</label>
+<label class="image-upload-label" for="user-image-input">Profile Image</label>
 <input type="file" name="user[image]" id="user-image-input">
 
-<br>
+<label for="user_name">Display Name</label>
+<input type="text" name="user[alias]" id="user_name" value="<%= user.escape('alias') %>">
 
-<label for="user_name">Username (optional)</label>
-<input type="text" name="user[alias]" id="user_name" value="<%= user.get('alias') %>">
+<label for="user_about">About Me</label>
+<textarea name="user[about]" id="user_about"><%= user.escape('about') %></textarea>
 
-<br>
+<label for="user_favorite_bird">Favorite Bird)</label>
+<input type="text" name="user[favorite_bird]" id="user_favorite_bird"
+  value="<%=user.escape('favorite_bird') %>">
 
-<label for="user_email">Email</label>
-<input type="text" name="user[email]" id="user_email" value="<%= user.get('email') %>">
-
-<br>
-
-<label for="user_password">Password (8+ characters)</label>
-<input type="password" name="user[password]" id="user_password">
-
-<br>
-
-<button "update-user-profile">Update</button>
-</form>
+<button class="back-button">Back</button>
+<button class="go-button update-user-profile">Update!</button>

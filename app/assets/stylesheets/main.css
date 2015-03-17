@@ -59,6 +59,7 @@
 
 #main-content form {
   margin: 0 auto;
+  position: relative;
   text-align: center;
 }
 
@@ -77,9 +78,9 @@
   border-radius: 20px;
   background: #fff;
   width: 300px;
-  padding: 5px 10px;
   font-size: 24px;
   text-align: center;
+  padding: 5px 10px;
   margin-bottom: 20px;
 }
 
@@ -94,7 +95,13 @@ form button {
   cursor: pointer;
 }
 
-form .back-button {
+.go-button {
+  background: #33cc99;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.back-button {
   background: #cc6600;
 }
 
@@ -102,4 +109,52 @@ form .back-button {
   color: #cc6600;
   display: none; /*fades in*/
   margin: 5px;
+}
+
+/* MY PROFLE */
+
+.user-image {
+  border-radius: 50%;
+  display: block;
+  width: 150px;
+  margin: 20px auto 50px auto;
+}
+
+h2 {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+
+form input#user-image-input {
+  font-size: 16px;
+  background: transparent;
+  width: auto;
+  position: absolute;
+  top: 210px;
+  left: 380px;
+  border: none;
+}
+
+#main-content form.edit-profile {
+  height: 700px;
+}
+
+#main-content form.edit-profile label.image-upload-label {
+  display: none;
+}
+
+#main-content form.edit-profile label {
+  width: 300px;
+  text-align: left;
+  font-size: 16px;
+}
+
+#main-content form.edit-profile textarea {
+  width: 300px;
+  background: #fff;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
 }

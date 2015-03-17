@@ -36,7 +36,8 @@ module Api
 
       def user_params
         params[:user][:alias] = nil if params[:user] && params[:user][:alias] == ""
-        params.require(:user).permit(:email, :password, :alias, :image)
+        params.require(:user).permit(:email, :password, :alias,
+                                     :image, :about, :favorite)
       end
   end
 end
