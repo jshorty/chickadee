@@ -1,7 +1,7 @@
 <% if (birds.models.length > 0) { %>
   <% birds.each(function (bird) { %>
-    <li><%= bird.get('common_name') %> (<%= bird.get('sci_name') %>)
+    <li><%= bird.get('common_name') %> <em>(<%= bird.get('sci_name') %>)</em></li>
   <% }) %>
 <% } else { %>
-  <p>No birds to display
+  <li>No birds to display</li>
 <% } %>

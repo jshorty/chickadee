@@ -7,10 +7,10 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   events: {
     "click .back-button":"goToRegions",
     "change #user-image-input":"changeImage",
-    "submit form":"updateProfile"
+    "submit":"updateProfile"
   },
 
-  template: JST["user_edit"],
+  template: JST["user_profile"],
 
   tagName: "form",
   className: "edit-profile",
@@ -47,7 +47,7 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   updateProfile: function (event) {
     event.preventDefault();
     var view = this;
-    var data = $(view.$el.find("form")).serializeJSON();
+    var data = view.$el.serializeJSON();
 
     if (view.model.get('new_image')) {
       data.user.image = view.model.get('image')
@@ -55,11 +55,11 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
 
     $.ajax({
       method: "PATCH",
-      url: "/api/users/" + this.model.id,
+      url: "/api/users/" + view.model.id,
       data: data,
       success: function () {
         view.model.fetch();
-        view.render();
+        view.goToRegions();
       },
       error: function (model, response) {
         view.displayErrors(response.responseJSON);

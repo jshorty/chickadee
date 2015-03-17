@@ -87,22 +87,23 @@
 form button {
   display: inline-block;
   margin: 20px auto 50px auto;
-  border-radius: 15px;
-  padding: 20px;
-  background: #33cc99;
   font-size: 20px;
-  color: #fff;
-  cursor: pointer;
 }
 
 .go-button {
   background: #33cc99;
   border-radius: 15px;
   padding: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .back-button {
   background: #cc6600;
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .error-message {
@@ -117,10 +118,10 @@ form button {
   border-radius: 50%;
   display: block;
   width: 150px;
-  margin: 20px auto 50px auto;
+  margin: 20px auto 30px auto;
 }
 
-h2 {
+form h2 {
   text-align: center;
   display: block;
   margin: 20px auto;
@@ -129,11 +130,8 @@ h2 {
 form input#user-image-input {
   font-size: 16px;
   background: transparent;
-  width: auto;
-  position: absolute;
-  top: 210px;
-  left: 380px;
-  border: none;
+  width: 200px;
+  position: relative;
 }
 
 #main-content form.edit-profile {
@@ -157,4 +155,66 @@ form input#user-image-input {
   border-radius: 20px;
   padding: 5px 10px;
   margin-bottom: 20px;
+  text-align: left;
+}
+
+/*BIRDS INDEX*/
+
+section.region-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section.bird-list button.region-update {
+  background: #0099CC;
+  position: absolute;
+  left: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+section.region-header > h2 {
+  font-size: 24px;
+}
+
+section.region-sidepanel {
+  float: left;
+  width: 350px;
+  margin-right: 20px;
+}
+
+section.region-sidepanel button {
+  margin: 5px auto;
+}
+
+[data-id="0"] {
+  background: #666;
+}
+
+section.region-sidepanel button.selected {
+  background: #0099cc
+}
+
+section.bird-list {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 20px;
+  width: 350px;
+  height: 450px;
+  float: left;
+  position: relative;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+section.bird-list li {
+  padding: 5px;
+}
+
+section.bird-list li em{
+  font-style: italic;
+  font-size: 12px;
 }

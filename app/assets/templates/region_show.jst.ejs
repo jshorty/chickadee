@@ -1,18 +1,21 @@
-<h2><%= region.name() %></h2>
+<section class="region-header">
+<h1>Birds from <%= region.name() %></h2>
 <h6>
   <% if (region.name() != "All Birds") { %>
-      reported species from <%= region.get('start_date') %> to
-      <%= region.get('updated_at') %>
+      (reported species from <%= region.get('start_date') %> to
+      <%= region.get('updated_at') %>)
+  <% } else { %>
+    check an individual region to see date ranges
   <% } %>
-    <button class='region-update'>Update</button>
 </h6>
+</section>
 <section class="region-sidepanel">
   <% regions.each(function (regionModel) { %>
 
     <% if (regionModel.name() === region.name()) { %>
-      <button class="selected region-button" data-id="<%= regionModel.id %>">
+      <button class="go-button selected region-button" data-id="<%= regionModel.id %>">
     <% } else { %>
-      <button class="region-button" data-id="<%= regionModel.id %>">
+      <button class="go-button region-button" data-id="<%= regionModel.id %>">
     <% } %>
       <%= regionModel.name() %>
     </button>
@@ -20,16 +23,16 @@
   <% }) %>
 
     <% if (region.name() === "All Birds") { %>
-      <button class="selected region-button" data-id=0>
+      <button class="go-button selected region-button" data-id=0>
     <% } else { %>
-      <button class="region-button" data-id=0>
+      <button class="go-button region-button" data-id=0>
     <% } %>
       All
     </button>
 
 </section>
 
-<section class="bird-list"></section>
+<section class="bird-list"><button class='region-update'>Update</button></section>
 
 <% if (region.id) { %>
   <a class="quiz-start" data-id="<%= region.id %>">Study!</a>

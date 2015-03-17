@@ -6,11 +6,15 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
       this.showAllUserBirds();
     }
 
+    this.$el.addClass("group");
+
     this.listenTo(this.model.birds(), "sync", this.render);
     this.listenTo(this.model, "sync", this.render);
   },
 
   template: JST["region_show"],
+
+  className: "region-show",
 
   events: {
     "click .region-button":"swapBirdIndex",
@@ -29,7 +33,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
       collection: this.model.birds()
     });
     this.subviews.push(birdIndex);
-    this.$el.find(".bird-list").html(birdIndex.render().el);
+    this.$el.find(".bird-list").append(birdIndex.render().el);
 
     return this;
   },
