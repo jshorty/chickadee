@@ -63,13 +63,13 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   },
 
   swapBirdIndex: function (event) {
-    var id = $(event.currentTarget).data("id")
-    if (id === 0) {
-      Backbone.history.navigate("birds", { trigger: true })
-    } else {
-      var url = "regions/" + id + "/birds"
-      Backbone.history.navigate(url, { trigger: true })
-    }
+    var view = this;
+    var id = $(event.currentTarget).data("id");
+    var url = "regions/" + id + "/birds";
+    view.$el.find(".bird-list li").fadeOut(300);
+    view.$el.find(".region-header").fadeOut(300, function () {
+      Backbone.history.navigate(url, { trigger: true });
+    });
   },
 
   reloadRegionBirds: function (event) {

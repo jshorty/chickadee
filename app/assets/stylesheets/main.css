@@ -188,6 +188,12 @@ section.region-sidepanel {
 
 section.region-sidepanel button {
   margin: 5px auto;
+  transition: background 0.2s linear;
+}
+
+section.region-sidepanel button:hover {
+  margin: 5px auto;
+  background: #0099cc;
 }
 
 [data-id="0"] {
@@ -217,4 +223,17 @@ section.bird-list li {
 section.bird-list li em{
   font-style: italic;
   font-size: 12px;
+}
+
+button.go-button.quiz-start {
+  display: block;
+  text-align: center;
+  width: 300px;
+  background: #cc6600;
+  font-size: 24px;
+  transition: background 3.0s linear;
+}
+
+button.go-button.quiz-start:hover {
+  background: #0099cc;
 }
