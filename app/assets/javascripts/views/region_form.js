@@ -4,9 +4,11 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   },
 
   tagName: "form",
+  className: "invisible",
 
   events: {
-    "submit":"submitNewRegion"
+    "submit":"submitNewRegion",
+    "click .back-button":"goToIndex"
   },
 
   template: JST["region_form"],
@@ -23,10 +25,10 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     var attr = $(event.currentTarget).serializeJSON();
     var view = this;
 
-    this.model.save(attr, {
+    view.model.save(attr, {
       success: function () {
-        Chickadee.Collections.regions.add(this.model)
-        Backbone.history.navigate("regions", {trigger: true})
+          Chickadee.Collections.regions.add(view.model);
+          view.goToIndex();
       },
       error: function (model, response) {
         view.displayErrors(response.responseJSON);
@@ -38,7 +40,13 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     this.removeSubviews();
     var subview = new Chickadee.Views.Errors({errors: errors});
     this.subviews.push(subview)
-    this.$el.append(subview.render().el)
+    this.$el.find("p").append(subview.render().el)
+    this.$el.find(".error-message").css('opacity', 0)
+                                   .slideDown(300)
+                                   .animate(
+                                     { opacity: 1 },
+                                     { queue: false, duration: 1000 }
+                                    );
   },
 
   remove: function () {
@@ -50,5 +58,12 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
       subview.remove();
     });
     this.subviews = [];
+  },
+
+  goToIndex: function (event) {
+    event && event.preventDefault();
+    this.$el.fadeOut(300, function () {
+      Backbone.history.navigate("regions", {trigger: true})
+    });
   }
 })

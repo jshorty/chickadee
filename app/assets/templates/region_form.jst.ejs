@@ -1,25 +1,23 @@
-<h1>Add a new study region!</h1>
-<p>Be as specific as you like, but make sure to at least choose a country!</p>
+<h1>Add a new study region</h1>
+<p>We'll go find out what bird species have been seen there!</p>
 
-<label for="new-region-county">County</label>
+<label for="new-region-country"><strong>Country*</strong></label>
 <input type="text"
-       name="region[county]"
-       id="new-region-county"
-       value='<% region.get('county') %>'>
-<br>
+       name="region[country]"
+       id="new-region-country"
+       value='<%= region.get('country') %>'>
 
 <label for="new-region-state">State</label>
 <input type="text"
        name="region[state]"
        id="new-region-state"
        value='<%= region.get('state') %>'>
-<br>
 
-<label for="new-region-country">Country</label>
+<label for="new-region-county">County</label>
 <input type="text"
-       name="region[country]"
-       id="new-region-country"
-       value='<%= region.get('country') %>'>
-<br>
+       name="region[county]"
+       id="new-region-county"
+       value='<% region.get('county') %>'>
 
-<button>Submit</button>
+<button class="back-button">Back</button>
+<button class="go-button">Find birds!</button>

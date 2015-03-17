@@ -26,6 +26,10 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       this.$el.find(".region-menu").prepend(subview.render().el);
     }, this);
 
+    if (this.collection.models.length === 0) {
+      this.$el.find(".region-item").addClass("solo-centered");
+    }
+
     return this;
   },
 

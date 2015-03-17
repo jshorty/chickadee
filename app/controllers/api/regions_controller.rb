@@ -5,7 +5,7 @@ module Api
     def create
       @region = Region.find_by(region_params)
       if !@region
-        render json: ["Region doesn't exist in the database"], status: 404
+        render json: ["Sorry, we couldn't find this region. Please confirm your spelling, or be less specific."], status: 404
       elsif @region.users.include?(current_user)
         render json: ["You are already studying that region"], status: 422
       else

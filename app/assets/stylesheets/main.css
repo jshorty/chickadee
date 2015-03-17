@@ -8,6 +8,7 @@
   padding: 20px;
 }
 
+
 /*REGIONS PAGE*/
 #main-content > div {
   width: 100%;
@@ -48,4 +49,57 @@
   border-radius: 20px;
 }
 
+#main-content li.solo-centered {
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+
 /*NEW REGION PAGE*/
+
+#main-content form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#main-content form label {
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+#main-content form input {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  width: 300px;
+  padding: 5px 10px;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form button {
+  display: inline-block;
+  margin: 20px auto 50px auto;
+  border-radius: 15px;
+  padding: 20px;
+  background: #33cc99;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+form .back-button {
+  background: #cc6600;
+}
+
+.error-message {
+  color: #cc6600;
+  display: none; /*fades in*/
+  margin: 5px;
+}

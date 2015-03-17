@@ -18,6 +18,7 @@ Chickadee.Views.Header = Backbone.View.extend({
     "submit form":"login",
     "click .profile":"openMyProfile",
     "click .home-link":"goToHome",
+    "click .logo":"goToHome",
     "click .birds-link":"goToBirds"
   },
 
