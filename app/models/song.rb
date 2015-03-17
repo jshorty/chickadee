@@ -17,7 +17,6 @@ class Song < ActiveRecord::Base
   def retrieve_file
     file_url = catch_redirect
     self.recording = URI.parse(file_url)
-    debugger
     self.update(local: true)
   end
 
