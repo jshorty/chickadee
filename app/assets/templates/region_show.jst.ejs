@@ -12,6 +12,7 @@
 
 <section class='region-info group'>
   <section class="region-sidepanel">
+
     <% regions.each(function (regionModel) { %>
       <% if (regionModel.name() === region.name()) { %>
         <button class="go-button selected region-button" data-id="<%= regionModel.id %>">
@@ -28,7 +29,10 @@
       </button>
     <% } %>
   </section>
-
+  <div class="search">
+    <input type="text" class="search-bar">
+    <img class="bino-background" src="../binoculars-icon.png">
+  </div>
   <section class="bird-list">
     <button class='region-update'>Update</button>
   </section>

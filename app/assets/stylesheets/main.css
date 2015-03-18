@@ -29,7 +29,7 @@
   text-align: center;
   margin: 0 auto;
   width: 450px;
-  min-height: 600px;
+  min-height: 300px;
 }
 
 #main-content li.region-item {
@@ -92,7 +92,7 @@ form button {
 }
 
 .go-button {
-  background: #33cc99;
+  background: #339966;
   border-radius: 15px;
   padding: 20px;
   color: #fff;
@@ -174,7 +174,8 @@ section.region-info {
 section.bird-list button.region-update {
   background: #0099CC;
   position: absolute;
-  left: 80%;
+  top: 0%;
+  left: 88%;
   padding: 5px;
   border-radius: 5px;
   font-size: 12px;
@@ -199,6 +200,9 @@ section.region-sidepanel {
 
 section.region-sidepanel button {
   margin: 5px auto;
+  min-width: 200px;
+  text-align: center;
+  float: right;
   transition: background, box-shadow 0.2s linear;
 }
 
@@ -228,6 +232,29 @@ section.bird-list {
   margin-bottom: 20px;
 }
 
+div.search {
+  padding: 5px 0px 0px 40px;
+  width: 350px;
+  float: left;
+}
+
+input.search-bar {
+  width: 250px;
+  display: block;
+  float: left;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 2px 5px;
+  background: #fff;
+}
+
+img.bino-background {
+  float: left;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 10px;
+}
+
 section.bird-list li {
   padding: 5px;
 }
@@ -238,16 +265,18 @@ section.bird-list li em{
 }
 
 button.go-button.quiz-start {
+  margin-top: 50px;
   display: block;
   text-align: center;
   width: 300px;
-  background: #cc6600;
+  background: #339900;
   font-size: 24px;
   transition: background 3.0s linear;
 }
 
 button.go-button.quiz-start:hover {
-  background: #0099cc;
+  margin-top: 50px;
+  background: #33CC99;
 }
 
 /* QUIZ SHOW */
