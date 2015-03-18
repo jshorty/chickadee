@@ -3,13 +3,18 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     this.subviews = [];
 
     if (!options.model) {
-      this.showAllUserBirds();
+      this.model = this.collection.models[0];
+      this.model && this.model.fetch()
     }
 
-    this.$el.addClass("group");
-
-    this.listenTo(this.model.birds(), "sync", this.render);
-    this.listenTo(this.model, "sync", this.render);
+    if (!this.model) {
+      this.template = JST["no_birds"]
+      this.render = function(){this.$el.html(this.template); return this};
+    } else {
+      this.$el.addClass("group");
+      this.listenTo(this.model.birds(), "sync", this.render);
+      this.listenTo(this.model, "sync", this.render);
+    }
   },
 
   template: JST["region_show"],

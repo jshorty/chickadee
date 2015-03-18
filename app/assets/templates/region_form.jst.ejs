@@ -1,6 +1,6 @@
 <h1>Add a new study region</h1>
 <p>We'll go find out what bird species have been seen there!</p>
-
+<fieldset>
 <label for="new-region-country"><strong>Country*</strong></label>
 <input type="text"
        name="region[country]"
@@ -18,6 +18,6 @@
        name="region[county]"
        id="new-region-county"
        value='<% region.get('county') %>'>
-
+</fieldset>
 <button class="back-button">Back</button>
 <button class="go-button">Find birds!</button>

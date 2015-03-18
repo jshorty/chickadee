@@ -16,7 +16,7 @@
 
 /*RESET && CLEARFIX*/
 html, body, header, nav, h1, h2, h3, h4, h5, h6, a, ul, li, main,
-section, img, div, p, form, label, textarea, button, footer, input {
+section, img, div, p, form, fieldset, label, textarea, button, footer, input {
   margin: 0;
   padding: 0;
   border: 0;

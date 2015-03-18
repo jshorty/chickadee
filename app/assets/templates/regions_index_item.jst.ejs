@@ -1,2 +1,5 @@
-<img class="region-img" src="../region-button.jpg">
+<% var imgNum = Math.floor(Math.random() * 3).toString() %>
+<% if (imgNum === "2") { (imgNum = "0")} %>
+
+<img class="region-img" src="../region-button-<%=imgNum%>.jpg">
 <%= region.name() %>

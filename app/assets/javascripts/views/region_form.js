@@ -25,12 +25,21 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     var attr = $(event.currentTarget).serializeJSON();
     var view = this;
 
+    $( document ).ajaxStart(function() {
+      view.fields = view.$el.find("fieldset").html();
+      $(view.fields).fadeOut(500, function () {
+        view.$el.find("fieldset").html(
+          '<img class="spinner" src="../spinner.gif">')
+      })
+    });
+
     view.model.save(attr, {
       success: function () {
           Chickadee.Collections.regions.add(view.model);
           view.goToIndex();
       },
       error: function (model, response) {
+        view.$el.find("fieldset").html(view.fields);
         view.displayErrors(response.responseJSON);
       }
     });
