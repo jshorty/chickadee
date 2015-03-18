@@ -1,24 +1,35 @@
 <h1><strong>Birds of <%= region.name() %></strong></h1>
 
-<br>
+<section class="quiz-window group">
+  <div class="quiz-score"><%= quiz.escape('score') %></div>
+  <div class="quiz-progress group">
+    <div class="unanswered"> </div><div class="unanswered"> </div>
+    <div class="unanswered"> </div><div class="unanswered"> </div>
+    <div class="unanswered"> </div><div class="unanswered"> </div>
+    <div class="unanswered"> </div><div class="unanswered"> </div>
+    <div class="unanswered"> </div><div class="unanswered"> </div>
+  </div>
 
-<section class="quiz-window">
-  <h4>Score: <%= quiz.escape('score') %></h4>
-  <h4>Progress: <%= parseInt(quiz.escape('progress')) + 1 %>/10</h4>
+
+    <!-- <%= parseInt(quiz.escape('progress')) + 1 %>/10 -->
 
   <div class='audio-box'>
+
     <div class='fade-box'>
     <%= question.get('correct_answer').common_name %>'s song here
+
     <audio src="<%=question.get('audio_url')%>" controls="true">
-      Will I see this?
+      Your browser does not support the audio player element
+      (try Chrome or Safari)
     </audio>
+
     Recorded by <%= question.escape('recordist') %>
     Recording info and license at <%= question.escape('info_url') %>
     </div>
+
   </div>
 
-  <section class="flash-box">
-  </section>
+  <section class="flash-box"></section>
 
   <section class="answer-choices">
     <ul>

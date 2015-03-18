@@ -309,14 +309,43 @@ button.go-button.quiz-start:hover {
 
 .quiz-window {
   position: relative;
+  width: 600px;
   margin: 0 auto;
   background: #fff;
+  margin-top: 10px;
   border-radius: 20px;
   padding: 20px;
 }
 
+.quiz-score {
+  float: right;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0099cc;
+}
+
+.quiz-progress {
+  float: right;
+  width: 150px;
+  margin: 5px 10px 0px 0px;
+}
+
+.quiz-progress > div {
+  float: right;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.quiz-progress > div.unanswered {
+  background: #aaa;
+}
+
 .audio-box {
   background: #666;
+  width: 530px;
+  height: 280px;
+  margin: 30px auto 0px auto;
   border-radius: 20px;
   padding: 10px;
 }
@@ -334,11 +363,11 @@ button.go-button.quiz-start:hover {
   padding: 10px;
 }
 
-.flash-box.correct {
+.correct {
   background: #339966;
 }
 
-.flash-box.incorrect {
+.incorrect {
   background: #cc6600;
 }
 
