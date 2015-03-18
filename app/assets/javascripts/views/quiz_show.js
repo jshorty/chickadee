@@ -2,11 +2,14 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   initialize: function (options) {
     this.regionId = options.regionId;
     this.subviews = [];
-
+    console.log("VIEW IS HERE");
     this.question = this.model.question();
     this.region = new Chickadee.Models.Region(this.model.get('region'));
   },
 
+  tagName: "section",
+  className: "quiz-show",
+  template: JST["quiz_show"],
   events: {
     "click .answer":"handleAnswer",
     "click .quiz-again":function(){
@@ -14,13 +17,32 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     },
   },
 
-  className: "quiz-show",
-  template: JST["quiz_show"],
+  flashCorrect: function () {
+    var flash = JST["answer_correct"]({bird: this.question.get('correct_answer')});
+    var flashbox = this.$el.find(".flash-box");
+    flashbox.addClass("correct");
+    flashbox.html(flash);
+    flashbox.hide();
+    flashbox.fadeToggle("fast")
+    setTimeout(function () {flashbox.fadeToggle("slow", "linear")}, 1500)
+  },
+
+  flashIncorrect: function () {
+    var flash = JST["answer_incorrect"]({bird: this.question.get('correct_answer')});
+    var flashbox = this.$el.find(".flash-box");
+    flashbox.addClass("incorrect");
+    flashbox.html(flash);
+    flashbox.hide();
+    flashbox.fadeToggle("fast")
+    setTimeout(function () {flashbox.fadeToggle("slow", "linear")}, 1500)
+  },
 
   handleAnswer: function (event) {
     var chosenId = $(event.currentTarget).data('id');
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
+
+    correct ? this.flashCorrect() : this.flashIncorrect()
 
     this.question.save({correct: correct}, {
       success: function (model, response) {

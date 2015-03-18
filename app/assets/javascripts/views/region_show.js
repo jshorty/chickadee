@@ -91,12 +91,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   },
 
   updateResults: function (event) {
-    console.log("Change event!");
     var query = $(event.currentTarget).val().toLowerCase();
-    console.log(query);
     this.$el.find(".bird-list li").each(function (i, el) {
       if ($(el).text().toLowerCase().indexOf(query) === -1) {
-        console.log($(el).text());
         $(el).hide();
       } else {
         $(el).show();

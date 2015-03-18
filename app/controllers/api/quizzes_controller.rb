@@ -43,7 +43,11 @@ module Api
       @quiz = @question.quiz
       correct ? @quiz.correct! : @quiz.incorrect!
       @question = @quiz.next_question
-      @song = @question.correct_answer.random_song
+
+      if @question
+        @song = @question.correct_answer.random_song
+      end
+
       render :show
     end
 

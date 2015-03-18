@@ -13,16 +13,13 @@ class Bird < ActiveRecord::Base
     through: :bird_regions,
     source: :region
 
-  has_many :quizzes,
-    through: :quiz_questions,
-    source: :quiz,
-    dependent: :destroy
-
   has_many :songs,
     class_name: "Song",
     primary_key: :id,
     foreign_key: :bird_id,
     dependent: :destroy
+
+  has_many :subject_questions
 
   def genus
     self.sci_name.split(" ")[0]
@@ -56,7 +53,6 @@ class Bird < ActiveRecord::Base
       self.update!(has_songs: false)
       return false
     else
-      debugger
       max_songs = 15
       count = (number_of_recordings < max_songs) ? number_of_recordings : max_songs
 

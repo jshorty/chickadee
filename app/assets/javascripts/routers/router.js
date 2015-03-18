@@ -14,7 +14,12 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "regions":"regionsIndex",
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow",
-    "*nomatch":"notFound"
+    "loading":"loading",
+    "*nomatch":"notFound",
+  },
+
+  loading: function () {
+    this._swapView(new Chickadee.Views.Loading());
   },
 
   newRegion: function () {
@@ -31,6 +36,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   },
 
   quizShow: function (regionId) {
+    this._swapView(new Chickadee.Views.Loading({message: "Loading quiz..."}));
     if (this._requireLoggedIn()) {
       var quiz = new Chickadee.Models.Quiz();
       quiz.save({region_id: regionId}, {
@@ -38,6 +44,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
           this._swapView(new Chickadee.Views.QuizShow({model: quiz}));
         }.bind(this)
       });
+      console.log("WAITING FOR QUIZ SAVE");
     } else {
       this._swapView(new Chickadee.Views.Welcome());
     }
