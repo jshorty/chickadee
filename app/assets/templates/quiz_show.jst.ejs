@@ -8,6 +8,11 @@
 
   <div class='audio-box'>
     <%= question.get('correct_answer').common_name %>'s song here
+    <audio src="<%=question.get('audio_url')%>" controls="true">
+      Will I see this?
+    </audio>
+    Recorded by <%= question.escape('recordist') %>
+    Recording info and license at <%= question.escape('info_url') %>
   </div>
 
   <section class="answer-choices">

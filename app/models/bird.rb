@@ -18,6 +18,12 @@ class Bird < ActiveRecord::Base
     source: :quiz,
     dependent: :destroy
 
+  has_many :songs,
+    class_name: "Song",
+    primary_key: :id,
+    foreign_key: :bird_id,
+    dependent: :destroy
+
   def genus
     self.sci_name.split(" ")[0]
   end
@@ -52,8 +58,11 @@ class Bird < ActiveRecord::Base
     else
       max_songs = 15
       count = (number_of_recordings < max_songs) ? number_of_recordings : max_songs
+      #prioritize high-quality recordings according to current rating:
+      songs = payload["recordings"].select{|song| song["q"] == "A"}.sample(count)
+      while songs.length < 15
+        songs.push(payload["recordings"] - songs)
 
-      songs = payload["recordings"].sample(count)
       save_songs!(songs)
       self.update!(has_songs: true)
       return true
@@ -64,6 +73,23 @@ class Bird < ActiveRecord::Base
     songs.each do |song|
       Song.create!(bird_id: self.id, info_url: song["url"],
                   xeno_canto_url: song["file"], recordist: song["rec"])
+    end
+  end
+
+  def random_song
+    self.get_songs unless self.has_songs
+    songs = self.songs.shuffle
+    i = 0
+
+    while i < songs.length
+      song = songs[i]
+      if song.local
+        return song
+      elsif song.retrieve_file
+        return song
+      else
+        i += 1
+      end
     end
   end
 end

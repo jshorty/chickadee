@@ -116,6 +116,8 @@ nav .nav-right li.current-user-img {
 nav .nav-right li.current-user-img img {
   border: 1px solid transparent;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 nav .current-user {

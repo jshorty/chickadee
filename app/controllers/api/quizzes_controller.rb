@@ -9,6 +9,7 @@ module Api
 
       if @quiz
         @question = @quiz.next_question
+        @song = @question.correct_answer.random_song
         render :show
       else
         @quiz ||= Quiz.new(user_id: current_user.id,
@@ -21,6 +22,7 @@ module Api
                          status: 422
           end
           @question = @quiz.next_question
+          @song = @question.correct_answer.random_song
           render :show
         else
           render json: @quiz.errors.full_messages, status: 422
@@ -41,6 +43,7 @@ module Api
       @quiz = @question.quiz
       correct ? @quiz.correct! : @quiz.incorrect!
       @question = @quiz.next_question
+      @song = @question.correct_answer.random_song
       render :show
     end
 

@@ -67,7 +67,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def next_question
-    Question.includes([:correct_answer, :answer_a, :answer_b, :answer_c])
+    Question.includes(:correct_answer, :answer_a, :answer_b, :answer_c)
             .find_by(quiz_id: self.id, answered: false)
   end
 end
