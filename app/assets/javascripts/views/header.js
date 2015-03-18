@@ -34,6 +34,14 @@ Chickadee.Views.Header = Backbone.View.extend({
       this.$el.find(".home-link").parent().removeClass("current");
     }
 
+    this.$el.find(".welcome-popdown").hide();
+
+    if (this.loggingIn) {
+      setTimeout(function () {
+        this.welcomePopdown();
+      }.bind(this), 500);
+    }
+
     return this;
   },
 
@@ -42,9 +50,13 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   openLoginWindow: function (event) {
-    var subview = new Chickadee.Views.Login();
-    this.subviews.push(subview);
-    this.$el.append(subview.render().el);
+    if (!this.openedLogin) {
+      this.openedLogin = true;
+      var subview = new Chickadee.Views.Login();
+      this.subviews.push(subview);
+      this.$el.append(subview.render().el);
+      subview.$el.fadeIn(300);
+    }
   },
 
   openMyProfile: function (event) {
@@ -69,6 +81,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   checkLoggedIn: function () {
     if (this.model.isLoggedIn()) {
       return JST["header_private"]({user: this.model});
+      this.openedLogin = false;
     } else {
       return JST["header_public"]();
     }
@@ -78,10 +91,21 @@ Chickadee.Views.Header = Backbone.View.extend({
     event.preventDefault();
     var credentials = $(event.currentTarget).serializeJSON();
     this.model.login(credentials);
+    this.loggingIn = true;
+    this.openedLogin = false;
   },
 
   logout: function (event) {
     event.preventDefault();
     this.model.logout();
+  },
+
+  welcomePopdown: function () {
+    var view = this;
+    var popdown = view.$el.find(".welcome-popdown")
+    popdown.fadeIn(500, function () {
+      setTimeout(function () {popdown.fadeOut('5000')}, 2000);
+    });
+    view.loggingIn = false;
   }
 });

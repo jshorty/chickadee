@@ -14,6 +14,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     },
   },
 
+  className: "quiz-show",
   template: JST["quiz_show"],
 
   handleAnswer: function (event) {

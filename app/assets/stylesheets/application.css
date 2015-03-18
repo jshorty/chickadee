@@ -65,11 +65,16 @@ header {
 }
 
 header .logo {
+  z-index: 1;
   font-size: 36px;
   float: left;
   padding: 10px 20px;
   cursor: pointer;
   color: #fff;
+}
+
+nav {
+  z-index: 1;
 }
 
 nav .nav-left {
@@ -155,4 +160,45 @@ nav .login {
   background: #666;
   color: #fff;
   letter-spacing: 1px;
+}
+
+header form {
+  display: none;
+  padding: 22px 0px;
+}
+
+header form label {
+  display: block;
+  float: left;
+  margin: 0px 10px;
+}
+
+header form input {
+  display: block;
+  float: left;
+  padding: 0px 5px;
+  background: #666;
+  border-bottom: 2px solid #666;
+  font-weight: 400;
+}
+
+header form button {
+  display: block;
+  float: left;
+  margin: 0px 0px 0px 10px;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #666;
+  font-weight: 400;
+}
+
+div.welcome-popdown {
+  z-index: 10;
+  position: fixed;
+  top: 4px;
+  right: 20px;
+  background: #33cc99;
+  padding: 20px 23px;
+  border-radius: 20px;
 }

@@ -63,11 +63,11 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   },
 
   swapBirdIndex: function (event) {
-    var view = this;
     var id = $(event.currentTarget).data("id");
+    if (this.model.id === id) { return }
     var url = "regions/" + id + "/birds";
-    view.$el.find(".bird-list li").fadeOut(300);
-    view.$el.find(".region-header").fadeOut(300, function () {
+    this.$el.find(".bird-list li").fadeOut(200);
+    this.$el.find(".region-header").fadeOut(200, function () {
       Backbone.history.navigate(url, { trigger: true });
     });
   },
@@ -78,6 +78,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   goToQuiz: function (event) {
     var region_id = $(event.currentTarget).data("id");
-    Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
+    this.$el.find(".bird-list li").fadeOut(200);
+    this.$el.find(".region-header").fadeOut(200, function () {
+      Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
+    });
   }
 })

@@ -8,11 +8,19 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
 
   events: {
     "click .new-region-link":"newRegion",
+    "click .region-item":"goToQuiz"
   },
 
   newRegion: function (event) {
     this.$el.fadeOut(200, function () {
       Backbone.history.navigate("regions/new", {trigger:true});
+    });
+  },
+
+  goToQuiz: function (event) {
+    var region_id = $(event.currentTarget).data("id");
+    this.$el.fadeOut(200, function () {
+      Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
     });
   },
 

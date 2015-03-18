@@ -10,6 +10,7 @@ Chickadee.Views.RegionsIndexItem = Backbone.View.extend({
   render: function () {
     var content = this.template({region: this.model});
     this.$el.html(content);
+    this.$el.data("id", this.model.id)
     return this;
   },
 })
