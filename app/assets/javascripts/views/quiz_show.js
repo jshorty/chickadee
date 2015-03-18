@@ -1,7 +1,6 @@
 Chickadee.Views.QuizShow = Backbone.View.extend({
   initialize: function (options) {
     this.regionId = options.regionId;
-    this.subviews = [];
     this.question = this.model.question();
     this.region = new Chickadee.Models.Region(this.model.get('region'));
   },
@@ -21,44 +20,64 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var flash = JST[("answer_" + resultStr)]({bird: this.question.get('correct_answer')});
     var flashbox = this.$el.find(".flash-box");
     flashbox.addClass(resultStr);
-    flashbox.html(flash);
-    flashbox.hide();
-    flashbox.fadeToggle("fast")
-    setTimeout(function () {
-      flashbox.fadeToggle("slow", "linear", function (){
-        return callback();
-      });
-    }, 1500)
-  },
 
-  fadeToLoad: function () {
     var view = this;
-    view.$el.find(".audio-box").children().fadeOut(500, function () {
-      view.$el.find(".audio-box").html(
-        JST["loading"]({message: "Loading bird audio..."})
-      );
+    flashbox.html(flash).hide().fadeToggle(400, function () {
+      setTimeout(function () {
+        flashbox.fadeToggle(600, "linear", function () {
+          view.flashOver = true;
+        });
+      }, 1000)
     });
   },
 
+  fadeToLoad: function () {
+    var message = "Loading bird audio..."
+    this.$el.find(".fade-box").fadeOut(500, function () {
+      this.$el.find(".audio-box").html(JST["loading"]({message: message}));
+    }.bind(this));
+  },
+
   handleAnswer: function (event) {
+    if (this.answered) {return}
+    this.answered = true
+    this.flashOver = false;
+
     var chosenId = $(event.currentTarget).data('id');
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
-    var flashFn = (correct ? this.flashCorrect : this.flashIncorrect)
-    this.flashResult(correct, this.fadeToLoad.bind(this));
+    this.flashResult(correct);
+
+    this.fadeToLoad();
 
     this.question.save({correct: correct}, {
       success: function (model, response) {
-        this.model.set(this.model.parse(response));
-        if (parseInt(response.progress) < 10) {
-          this.question = this.model.question();
-          this.render();
-        } else {
-          this.results();
-        }
+        console.log("LOADED");
+        this.interval = window.setInterval(function () {
+          // console.log("CHECKING INTERVAL!");
+          // console.log(this.flashOver);
+          if (this.flashOver) {
+            console.log("FIRED!");
+            this.nextQuestion(response);
+            window.clearInterval(this.interval);
+          }
+        }.bind(this), 100);
       }.bind(this)
     });
+  },
+
+  nextQuestion: function (response) {
+    this.model.set(this.model.parse(response));
+
+    if (parseInt(response.progress) < 10) {
+      this.question = this.model.question();
+      this.answered = false;
+      this.render();
+    } else {
+      this.answered = false;
+      this.results();
+    }
   },
 
 
@@ -81,13 +100,5 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
 
     this.$el.html(content);
     return this;
-  },
-
-  remove: function () {
-    Chickadee.Views.RegionsIndex.prototype.remove.call(this);
-  },
-
-  goToResults: function () {
-
   },
 })
