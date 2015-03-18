@@ -56,12 +56,20 @@ class Bird < ActiveRecord::Base
       self.update!(has_songs: false)
       return false
     else
+      debugger
       max_songs = 15
       count = (number_of_recordings < max_songs) ? number_of_recordings : max_songs
-      #prioritize high-quality recordings according to current rating:
+
+      #prioritize high-quality recordings according to audio's current rating:
       songs = payload["recordings"].select{|song| song["q"] == "A"}.sample(count)
-      while songs.length < 15
-        songs.push(payload["recordings"] - songs)
+      remaining = count - songs.length
+      if remaining > 0
+        ["B", "C", "no score", "D", "E"].each do |score|
+          songs += (payload["recordings"].select{|song| song["q"] == score}.sample(remaining))
+          remaining = count - songs.length
+          break if remaining == 0
+        end
+      end
 
       save_songs!(songs)
       self.update!(has_songs: true)
@@ -71,8 +79,8 @@ class Bird < ActiveRecord::Base
 
   def save_songs!(songs)
     songs.each do |song|
-      Song.create!(bird_id: self.id, info_url: song["url"],
-                  xeno_canto_url: song["file"], recordist: song["rec"])
+      Song.create!(bird_id: self.id, info_url: song["url"], rating: song["q"],
+                   xeno_canto_url: song["file"], recordist: song["rec"])
     end
   end
 

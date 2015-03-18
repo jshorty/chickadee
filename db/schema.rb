@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317185958) do
+ActiveRecord::Schema.define(version: 20150318145022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20150317185958) do
     t.string   "recording_content_type"
     t.integer  "recording_file_size"
     t.datetime "recording_updated_at"
+    t.string   "rating"
   end
 
   create_table "user_regions", force: :cascade do |t|
