@@ -44,7 +44,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
           this._swapView(new Chickadee.Views.QuizShow({model: quiz}));
         }.bind(this)
       });
-      console.log("WAITING FOR QUIZ SAVE");
     } else {
       this._swapView(new Chickadee.Views.Welcome());
     }

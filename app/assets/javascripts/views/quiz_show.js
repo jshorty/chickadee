@@ -2,7 +2,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   initialize: function (options) {
     this.regionId = options.regionId;
     this.subviews = [];
-    console.log("VIEW IS HERE");
     this.question = this.model.question();
     this.region = new Chickadee.Models.Region(this.model.get('region'));
   },
@@ -17,24 +16,28 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     },
   },
 
-  flashCorrect: function () {
-    var flash = JST["answer_correct"]({bird: this.question.get('correct_answer')});
+  flashResult: function (correct, callback) {
+    var resultStr = correct ? "correct" : "incorrect"
+    var flash = JST[("answer_" + resultStr)]({bird: this.question.get('correct_answer')});
     var flashbox = this.$el.find(".flash-box");
-    flashbox.addClass("correct");
+    flashbox.addClass(resultStr);
     flashbox.html(flash);
     flashbox.hide();
     flashbox.fadeToggle("fast")
-    setTimeout(function () {flashbox.fadeToggle("slow", "linear")}, 1500)
+    setTimeout(function () {
+      flashbox.fadeToggle("slow", "linear", function (){
+        return callback();
+      });
+    }, 1500)
   },
 
-  flashIncorrect: function () {
-    var flash = JST["answer_incorrect"]({bird: this.question.get('correct_answer')});
-    var flashbox = this.$el.find(".flash-box");
-    flashbox.addClass("incorrect");
-    flashbox.html(flash);
-    flashbox.hide();
-    flashbox.fadeToggle("fast")
-    setTimeout(function () {flashbox.fadeToggle("slow", "linear")}, 1500)
+  fadeToLoad: function () {
+    var view = this;
+    view.$el.find(".audio-box").children().fadeOut(500, function () {
+      view.$el.find(".audio-box").html(
+        JST["loading"]({message: "Loading bird audio..."})
+      );
+    });
   },
 
   handleAnswer: function (event) {
@@ -42,7 +45,8 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
-    correct ? this.flashCorrect() : this.flashIncorrect()
+    var flashFn = (correct ? this.flashCorrect : this.flashIncorrect)
+    this.flashResult(correct, this.fadeToLoad.bind(this));
 
     this.question.save({correct: correct}, {
       success: function (model, response) {
