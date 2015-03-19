@@ -18,6 +18,18 @@
     <div class='fade-box'>
       <%= question.get('correct_answer').common_name %>'s song here
 
+      <div id="zen">
+        <span class="player"></span>
+        <span class="circle"></span>
+        <span class="progress"></span>
+        <span class="buffer"></span>
+        <span class="drag"></span>
+        <div class="button">
+          <span class="icon play"></span>
+          <span class="icon pause"></span>
+        </div>
+      </div>
+
       <audio src="<%=question.get('audio_url')%>" controls="true">
         Your browser does not support the audio player element
         (try Chrome or Safari)

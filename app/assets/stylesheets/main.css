@@ -400,16 +400,21 @@ button.go-button.quiz-start:hover {
   margin: 30px auto 0px auto;
   border-radius: 20px;
   padding: 10px;
+  text-align: center;
+}
+
+.audio-box audio {
+  display: block;
+  margin: 0 auto;
 }
 
 .flash-box {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 115px;
   width: 200px;
-  margin-left: -100px;
+  margin-left: -110px;
   height: 150px;
-  margin-top: -75px;
   border-radius: 20px;
   text-align: center;
   padding: 10px;
