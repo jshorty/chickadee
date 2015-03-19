@@ -34,6 +34,14 @@ module Api
       render :index
     end
 
+    def countries
+      @countries = []
+      countries = Region.all.where("county IS NULL and state IS NULL")
+      countries.each { |region| @countries.push(region.country) }
+      @countries.sort
+      render :countries
+    end
+
     private
 
       def region_params

@@ -8,6 +8,42 @@
   padding: 20px;
 }
 
+/*WELCOME SCREEN*/
+#welcome-screen-patch {
+  position: fixed;
+  z-index: -1;
+  top: 72px;
+  left: 0;
+  background: #ccc;
+  width: 110%;
+  height: 100px;
+}
+
+.welcome-page {
+  z-index: 10;
+  position: relative;
+  float: right;
+  margin-right: 40%;
+  text-align: right;
+  width: 550px;
+  left: 30%;
+}
+
+#welcome-message {
+  margin: 0px 0px 10px 0px;
+  float: right;
+}
+
+h3 #welcome-tagline {
+  float: right;
+}
+
+.sign-up {
+  width: 200px;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 20px;
+}
 
 /*REGIONS PAGE*/
 #main-content > div {
@@ -60,6 +96,14 @@
   float: none;
   display: inline-block;
   margin: 0 auto;
+}
+
+.tree-footer {
+  z-index: 1;
+  width:120%;
+  bottom: -5px;
+  left: -10px;
+  position: fixed;
 }
 
 /*NEW REGION PAGE*/
@@ -389,12 +433,33 @@ button.go-button.quiz-start:hover {
   top: 55px;
 }
 
+.fade-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-box span.audio-info {
+  font-size: 10px;
+  color: #333;
+  display: block;
+}
+
+.fade-box span.recordist {
+  position: absolute;
+  bottom: 0;
+}
+
+.fade-box span a {
+  text-decoration: underline;
+}
+
 /* LOADING SCREEN */
 .loading {
   margin: 0 auto;
   height: 200px;
 }
-.loading > h1.loading-message {
+h1.loading-message {
   margin-bottom: 20px;
   color: #aaa;
 }

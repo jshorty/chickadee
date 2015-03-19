@@ -1,6 +1,17 @@
 Chickadee.Views.RegionForm = Backbone.View.extend({
   initialize: function (options) {
     this.subviews = []
+
+    $.ajax({
+      url: "api/countries",
+      method: "GET",
+      success: function (data) {
+        this.countryList = data
+        this.$el.find("#new-region-country").autocomplete({
+          source: this.countryList
+        })
+      }.bind(this)
+    });
   },
 
   tagName: "form",

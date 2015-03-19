@@ -16,15 +16,20 @@
   <div class='audio-box'>
 
     <div class='fade-box'>
-    <%= question.get('correct_answer').common_name %>'s song here
+      <%= question.get('correct_answer').common_name %>'s song here
 
-    <audio src="<%=question.get('audio_url')%>" controls="true">
-      Your browser does not support the audio player element
-      (try Chrome or Safari)
-    </audio>
+      <audio src="<%=question.get('audio_url')%>" controls="true">
+        Your browser does not support the audio player element
+        (try Chrome or Safari)
+      </audio>
 
-    Recorded by <%= question.escape('recordist') %>
-    Recording info and license at <%= question.escape('info_url') %>
+      <span class="audio-info recordist">
+        Recorded by <%= question.escape('recordist') %>. Info and
+        license available at
+        <a href="<%= question.escape('info_url') %>">
+          <%= question.escape('info_url') %>
+        </a>.
+      </span>
     </div>
 
   </div>

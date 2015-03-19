@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update, :show]
 
     resources :regions, only: [:show, :index, :create]
+    get "/countries", to: "regions#countries"
 
     resources :birds, only: [:create, :show, :index]
     get "/birds_all", to: "birds#world_index"
