@@ -1,13 +1,13 @@
 Chickadee.Views.RegionForm = Backbone.View.extend({
   initialize: function (options) {
     this.subviews = []
-
     $.ajax({
       url: "api/countries",
       method: "GET",
       success: function (data) {
         this.countryList = data
         this.$el.find("#new-region-country").autocomplete({
+          minLength: 3,
           source: this.countryList
         })
       }.bind(this)
@@ -25,6 +25,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   template: JST["region_form"],
 
   render: function () {
+    this.showSpinner = false
     this.removeSubviews()
     var content = this.template({region: this.model});
     this.$el.html(content);
@@ -36,20 +37,21 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     var attr = $(event.currentTarget).serializeJSON();
     var view = this;
 
-    $( document ).ajaxStart(function() {
-      view.fields = view.$el.find("fieldset").html();
-      $(view.fields).fadeOut(500, function () {
-        view.$el.find("fieldset").html(
-          '<img class="spinner" src="../spinner.gif">')
-      })
-    });
+    var timer = setTimeout( function () {
+      this.$("fieldset").fadeOut(300, function () {
+        view.$el.find(".spinner-box")
+                .html('<img class="spinner" src="spinner-light.gif">')
+      });
+    }, 500);
 
     view.model.save(attr, {
       success: function () {
+          clearTimeout(timer);
           Chickadee.Collections.regions.add(view.model);
           view.goToIndex();
       },
       error: function (model, response) {
+        view.showSpinner = false;
         view.$el.find("fieldset").html(view.fields);
         view.displayErrors(response.responseJSON);
       }
@@ -70,6 +72,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   },
 
   remove: function () {
+    this.showSpinner = false;
     Chickadee.Views.RegionsIndex.prototype.remove.call(this);
   },
 

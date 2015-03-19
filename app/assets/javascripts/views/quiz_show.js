@@ -3,6 +3,8 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.regionId = options.regionId;
     this.question = this.model.question();
     this.region = new Chickadee.Models.Region(this.model.get('region'));
+    this.$el.append('<audio class="ping" src="correct-beep.mp3"></audio>')
+    this.$el.append('<audio class="ping" src="incorrect-beep.mp3"></audio>')
   },
 
   tagName: "section",
@@ -10,17 +12,16 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   template: JST["quiz_show"],
   events: {
     "click .answer":"handleAnswer",
-    "click .quiz-again":function(){
-      Backbone.history.loadUrl();
-    },
+    "click .quiz-again":"quizAgain",
+    "click .back-button":"goToIndex",
   },
 
   flashResult: function (correct, callback) {
     var resultStr = correct ? "correct" : "incorrect"
     var flash = JST[("answer_" + resultStr)]({bird: this.question.get('correct_answer')});
-    var flashbox = this.$el.find(".flash-box");
+    var flashbox = this.$(".flash-box");
     flashbox.addClass(resultStr);
-
+    this.$el.append('<audio class="ping" src="'+ resultStr +'-beep.mp3" autoplay></audio>');
     var view = this;
     flashbox.html(flash).hide().fadeToggle(400, function () {
       setTimeout(function () {
@@ -32,10 +33,11 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   },
 
   fadeToLoad: function () {
-    var message = "Loading bird audio..."
-    this.$el.find(".fade-box").fadeOut(500, function () {
-      this.$el.find(".audio-box").html(JST["loading"]({message: message}));
-      this.$el.find(".spinner").attr("src", "../spinner-dark.gif");
+    var message = "Loading audio..."
+    this.$(".fade-box").fadeOut(500, function () {
+      this.$(".audio-box").html(JST["loading"]({message: message}));
+      this.$(".spinner").attr("src", "../spinner-dark.gif");
+      this.$(".audio-box").prepend("<br><br><br>")
     }.bind(this));
   },
 
@@ -54,12 +56,8 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
 
     this.question.save({correct: correct}, {
       success: function (model, response) {
-        console.log("LOADED");
         this.interval = window.setInterval(function () {
-          // console.log("CHECKING INTERVAL!");
-          // console.log(this.flashOver);
           if (this.flashOver) {
-            console.log("FIRED!");
             this.nextQuestion(response);
             window.clearInterval(this.interval);
           }
@@ -102,4 +100,16 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$el.html(content);
     return this;
   },
+
+  quizAgain: function (event) {
+    this.$el.fadeOut(300, function () {
+      Backbone.history.loadUrl();
+    });
+  },
+
+  goToIndex: function (event) {
+    this.$el.fadeOut(300, function () {
+      Backbone.history.navigate("regions", {trigger: true})
+    });
+  }
 })

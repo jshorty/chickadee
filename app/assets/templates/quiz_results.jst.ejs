@@ -3,16 +3,25 @@
 <br>
 
 <section class="quiz-window">
-  <h2>
-    You scored <%= quiz.escape('score') %>/10
-  </h2>
+  <h1 class="result-header">
+    You got <%= quiz.escape('score') %>/10 correct!
+  </h1>
 
-  <section class="answer-choices">
-    <ul>
-        <li>
-          <a class="quiz-again">Practice again</a>
-          <a href="#regions">Home</a>
-        </li>
-    </ul>
+  <% var score = parseInt(quiz.escape('score')) %>
+
+  <% if (score === 10) {%>
+    <h2 class="encouragement">Wow, looks like you know your stuff.</h2>
+  <% } else if (score >= 7) { %>
+    <h2 class="encouragement">Good job, but there's more to learn!</h2>
+  <% } else if (score >= 3){ %>
+    <h2 class="encouragement">Keep practicing and you'll develop a keen ear.</h2>
+  <% } else { %>
+    <h2 class="encouragement">Uh oh! The birds are laughing at you! Prove them wrong and try again!</h2>
+  <% } %>
+
+
+  <section class="quiz-result-choices">
+    <button class="back-button" href="#regions">Home</button>
+    <button class="go-button quiz-again">Practice again</button>
   </section>
 </section>

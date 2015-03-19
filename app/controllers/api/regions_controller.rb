@@ -7,7 +7,7 @@ module Api
       if !@region
         render json: ["Sorry, we couldn't find this region. Please confirm your spelling, or be less specific."], status: 404
       elsif @region.users.include?(current_user)
-        render json: ["You are already studying that region"], status: 422
+        render json: ["You are already studying that region!"], status: 422
       else
         @user_region = UserRegion.new(region_id: @region.id,
                                       user_id: current_user.id)
