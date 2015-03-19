@@ -41,6 +41,15 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     }.bind(this));
   },
 
+  updateProgressBar: function (correct) {
+    var newClass = (correct ? "correct" : "incorrect")
+    var currentDot = parseInt(this.model.get('progress')) + 1
+    var $dot = this.$(".quiz-progress div:nth-last-child(" + currentDot + ")")
+        $dot.removeClass("unanswered")
+        $dot.addClass(newClass)
+    this.oldProgressBar = this.$(".quiz-progress").html();
+  },
+
   handleAnswer: function (event) {
     if (this.answered) {return}
     this.answered = true
@@ -50,6 +59,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
+    this.updateProgressBar(correct);
     this.flashResult(correct);
 
     this.fadeToLoad();
@@ -88,6 +98,9 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    if (this.oldProgressBar) {
+      this.$(".quiz-progress").html(this.oldProgressBar);
+    }
     return this;
   },
 

@@ -366,7 +366,8 @@ button.go-button.quiz-start:hover {
 /* QUIZ SHOW */
 
 #main-content > section.quiz-show {
-  background-image: url("tree-footer-compressor.png");
+  z-index: 10000;
+  background-image: url("../tree-footer.png");
   background-position: 43% 0%;
   background-size: cover;
   padding-bottom: 40px;
