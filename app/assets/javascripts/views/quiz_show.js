@@ -50,6 +50,11 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.oldProgressBar = this.$(".quiz-progress").html();
   },
 
+  updateScore: function () {
+    debugger;
+    this.$(".quiz-score").html(parseInt(this.model.get('score')) + 1);
+  },
+
   handleAnswer: function (event) {
     if (this.answered) {return}
     this.answered = true
@@ -60,6 +65,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correct = (correctId === chosenId ? true : false);
 
     this.updateProgressBar(correct);
+    correct && this.updateScore();
     this.flashResult(correct);
 
     this.fadeToLoad();
