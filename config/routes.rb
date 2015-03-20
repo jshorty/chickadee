@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback", to: "api/sessions#omniauth",
     :defaults => { :format => 'json' }
-  get "/auth/failure", to: redirect('/')
+  get "/auth/failure", to: "static_pages#root"
 
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :show, :destroy]
