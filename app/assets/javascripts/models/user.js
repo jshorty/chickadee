@@ -13,7 +13,7 @@ Chickadee.Models.User = Backbone.Model.extend({
 });
 
 Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
-  url: "api/session",
+  url: "/api/session",
 
   initialize: function () {
     this.listenTo(this, "change", this.checkLoggedIn)
