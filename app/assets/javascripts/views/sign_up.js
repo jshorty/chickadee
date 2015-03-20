@@ -3,8 +3,11 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   template: JST["sign_up"],
 
   events: {
-    "submit form":"submit"
+    "click .back-button":"backToRoot",
+    "click .go-button":"submit"
   },
+
+  className: "modal-backdrop",
 
   render: function () {
     this.$el.html(this.template());
@@ -13,7 +16,8 @@ Chickadee.Views.SignUp = Backbone.View.extend({
 
   submit: function (event) {
     event.preventDefault();
-    var data = $(event.currentTarget).serializeJSON();
+    var data = this.$("form").serializeJSON();
+    debugger
     var view = this;
     $.ajax({
       url: "/api/users",
@@ -28,6 +32,13 @@ Chickadee.Views.SignUp = Backbone.View.extend({
         var errors = response.responseJSON;
         view.$el.append(JST["errors"]({errors: errors}))
       }
+    });
+  },
+
+  backToRoot: function (event) {
+    console.log("Clicked!");
+    this.$el.fadeOut(300, function () {
+      Backbone.history.navigate("refresh");
     });
   }
 });

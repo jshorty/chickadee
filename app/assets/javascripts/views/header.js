@@ -26,14 +26,6 @@ Chickadee.Views.Header = Backbone.View.extend({
     var content = this.checkLoggedIn();
     this.$el.html(content);
 
-    if (Backbone.history.fragment === "regions") {
-      this.$el.find(".home-link").parent().addClass("current");
-      this.$el.find(".birds-link").parent().removeClass("current");
-    } else {
-      this.$el.find(".birds-link").parent().addClass("current");
-      this.$el.find(".home-link").parent().removeClass("current");
-    }
-
     this.$el.find(".welcome-popdown").hide();
 
     if (this.loggingIn) {

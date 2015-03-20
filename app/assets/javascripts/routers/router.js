@@ -11,11 +11,16 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "profile":"userProfile",
     "birds":"regionShow",
     "quiz/:regionId":"quizShow",
+    "refresh":"backToWelcome",
     "regions":"regionsIndex",
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow",
     "loading":"loading",
     "*nomatch":"notFound",
+  },
+
+  backToWelcome: function () {
+    Backbone.history.navigate("", {trigger: true});
   },
 
   loading: function () {
@@ -108,6 +113,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.$main.html(this.currentView.render().el);
     this.$main.css('height', 'auto')
     var autoHeight = this.$main.height();
-    this.$main.height(curHeight).animate({height: autoHeight}, 500);
+    if (!(view instanceof Chickadee.Views.Welcome)) {
+      this.$main.height(curHeight).animate({height: autoHeight}, 500);
+    }
   },
 });

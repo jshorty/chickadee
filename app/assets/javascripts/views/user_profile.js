@@ -46,12 +46,14 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
 
   updateProfile: function (event) {
     event.preventDefault();
+
     var view = this;
     var data = view.$el.serializeJSON();
 
     if (view.model.get('new_image')) {
       data.user.image = view.model.get('image')
     }
+
 
     $.ajax({
       method: "PATCH",
@@ -65,5 +67,7 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
         view.displayErrors(response.responseJSON);
       },
     });
+    this.stopListening(this.model);
+    this.$el.html(JST["loading"]({message: "Syncing your profile..."}))
   }
 });

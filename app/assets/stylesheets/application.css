@@ -34,6 +34,7 @@ section, img, div, p, form, fieldset, label, textarea, button, footer, input {
 body {
   font-family: 'Asap', sans-serif;
   background: #ccc;
+  min-height: 300px;
 }
 
 ul {
@@ -143,6 +144,7 @@ nav .current-user .dropdown {
   top: 50px;
   box-shadow: 0px 5px 5px 0px #555;
   border-radius: 5px;
+  width: 120px;
 }
 
 nav .current-user .dropdown li {
@@ -175,23 +177,22 @@ header form {
 }
 
 header form label {
-  display: block;
-  float: left;
   margin: 0px 10px;
 }
 
-header form input {
-  display: block;
-  float: left;
+header form div {
   padding: 0px 5px;
+  float: left;
+}
+
+header form input {
+
   background: #666;
   border-bottom: 2px solid #666;
   font-weight: 400;
 }
 
 header form button {
-  display: block;
-  float: left;
   margin: 0px 0px 0px 10px;
   padding: 0px 10px;
   cursor: pointer;
