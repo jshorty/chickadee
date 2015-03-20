@@ -428,6 +428,14 @@ button.go-button.quiz-start:hover {
   margin: 20px auto;
 }
 
+#no-birds-link button {
+  transition: background 0.5s, box-shadow 0.2s linear;
+}
+
+#no-birds-link button:hover {
+  box-shadow: 0px 2px 5px 0px #555;
+}
+
 /* QUIZ SHOW */
 
 #main-content > section.quiz-show {
