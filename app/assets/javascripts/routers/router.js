@@ -47,6 +47,9 @@ Chickadee.Routers.Router = Backbone.Router.extend({
       quiz.save({region_id: regionId}, {
         success: function () {
           this._swapView(new Chickadee.Views.QuizShow({model: quiz}));
+        }.bind(this),
+        error: function () {
+          this._swapView(new Chickadee.Views.NoQuiz());
         }.bind(this)
       });
     } else {
