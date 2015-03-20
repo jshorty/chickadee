@@ -92,7 +92,6 @@ h3#welcome-tagline {
   width: 240px;
 }
 
-
 #welcome-back:hover, #welcome-go:hover {
   box-shadow: 0px 2px 5px 0px #555;
 }
@@ -101,6 +100,13 @@ h3#welcome-tagline {
   z-index: 20;
   border: 1px solid #ccc;
   transition: box-shadow 0.2s linear;
+}
+
+.moon {
+  position: relative;
+  width: 150px;
+  left: -750px;
+  top: -150px;
 }
 
 /*REGIONS PAGE*/
