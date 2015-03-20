@@ -25,6 +25,21 @@ class User < ActiveRecord::Base
   :styles => {medium: "150x150#", thumb: "50x50#"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  def self.find_or_create_by_auth_hash(auth_hash)
+    user = User.find_by(
+            provider: auth_hash[:provider],
+            uid: auth_hash[:uid])
+    unless user
+      user = User.create!(
+            provider: auth_hash[:provider],
+            uid: auth_hash[:uid],
+            alias: auth_hash[:info][:name],
+            email: auth_hash[:info][:email],
+            password: SecureRandom::urlsafe_base64)
+    end
+    user
+  end
+
   def email_must_have_valid_format
     if self.email
       if self.email.match(" ")
