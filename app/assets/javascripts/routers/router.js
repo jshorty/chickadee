@@ -16,7 +16,6 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "regions/new":"newRegion",
     "regions/:id/birds":"regionShow",
     "loading":"loading",
-    "_=_":"welcome",
     "*nomatch":"notFound",
   },
 
