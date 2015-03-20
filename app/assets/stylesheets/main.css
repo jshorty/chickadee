@@ -36,6 +36,11 @@ h3#welcome-tagline {
   width: 200px;
   text-align: center;
   font-size: 20px;
+  transition: box-shadow 0.2s linear;
+}
+
+.sign-up:hover {
+  box-shadow: -2px 2px 5px 0px #555;
 }
 
 .welcome-page > h2 {
@@ -53,6 +58,11 @@ h3#welcome-tagline {
 .facebook-icon {
   width: 50px;
   border-radius: 10px;
+  transition: box-shadow 0.2s linear;
+}
+
+.facebook-icon:hover {
+  box-shadow: -2px 2px 5px 0px #555;
 }
 
 .user_email {
