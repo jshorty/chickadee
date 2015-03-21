@@ -99,6 +99,7 @@ class Region < ActiveRecord::Base
   end
 
   def quiz_question
+    parse_birds_from_ebird_data if self.birds.length < 4
     birds = self.birds.to_a.sample(4)
     unless birds.length == 4
       raise InvalidQuizError.new("Not enough birds for a quiz.")
