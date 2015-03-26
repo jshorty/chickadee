@@ -2,7 +2,7 @@
 
 [www.chickadee.io][live]
 
-[live]: http//www.chickadee.io
+[live]: http://www.chickadee.io
 
 ## About
 Chickadee is a quiz application for learning to identify birds by their songs, modeled loosely after Duolingo. Users customize their study regions to practice the bird species relevant to them. Chickadee uses bird demographic data collected by birdwatchers and scientists through Cornell Laboratory of Ornithology's [eBird][ebird] database, and bird audio recordings from the [Xeno-canto Foundation][xeno-canto]'s archives. Chickadee is built with Backbone.js and Ruby on Rails.
