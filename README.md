@@ -19,12 +19,17 @@ Chickadee is a quiz application for learning to identify birds by their songs, m
 - links to a bird song's audio data for more information
 
 ## Under the hood
-- responsive design/UI with CSS and jQuery
-- client-side Backbone.js consuming RESTful Rails API
-- store bird audio & profile images with Amazon Web Services
-- PostgreSQL database queries APIs for file links and downloads audio when not yet available through AWS S3
+  ### General
+  - responsive design/UI with CSS and jQuery
+  - client-side Backbone.js consuming RESTful Rails API
+  - store bird audio & profile images with Amazon Web Services
+  - PostgreSQL database queries APIs for file links and downloads audio when not yet available through AWS S3
+  
+  ### Libraries
+  -JavaScript: jQuery, jQueryUI, jQuery.serializeJSON, Backbone, Underscore
+  -Ruby Gems: nokogiri, paperclip, aws-sdk, figaro, rest-client, omniauth-facebook
 
-### Next steps
+## Next steps
 - [X] Loading spinners/quiz answer flash to decrease perceived load time
 - [ ] Simplistic instructions on sign up walk user through setting up first quiz
 - [ ] Full autocomplete on regions form matching to database
