@@ -1,64 +1,33 @@
 # Chickadee
 
-[Heroku link][heroku]
+[www.chickadee.io][live]
 
-[heroku]: https://chickadee.herokuapp.com/
+[live]: http//www.chickadee.io
 
-## Minimum Viable Product
-Chickadee is a clone of the language-learning app Duolingo, used for learning to identify birds by song. It's built on Rails and Backbone.  With Chickadee, users can:
-- [X] Sign up, log in, and log out
-- [X] Edit user profile
-- [X] Create birds
-- [X] Create regions
-- [X] View birds
-- [X] View regions
-- [X] Take a quiz on a region's birdsongs (text description)
-- [X] See their score on a quiz
-- [ ] Listen to the bird song for a given quiz question
-- [X] Upload a profile image
+## About
+Chickadee is a quiz application for learning to identify birds by their songs, modeled loosely after Duolingo. Users customize their study regions to practice the bird species relevant to them. Chickadee uses bird demographic data collected by birdwatchers and scientists through Cornell Laboratory of Ornithology's [eBird][ebird] database, and bird audio recordings from the [Xeno-canto Foundation][xeno-canto]'s archives. Chickadee is built with Backbone.js and Ruby on Rails.
 
-## Design Docs
-* Wireframes were done with ink and paper! (Photos in [wireframe] directory)
-* [DB schema][schema]
-[wireframe]: ./docs/wireframes
-[schema]: ./docs/schema.md
+[ebird]: http://www.ebird.org
+[xeno-canto]: http://www.xeno-canto.org
 
-## Implementation Timeline
+## Features
+- users can study bird songs from any country in the world, or a given state/province or county in many countries
+- users have a customizable profile
+- quizzes are saved where you left them to resume later
+- streak count encourages you to keep practicing
+- users can log in with Facebook
+- links to a bird song's audio data for more information
 
-### Phase 1: User Authentication, Birds and Regions (~1-2 days)
-I will implement user authentication and the birds and regions resources with rails. Region creation will cause creation of bird models via queries to the eBird API, which will be written into the region's model logic. Nokogiri will allow me to parse the XML from querying eBird. By the end of this phase I will have simple static pages for users, sessions, regions, and birds paralleling those needed in the completed MVP.
+## Under the hood
+- responsive design/UI with CSS and jQuery
+- client-side Backbone.js consuming RESTful Rails API
+- store bird audio & profile images with Amazon Web Services
+- PostgreSQL database queries APIs for file links and downloads audio when not yet available through AWS S3
 
-[Details][phase-one]
+### Next steps
+- [X] Loading spinners/quiz answer flash to decrease perceived load time
+- [ ] Simplistic instructions on sign up walk user through setting up first quiz
+- [ ] Full autocomplete on regions form matching to database
+- [ ] Enhance basic gamification (add lives, XP)
+- [ ] Integrate bird photographs to better ground the app in reality
 
-### Phase 2: Viewing Regions and Birds, User Profile (~1 days)
-I will add API routes to serve JSON data for a users' regions and birds, and build the Backbone front end for these resources. I plan on two static pages, one for all accessible logged-out views (just welcome page and login for the MVP) and one for logged-in views.
-
-[Details][phase-two]
-
-### Phase 3: Quizzes (~2 days)
-I will add the quiz and question resources in Rails to be served and managed as JSON through the API, and corresponding models, collections and views in Backbone. The quiz will be presented through a series of Question/Answer Show views, flashing a QuestionResult View after each answer and a QuizResult View at the end.
-
-[Details][phase-three]
-
-### Phase 4: MP3 Audio (~2-3 days)
-I will query the xeno-canto API to get a link for mp3 audio of a species' song; in the frequent case of multiple songs I will have one selected at random. When creating a new quiz, an mp3 link should be retrieved for each question's bird. When that question is presented, a simple player (play button only) will be visible in the QuestionShow view and play the audio from xeno-canto's servers. Ideally the audio for upcoming questions in the quiz could be queued up and ready by the time that user reaches that question. I would love to talk potential logistics over with a TA!
-
-[Details][phase-four]
-
-### Phase 5: Profile Image Upload (~1 days)
-To allow users to upload and display a profile image like Duolingo, I'll use Paperclip and an AWS S3 Bucket to provide this functionality from the user profile page. I'll install the gems, configure heroku to work with the AWS resources, and finally display the user's image in the header when logged in.
-
-[Details][phase-five]
-
-### Bonus Features (TBD)
-- [ ] Draggable, droppable regions on regions index/landing page
-- [ ] Modal view login/signup
-- [ ] Typeahead entry on new region form
-- [ ] Gamification (3 "lives" during quiz, gain XP)
-- [ ] Bird images shown with audio in quiz and on answer hover
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
