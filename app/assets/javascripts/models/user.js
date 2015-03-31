@@ -24,9 +24,7 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
   },
 
   login: function (credentials) {
-    debugger;
     this.set(credentials);
-    debugger;
     this.save({}, {
       success: function () {
         Backbone.history.navigate("regions", {trigger:true})
@@ -51,7 +49,6 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
   },
 
   checkLoggedIn: function () {
-    debugger
     if (!this.isNew()) {
       this.trigger("login");
     } else {

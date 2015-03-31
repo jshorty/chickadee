@@ -86,7 +86,6 @@ Chickadee.Views.Header = Backbone.View.extend({
       this.loggingIn = true;
       this.openedLogin = false;
     } else {
-      debugger;
       this.displayError();
     }
   },

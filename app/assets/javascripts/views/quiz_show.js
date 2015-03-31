@@ -51,7 +51,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   },
 
   updateScore: function () {
-    debugger;
     this.$(".quiz-score").html(parseInt(this.model.get('score')) + 1);
   },
 

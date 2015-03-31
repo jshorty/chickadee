@@ -213,7 +213,7 @@ div.welcome-popdown {
 
 p.login-error {
   display: inline-block;
-  width: 250px;
-  color: #cc6600;
+  width: 220px;
+  color: #FFCC00;
   margin-left: 15px;
 }

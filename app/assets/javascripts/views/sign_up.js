@@ -17,7 +17,6 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   submit: function (event) {
     event.preventDefault();
     var data = this.$("form").serializeJSON();
-    debugger
     var view = this;
     $.ajax({
       url: "/api/users",
