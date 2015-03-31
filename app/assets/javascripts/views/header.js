@@ -105,6 +105,10 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   displayError: function () {
-    this.$("form").find("p").fadeIn(300);
+    this.$("form").find("p").fadeIn(300, function () {
+      setTimeout(function () {
+        this.$("form").find("p").fadeOut(300);
+      }.bind(this), 3000)
+    }.bind(this));
   }
 });

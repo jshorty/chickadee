@@ -27,10 +27,13 @@ Chickadee.Views.SignUp = Backbone.View.extend({
         Chickadee.Models.currentUser.login(data);
         view.remove();
       },
-      error: function (model, response) {
+      error: function (response) {
         var errors = response.responseJSON;
-        view.$el.append(JST["errors"]({errors: errors}))
-      }
+        if (errors[0] === "Email has already been taken") {
+          errors[0] = "This email is in use";
+        }
+        this.$("#user_email").val(errors[0]);
+      }.bind(this)
     });
   },
 
