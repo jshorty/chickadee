@@ -25,7 +25,6 @@ Chickadee.Views.Header = Backbone.View.extend({
   render: function (options) {
     var content = this.checkLoggedIn();
     this.$el.html(content);
-
     this.$el.find(".welcome-popdown").hide();
 
     if (this.loggingIn) {
@@ -81,10 +80,15 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   login: function (event) {
     event.preventDefault();
+    this.$el.find(".login-error").hide();
     var credentials = $(event.currentTarget).serializeJSON();
-    this.model.login(credentials);
-    this.loggingIn = true;
-    this.openedLogin = false;
+    if (this.model.login(credentials)) {
+      this.loggingIn = true;
+      this.openedLogin = false;
+    } else {
+      debugger;
+      this.displayError();
+    }
   },
 
   logout: function (event) {
@@ -99,5 +103,9 @@ Chickadee.Views.Header = Backbone.View.extend({
       setTimeout(function () {popdown.fadeOut('5000')}, 2000);
     });
     view.loggingIn = false;
+  },
+
+  displayError: function () {
+    this.$("form").find("p").fadeIn(300);
   }
 });

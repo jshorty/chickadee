@@ -210,3 +210,10 @@ div.welcome-popdown {
   padding: 20px 23px;
   border-radius: 20px;
 }
+
+p.login-error {
+  display: inline-block;
+  width: 250px;
+  color: #cc6600;
+  margin-left: 15px;
+}

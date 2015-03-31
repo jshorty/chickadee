@@ -24,16 +24,17 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
   },
 
   login: function (credentials) {
+    debugger;
     this.set(credentials);
+    debugger;
     this.save({}, {
       success: function () {
         Backbone.history.navigate("regions", {trigger:true})
         return true
       },
       error: function () {
-        console.log("Error logging in.");
         return false
-      },
+      }
     });
   },
 
@@ -50,10 +51,11 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
   },
 
   checkLoggedIn: function () {
+    debugger
     if (!this.isNew()) {
       this.trigger("login");
     } else {
-      this.trigger("logout");
+      this.isLoggedIn() && this.trigger("logout");
     }
   }
 });
