@@ -28,6 +28,8 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     var content = this.template({regions: this.collection});
     this.$el.html(content);
 
+    this.$(".hints").hide();
+
     this.collection.each(function (region) {
       var subview = new Chickadee.Views.RegionsIndexItem({model: region});
       this.subviews.push(subview);
@@ -37,7 +39,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     if (this.collection.models.length === 0) {
       this.$el.find(".region-item").addClass("solo-centered");
     }
-
+    this.flashHints();
     return this;
   },
 
@@ -48,5 +50,23 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       subview.remove();
     });
     view.subviews = [];
+  },
+
+  flashHints: function () { //brace yourself
+    this.$("#hints-home1").fadeIn(1000, function () {
+      setTimeout(function () {
+        this.$("#hints-home1").fadeOut(600);
+        this.$("#hints-home2").fadeIn(1000, function () {
+          setTimeout(function () {
+            this.$("#hints-home2").fadeOut(600);
+            this.$("#hints-home3").fadeIn(1000, function () {
+              setTimeout(function () {
+                this.$("#hints-home3").fadeOut(600);
+              }, 4000)
+            })
+          }, 4000)
+        })
+      }, 4000)
+    });
   }
 })

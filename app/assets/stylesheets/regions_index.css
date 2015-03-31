@@ -1,0 +1,80 @@
+/*REGIONS PAGE*/
+#main-content > div {
+  width: 100%;
+}
+
+#main-content h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+#main-content p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+#main-content ul.region-menu {
+  text-align: center;
+  margin: 0 auto;
+  width: 450px;
+  min-height: 300px;
+}
+
+#main-content li.region-item {
+  float: left;
+  width: 130px;
+  height: 200px;
+  padding: 0px 10px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+#main-content .region-img {
+  display: block;
+  margin: 0 auto 5px auto;
+  width: 110px;
+  height: 110px;
+  border: 5px solid #666;
+  border-radius: 20px;
+  transition: box-shadow 0.2s linear;
+}
+
+#main-content .region-img:hover {
+  box-shadow: -2px 2px 5px 0px #555;
+}
+
+#main-content li.solo-centered {
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#main-content .hints {
+  position: absolute;
+  left: 100px;
+  top: 180px;
+  max-width: 350px;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-align: left;
+  background: #0099CC;
+}
+#main-content .hints p {
+  margin: 0;
+  color: #fff;
+  text-align: left;
+}
+
+#hints-home1 {
+
+}
+#hints-home2 {
+
+}
+#hints-home3 {
+
+}
