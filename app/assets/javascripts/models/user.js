@@ -28,11 +28,11 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
     this.save({}, {
       success: function () {
         Backbone.history.navigate("regions", {trigger:true})
-        return true
-      },
+        this.trigger("loginSuccess")
+      }.bind(this),
       error: function () {
-        return false
-      }
+        this.trigger("loginFail")
+      }.bind(this)
     });
   },
 
@@ -43,8 +43,9 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
       method: 'DELETE',
       success: function() {
         currentUser.clear();
+        this.trigger("logout");
         Backbone.history.navigate("", { trigger: true });
-      }
+      }.bind(this)
     });
   },
 

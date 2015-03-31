@@ -5,6 +5,8 @@ Chickadee.Views.Header = Backbone.View.extend({
     this.model = Chickadee.Models.currentUser;
 
     this.listenTo(this.model, "login logout sync", this.render);
+    this.listenTo(this.model, "loginFail", this.displayError);
+    this.listenTo(this.model, "loginSuccess", this.handleLogin);
   },
 
   tagName: "header",
@@ -82,12 +84,13 @@ Chickadee.Views.Header = Backbone.View.extend({
     event.preventDefault();
     this.$el.find(".login-error").hide();
     var credentials = $(event.currentTarget).serializeJSON();
-    if (this.model.login(credentials)) {
-      this.loggingIn = true;
-      this.openedLogin = false;
-    } else {
-      this.displayError();
-    }
+    this.model.login(credentials);
+  },
+
+  handleLogin: function (event) {
+    this.loggingIn = true;
+    this.openedLogin = false;
+    this.render();
   },
 
   logout: function (event) {
