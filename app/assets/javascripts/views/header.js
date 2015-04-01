@@ -8,7 +8,7 @@ Chickadee.Views.Header = Backbone.View.extend({
     this.listenTo(this.model, "loginFail", this.displayError);
     this.listenTo(this.model, "loginSuccess", this.handleLogin);
   },
-
+  
   tagName: "header",
   className: "group",
 

@@ -106,4 +106,17 @@ class Region < ActiveRecord::Base
     end
     birds
   end
+
+  def self.find_most_specific(params)
+    region = Region.find_by(params)
+    unless region
+      params["county"] = nil
+      region = Region.find_by(params)
+    end
+    unless @region
+      params["state"] = nil
+      region = Region.find_by(params)
+    end
+    region
+  end
 end

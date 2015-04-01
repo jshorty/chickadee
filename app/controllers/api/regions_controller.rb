@@ -3,7 +3,7 @@ module Api
     before_action :require_logged_in
 
     def create
-      @region = Region.find_by(region_params)
+      @region = Region.find_most_specific(region_params)
       if !@region
         render json: ["Sorry, we couldn't find this region. Please confirm your spelling, or be less specific."], status: 404
       elsif @region.users.include?(current_user)

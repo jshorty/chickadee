@@ -19,7 +19,9 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
 
   events: {
     "submit":"submitNewRegion",
-    "click .back-button":"goToIndex"
+    "click .back-button":"goToIndex",
+    "click #new-region-state":"checkForCountry",
+    "click #new-region-county":"checkForState"
   },
 
   template: JST["region_form"],
@@ -32,9 +34,56 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     return this;
   },
 
+  checkForCountry: function (event) {
+    if (this.$("#new-region-country").val() == "") {
+      $(event.currentTarget).val("Enter a country first!")
+    }
+  },
+
+  checkForState: function (event) {
+    if (this.$("#new-region-state").val() == "") {
+      $(event.currentTarget).val("Enter a state first!")
+    }
+  },
+
+  capitalizeRegion: function (region) {
+    if (region["country"] != "") {
+      region["country"] = this.capitalizeMostWords(region["country"]);
+    }
+
+    if (region["state"] === "Enter a country first!") {
+      region["state"] = "";
+    } else if (region["state"] != "") {
+      region["state"] = this.capitalizeMostWords(region["state"]);
+    }
+
+    if (region["county"] === "Enter a state first!") {
+      region["county"] = "";
+    } else if (region["country"] != "") {
+      region["county"] = this.capitalizeMostWords(region["county"]);
+    }
+
+    return region;
+  },
+
+  capitalizeMostWords: function (str) {
+    debugger;
+    var new_str = [];
+    str.split(" ").forEach(function (word) {
+      if (word != "and" && (word != "of" && word != "the")) {
+        new_str.push(word[0].toUpperCase()
+                     + word.substring(1, word.length).toLowerCase());
+      }
+    })
+    return new_str.join(" ");
+  },
+
   submitNewRegion: function (event) {
     event.preventDefault();
     var attr = $(event.currentTarget).serializeJSON();
+    debugger;
+    this.capitalizeRegion(attr["region"]);
+    debugger;
     var view = this;
     view.showSpinner = true;
 
