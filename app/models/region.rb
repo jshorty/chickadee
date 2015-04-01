@@ -113,7 +113,7 @@ class Region < ActiveRecord::Base
       params["county"] = nil
       region = Region.find_by(params)
     end
-    unless @region
+    unless region
       params["state"] = nil
       region = Region.find_by(params)
     end
