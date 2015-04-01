@@ -13,7 +13,8 @@ Chickadee.Views.Welcome = Backbone.View.extend({
 
   events: {
     "click .sign-up":"openSignUpWindow",
-    "click .back-button":"closeSignUpWindow"
+    "click .back-button":"closeSignUpWindow",
+    "click .demo":"loginAsDemoUser"
   },
 
   render: function(){
@@ -44,5 +45,14 @@ Chickadee.Views.Welcome = Backbone.View.extend({
     this.$(".modal-backdrop").fadeOut(300, function () {
       this.render()
     }.bind(this))
+  },
+
+  loginAsDemoUser: function (event) {
+    Chickadee.Models.currentUser.login({
+      user: {
+        email: "demouser@example.com",
+        password: "password"
+      }
+    });
   }
 });
