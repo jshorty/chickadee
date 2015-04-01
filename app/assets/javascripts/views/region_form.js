@@ -59,7 +59,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
 
     if (region["county"] === "Enter a state first!") {
       region["county"] = "";
-    } else if (region["country"] != "") {
+    } else if (region["county"] != "") {
       region["county"] = this.capitalizeMostWords(region["county"]);
     }
 
