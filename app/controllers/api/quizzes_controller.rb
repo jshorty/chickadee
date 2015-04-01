@@ -3,10 +3,10 @@ module Api
     before_action :require_logged_in
 
     def create
-      @quiz = Quiz.includes(:region)
-                  .where("quizzes.progress < 10")
-                  .find_by(region_id: params[:region_id])
-
+      @quiz = current_user.quizzes
+                          .includes(:region)
+                          .where("quizzes.progress < 10")
+                          .find_by(region_id: params[:region_id])
       if @quiz
         puts "Existing quiz found."
         begin
