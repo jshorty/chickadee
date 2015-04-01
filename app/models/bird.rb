@@ -86,12 +86,17 @@ class Bird < ActiveRecord::Base
     i = 0
 
     while i < songs.length
-      song = songs[i]
-      if song.local
-        return song
-      elsif song.retrieve_file
-        return song
-      else
+      begin
+        song = songs[i]
+        if song.local
+          return song
+        elsif song.retrieve_file
+          return song
+        else
+          i += 1
+        end
+      rescue URI::InvalidURIError
+        song.destroy
         i += 1
       end
     end

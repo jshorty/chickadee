@@ -39,8 +39,8 @@ class Quiz < ActiveRecord::Base
     end
   end
 
-  def seed_questions
-    10.times do |i|
+  def seed_questions(num)
+    num.times do |i|
       birds = self.region.quiz_question
       Question.create(quiz_id: self.id,
                       bird_id: birds[0].id,

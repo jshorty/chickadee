@@ -36,12 +36,15 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
     event.preventDefault();
     var attr = $(event.currentTarget).serializeJSON();
     var view = this;
+    view.showSpinner = true;
 
     var timer = setTimeout( function () {
-      this.$("fieldset").fadeOut(300, function () {
-        view.$el.find(".spinner-box")
-                .html('<img class="spinner" src="spinner-light.gif">')
-      });
+      if (view.showSpinner) {
+        this.$("fieldset").fadeOut(300, function () {
+          view.$el.find(".spinner-box")
+                  .html('<img class="spinner" src="spinner-light.gif">')
+        });
+      }
     }, 500);
 
     view.model.save(attr, {
@@ -52,7 +55,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
       },
       error: function (model, response) {
         view.showSpinner = false;
-        view.$el.find("fieldset").html(view.fields);
+        view.$("fieldset").fadeIn(300);
         view.displayErrors(response.responseJSON);
       }
     });
