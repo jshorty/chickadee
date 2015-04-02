@@ -147,7 +147,8 @@ nav .current-user .dropdown {
   width: 120px;
 }
 
-nav .current-user .dropdown li {
+nav .current-user .dropdown li,
+nav .streak-count .dropdown li  {
   padding: 5px 10px;
 }
 
@@ -156,9 +157,42 @@ nav .current-user .dropdown li:hover {
   color: #fff;
 }
 
-nav .current-user:hover .dropdown {
+nav .current-user:hover .dropdown,
+nav .streak-count:hover .dropdown {
   background: #666;
   display: block;
+}
+
+nav .streak-count:hover .arrow-up {
+  display: block;
+}
+
+.arrow-up {
+  display: none;
+  position: fixed;
+  background: transparent;
+  top: 50px;
+  right: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #666;
+}
+
+nav .streak-count .dropdown {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  box-shadow: 0px 5px 5px 0px #555;
+  border-radius: 5px;
+  width: 120px;
+  color: #000;
+}
+
+nav .streak-count .dropdown .streak-msg {
+  font-size: 16px;
 }
 
 nav .login {

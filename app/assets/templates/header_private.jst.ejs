@@ -23,7 +23,13 @@
       </ul>
     </li>
     <li class="streak-count">
-      <a title="You're on a <%= user.escape('streak_count') %> day streak!">&#x1f525;<%= user.escape('streak_count') %></a>
+      <a>&#x1f525;<%= user.escape('streak_count') %></a>
+      <div class="arrow-up"></div>
+      <ul class="dropdown">
+        <li class="streak-msg">
+          You're on a <%= user.escape('streak_count') %> day streak!
+        </li>
+      </ul>
     </li>
   </ul>
 </nav>
