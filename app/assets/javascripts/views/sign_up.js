@@ -23,7 +23,7 @@ Chickadee.Views.SignUp = Backbone.View.extend({
       method: 'POST',
       data: data,
       success: function(newUserData) {
-        Chickadee.Models.currentUser;
+        Chickadee.Models.currentUser.firstTime = true;
         Chickadee.Models.currentUser.login(data);
         view.remove();
       },

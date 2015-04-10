@@ -17,6 +17,7 @@ Chickadee.Models.CurrentUser = Chickadee.Models.User.extend({
 
   initialize: function () {
     this.listenTo(this, "change", this.checkLoggedIn)
+    this.firstTime = false;
   },
 
   isLoggedIn: function () {

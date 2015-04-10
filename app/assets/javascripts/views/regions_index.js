@@ -39,7 +39,11 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     if (this.collection.models.length === 0) {
       this.$el.find(".region-item").addClass("solo-centered");
     }
-    this.flashHints();
+
+    if (Chickadee.Models.currentUser.firstTime) {
+      this.flashHints();
+    }
+
     return this;
   },
 
@@ -61,6 +65,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
             this.$("#hints-home2").fadeOut(600);
             this.$("#hints-home3").fadeIn(1000, function () {
               setTimeout(function () {
+                Chickadee.Models.currentUser.firstTime = false;
                 this.$("#hints-home3").fadeOut(600);
               }, 4000)
             })

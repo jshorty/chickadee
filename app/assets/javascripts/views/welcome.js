@@ -54,5 +54,6 @@ Chickadee.Views.Welcome = Backbone.View.extend({
         password: "password"
       }
     });
+    Chickadee.Models.currentUser.firstTime = true;
   }
 });
