@@ -2,6 +2,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
   initialize: function (options) {
     this.subviews = [];
     this.listenTo(this.collection, "add remove sync", this.render)
+    this.listenTo(this.collection, "sync", this.checkHints)
   },
 
   template: JST["regions_index"],
@@ -40,9 +41,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       this.$el.find(".region-item").addClass("solo-centered");
     }
 
-    if (Chickadee.Models.currentUser.firstTime) {
-      this.flashHints();
-    }
+
 
     return this;
   },
@@ -54,6 +53,12 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       subview.remove();
     });
     view.subviews = [];
+  },
+
+  checkHints: function () {
+    if (Chickadee.Models.currentUser.firstTime) {
+      this.flashHints();
+    }
   },
 
   flashHints: function () { //brace yourself
