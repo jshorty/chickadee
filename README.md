@@ -32,7 +32,7 @@ Chickadee is a quiz application for learning to identify birds by their songs, m
 
 ## Next steps
 - [X] Loading spinners/quiz answer flash to decrease perceived load time
-- [ ] Simplistic instructions on sign up walk user through setting up first quiz
+- [X] Simplistic instructions on sign in
 - [ ] Full autocomplete on regions form matching to database
 - [ ] Enhance basic gamification (add lives, XP)
 - [ ] Integrate bird photographs to better ground the app in reality
