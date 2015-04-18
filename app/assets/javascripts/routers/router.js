@@ -58,15 +58,10 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     }
   },
 
-  regionsIndex: function () {
-    if (this._requireLoggedIn()) {
-      this.regions.fetch();
-      this._swapView(new Chickadee.Views.RegionsIndex({
-        collection: this.regions
-      }));
-    } else {
-      this._swapView(new Chickadee.Views.Welcome());
-    }
+  readjustHeight: function () {
+    var curHeight = this.$main.height();
+    var autoHeight = this.$main.children(":first").height();
+    this.$main.height(curHeight).animate({height: autoHeight}, 500);
   },
 
   regionShow: function (id) {
@@ -74,6 +69,17 @@ Chickadee.Routers.Router = Backbone.Router.extend({
       var region = (id ? this.regions.getOrFetch(id) : null)
       this._swapView(new Chickadee.Views.RegionShow({
         model: region, collection: this.regions
+      }));
+    } else {
+      this._swapView(new Chickadee.Views.Welcome());
+    }
+  },
+
+  regionsIndex: function () {
+    if (this._requireLoggedIn()) {
+      this.regions.fetch();
+      this._swapView(new Chickadee.Views.RegionsIndex({
+        collection: this.regions
       }));
     } else {
       this._swapView(new Chickadee.Views.Welcome());
@@ -120,11 +126,5 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     if (!(view instanceof Chickadee.Views.Welcome)) {
       this.$main.height(curHeight).animate({height: autoHeight}, 500);
     }
-  },
-
-  readjustHeight: function () {
-    var curHeight = this.$main.height();
-    var autoHeight = this.$main.children(":first").height();
-    this.$main.height(curHeight).animate({height: autoHeight}, 500);
   },
 });

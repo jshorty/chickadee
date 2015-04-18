@@ -11,18 +11,15 @@ module Api
         puts "Existing quiz found."
         begin
           @question = @quiz.next_question
-          puts "We found a question. Calling 'random_song' now..."
           @song = @question.correct_answer.random_song
-          puts "We found a song!"
         rescue NoMethodError
-          @quiz.questions.destroy_all
-          @quiz.seed_questions(10 - @quiz.progress)
+          @quiz.reseed_remaining_questions
           retry
         end
         render :show
       else
-        @quiz ||= Quiz.new(user_id: current_user.id,
-                           region_id: params[:region_id])
+        @quiz = Quiz.new(user_id: current_user.id,
+                         region_id: params[:region_id])
         if @quiz.save
           begin
             @quiz.seed_questions(10)

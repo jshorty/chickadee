@@ -95,4 +95,9 @@ class User < ActiveRecord::Base
     self.update!(streak_count: self.streak_count += 1,
                  last_quiz_date: Date.today)
   end
+
+  def gain_xp(region, xp)
+    user_region = self.user_regions.find_by_region_id(region.id)
+    user_region.update!(xp: user_region.xp + xp)
+  end
 end

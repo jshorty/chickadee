@@ -50,24 +50,29 @@ class Quiz < ActiveRecord::Base
     end
   end
 
+  def reseed_remaining_questions
+    self.questions.destroy_all
+    self.seed_questions(10 - self.progress)
+  end
+
   def correct!
     self.update(score: (self.score + 1), progress: (self.progress + 1))
-    if self.progress == 10
-      self.questions.destroy_all
-      self.user.continue_streak
-    end
+    self.complete if self.progress == 10
   end
 
   def incorrect!
     self.update(progress: (self.progress + 1))
-    if self.progress == 10
-      self.questions.destroy_all
-      self.user.continue_streak
-    end
+    self.complete if self.progress == 10
   end
 
   def next_question
     Question.includes(:correct_answer, :answer_a, :answer_b, :answer_c)
             .find_by(quiz_id: self.id, answered: false)
+  end
+
+  def complete
+    self.questions.destroy_all
+    self.user.continue_streak
+    self.user.gain_xp(self.region, self.score)
   end
 end
