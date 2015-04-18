@@ -115,10 +115,13 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.currentView && this.currentView.remove();
     this.currentView = view;
     this.$main.html(this.currentView.render().el);
-    this.$main.css('height', 'auto')
-    var autoHeight = this.$main.height();
-    if (!(view instanceof Chickadee.Views.Welcome)) {
-      this.$main.height(curHeight).animate({height: autoHeight}, 500);
-    }
+    this.$main.css('height', 'auto');
+
+    $(document).ready(function () {
+      var autoHeight = this.$main.height();
+      if (!(view instanceof Chickadee.Views.Welcome)) {
+        this.$main.height(curHeight).animate({height: autoHeight}, 500);
+      }
+    }.bind(this));
   },
 });
