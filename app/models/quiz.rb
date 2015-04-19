@@ -73,6 +73,6 @@ class Quiz < ActiveRecord::Base
   def complete
     self.questions.destroy_all
     self.user.continue_streak
-    self.user.gain_xp(self.region, self.score)
+    self.user.gain_xp(self.region, self.score * 10)
   end
 end

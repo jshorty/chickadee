@@ -11,4 +11,16 @@ class UserRegion < ActiveRecord::Base
     class_name: "Region",
     primary_key: :id,
     foreign_key: :region_id
+
+  def gain_xp(xp)
+    self.update!(xp: self.xp + xp)
+    self.maybe_level_up!
+  end
+
+  def maybe_level_up!
+    threshold = self.level * 100
+    if self.xp >= threshold
+      self.update!(xp: self.xp - threshold, level: self.level + 1)
+    end
+  end
 end

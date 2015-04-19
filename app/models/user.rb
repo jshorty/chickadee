@@ -98,6 +98,6 @@ class User < ActiveRecord::Base
 
   def gain_xp(region, xp)
     user_region = self.user_regions.find_by_region_id(region.id)
-    user_region.update!(xp: user_region.xp + xp)
+    user_region.gain_xp(xp)
   end
 end
