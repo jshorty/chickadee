@@ -1,4 +1,5 @@
 class Bird < ActiveRecord::Base
+  MAX_SONGS = 15
 
   validates :common_name, :sci_name, presence: true
   validates :sci_name, uniqueness: true
@@ -19,8 +20,6 @@ class Bird < ActiveRecord::Base
     foreign_key: :bird_id,
     dependent: :destroy
 
-  has_many :subject_questions
-
   def genus
     self.sci_name.split(" ")[0]
   end
@@ -29,48 +28,41 @@ class Bird < ActiveRecord::Base
     self.sci_name.split(" ")[1]
   end
 
-  def subspecies
-    names = self.sci_name.split(" ")
-    names.length > 2 ? names[2] : nil
-  end
-
   def countries
     self.regions.pluck(:country).uniq
   end
 
   def xeno_canto_url
-    base = "http://www.xeno-canto.org/api/2/recordings?query="
-    sci_name = "#{genus} #{species}"
-    base + sci_name
+    "http://www.xeno-canto.org/api/2/recordings?query=#{self.sci_name}"
   end
 
   def get_songs
     uri = URI.encode(self.xeno_canto_url)
     payload = JSON.parse(RestClient.get(uri, {:accept => :json}))
-    number_of_recordings = payload["numRecordings"].to_i
+    num_recordings = payload["numRecordings"].to_i
 
-    if number_of_recordings == 0
+    if num_recordings == 0
       self.update!(has_songs: false)
       return false
     else
-      max_songs = 15
-      count = (number_of_recordings < max_songs) ? number_of_recordings : max_songs
-
-      #prioritize high-quality recordings according to audio's current rating:
-      songs = payload["recordings"].select{|song| song["q"] == "A"}.sample(count)
-      remaining = count - songs.length
-      if remaining > 0
-        ["B", "C", "no score", "D", "E"].each do |score|
-          songs += (payload["recordings"].select{|song| song["q"] == score}.sample(remaining))
-          remaining = count - songs.length
-          break if remaining == 0
-        end
-      end
-
+      count = [num_recordings, MAX_SONGS].min
+      songs = prioritize_songs_by_quality(payload["recordings"], count)
       save_songs!(songs)
       self.update!(has_songs: true)
       return true
     end
+  end
+
+  def prioritize_songs_by_quality(song_payload, count)
+    songs = []
+    remaining = count
+    ["A", "B", "C", "no score", "D", "E"].each do |score|
+      new_songs = song_payload.select {|song| song["q"] == score}
+      songs << new_songs.sample(remaining)
+      remaining = count - songs.length
+      break if remaining == 0
+    end
+    songs
   end
 
   def save_songs!(songs)
