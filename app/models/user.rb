@@ -84,20 +84,25 @@ class User < ActiveRecord::Base
   end
 
   def check_for_streak
-    if !self.last_quiz_date || Date.today - 1 > self.last_quiz_date
+    today = Date.today.in_time_zone(self.time_zone).to_date
+    if !self.last_quiz_date || today - 1 > self.last_quiz_date
       self.update!({streak_count: 0})
     end
   end
 
   def continue_streak
-    return if Date.today == self.last_quiz_date
-
-    self.update!(streak_count: self.streak_count += 1,
-                 last_quiz_date: Date.today)
+    unless self.completed_quiz_today?
+      today = Date.today.in_time_zone(self.time_zone).to_date
+      self.update!(streak_count: self.streak_count += 1, last_quiz_date: today)
+    end
   end
 
   def gain_xp(region, xp)
     user_region = self.user_regions.find_by_region_id(region.id)
     user_region.gain_xp(xp)
+  end
+
+  def completed_quiz_today?
+    self.last_quiz_date == 0.days.ago.in_time_zone(self.time_zone).to_date
   end
 end
