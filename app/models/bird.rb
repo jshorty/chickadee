@@ -58,7 +58,7 @@ class Bird < ActiveRecord::Base
     remaining = count
     ["A", "B", "C", "no score", "D", "E"].each do |score|
       new_songs = song_payload.select {|song| song["q"] == score}
-      songs << new_songs.sample(remaining)
+      songs.concat(new_songs.sample(remaining))
       remaining = count - songs.length
       break if remaining == 0
     end

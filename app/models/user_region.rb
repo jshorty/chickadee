@@ -20,6 +20,11 @@ class UserRegion < ActiveRecord::Base
     self.maybe_level_up!
   end
 
+  def xp_timeseries
+    [self.xp_day7, self.xp_day6, self.xp_day5, self.xp_day4,
+     self.xp_day3, self.xp_day2, self.xp]
+  end
+
   def maybe_level_up!
     threshold = self.level * XP_MULTIPLIER
     if self.xp >= threshold

@@ -1,4 +1,6 @@
 class Quiz < ActiveRecord::Base
+  NUM_QUESTIONS = 10
+
   validates :user_id, :region_id, presence: true
   validate :one_active_quiz_per_region
   validate :quiz_region_exists_for_user
@@ -24,7 +26,7 @@ class Quiz < ActiveRecord::Base
     source: :birds
 
   def one_active_quiz_per_region
-    if self.progress < 10 &&
+    if self.progress < NUM_QUESTIONS &&
         Quiz.where({user_id: self.user_id,
                     region_id: self.region_id})
                     .where("quizzes.progress < 10")
@@ -52,17 +54,17 @@ class Quiz < ActiveRecord::Base
 
   def reseed_remaining_questions
     self.questions.destroy_all
-    self.seed_questions(10 - self.progress)
+    self.seed_questions(NUM_QUESTIONS - self.progress)
   end
 
   def correct!
     self.update(score: (self.score + 1), progress: (self.progress + 1))
-    self.complete if self.progress == 10
+    self.complete if self.progress == NUM_QUESTIONS
   end
 
   def incorrect!
     self.update(progress: (self.progress + 1))
-    self.complete if self.progress == 10
+    self.complete if self.completed?
   end
 
   def next_question
@@ -75,5 +77,14 @@ class Quiz < ActiveRecord::Base
     self.user.gain_xp(self.region, self.score * 10)
     #XP gain must occur before streak update to properly modify XP timeseries
     self.user.continue_streak
+  end
+
+  def completed?
+    self.progress == NUM_QUESTIONS
+  end
+
+  def xp_timeseries
+    UserRegion.find_by(user_id: self.user_id, region_id: self.region_id)
+              .xp_timeseries
   end
 end

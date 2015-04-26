@@ -67,7 +67,6 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   },
 
   capitalizeMostWords: function (str) {
-    debugger;
     var new_str = [];
     str.split(" ").forEach(function (word) {
       if (word != "and" && (word != "of" && word != "the")) {
@@ -81,9 +80,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   submitNewRegion: function (event) {
     event.preventDefault();
     var attr = $(event.currentTarget).serializeJSON();
-    debugger;
     this.capitalizeRegion(attr["region"]);
-    debugger;
     var view = this;
     view.showSpinner = true;
 
