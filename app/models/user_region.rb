@@ -1,4 +1,6 @@
 class UserRegion < ActiveRecord::Base
+  XP_MULTIPLIER = 100
+
   validates :user_id, :region_id, presence: true
   validates :region_id, uniqueness: { scope: :user_id }
 
@@ -18,9 +20,12 @@ class UserRegion < ActiveRecord::Base
   end
 
   def maybe_level_up!
-    threshold = self.level * 100
+    threshold = self.level * XP_MULTIPLIER
     if self.xp >= threshold
       self.update!(xp: self.xp - threshold, level: self.level + 1)
     end
   end
+
+  def advance_days(num_days)
+
 end

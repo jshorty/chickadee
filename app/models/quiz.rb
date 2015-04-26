@@ -72,7 +72,8 @@ class Quiz < ActiveRecord::Base
 
   def complete
     self.questions.destroy_all
-    self.user.continue_streak
     self.user.gain_xp(self.region, self.score * 10)
+    #XP gain must occur before streak update to properly modify XP timeseries
+    self.user.continue_streak
   end
 end
