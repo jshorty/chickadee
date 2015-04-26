@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui.min
 //= require jquery.serializejson
+//= require d3.min
 //= require underscore
 //= require backbone
 //= require chickadee
