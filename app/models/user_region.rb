@@ -26,10 +26,15 @@ class UserRegion < ActiveRecord::Base
   end
 
   def maybe_level_up!
-    threshold = self.level * XP_MULTIPLIER
-    if self.xp >= threshold
-      self.update!(xp: self.xp - threshold, level: self.level + 1)
+    if self.xp >= level_threshold(self.level)
+      self.update!(level: self.level + 1)
     end
+  end
+
+  def level_threshold(level)
+    return 100 if level == 1
+    threshold = level * XP_MULTIPLIER
+    threshold + level_threshold(level)
   end
 
   def advance_days
