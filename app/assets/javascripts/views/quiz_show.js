@@ -148,9 +148,9 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
               .domain([d3.min(data) - 20, d3.max(data)]);
 
     var xAxis = d3.svg.axis().scale(x).orient("bottom")
-                  .ticks(6).tickSize(-height, 0).tickFormat('');
+                  .ticks(6).tickSize(-5, 0).tickFormat('');
     var yAxis = d3.svg.axis().scale(y).orient("left")
-                  .ticks(3).tickSize(10, 0);
+                  .ticks(3).tickSize(-5, 0);
 
     var valueline = d3.svg.line()
                       .x(function(d, i) { return x(i); })
@@ -176,13 +176,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
-
-    svg.append("text")
-        .attr("text-anchor", "end")
-        .attr("y", 150)
-        .attr("x", 210)
-        .attr("dy", "2em")
-        .text("this week");
 
     svg.selectAll(".tick")
        .filter(function (d) { return d === 0;  })
