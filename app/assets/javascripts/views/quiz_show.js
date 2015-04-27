@@ -140,7 +140,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     console.log(data);
     var margin = {top: 30, right: 20, bottom: 30, left: 120},
         width = 500 - margin.left - margin.right,
-        height = 200 - margin.top - margin.bottom;
+        height = 220 - margin.top - margin.bottom;
 
     var x = d3.scale.linear().range([0, width]).domain([0, 6])
 
@@ -179,10 +179,10 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
 
     svg.append("text")
         .attr("text-anchor", "end")
-        .attr("y", -30)
-        .attr("x", 120)
+        .attr("y", 150)
+        .attr("x", 210)
         .attr("dy", "2em")
-        .text("XP this week:");
+        .text("this week");
 
     svg.selectAll(".tick")
        .filter(function (d) { return d === 0;  })
