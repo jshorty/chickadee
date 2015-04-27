@@ -116,6 +116,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    this.renderGraph();
     return this;
   },
 
@@ -129,5 +130,63 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$el.fadeOut(300, function () {
       Backbone.history.navigate("regions", {trigger: true})
     });
+  },
+
+  renderGraph: function () {
+    var data = this.model.get('xp_timeseries');
+    // timeseries.forEach(function(xpPoints) {
+    //   data.push({xp: parseInt(xpPoints)})
+    // });
+    console.log(data);
+    var margin = {top: 30, right: 20, bottom: 30, left: 120},
+        width = 500 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear().range([0, width]).domain([0, 6])
+
+    var y = d3.scale.linear().range([height, 0])
+              .domain([d3.min(data) - 20, d3.max(data)]);
+
+    var xAxis = d3.svg.axis().scale(x).orient("bottom")
+                  .ticks(6).tickSize(-height, 0).tickFormat('');
+    var yAxis = d3.svg.axis().scale(y).orient("left")
+                  .ticks(3).tickSize(10, 0);
+
+    var valueline = d3.svg.line()
+                      .x(function(d, i) { return x(i); })
+                      .y(function(d) { return y(d); })
+
+    var svg = d3.select("#xp-chart")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("y", -30)
+        .attr("x", 120)
+        .attr("dy", "2em")
+        .text("XP this week:");
+
+    svg.selectAll(".tick")
+       .filter(function (d) { return d === 0;  })
+       .remove();
+
   }
 })
