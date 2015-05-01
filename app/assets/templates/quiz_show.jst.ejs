@@ -1,6 +1,7 @@
 <h1><strong>Birds of <%= region.name() %></strong></h1>
 
 <section class="quiz-window group">
+  <div class="quiz-level">Lv. <%= quiz.escape('level') %></div>
   <div class="quiz-score"><%= quiz.escape('score') %></div>
   <div class="quiz-progress group">
     <div class="unanswered"> </div><div class="unanswered"> </div>

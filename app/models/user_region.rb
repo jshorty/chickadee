@@ -33,8 +33,8 @@ class UserRegion < ActiveRecord::Base
 
   def level_threshold(level)
     return 100 if level == 1
-    threshold = level * XP_MULTIPLIER
-    threshold + level_threshold(level)
+    xp_threshold = level * XP_MULTIPLIER
+    xp_threshold + level_threshold(level - 1)
   end
 
   def advance_days

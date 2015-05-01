@@ -87,4 +87,17 @@ class Quiz < ActiveRecord::Base
     UserRegion.find_by(user_id: self.user_id, region_id: self.region_id)
               .xp_timeseries
   end
+
+  def level
+    UserRegion.find_by(user_id: self.user_id, region_id: self.region_id)
+              .level
+  end
+
+  def self.find_incomplete_or_create(region_id, user_id)
+    quiz = Quiz.where("quizzes.progress < 10")
+               .where(region_id: region_id, user_id: user_id)
+               .first
+    quiz ||= Quiz.new(user_id: user_id, region_id: region_id)
+  end
+
 end

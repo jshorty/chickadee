@@ -299,6 +299,13 @@ button.go-button.quiz-start:hover {
   padding: 20px;
 }
 
+.quiz-level {
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0099cc;
+}
+
 .quiz-score {
   float: right;
   font-size: 24px;
