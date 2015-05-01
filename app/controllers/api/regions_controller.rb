@@ -11,7 +11,7 @@ module Api
       else
         @user_region = UserRegion.new(region_id: @region.id,
                                       user_id: current_user.id,
-                                      country: @region.county,
+                                      country: @region.country,
                                       state: @region.state,
                                       county: @region.county)
         if @user_region.save
