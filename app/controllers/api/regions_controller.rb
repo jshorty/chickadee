@@ -10,7 +10,10 @@ module Api
         render json: ["You are already studying that region!"], status: 422
       else
         @user_region = UserRegion.new(region_id: @region.id,
-                                      user_id: current_user.id)
+                                      user_id: current_user.id,
+                                      country: @region.county,
+                                      state: @region.state,
+                                      county: @region.county)
         if @user_region.save
           @region.parse_birds_from_ebird_data
           render json: @region
@@ -30,7 +33,7 @@ module Api
     end
 
     def index
-      @regions = current_user.regions
+      @user_regions = current_user.user_regions
       render :index
     end
 

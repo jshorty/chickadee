@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150426024939) do
+ActiveRecord::Schema.define(version: 20150501192456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,9 @@ ActiveRecord::Schema.define(version: 20150426024939) do
     t.integer  "xp_day5"
     t.integer  "xp_day6"
     t.integer  "xp_day7"
+    t.string   "country",                null: false
+    t.string   "state"
+    t.string   "county"
   end
 
   add_index "user_regions", ["user_id"], name: "index_user_regions_on_user_id", using: :btree
