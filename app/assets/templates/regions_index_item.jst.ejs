@@ -1,5 +1,6 @@
 <% var imgNum = Math.floor(Math.random() * 3).toString() %>
 
+<div class="region-level">LV <%= region.escape('level') %></div>
+
 <img class="region-img" src="../region-button-<%=imgNum%>.jpg">
 <%= region.name() %>
-<%= region.escape('level') %>
