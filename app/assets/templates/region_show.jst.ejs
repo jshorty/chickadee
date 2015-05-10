@@ -29,6 +29,10 @@
       <button class="go-button quiz-start" data-region_id="<%= parseInt(region.get('region_id')) %>">
         <strong>PRACTICE!</strong>
       </button>
+    <% } else if (region.id) { %>
+      <button class="go-button quiz-start" data-region_id="<%= parseInt(region.id) %>">
+        <strong>PRACTICE!</strong>
+      </button>
     <% } %>
 
   </section>
