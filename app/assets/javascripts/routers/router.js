@@ -64,9 +64,9 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     this.$main.height(curHeight).animate({height: autoHeight}, 500);
   },
 
-  regionShow: function (id) {
+  regionShow: function (region_id) {
     if (this._requireLoggedIn()) {
-      var region = (id ? this.regions.getOrFetch(id) : null)
+      var region = (region_id ? this.regions.getOrFetch(region_id) : null)
       this._swapView(new Chickadee.Views.RegionShow({
         model: region, collection: this.regions
       }));

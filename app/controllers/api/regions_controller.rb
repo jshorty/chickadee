@@ -16,7 +16,7 @@ module Api
                                       county: @region.county)
         if @user_region.save
           @region.parse_birds_from_ebird_data
-          render json: @region
+          render json: @user_region
         else
           render json: @user_region.errors.full_messages, status: 422
         end

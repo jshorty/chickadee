@@ -1,10 +1,13 @@
 Chickadee.Views.RegionShow = Backbone.View.extend({
   initialize: function (options) {
+    debugger;
     this.subviews = [];
 
     if (!options.model) {
+      debugger;
       this.model = this.collection.models[0];
-      this.model && this.model.fetch()
+      this.model && this.model.set('id', this.model.get('region_id'))
+      this.model && this.model.fetch();
     }
 
     if (!this.model) {
@@ -30,7 +33,6 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
 
   render: function () {
     this.removeSubviews();
-
     var content = this.template({region: this.model,
                                  regions: this.collection});
     this.$el.html(content);
@@ -40,7 +42,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     });
     this.subviews.push(birdIndex);
     this.$el.find(".bird-list").append(birdIndex.render().el);
-
+    console.log(this.collection.models);
     return this;
   },
 
@@ -69,9 +71,9 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   },
 
   swapBirdIndex: function (event) {
-    var id = $(event.currentTarget).data("id");
-    if (this.model.id === id) { return }
-    var url = "regions/" + id + "/birds";
+    var region_id = $(event.currentTarget).data("region_id");
+    if (this.model.get('region_id') === region_id) { return }
+    var url = "regions/" + region_id + "/birds";
     this.$el.find(".bird-list li").fadeOut(200);
     this.$el.find(".region-header").fadeOut(200, function () {
       Backbone.history.navigate(url, { trigger: true });
@@ -83,7 +85,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
   },
 
   goToQuiz: function (event) {
-    var region_id = $(event.currentTarget).data("id");
+    var region_id = $(event.currentTarget).data("region_id");
     this.$el.find(".bird-list li").fadeOut(200);
     this.$el.find(".region-header").fadeOut(200, function () {
       Backbone.history.navigate("#quiz/" + region_id, {trigger: true})

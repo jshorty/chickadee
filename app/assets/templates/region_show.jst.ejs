@@ -14,20 +14,23 @@
   <section class="region-sidepanel">
 
     <% regions.each(function (regionModel) { %>
-      <% if (regionModel.name() === region.name()) { %>
-        <button class="go-button selected region-button" data-id="<%= regionModel.id %>">
-      <% } else { %>
-        <button class="go-button region-button" data-id="<%= regionModel.id %>">
+      <% if (regionModel.get('region_id') && regionModel.name() === region.name()) { %>
+        <button class="go-button selected region-button" data-region_id="<%= parseInt(regionModel.get('region_id')) %>">
+          <%= regionModel.name() %>
+        </button>
+      <% } else if (regionModel.get('region_id')) { %>
+        <button class="go-button region-button" data-region_id="<%= parseInt(regionModel.get('region_id')) %>">
+          <%= regionModel.name() %>
+        </button>
       <% } %>
-        <%= regionModel.name() %>
-      </button>
     <% }) %>
 
-    <% if (region.id) { %>
-      <button class="go-button quiz-start" data-id="<%= region.id %>">
+    <% if (region.get('region_id')) { %>
+      <button class="go-button quiz-start" data-region_id="<%= parseInt(region.get('region_id')) %>">
         <strong>PRACTICE!</strong>
       </button>
     <% } %>
+
   </section>
   <div class="search">
     <input type="text" class="search-bar">

@@ -8,6 +8,7 @@ module Api
       if @quiz.new_record? #get questions for a new quiz
         unless @quiz.save
           render json: @quiz.errors.full_messages, status: 422
+          return
         end
         begin
           @quiz.seed_questions(10)
