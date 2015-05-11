@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 8, allow_nil: true }
   validate :email_must_have_valid_format
   after_initialize :ensure_session_token
+  before_save :set_last_quiz_date
 
   has_many :user_regions,
     class_name: "UserRegion",
@@ -104,5 +105,9 @@ class User < ActiveRecord::Base
 
   def completed_quiz_today?
     self.last_quiz_date == 0.days.ago.in_time_zone(self.time_zone).to_date
+  end
+
+  def set_last_quiz_date #Rails doesn't support dynamic default values in migrations
+    self.last_quiz_date ||= Date.today if self.new_record?
   end
 end
