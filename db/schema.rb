@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501192456) do
+ActiveRecord::Schema.define(version: 20150511183145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,12 +90,12 @@ ActiveRecord::Schema.define(version: 20150501192456) do
     t.datetime "updated_at"
     t.integer  "xp",         default: 0, null: false
     t.integer  "level",      default: 1, null: false
-    t.integer  "xp_day2"
-    t.integer  "xp_day3"
-    t.integer  "xp_day4"
-    t.integer  "xp_day5"
-    t.integer  "xp_day6"
-    t.integer  "xp_day7"
+    t.integer  "xp_day2",    default: 0
+    t.integer  "xp_day3",    default: 0
+    t.integer  "xp_day4",    default: 0
+    t.integer  "xp_day5",    default: 0
+    t.integer  "xp_day6",    default: 0
+    t.integer  "xp_day7",    default: 0
     t.string   "country",                null: false
     t.string   "state"
     t.string   "county"
