@@ -14,3 +14,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore the worst thing in the world!
+.DS_Store
