@@ -281,7 +281,6 @@ button.go-button.quiz-start:hover {
 
 #main-content > section.quiz-show {
   z-index: 10000;
-  background-image: url("../tree-footer.png");
   background-position: 43% 0%;
   background-size: cover;
   padding-bottom: 40px;
