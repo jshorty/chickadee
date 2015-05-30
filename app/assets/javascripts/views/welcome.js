@@ -19,8 +19,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   },
 
   remove: function(){
-    Chickadee.Views.RegionsIndex.prototype.remove.call(this)
-    $("#main-content").css("background", "#eee")
+    Backbone.View.prototype.remove.call(this);
   },
 
   goToIndex: function(){
