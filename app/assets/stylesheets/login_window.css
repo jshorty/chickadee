@@ -33,10 +33,6 @@
   font-weight: 400;
 }
 
-.login-window button {
-  bottom: 0%;
-}
-
 .login-window .login-error {
   display: block;
   font-size: 16px;
