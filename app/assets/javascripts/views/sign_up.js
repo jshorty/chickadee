@@ -30,7 +30,8 @@ Chickadee.Views.SignUp = Backbone.View.extend({
       },
       error: function (response) {
         var errors = response.responseJSON;
-        this.$(".login-error").append(errors[0] + ".")
+        this.$(".login-error").empty();
+        this.$(".login-error").append(errors[0] + ".");
         this.displayError();
       }.bind(this)
     });
