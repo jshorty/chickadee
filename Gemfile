@@ -16,6 +16,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'figaro'
 gem 'rest-client'
 gem 'omniauth-facebook'
+gem 'flickraw'
 
 group :development do
   gem 'better_errors'
