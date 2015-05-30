@@ -1,19 +1,15 @@
 Chickadee.Views.Welcome = Backbone.View.extend({
   initialize: function(){
     this.model = Chickadee.Models.currentUser;
-    this.subviews = [];
     this.listenTo(this.model, "login", this.goToIndex);
-
-    $("#main-content").css("background", "transparent")
   },
 
   tagName: "section",
-  // className: "welcome-page group",
   template: JST["welcome"],
 
   events: {
     "click .sign-up":"openSignUpWindow",
-    "click .back-button":"closeSignUpWindow",
+    "click .modal-backdrop":"closeSignUpWindow",
     "click .demo":"loginAsDemoUser"
   },
 
@@ -32,19 +28,17 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   },
 
   openSignUpWindow: function(event){
-    var subview = new Chickadee.Views.SignUp();
-    this.subviews.push(subview);
-    this.$el.prepend(subview.render().el);
-    this.$(".modal-backdrop").fadeIn(300, function () {
-      this.$(" > .tree-footer").hide();
-    }.bind(this))
+    this.signUpWindow = new Chickadee.Views.SignUp();
+    this.$el.append(this.signUpWindow.render().el);
+    this.signUpWindow.$el.fadeIn(300)
   },
 
   closeSignUpWindow: function (event) {
-    this.$(" > .tree-footer").show();
-    this.$(".modal-backdrop").fadeOut(300, function () {
-      this.render()
-    }.bind(this))
+    if (event.target === event.currentTarget) {
+      this.signUpWindow.$el.fadeOut(300, function () {
+        this.signUpWindow.remove();
+      }.bind(this));
+    }
   },
 
   loginAsDemoUser: function (event) {

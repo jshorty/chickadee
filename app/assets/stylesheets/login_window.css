@@ -6,6 +6,8 @@
   padding: 50px 20px 20px 20px;
   background-color: #333;
   text-align: center;
+  font-weight: bold;
+  color: #fff;
 }
 
 .login-window .login-message {
@@ -20,6 +22,7 @@
 
 .login-window label {
   display: block;
+  font-size: 18px;
 }
 
 .login-window input {
@@ -33,8 +36,13 @@
   font-weight: 400;
 }
 
+.login-window button {
+  margin-top: 50px;
+}
+
 .login-window .login-error {
   display: block;
+  margin-top: 10px;
   font-size: 16px;
   color: #FFCC00;
 }

@@ -26,7 +26,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   render: function (options) {
     var content = this.checkLoggedIn();
     this.$el.html(content);
-    this.$el.find(".welcome-popdown").hide();
+    this.$(".welcome-popdown").hide();
 
     if (this.loggingIn) {
       setTimeout(function () {
@@ -66,15 +66,15 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   goToHome: function (event) {
     event.preventDefault();
-    this.$el.find(".home-link").parent().addClass("current");
-    this.$el.find(".birds-link").parent().removeClass("current");
+    this.$(".home-link").parent().addClass("current");
+    this.$(".birds-link").parent().removeClass("current");
     Backbone.history.navigate("regions", {trigger: true})
   },
 
   goToBirds: function (event) {
     event.preventDefault();
-    this.$el.find(".birds-link").parent().addClass("current");
-    this.$el.find(".home-link").parent().removeClass("current");
+    this.$(".birds-link").parent().addClass("current");
+    this.$(".home-link").parent().removeClass("current");
     Backbone.history.navigate("birds", {trigger: true})
   },
 
@@ -89,7 +89,7 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   login: function (event) {
     event.preventDefault();
-    this.$el.find(".login-error").hide();
+    this.$(".login-error").hide();
     var credentials = $(event.currentTarget).serializeJSON();
     this.model.login(credentials);
   },
@@ -107,7 +107,7 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   welcomePopdown: function () {
     var view = this;
-    var popdown = view.$el.find(".welcome-popdown")
+    var popdown = view.$(".welcome-popdown")
     popdown.fadeIn(500, function () {
       setTimeout(function () {popdown.fadeOut('5000')}, 2000);
     });
@@ -115,9 +115,9 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   displayError: function () {
-    this.$("form").find(".login-error").fadeIn(300, function () {
+    this.$(".login-error").fadeIn(300, function () {
       setTimeout(function () {
-        this.$("form").find(".login-error").fadeOut(300);
+        this.$(".login-error").fadeOut(300);
       }.bind(this), 3000)
     }.bind(this));
   }

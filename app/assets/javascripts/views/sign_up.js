@@ -3,14 +3,15 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   template: JST["sign_up"],
 
   events: {
-    "click .back-button":"backToRoot",
     "click .go-button":"submit"
   },
 
-  className: "modal-backdrop",
+  tagName: "section",
+  className: "modal-backdrop modal-backdrop-orange",
 
   render: function () {
     this.$el.html(this.template());
+    this.$el.find(".login-error").hide();
     return this;
   },
 
@@ -29,18 +30,17 @@ Chickadee.Views.SignUp = Backbone.View.extend({
       },
       error: function (response) {
         var errors = response.responseJSON;
-        if (errors[0] === "Email has already been taken") {
-          errors[0] = "This email is in use";
-        }
-        this.$("#user_email").val(errors[0]);
+        this.$(".login-error").append(errors[0] + ".")
+        this.displayError();
       }.bind(this)
     });
   },
 
-  backToRoot: function (event) {
-    console.log("Clicked!");
-    this.$el.fadeOut(300, function () {
-      Backbone.history.navigate("refresh");
-    });
+  displayError: function () {
+    this.$(".login-error").fadeIn(300, function () {
+      setTimeout(function () {
+        this.$(".login-error").fadeOut(300);
+      }.bind(this), 3000)
+    }.bind(this));
   }
 });

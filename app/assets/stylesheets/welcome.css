@@ -78,10 +78,6 @@ h3#welcome-tagline {
   box-shadow: -2px 2px 5px 0px #555;
 }
 
-.user_email {
-  color: #000;
-}
-
 #welcome-back:hover, #welcome-go:hover {
   box-shadow: 0px -2px 5px 0px #555;
 }
@@ -90,21 +86,4 @@ h3#welcome-tagline {
   z-index: 20;
   border: 1px solid #ccc;
   transition: box-shadow 0.2s linear;
-}
-
-.moon {
-  position: relative;
-  width: 150px;
-  left: -750px;
-  top: -150px;
-}
-
-.tree-footer {
-  z-index: -1;
-  width:110%;
-  max-height: 70%;
-  bottom: -5px;
-  left: -10px;
-  position: fixed;
-  pointer-events: none;
 }
