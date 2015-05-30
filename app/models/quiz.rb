@@ -58,13 +58,16 @@ class Quiz < ActiveRecord::Base
   end
 
   def correct!
-    self.update(score: (self.score + 1), progress: (self.progress + 1))
-    self.complete if self.progress == NUM_QUESTIONS
+    self.score += 1
+    self.progress += 1
+    self.history << "Y"
+    self.save!
+    self.complete! if self.progress == NUM_QUESTIONS
   end
 
   def incorrect!
     self.update(progress: (self.progress + 1))
-    self.complete if self.completed?
+    self.complete! if self.completed?
   end
 
   def next_question
@@ -72,7 +75,7 @@ class Quiz < ActiveRecord::Base
             .find_by(quiz_id: self.id, answered: false)
   end
 
-  def complete
+  def complete!
     self.questions.destroy_all
     self.user.gain_xp(self.region, self.score * 10)
     #XP gain must occur before streak update to properly modify XP timeseries
