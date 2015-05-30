@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     if @user
       log_in!(@user)
       redirect_to ("/#regions")
-      puts "WE ALREADY REDIRECTED"
     else
       flash.now[:errors] = ["Invalid email or password."]
       render :new

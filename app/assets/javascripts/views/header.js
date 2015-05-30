@@ -1,14 +1,12 @@
 Chickadee.Views.Header = Backbone.View.extend({
   initialize: function () {
-    this.subviews = [];
-
     this.model = Chickadee.Models.currentUser;
 
     this.listenTo(this.model, "login logout sync", this.render);
     this.listenTo(this.model, "loginFail", this.displayError);
     this.listenTo(this.model, "loginSuccess", this.handleLogin);
   },
-  
+
   tagName: "header",
   className: "group",
 
@@ -16,6 +14,7 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   events: {
     "click .login":"openLoginWindow",
+    "click .modal-backdrop":"closeLoginWindow",
     "click .logout":"logout",
     "submit form":"login",
     "click .profile":"openMyProfile",
@@ -45,10 +44,18 @@ Chickadee.Views.Header = Backbone.View.extend({
   openLoginWindow: function (event) {
     if (!this.openedLogin) {
       this.openedLogin = true;
-      var subview = new Chickadee.Views.Login();
-      this.subviews.push(subview);
-      this.$el.append(subview.render().el);
-      subview.$el.fadeIn(300);
+      this.loginWindow = new Chickadee.Views.Login();
+      this.$el.append(this.loginWindow.render().el);
+      this.loginWindow.$el.fadeIn(300);
+    }
+  },
+
+  closeLoginWindow: function (event) {
+    if (event.target === event.currentTarget) {
+      this.loginWindow.$el.fadeOut(300, function () {
+        this.loginWindow.remove();
+      }.bind(this));
+      this.openedLogin = false;
     }
   },
 
@@ -108,9 +115,9 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   displayError: function () {
-    this.$("form").find("p").fadeIn(300, function () {
+    this.$("form").find(".login-error").fadeIn(300, function () {
       setTimeout(function () {
-        this.$("form").find("p").fadeOut(300);
+        this.$("form").find(".login-error").fadeOut(300);
       }.bind(this), 3000)
     }.bind(this));
   }

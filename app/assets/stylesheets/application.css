@@ -205,36 +205,6 @@ nav .login {
   letter-spacing: 1px;
 }
 
-header form {
-  display: none;
-  padding: 22px 0px;
-}
-
-header form label {
-  margin: 0px 10px;
-}
-
-header form div {
-  padding: 0px 5px;
-  float: left;
-}
-
-header form input {
-
-  background: #666;
-  border-bottom: 2px solid #666;
-  font-weight: 400;
-}
-
-header form button {
-  margin: 0px 0px 0px 10px;
-  padding: 0px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  background: #666;
-  font-weight: 400;
-}
-
 div.welcome-popdown {
   z-index: 10;
   position: fixed;
@@ -243,11 +213,4 @@ div.welcome-popdown {
   background: #33cc99;
   padding: 20px 23px;
   border-radius: 20px;
-}
-
-p.login-error {
-  display: inline-block;
-  width: 220px;
-  color: #FFCC00;
-  margin-left: 15px;
 }
