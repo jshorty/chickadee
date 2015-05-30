@@ -1,5 +1,15 @@
 /*WELCOME SCREEN*/
 
+.welcome-background {
+  background-image: url(../sparrow.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .welcome-page {
   position: relative;
   background: rgba(187, 187, 187, 0.8);

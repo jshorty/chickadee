@@ -8,7 +8,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   },
 
   tagName: "section",
-  className: "welcome-page group",
+  // className: "welcome-page group",
   template: JST["welcome"],
 
   events: {
