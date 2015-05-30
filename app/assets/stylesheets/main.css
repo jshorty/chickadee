@@ -238,6 +238,10 @@ section.bird-list li em{
   font-size: 12px;
 }
 
+section.bird-list li a:hover {
+  font-weight: bold;
+}
+
 button.go-button.quiz-start {
   margin-top: 50px;
   display: block;

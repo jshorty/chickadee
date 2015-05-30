@@ -1,6 +1,11 @@
 <% if (birds.models.length > 0) { %>
   <% birds.each(function (bird) { %>
-    <li><%= bird.get('common_name') %> <em>(<%= bird.get('sci_name') %>)</em></li>
+    <% commonName = bird.get('common_name') %>
+    <li>
+      <a href="<%= "http://en.wikipedia.org/wiki/" + commonName.replace(/ /g,"_") %>" target="_blank">
+        <%= commonName %> <em>(<%= bird.get('sci_name') %>)</em>
+      </a>
+    </li>
   <% }) %>
 <% } else { %>
   <li>No birds to display</li>

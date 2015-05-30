@@ -70,6 +70,17 @@ header {
   font-weight: 700;
 }
 
+@media screen and (max-width: 680px) {
+  header {
+    height: 140px;
+  }
+
+  nav ul.nav-right.group {
+    float: left;
+    margin-left: 50px;
+  }
+}
+
 header .logo {
   z-index: 1;
   font-size: 36px;
