@@ -18,23 +18,33 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   submit: function (event) {
     event.preventDefault();
     var data = this.$("form").serializeJSON();
-    var view = this;
-    $.ajax({
-      url: "/api/users",
-      method: 'POST',
-      data: data,
-      success: function(newUserData) {
-        Chickadee.Models.currentUser.firstTime = true;
-        Chickadee.Models.currentUser.login(data);
-        view.remove();
-      },
-      error: function (response) {
-        var errors = response.responseJSON;
-        this.$(".login-error").empty();
-        this.$(".login-error").append(errors[0] + ".");
-        this.displayError();
-      }.bind(this)
-    });
+    if (this.passwordsMatch(data)) {
+      var view = this;
+      $.ajax({
+        url: "/api/users",
+        method: 'POST',
+        data: data,
+        success: function(newUserData) {
+          Chickadee.Models.currentUser.firstTime = true;
+          Chickadee.Models.currentUser.login(data);
+          view.remove();
+        },
+        error: function (response) {
+          var errors = response.responseJSON;
+          this.$(".login-error").empty();
+          this.$(".login-error").append(errors[0] + ".");
+          this.displayError();
+        }.bind(this)
+      });
+    } else {
+      this.$(".login-error").empty();
+      this.$(".login-error").append("Passwords do not match.");
+      this.displayError();
+    }
+  },
+
+  passwordsMatch: function (data) {
+    return data["user"]["password"] === data["user"]["confirm_password"];
   },
 
   displayError: function () {
