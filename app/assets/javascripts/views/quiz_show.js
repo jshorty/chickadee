@@ -41,13 +41,19 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     }.bind(this));
   },
 
-  updateProgressBar: function (correct) {
-    var newClass = (correct ? "correct" : "incorrect")
-    var currentDot = parseInt(this.model.get('progress')) + 1
-    var $dot = this.$(".quiz-progress div:nth-last-child(" + currentDot + ")")
-        $dot.removeClass("unanswered")
-        $dot.addClass(newClass)
-    this.oldProgressBar = this.$(".quiz-progress").html();
+  fillProgressBar: function () {
+    this.model.get('history').forEach(function (answer, i) {
+      var currentDot = (i + 1).toString();
+      var $dot = this.$(".quiz-progress div:nth-last-child(" + currentDot + ")");
+      $dot.removeClass();
+      if (answer === "Y") {
+        $dot.addClass("correct");
+      } else if (answer === "N") {
+        $dot.addClass("incorrect");
+      } else {
+        $dot.addClass("unanswered")
+      }
+    }.bind(this))
   },
 
   updateScore: function () {
@@ -63,7 +69,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
-    this.updateProgressBar(correct);
+    this.fillProgressBar();
     correct && this.updateScore();
     this.flashResult(correct);
 
@@ -94,7 +100,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     }
   },
 
-
   render: function () {
     var content = this.template({
       quiz: this.model,
@@ -103,9 +108,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     });
 
     this.$el.html(content);
-    if (this.oldProgressBar) {
-      this.$(".quiz-progress").html(this.oldProgressBar);
-    }
+    this.fillProgressBar();
     return this;
   },
 

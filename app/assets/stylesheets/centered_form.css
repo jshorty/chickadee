@@ -1,0 +1,33 @@
+.centered-form {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.centered-form label {
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+.centered-form input {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  width: 300px;
+  font-size: 24px;
+  text-align: center;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.centered-form button {
+  display: inline-block;
+  margin: 20px auto 50px auto;
+  font-size: 20px;
+  transition: box-shadow 0.2s linear;
+}

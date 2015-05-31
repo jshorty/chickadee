@@ -1,4 +1,4 @@
-json.(@quiz, :id, :progress, :score, :level, :xp_timeseries, :region)
+json.(@quiz, :id, :progress, :score, :level, :xp_timeseries, :region, :history)
 
 if @question
   json.question(@question, :id, :quiz_id, :answered, :correct,

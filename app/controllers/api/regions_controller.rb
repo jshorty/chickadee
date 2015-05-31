@@ -48,15 +48,15 @@ module Api
       render :countries
     end
 
+
     private
 
-      def region_params
-        [:country, :state, :country].each do |scope|
-          params[:region][scope] = nil if params[:region][scope].blank?
-        end
-        params.require(:region).permit(:id, :county, :state, :country)
-      end
 
-      def
+    def region_params
+      [:country, :state, :country].each do |scope|
+        params[:region][scope] = nil if params[:region][scope].blank?
+      end
+      params.require(:region).permit(:id, :county, :state, :country)
+    end
   end
 end

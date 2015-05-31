@@ -1,4 +1,5 @@
 class Quiz < ActiveRecord::Base
+  include ActiveModel::Dirty
   NUM_QUESTIONS = 10
 
   validates :user_id, :region_id, presence: true
@@ -60,13 +61,17 @@ class Quiz < ActiveRecord::Base
   def correct!
     self.score += 1
     self.progress += 1
+    self.history_will_change!
     self.history << "Y"
     self.save!
     self.complete! if self.progress == NUM_QUESTIONS
   end
 
   def incorrect!
-    self.update(progress: (self.progress + 1))
+    self.progress += 1
+    self.history_will_change!
+    self.history << "N"
+    self.save!
     self.complete! if self.completed?
   end
 

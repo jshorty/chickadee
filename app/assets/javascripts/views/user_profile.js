@@ -13,7 +13,7 @@ Chickadee.Views.UserProfile = Backbone.View.extend({
   template: JST["user_profile"],
 
   tagName: "form",
-  className: "edit-profile",
+  className: "edit-profile centered-form",
 
   goToRegions: function (event) {
     event && event.preventDefault();

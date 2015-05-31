@@ -15,7 +15,7 @@ Chickadee.Views.RegionForm = Backbone.View.extend({
   },
 
   tagName: "form",
-  className: "invisible",
+  className: "invisible centered-form",
 
   events: {
     "submit":"submitNewRegion",

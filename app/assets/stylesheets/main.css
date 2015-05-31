@@ -15,32 +15,7 @@
   height: 96px;
 }
 
-/*#main-content form {
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-}
 
-/*#main-content form label {
-  font-size: 20px;
-  display: block;
-  margin: 0 auto;
-  width: 300px;
-  margin-bottom: 5px;
-}
-
-#main-content form input {
-  display: block;
-  margin: 0 auto;
-  border: 3px solid #ccc;
-  border-radius: 20px;
-  background: #fff;
-  width: 300px;
-  font-size: 24px;
-  text-align: center;
-  padding: 5px 10px;
-  margin-bottom: 20px;
-}*/*/
 
 body > ul.ui-autocomplete {
     background: #fff;
@@ -50,13 +25,6 @@ body > ul.ui-autocomplete {
     border-radius: 15px;
     padding-top: 10px;
 }
-
-/*form button {
-  display: inline-block;
-  margin: 20px auto 50px auto;
-  font-size: 20px;
-  transition: box-shadow 0.2s linear;
-}*/
 
 form div.spinner-box {
   margin: 0 auto;
