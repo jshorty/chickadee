@@ -15,6 +15,10 @@
   background-color: rgba(204, 102, 0, 0.6);
 }
 
+.modal-backdrop-green {
+  background-color: rgba(102, 204, 51, 0.6);
+}
+
 .modal-window {
   position: absolute;
   top: 0;
@@ -22,4 +26,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
+}
+
+.modal-tall {
 }

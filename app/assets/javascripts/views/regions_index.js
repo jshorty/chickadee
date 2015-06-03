@@ -2,7 +2,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
   initialize: function (options) {
     this.subviews = [];
     this.listenTo(this.collection, "add remove sync", this.render)
-    this.listenTo(this.collection, "sync", this.checkHints)
+    this.listenTo(this.collection, "sync", this.checkForGreeting)
     this.listenTo(this.collection, "sync", this.readjustHeight)
   },
 
@@ -10,7 +10,9 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
 
   events: {
     "click .new-region-link":"newRegion",
-    "click .region-item":"goToQuiz"
+    "click .region-item":"goToQuiz",
+    "click .modal-backdrop":"closeGreeting",
+    "click .greeting-button":"closeGreeting",
   },
 
   newRegion: function (event) {
@@ -34,8 +36,6 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     var content = this.template({regions: this.collection});
     this.$el.html(content);
 
-    this.$(".hints").hide();
-
     this.collection.each(function (region) {
       var subview = new Chickadee.Views.RegionsIndexItem({model: region});
       this.subviews.push(subview);
@@ -58,28 +58,26 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     view.subviews = [];
   },
 
-  checkHints: function () {
+  checkForGreeting: function () {
     if (Chickadee.Models.currentUser.firstTime) {
-      this.flashHints();
+      setTimeout(function () {
+        this.displayGreeting();
+      }.bind(this), 500);
     }
   },
 
-  flashHints: function () { //brace yourself
-    this.$("#hints-home1").fadeIn(1000, function () {
-      setTimeout(function () {
-        this.$("#hints-home1").fadeOut(600);
-        this.$("#hints-home2").fadeIn(1000, function () {
-          setTimeout(function () {
-            this.$("#hints-home2").fadeOut(600);
-            this.$("#hints-home3").fadeIn(1000, function () {
-              setTimeout(function () {
-                Chickadee.Models.currentUser.firstTime = false;
-                this.$("#hints-home3").fadeOut(600);
-              }, 4000)
-            })
-          }, 4000)
-        })
-      }, 4000)
-    });
-  }
+  displayGreeting: function () {
+    this.greetingWindow = new Chickadee.Views.GreetingWindow();
+    this.$el.append(this.greetingWindow.render().el);
+    this.greetingWindow.$el.fadeIn(300);
+  },
+
+  closeGreeting: function (event) {
+    if (event.target === event.currentTarget) {
+      this.greetingWindow.$el.fadeOut(300, function () {
+        this.greetingWindow.remove();
+        Chickadee.Models.currentUser.firstTime = false;
+      }.bind(this));
+    }
+  },
 })

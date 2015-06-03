@@ -63,30 +63,9 @@
   margin: 0 auto;
 }
 
-#main-content .hints {
-  position: absolute;
-  left: 100px;
-  top: 180px;
-  max-width: 350px;
-  margin-bottom: 0;
-  padding: 10px;
-  border: 3px solid #fff;
-  border-radius: 20px;
-  text-align: left;
-  background: #0099CC;
-}
-#main-content .hints p {
-  margin: 0;
-  color: #fff;
-  text-align: left;
-}
-
-#hints-home1 {
-
-}
-#hints-home2 {
-
-}
-#hints-home3 {
-
+.modal-window .sparrow-icon {
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
 }

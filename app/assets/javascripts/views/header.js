@@ -107,10 +107,12 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   welcomePopdown: function () {
     var view = this;
-    var popdown = view.$(".welcome-popdown")
-    popdown.fadeIn(500, function () {
-      setTimeout(function () {popdown.fadeOut('5000')}, 2000);
-    });
+    if (!this.model.firstTime) {
+      var popdown = view.$(".welcome-popdown")
+      popdown.fadeIn(500, function () {
+        setTimeout(function () {popdown.fadeOut('5000')}, 2000);
+      });
+    }
     view.loggingIn = false;
   },
 

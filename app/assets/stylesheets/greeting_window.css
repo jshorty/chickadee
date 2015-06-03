@@ -1,0 +1,13 @@
+.greeting-message {
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.greeting-button {
+  width: 200px;
+  transition: box-shadow 0.2s linear;
+}
+
+.greeting-button:hover {
+  box-shadow: -2px 2px 5px 0px #555;
+}
