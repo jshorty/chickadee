@@ -317,6 +317,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.0)
   rails_12factor
+  rails_serve_static_assets
   rest-client
   rspec-rails
   sass-rails (~> 5.0)
