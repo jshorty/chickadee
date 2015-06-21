@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # get "/auth/api/session", to: "static_pages#root"
 
   namespace :api, defaults: { format: :json } do
+
     resource :session, only: [:create, :show, :destroy]
 
     resources :users, only: [:create, :update, :show]
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
     get "/birds_quiz", to: "birds#quiz_question"
 
     resources :quizzes, only: [:create, :update, :show]
+
+    resource :leaderboards, only: :index
   end
 
 end
