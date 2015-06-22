@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
     resources :quizzes, only: [:create, :update, :show]
 
-    resource :leaderboards, only: :index
+    get "/leaderboard", to: "leaderboard#index"
   end
 
 end
