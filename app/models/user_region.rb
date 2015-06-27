@@ -56,4 +56,8 @@ class UserRegion < ActiveRecord::Base
     end
     self.save!
   end
+
+  def leaderboard(current_user_id)
+    region.leaderboard(current_user_id)
+  end
 end

@@ -1,0 +1,14 @@
+<h1>Leaderboards</h1>
+<h2 class="leaderboard-region"><%= board.name %></h2>
+
+<ul class="leaderboard-list">
+  <% board.users.forEach(function (user, idx) { %>
+    <% if (user[2]) { %>
+      <li class="leaderboard-ranking current-user-score"><%= idx + 1 %>. <%= user[1] %> (Level <%= user[0] %>)</li>
+    <% } else if (user[1] === null) { %>
+      <li class="leaderboard-ranking"><%= idx + 1 %>. <%= "Anonymous" %> (Level <%= user[0] %>)</li>
+    <% } else { %>
+      <li class="leaderboard-ranking"><%= idx + 1 %>. <%= user[1] %> (Level <%= user[0] %>)</li>
+    <% } %>
+  <% }); %>
+</ul>

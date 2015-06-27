@@ -107,9 +107,13 @@ class Region < ActiveRecord::Base
     birds
   end
 
-  def leaderboard
-    user_regions = user_regions.order(level: :desc, xp: :desc).include(:user).limit(10).to_a
-    user_regions.map { |region| [region.level, region.user.alias]}
+  def leaderboard(current_user_id)
+    top_ten = user_regions.order(level: :desc, xp: :desc).includes(:user).limit(10).to_a
+    top_ten.map do |region|
+      ranking = [region.level, region.user.alias]
+      ranking << true if region.user.id == current_user_id
+      ranking
+    end
   end
 
   def self.find_most_specific(params)

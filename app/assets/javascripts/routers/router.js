@@ -78,8 +78,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
   regionsIndex: function () {
     if (this._requireLoggedIn()) {
       this.regions.fetch();
-      this._swapView(new Chickadee.Views.RegionsIndex({
-        collection: this.regions
+      this._swapView(new Chickadee.Views.Home({
+        regions: this.regions
       }));
     } else {
       this._swapView(new Chickadee.Views.Welcome());
