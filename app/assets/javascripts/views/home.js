@@ -4,8 +4,8 @@ Chickadee.Views.Home = Backbone.View.extend({
     this.regions = options.regions;
   },
 
+  className: "home",
   template: JST["home"],
-  className: "group",
 
   render: function () {
     this.$el.html(this.template());
@@ -17,7 +17,6 @@ Chickadee.Views.Home = Backbone.View.extend({
 
     this.$("#region-menu").html(regionsIndex.render().el)
     this.$("#leaderboard").html(leaderboard.render().el)
-
     return this;
   },
 

@@ -1,8 +1,49 @@
+.home {
+  text-align: center;
+}
+
+.home-panel {
+  display: inline-block;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+
 #region-menu {
   float: left;
 }
 
 #leaderboard {
-  width: 200px;
+  width: 280px;
+  padding: 0px 10px;
   float: left;
+  margin-left: 50px;
+}
+
+.leaderboard-rotator {
+  display: none;
+}
+
+.leaderboard-pane {
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  background: #ccc;
+}
+
+.leaderboard-region {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.leaderboard-list {
+  padding-left: 15px;
+}
+
+.leaderboard-ranking {
+  color: #999;
+}
+
+.leaderboard-ranking.current-user-score {
+  color: #339966;
 }
