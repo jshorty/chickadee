@@ -12,7 +12,7 @@ Chickadee.Views.Leaderboard = Backbone.View.extend({
     var board = this.createBoard();
     this.$el.html(this.template({board: board}));
     this.$(".leaderboard-rotator").fadeIn(500, function () {
-      setTimeout(function () {this.switchBoard();}.bind(this), 4500);
+      setTimeout(function () {this.switchBoard();}.bind(this), 3000);
     }.bind(this));
     return this;
   },
@@ -34,7 +34,7 @@ Chickadee.Views.Leaderboard = Backbone.View.extend({
       var board = this.createBoard();
       this.$el.html(this.template({board: board}));
       this.$(".leaderboard-rotator").fadeIn(700, function () {
-        setTimeout(function () {this.switchBoard();}.bind(this), 4500);
+        setTimeout(function () {this.switchBoard();}.bind(this), 3000);
       }.bind(this));
     }.bind(this));
   }

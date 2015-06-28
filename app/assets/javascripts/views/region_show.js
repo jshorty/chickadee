@@ -1,10 +1,8 @@
 Chickadee.Views.RegionShow = Backbone.View.extend({
   initialize: function (options) {
-    debugger;
     this.subviews = [];
 
     if (!options.model) {
-      debugger;
       this.model = this.collection.models[0];
       this.model && this.model.set('id', this.model.get('region_id'))
       this.model && this.model.fetch();
