@@ -19,7 +19,6 @@ Chickadee.Views.Leaderboard = Backbone.View.extend({
 
   createBoard: function () {
     var region = this.collection.models[this.currentBoardIndex];
-    console.log(this.currentBoardIndex);
     var users = region.get('leaderboard');
     return {name: region.name(), users: region.get('leaderboard')}
   },
