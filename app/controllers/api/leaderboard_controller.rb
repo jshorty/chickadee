@@ -4,7 +4,7 @@ module Api
 
     def index
       regions = Region.find(leaderboard_params[:region_ids])
-      render json: regions.map(:&leaderboard)
+      render json: regions.map(&:leaderboard)
     end
 
     private
