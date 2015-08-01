@@ -19,7 +19,7 @@ Chickadee.Models.Region = Backbone.Model.extend({
   name: function () {
     var county = this.get('county');
     var state = this.get('state');
-    var country = this.get('country')
+    var country = this.get('country');
 
     if (!state) {
       return country;

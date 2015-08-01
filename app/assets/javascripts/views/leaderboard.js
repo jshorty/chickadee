@@ -12,13 +12,19 @@ Chickadee.Views.Leaderboard = Backbone.View.extend({
     var board = this.createBoard();
     this.$el.html(this.template({board: board}));
     this.$(".leaderboard-rotator").fadeIn(500, function () {
-      setTimeout(function () {this.switchBoard();}.bind(this), 3000);
+      setTimeout(function () { // only keep switching the board if there are multiple regions
+        if (this.collection.models.length > 1) {this.switchBoard();}
+      }.bind(this), 3000);
     }.bind(this));
     return this;
   },
 
   createBoard: function () {
     var region = this.collection.models[this.currentBoardIndex];
+    if (!region) {
+      return {name: "Loading leaderboards...", users: []};
+      setTimeout(function(){ this.createBoard(); }.bind(this), 1000);
+    }
     var users = region.get('leaderboard');
     return {name: region.name(), users: region.get('leaderboard')}
   },
