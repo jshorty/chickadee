@@ -3,7 +3,7 @@ module Api
     before_action :require_logged_in
 
     def create
-      @quiz = Quiz.find_incomplete_or_create(params[:region_id], current_user.id)
+      @quiz = Quiz.find_incomplete_or_create_new(params[:region_id], current_user.id)
 
       if @quiz.new_record? #get questions for a new quiz
         unless @quiz.save
@@ -11,7 +11,7 @@ module Api
           return
         end
         begin
-          @quiz.seed_questions(10)
+          @quiz.generate_questions(10)
         rescue
           render json: ["Region has too few birds for quiz"], status: 422
           return
@@ -22,7 +22,7 @@ module Api
         @question = @quiz.next_question
         @song = @question.correct_answer.random_song
       rescue NoMethodError
-        @quiz.reseed_remaining_questions
+        @quiz.regenerate_remaining_questions
         retry
       end
       render :show
