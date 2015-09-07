@@ -88,11 +88,10 @@ class Region < ActiveRecord::Base
     birds = self.birds.dup
 
     common_names.length.times do |i|
-      #filters out hybrids and birds not identified to species
+      # Filters out hybrids and birds not identified to species.
       next if common_names[i].text.match(/sp.|\/| x |\(|\)/)
 
-      bird = Bird.find_or_create_by(common_name: common_names[i].text,
-                                    sci_name: sci_names[i].text)
+      bird = Bird.find_or_create_by_names(common_names[i].text, sci_names[i].text)
 
       BirdRegion.create(bird_id: bird.id, region_id: self.id)
     end

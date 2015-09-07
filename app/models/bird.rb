@@ -36,6 +36,19 @@ class Bird < ActiveRecord::Base
     "http://www.xeno-canto.org/api/2/recordings?query=#{self.sci_name}"
   end
 
+  def self.find_or_create_by_names(common_name, sci_name)
+    # Right now we'll update scientific names, but just consider it a new
+    # bird when the common name is different, since my guess is
+    # the Clements checklist updates this less often. (2015-09-07)
+    bird = self.find_by_common_name(common_name)
+    unless bird
+      bird = Bird.create(common_name: common_name, sci_name: sci_name)
+    elsif bird.sci_name != sci_name
+      bird.update!(sci_name: sci_name)
+    end
+    bird
+  end
+
   def get_songs
     uri = URI.encode(self.xeno_canto_url)
     payload = JSON.parse(RestClient.get(uri, {:accept => :json}))
