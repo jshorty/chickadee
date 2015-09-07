@@ -41,7 +41,7 @@ class Bird < ActiveRecord::Base
     # bird when the common name is different, since my guess is
     # the Clements checklist updates this less often. (2015-09-07)
     bird = self.find_by_common_name(common_name)
-    unless bird
+    if !bird
       bird = Bird.create(common_name: common_name, sci_name: sci_name)
     elsif bird.sci_name != sci_name
       bird.update!(sci_name: sci_name)
