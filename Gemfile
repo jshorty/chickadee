@@ -16,6 +16,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'figaro'
 gem 'rest-client'
 gem 'omniauth-facebook'
+gem 'omniauth-flickr'
 gem 'flickraw'
 
 group :development do
