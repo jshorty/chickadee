@@ -1,5 +1,13 @@
 class Bird < ActiveRecord::Base
   MAX_SONGS = 15
+  # Since we're providing attribution, we can use everything except
+  # code 0, which is 'All Rights Reserved'.
+  IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
+  # Desired photo size from Flickr (Medium is 500px width).
+  PHOTO_SIZE = "Medium"
+  IMAGE_MAX_WIDTH = "500"
+  IMAGE_MAX_HEIGHT = "320"
+  MAX_PHOTOS = 5
 
   validates :common_name, :sci_name, presence: true
   validates :sci_name, uniqueness: true
@@ -16,6 +24,12 @@ class Bird < ActiveRecord::Base
 
   has_many :songs,
     class_name: "Song",
+    primary_key: :id,
+    foreign_key: :bird_id,
+    dependent: :destroy
+
+  has_many :photographs,
+    class_name: "BirdPhoto",
     primary_key: :id,
     foreign_key: :bird_id,
     dependent: :destroy
@@ -66,6 +80,38 @@ class Bird < ActiveRecord::Base
     end
   end
 
+  def get_photos! # Creates records in the database for new photos from Flickr.
+    FlickRaw.api_key = ENV["FLICKR_KEY"]
+    FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
+
+    photos = flickr.photos.search(text: "#{sci_name} #{common_name}", license: IMAGE_LICENSES, sort: "interestingness-desc").to_a
+    photos = flickr.photos.search(text: sci_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
+    photos = flickr.photos.search(text: common_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
+
+    return false if photos.empty?
+
+    photos[0...MAX_PHOTOS].each { |photo| create_photo_record(photo) if photo }
+    true
+  end
+
+  def create_photo_record(photo)
+    owner = flickr.people.getInfo(user_id: photo["owner"])
+    owner_name = owner.try(:realname) || owner.try(:username)
+
+    sizes = flickr.photos.getSizes(photo_id: photo["id"])
+    is_landscape = sizes.any? { |img| (img.width.to_i > img.height.to_i) }
+    image = sizes.find { |img| img.width == IMAGE_MAX_WIDTH } if is_landscape
+    image = sizes.find { |img| img.height == IMAGE_MAX_HEIGHT } unless is_landscape
+    image = sizes.find { |img| img.label == "Large Square" } unless image
+
+    BirdPhoto.create(
+      bird_id: id,
+      owner: owner_name,
+      flickr_url: image.url,
+      file_url: image.source,
+    )
+  end
+
   def prioritize_songs_by_quality(song_payload, count)
     songs = []
     remaining = count
@@ -85,6 +131,27 @@ class Bird < ActiveRecord::Base
     end
   end
 
+  def has_photos?
+    photographs.any? || get_photos!
+  end
+
+  def random_photo
+    # Send some kind of alert here and link to a placeholder.
+    return false unless has_photos?
+
+    photos = photographs.shuffle
+    i = 0
+    while i < photos.length
+      begin
+        return photos[i] if photos[i].local || photos[i].retrieve_file
+      rescue URI::InvalidURIError
+        song.destroy
+      ensure
+        i += 1
+      end
+    end
+  end
+
   def random_song
     self.get_songs unless self.has_songs
     songs = self.songs.shuffle
@@ -92,16 +159,10 @@ class Bird < ActiveRecord::Base
 
     while i < songs.length
       begin
-        song = songs[i]
-        if song.local
-          return song
-        elsif song.retrieve_file
-          return song
-        else
-          i += 1
-        end
+        return songs[i] if songs[i].local || songs[i].retrieve_file
       rescue URI::InvalidURIError
-        song.destroy
+        songs[i].destroy
+      ensure
         i += 1
       end
     end

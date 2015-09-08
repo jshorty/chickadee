@@ -2,7 +2,8 @@
   <% birds.each(function (bird) { %>
     <% commonName = bird.get('common_name') %>
     <li>
-      <a href="<%= "http://en.wikipedia.org/wiki/" + commonName.replace(/ /g,"_") %>" target="_blank">
+      <% "http://en.wikipedia.org/wiki/" + commonName.replace(/ /g,"_") %>
+      <a class="bird-link" data-id="<%= bird.id %>" target="_blank">
         <%= commonName %> <em>(<%= bird.get('sci_name') %>)</em>
       </a>
     </li>

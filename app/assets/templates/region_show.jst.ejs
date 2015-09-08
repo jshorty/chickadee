@@ -1,46 +1,40 @@
-<section class="region-header">
-  <% if (region.name() != "All Birds") { %>
-    <h1>Birds from <%= region.name() %></h2>
-    <h6>
-      (reported species from <%= region.get('start_date') %> to
-      <%= region.get('updated_at') %>)
-    </h6>
-  <% } else { %>
-    <h1>All Birds</h1>
-  <% } %>
-</section>
+
 
 <section class='region-info group'>
-  <section class="region-sidepanel">
-
-    <% regions.each(function (regionModel) { %>
-      <% if (regionModel.get('region_id') && regionModel.name() === region.name()) { %>
-        <button class="go-button selected region-button" data-region_id="<%= parseInt(regionModel.get('region_id')) %>">
-          <%= regionModel.name() %>
-        </button>
-      <% } else if (regionModel.get('region_id')) { %>
-        <button class="go-button region-button" data-region_id="<%= parseInt(regionModel.get('region_id')) %>">
-          <%= regionModel.name() %>
-        </button>
+  <div class="bird-selector">
+    <section class="region-header">
+      <% if (region.name() != "All Birds") { %>
+        <h6>Birds from
+          <select class='region-chooser'>
+            <% regions.each(function (regionModel) { %>
+              <% if (region.name() === regionModel.name()) { %>
+                <option selected value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
+              <% } else { %>
+                <option value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
+              <% } %>
+            <% }) %>
+          </select>
+        </h6>
+        <small>
+          (reported species from <%= region.get('start_date') %> to
+          <%= region.get('updated_at') %>)
+          <button class='region-update'><img src="refresh.png" alt="refresh"></button>
+        </small>
+      <% } else { %>
+        <h1>All Birds</h1>
       <% } %>
-    <% }) %>
+    </section>
 
-    <% if (region.get('region_id')) { %>
-      <button class="go-button quiz-start" data-region_id="<%= parseInt(region.get('region_id')) %>">
-        <strong>PRACTICE!</strong>
-      </button>
-    <% } else if (region.id) { %>
-      <button class="go-button quiz-start" data-region_id="<%= parseInt(region.id) %>">
-        <strong>PRACTICE!</strong>
-      </button>
-    <% } %>
+    <section class="bird-menu">
 
-  </section>
-  <div class="search">
-    <input type="text" class="search-bar">
-    <img class="bino-background" src="binoculars-icon.png">
+      <div class="search">
+        <input type="text" class="search-bar">
+        <img class="bino-background" src="binoculars-icon.png">
+      </div>
+      <section class="bird-list">
+      </section>
+    </section>
   </div>
-  <section class="bird-list">
-    <button class='region-update'>Update</button>
+  <section class="bird-details">
   </section>
 </section>

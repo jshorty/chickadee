@@ -1,0 +1,189 @@
+/*BIRDS INDEX*/
+
+.region-info .bird-selector {
+  width: 430px;
+  float: left;
+}
+
+.region-header {
+  clear: both;
+  margin: 0 auto 20px auto;
+}
+
+.region-header h6 {
+  max-width: 400px;
+  margin: 0 auto 10px auto;
+}
+
+.region-header select {
+  border: 1px solid #111;
+  cursor: pointer;
+  background: transparent;
+  width: 300px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.region-header select::-ms-expand { /* for IE 11 */
+  display: none;
+}
+
+section.region-info {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.bird-menu {
+  float: left;
+  width: 430px;
+}
+
+.bird-link {
+  cursor: pointer;
+}
+
+.bird-details {
+  float: right;
+  width: 550px;
+}
+
+.bird-details .bird-name {
+  display: block;
+  text-align: center;
+  margin: 5px 0px 15px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bird-photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.bird-attribution {
+  color: #666;
+  font-size: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.region-header small {
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+}
+
+small .region-update {
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+  position: relative
+}
+
+.region-update img {
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -15px;
+}
+
+section.bird-list button.region-update:hover {
+  box-shadow: 0px 2px 5px 0px #555;
+}
+
+section.region-header > h2 {
+  font-size: 24px;
+}
+
+section.bird-list {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 20px;
+  width: 350px;
+  height: 450px;
+  float: left;
+  position: relative;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+div.search {
+  margin: 0 auto;
+  width: 400px;
+  float: left;
+}
+
+input.search-bar {
+  width: 350px;
+  display: block;
+  float: left;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 2px 5px;
+  background: #fff;
+}
+
+img.bino-background {
+  float: left;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 10px;
+}
+
+section.bird-list li {
+  padding: 5px;
+}
+
+section.bird-list li em{
+  font-size: 12px;
+}
+
+section.bird-list li a:hover {
+  font-weight: bold;
+}
+
+button.go-button.quiz-start {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  width: 300px;
+  background: #336633;
+  font-size: 24px;
+  transition: background 0.5s, box-shadow 0.2s linear;
+}
+
+button.go-button.quiz-start:hover {
+  margin-top: 50px;
+  background: #33CC33;
+  box-shadow: 0px 2px 5px 0px #555;
+}
+
+#no-birds-msg {
+  text-align: center;
+  margin: 5px auto;
+}
+
+#no-birds-link {
+  display: block;
+  width: 74px;
+  margin: 20px auto;
+}
+
+#no-birds-link button {
+  transition: background 0.5s, box-shadow 0.2s linear;
+}
+
+#no-birds-link button:hover {
+  box-shadow: 0px 2px 5px 0px #555;
+}

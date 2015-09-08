@@ -1,9 +1,10 @@
 module Api
   class BirdsController < ApplicationController
     before_action :require_logged_in
-    
+
     def show
       @bird = Bird.find(params[:id])
+      @photograph = @bird.random_photo
       render :show
     end
 

@@ -5,7 +5,6 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     if (!options.model) {
       this.model = this.collection.models[0];
       this.model && this.model.set('id', this.model.get('region_id'))
-      this.model && this.model.fetch();
     }
 
     if (!this.model) {
@@ -26,7 +25,8 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     "click .region-button":"swapBirdIndex",
     "click .region-update":"reloadRegionBirds",
     "click .quiz-start":"goToQuiz",
-    "input .search-bar":"updateResults"
+    "input .search-bar":"updateResults",
+    "change .region-chooser":"swapRegion"
   },
 
   render: function () {
@@ -39,9 +39,28 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
       collection: this.model.birds()
     });
     this.subviews.push(birdIndex);
+    this.listenTo(birdIndex, "birdSelected", this.renderBird);
     this.$el.find(".bird-list").append(birdIndex.render().el);
-    console.log(this.collection.models);
     return this;
+  },
+
+  renderBird: function (data) {
+    $.ajax({
+      url: "/api/birds/" + data.birdId,
+      method: 'GET',
+      success: function(data) {
+        var bird = data;
+
+        if (this.subviews.length == 2) {
+          this.subviews[1].remove();
+          this.subviews.pop();
+        }
+
+        var subview = new Chickadee.Views.BirdShow({model: bird});
+        this.subviews.push(subview);
+        this.$el.find(".bird-details").prepend(subview.render().el);
+      }.bind(this)
+    });
   },
 
   remove: function () {
@@ -72,6 +91,14 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     var region_id = $(event.currentTarget).data("region_id");
     if (this.model.get('region_id') === region_id) { return }
     var url = "regions/" + region_id + "/birds";
+    this.$el.find(".bird-list li").fadeOut(200);
+    this.$el.find(".region-header").fadeOut(200, function () {
+      Backbone.history.navigate(url, { trigger: true });
+    });
+  },
+
+  swapRegion: function (event) {
+    url = "regions/" + $(event.currentTarget).val() + "/birds";
     this.$el.find(".bird-list li").fadeOut(200);
     this.$el.find(".region-header").fadeOut(200, function () {
       Backbone.history.navigate(url, { trigger: true });
