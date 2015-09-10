@@ -7,20 +7,22 @@
 
 .region-header {
   clear: both;
-  margin: 0 auto 20px auto;
+  margin-bottom: 20px;
 }
 
 .region-header h6 {
-  max-width: 400px;
-  margin: 0 auto 10px auto;
+  position: relative;
+  max-width: 420px;
+  margin-bottom: 10px;
 }
 
 .region-header select {
+  margin-left: 5px;
   border: 1px solid #111;
   cursor: pointer;
   background: transparent;
-  width: 300px;
-  padding: 5px 10px;
+  width: 335px;
+  padding: 5px 15px;
   font-size: 16px;
   font-weight: bold;
   border: 1px solid #ccc;
@@ -32,6 +34,17 @@
 
 .region-header select::-ms-expand { /* for IE 11 */
   display: none;
+}
+
+.region-header .down-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  color: #ccc;
+}
+
+.region-header h6:hover .down-icon {
+  color: #333;
 }
 
 section.region-info {
@@ -98,15 +111,7 @@ small .region-update {
   top: -15px;
 }
 
-section.bird-list button.region-update:hover {
-  box-shadow: 0px 2px 5px 0px #555;
-}
-
-section.region-header > h2 {
-  font-size: 24px;
-}
-
-section.bird-list {
+.bird-list {
   background: #fff;
   padding: 20px 40px;
   border-radius: 20px;
@@ -114,20 +119,24 @@ section.bird-list {
   height: 450px;
   float: left;
   position: relative;
-  overflow: scroll;
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
-div.search {
+.bird-list:hover {
+  overflow: scroll;
+}
+
+.search {
   margin: 0 auto;
-  width: 400px;
+  width: 420px;
   float: left;
 }
 
-input.search-bar {
+.search-bar {
+  margin-left: 15px;
   width: 350px;
-  display: block;
-  float: left;
+  display: inline-block;
   border: 2px solid #aaa;
   border-radius: 10px;
   padding: 2px 5px;
@@ -135,7 +144,8 @@ input.search-bar {
 }
 
 img.bino-background {
-  float: left;
+  margin-right: 5px;
+  float: right;
   width: 30px;
   height: 30px;
   padding-bottom: 10px;

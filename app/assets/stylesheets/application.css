@@ -60,6 +60,29 @@ strong {
   font-weight: 700;
 }
 
+/*CUSTOM SCROLLBAR*/
+.special-scrollbar ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: rgba(0,0,0,0);
+}
+
+/* Track */
+.special-scrollbar ::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+.special-scrollbar ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #333;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.special-scrollbar ::-webkit-scrollbar-thumb:window-inactive {
+	background: #aaa;
+}
+
 /*HEADER*/
 
 header {
