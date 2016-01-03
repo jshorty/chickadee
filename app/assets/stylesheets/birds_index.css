@@ -41,6 +41,7 @@
   right: 10px;
   top: 8px;
   color: #ccc;
+  cursor: pointer;
 }
 
 .region-header h6:hover .down-icon {

@@ -7,10 +7,12 @@
         <h6>Birds from
           <select class='region-chooser'>
             <% regions.each(function (regionModel) { %>
-              <% if (region.name() === regionModel.name()) { %>
-                <option selected value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
-              <% } else { %>
-                <option value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
+              <% if (!isNaN(parseInt(regionModel.get('region_id')))) { %>
+                <% if (region.name() === regionModel.name()) { %>
+                  <option selected value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
+                <% } else { %>
+                  <option value="<%= parseInt(regionModel.get('region_id')) %>"><%= regionModel.name() %></option>
+                <% } %>
               <% } %>
             <% }) %>
           </select>

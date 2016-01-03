@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root to: "static_pages#root"
+  get "/wip/home", to: "static_pages#home"
+  get "/wip/welcome", to: "static_pages#welcome"
 
   resource :session, only: [:new, :create, :destroy]
 

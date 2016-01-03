@@ -3,10 +3,7 @@ class Bird < ActiveRecord::Base
   # Since we're providing attribution, we can use everything except
   # code 0, which is 'All Rights Reserved'.
   IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
-  # Desired photo size from Flickr (Medium is 500px width).
-  PHOTO_SIZE = "Medium"
-  IMAGE_MAX_WIDTH = "500"
-  IMAGE_MAX_HEIGHT = "320"
+
   MAX_PHOTOS = 5
 
   validates :common_name, :sci_name, presence: true
@@ -81,35 +78,20 @@ class Bird < ActiveRecord::Base
   end
 
   def get_photos! # Creates records in the database for new photos from Flickr.
+    photos = photo_search
+    return false if photos.empty?
+    photos[0...MAX_PHOTOS].each { |photo| BirdPhoto.create_photo_record(self, photo) if photo }
+    true
+  end
+
+  def photo_search
     FlickRaw.api_key = ENV["FLICKR_KEY"]
     FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
 
     photos = flickr.photos.search(text: "#{sci_name} #{common_name}", license: IMAGE_LICENSES, sort: "interestingness-desc").to_a
     photos = flickr.photos.search(text: sci_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
     photos = flickr.photos.search(text: common_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
-
-    return false if photos.empty?
-
-    photos[0...MAX_PHOTOS].each { |photo| create_photo_record(photo) if photo }
-    true
-  end
-
-  def create_photo_record(photo)
-    owner = flickr.people.getInfo(user_id: photo["owner"])
-    owner_name = owner.try(:realname) || owner.try(:username)
-
-    sizes = flickr.photos.getSizes(photo_id: photo["id"])
-    is_landscape = sizes.any? { |img| (img.width.to_i > img.height.to_i) }
-    image = sizes.find { |img| img.width == IMAGE_MAX_WIDTH } if is_landscape
-    image = sizes.find { |img| img.height == IMAGE_MAX_HEIGHT } unless is_landscape
-    image = sizes.find { |img| img.label == "Large Square" } unless image
-
-    BirdPhoto.create(
-      bird_id: id,
-      owner: owner_name,
-      flickr_url: image.url,
-      file_url: image.source,
-    )
+    photos
   end
 
   def prioritize_songs_by_quality(song_payload, count)
