@@ -36,7 +36,7 @@ module Api
     end
 
     def index
-      @user_regions = current_user.user_regions
+      @user_regions = current_user.user_regions.includes(:region)
       render :index
     end
 

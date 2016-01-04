@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :birds, only: [:create, :show, :index]
     get "/birds_all", to: "birds#world_index"
     get "/birds_quiz", to: "birds#quiz_question"
+    get "/random_song", to: "birds#random_song"
 
     resources :quizzes, only: [:create, :update, :show]
 

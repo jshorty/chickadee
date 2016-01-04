@@ -9,13 +9,31 @@
   </section>
 
   <section class="welcome-page group">
-    <button class="demo go-button">Try it out!</button>
-    <button class="sign-up go-button">Sign Up</button>
-    <span>or sign in with:</span>
-    <div class="facebook-sign-in">
-      <a href="/auth/facebook">
-        <img class="facebook-icon" src="facebook.png">
-      </a>
+    <div id="song-sampler" class="song-sampler group">
+      <img class="music-note" src="music_note.png">
+      <div class="sampler-bird-name"><%= songInfo.bird %></div>
+      <audio controls="true" src="<%= songInfo.url %>">
+        Your browser does not support the audio player element
+        (try Chrome or Safari)
+      </audio>
+      <div class="sampler-audio-info">
+        Recorded by <%= songInfo.author %>. Info and
+        license available
+        <a href="<%= songInfo.info %>">
+          here
+        </a>.
+      </div>
+    </div>
+
+    <div class="welcome-buttons group">
+      <button class="demo go-button">Try it out!</button>
+      <button class="sign-up go-button">Sign Up</button>
+      <span>or sign in with:</span>
+      <div class="facebook-sign-in">
+        <a href="/auth/facebook">
+          <img class="facebook-icon" src="facebook.png">
+        </a>
+      </div>
     </div>
   </section>
 </section>

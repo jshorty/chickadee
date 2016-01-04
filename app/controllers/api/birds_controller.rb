@@ -1,6 +1,6 @@
 module Api
   class BirdsController < ApplicationController
-    before_action :require_logged_in
+    before_action :require_logged_in, except: [:random_song]
 
     def show
       @bird = Bird.find(params[:id])
@@ -27,6 +27,16 @@ module Api
       indices.sample(4).each { |i| @birds.push(region_birds[i]) }
 
       render json: @birds
+    end
+
+    def random_song
+      song = Song.where(local: true).sample
+      render json: {
+        bird: "#{song.bird.common_name} (<i>#{song.bird.sci_name}</i>)",
+        url: song.recording.url,
+        author: song.recordist,
+        info: song.info_url,
+      }
     end
 
     private

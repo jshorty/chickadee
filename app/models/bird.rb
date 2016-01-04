@@ -2,9 +2,8 @@ class Bird < ActiveRecord::Base
   MAX_SONGS = 15
   # Since we're providing attribution, we can use everything except
   # code 0, which is 'All Rights Reserved'.
-  IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
-
   MAX_PHOTOS = 5
+  IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
 
   validates :common_name, :sci_name, presence: true
   validates :sci_name, uniqueness: true

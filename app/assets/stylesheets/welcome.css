@@ -42,6 +42,53 @@
   width: 500px;
 }
 
+.song-sampler {
+  opacity: 0.0;
+  float: right;
+  clear: both;
+  margin-right: 10%;
+  width: 400px;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: opacity 1.0s linear;
+}
+
+.song-sampler audio {
+  margin-top: 10px;
+  padding-right: 10px;
+  width: 380px;
+  float: right;
+}
+
+.welcome-buttons {
+  clear: both;
+}
+
+.music-note {
+  float: left;
+  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.sampler-bird-name {
+  display: inline-block;
+  font-size: 12px;
+  width: 350px;
+  margin: 10px 0px 0px 10px;
+}
+
+.sampler-audio-info {
+  float: right;
+  padding-right: 10px;
+  margin-top: 0px;
+  font-size: 8px;
+}
+
+.sampler-audio-info a {
+  text-decoration: underline;
+}
+
 .sign-up, .demo {
   display: block;
   width: 150px;

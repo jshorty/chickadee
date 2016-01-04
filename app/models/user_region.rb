@@ -14,6 +14,8 @@ class UserRegion < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :region_id
 
+  after_create :get_photo_if_new
+
   def gain_xp(xp)
     self.advance_days unless self.user.completed_quiz_today?
     self.update!(xp: self.xp + xp)
@@ -59,5 +61,11 @@ class UserRegion < ActiveRecord::Base
 
   def leaderboard(current_user_id)
     region.leaderboard(current_user_id)
+  end
+
+  def get_photo_if_new
+    if region.image.url == "/images/original/missing.png"
+      region.get_photo
+    end
   end
 end

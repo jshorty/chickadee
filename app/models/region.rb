@@ -32,6 +32,13 @@ class Region < ActiveRecord::Base
     through: :user_regions,
      source: :user
 
+  has_attached_file :image
+  # URL to default 'missing photo' image should go here:
+  #default_url: "https://s3.amazonaws.com/chickadee-development/images/user_image.jpg",
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  after_create :get_photo
+
   def name
     county_name = self.county ? "#{self.county}, " : ""
     state_name = self.state ? "#{self.state}, " : ""
@@ -126,5 +133,26 @@ class Region < ActiveRecord::Base
       region = Region.find_by(params)
     end
     region
+  end
+
+  def get_photo
+    FlickRaw.api_key = ENV["FLICKR_KEY"]
+    FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
+
+    photos = flickr.photos.search(tags: "#{name}, nature", tag_mode: "all", license: "7,8,9,10", sort: "interestingness-desc").to_a
+    photos = flickr.photos.search(tags: "#{name}, landscape", tag_mode: "all", license: "7,8,9,10", sort: "interestingness-desc").to_a
+    photos = flickr.photos.search(text: "#{name} trees", license: "7,8,9,10", sort: "interestingness-desc").to_a if photos.empty?
+    photos = flickr.photos.search(text: "#{name} landscape", license: "7,8,9,10", sort: "interestingness-desc").to_a if photos.empty?
+    photos = flickr.photos.search(text: "#{name}", license: "7,8,9,10", sort: "interestingness-desc").to_a if photos.empty?
+    image = nil
+    i = 0
+    until image
+      sizes = flickr.photos.getSizes(photo_id: photos[i]["id"])
+      image = sizes.find { |img| img.label == "Large Square" }
+      i += 1
+    end
+
+    self.image = URI.parse(image.source)
+    save!(validate: false)
   end
 end

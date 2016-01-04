@@ -2,6 +2,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   initialize: function(){
     this.model = Chickadee.Models.currentUser;
     this.listenTo(this.model, "login", this.goToIndex);
+    setTimeout(this.randomBirdSong.bind(this), 1000);
   },
 
   tagName: "section",
@@ -13,8 +14,24 @@ Chickadee.Views.Welcome = Backbone.View.extend({
     "click .demo":"loginAsDemoUser"
   },
 
+  randomBirdSong: function(){
+    $.getJSON(
+      "/api/random_song",
+      function(response){
+        this.songInfo = response;
+        this.render();
+      }.bind(this)
+    );
+  },
+
   render: function(){
-    this.$el.html(this.template());
+    var songInfo = this.songInfo || {};
+    this.$el.html(this.template({songInfo: songInfo}));
+    if (this.songInfo) { // Fade in the song sampler
+      setTimeout(function() {
+        this.$el.find('#song-sampler').css('opacity', '1.0');
+      }.bind(this), 1000);
+    }
     return this;
   },
 
