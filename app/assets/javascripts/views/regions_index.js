@@ -84,14 +84,14 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
 
   toggleView: function (event) {
     if (this.viewMode === 'icon') {
-      debugger;
       this.$el.find('.region-menu-buttons:first').css('display', 'none');
       this.$el.find('.region-menu-list:first').css('display', 'block');
-      this.viewMode = 'list';
+      this.$el.find('.view-toggle:first').html('Show Icon View');
     } else {
       this.$el.find('.region-menu-list:first').css('display', 'none');
       this.$el.find('.region-menu-buttons:first').css('display', 'block');
-      this.viewMode = 'icon';
+      this.$el.find('.view-toggle:first').html('Show List View');
     }
+    this.viewMode = this.viewMode === 'icon' ? 'list' : 'icon';
   }
 })
