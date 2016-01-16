@@ -11,17 +11,16 @@
 #main-content p {
   text-align: center;
   font-size: 16px;
-  margin-bottom: 30px;
 }
 
 #main-content ul.region-menu {
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto 0px auto;
   width: 450px;
   min-height: 300px;
 }
 
-#main-content li.region-item {
+#main-content .region-menu-buttons li.region-item {
   float: left;
   position: relative;
   width: 130px;
@@ -32,7 +31,7 @@
 
 }
 
-#main-content li.region-item div.region-level {
+#main-content .region-menu-buttons li.region-item div.region-level {
   position: absolute;
   top: 10px;
   right: 30px;
@@ -43,7 +42,7 @@
   font-weight: 700;
 }
 
-#main-content .region-img {
+#main-content .region-menu-buttons .region-img {
   display: block;
   margin: 0 auto 5px auto;
   width: 110px;
@@ -53,11 +52,11 @@
   transition: box-shadow 0.2s linear;
 }
 
-#main-content .region-img:hover {
+#main-content .region-menu-buttons .region-img:hover {
   box-shadow: -2px 2px 5px 0px #555;
 }
 
-#main-content li.solo-centered {
+#main-content .region-menu-buttons li.solo-centered {
   float: none;
   display: inline-block;
   margin: 0 auto;
@@ -68,4 +67,51 @@
   margin: 10px auto;
   width: 100px;
   height: 100px;
+}
+
+.view-toggle {
+  margin-left: 5px;
+  border: 1px dotted #ccc;
+  border-radius: 10px;
+  padding: 2px 4px;
+  color: #ccc;
+}
+
+.view-toggle:hover {
+  border: 1px dotted #000;
+  cursor: pointer;
+  color: #000;
+}
+
+.region-menu-list {
+  display: none;
+}
+
+.region-menu-list img {
+  display: none;
+}
+
+.region-menu-list li {
+  background-color: #ccc;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  padding: 3px 0px;
+}
+
+.region-menu-list li:hover {
+  cursor: pointer;
+  background-color: #aaa;
+}
+
+.region-menu-list .region-level {
+  display: none;
+}
+
+.region-menu-list .region-level-list {
+  padding-left: 5px;
+  color: #666;
+}
+
+.region-menu-list p {
+  padding: 3px 0px;
 }

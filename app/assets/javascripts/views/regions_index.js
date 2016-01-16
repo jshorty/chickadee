@@ -13,6 +13,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     "click .region-item":"goToQuiz",
     "click .modal-backdrop":"closeGreeting",
     "click .greeting-button":"closeGreeting",
+    "click .view-toggle":"toggleView",
   },
 
   newRegion: function (event) {
@@ -33,9 +34,9 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
   },
 
   render: function () {
+    this.viewMode = 'icon';
     var content = this.template({regions: this.collection});
     this.$el.html(content);
-
     this.collection.each(function (region) {
       var subview = new Chickadee.Views.RegionsIndexItem({model: region});
       this.subviews.push(subview);
@@ -80,4 +81,17 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       }.bind(this));
     }
   },
+
+  toggleView: function (event) {
+    if (this.viewMode === 'icon') {
+      debugger;
+      this.$el.find('.region-menu-buttons:first').css('display', 'none');
+      this.$el.find('.region-menu-list:first').css('display', 'block');
+      this.viewMode = 'list';
+    } else {
+      this.$el.find('.region-menu-list:first').css('display', 'none');
+      this.$el.find('.region-menu-buttons:first').css('display', 'block');
+      this.viewMode = 'icon';
+    }
+  }
 })

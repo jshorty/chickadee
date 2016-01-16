@@ -83,6 +83,12 @@ strong {
 	background: #aaa;
 }
 
+/*DEFAULTS*/
+
+small {
+  font-size: 11px;
+}
+
 /*HEADER*/
 
 header {
