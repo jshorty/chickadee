@@ -95,6 +95,10 @@
   background-color: #ccc;
   border-radius: 10px;
   margin-bottom: 2px;
+  padding: 3px 0px 3px 30px;
+}
+
+.region-menu-list li.new {
   padding: 3px 0px;
 }
 
@@ -114,4 +118,26 @@
 
 .region-menu-list p {
   padding: 3px 0px;
+}
+
+.region-menu-buttons .delete-region {
+  display: none;
+}
+
+.region-menu-list .delete-region {
+  visibility: hidden;
+  padding-top: 2px;
+  padding-right: 10px;
+  opacity: 0.3;
+  display: block;
+  float: right;
+  width: 20px;
+}
+
+.region-menu-list li:hover .delete-region {
+  visibility: visible;
+}
+
+.delete-region:hover {
+  opacity: 1.0;
 }

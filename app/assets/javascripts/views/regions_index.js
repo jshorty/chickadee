@@ -14,6 +14,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     "click .modal-backdrop":"closeGreeting",
     "click .greeting-button":"closeGreeting",
     "click .view-toggle":"toggleView",
+    "click .delete-region":"deleteRegion",
   },
 
   newRegion: function (event) {
@@ -93,5 +94,17 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       this.$el.find('.view-toggle:first').html('Show List View');
     }
     this.viewMode = this.viewMode === 'icon' ? 'list' : 'icon';
+  },
+
+  deleteRegion: function(event) {
+    event.stopPropagation();
+    var id = $(event.currentTarget).parent().data()["region_id"]
+    $.ajax({
+      url: "/api/regions/" + id.toString(),
+      method: 'DELETE',
+      success: function() {
+        this.collection.fetch();
+      }.bind(this)
+    });
   }
 })

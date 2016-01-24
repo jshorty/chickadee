@@ -40,6 +40,12 @@ module Api
       render :index
     end
 
+    def destroy
+      @user_region = current_user.user_regions.find_by(region_id: params[:id])
+      @user_region.destroy
+      render json: @user_region, status: 200
+    end
+
     def countries
       @countries = []
       countries = Region.all.where("county IS NULL and state IS NULL")
