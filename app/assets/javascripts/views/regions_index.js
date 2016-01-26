@@ -14,7 +14,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     "click .modal-backdrop":"closeGreeting",
     "click .greeting-button":"closeGreeting",
     "click .view-toggle":"toggleView",
-    "click .delete-region":"deleteRegion",
+    "click .delete-region":"openDeleteModal",
   },
 
   newRegion: function (event) {
@@ -69,7 +69,12 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
   },
 
   displayGreeting: function () {
-    this.greetingWindow = new Chickadee.Views.GreetingWindow();
+    this.greetingWindow = new Chickadee.Views.Modal({
+      header: "Welcome to Chickadee!",
+      message: "Chickadee allows you learn bird songs by studying species from the regions of your choice.\n" +
+        "This is where we'll keep track of the regions that you're studying.\n" +
+        "Click \"New Region\" to get started!"
+    });
     this.$el.append(this.greetingWindow.render().el);
     this.greetingWindow.$el.fadeIn(300);
   },
@@ -96,9 +101,20 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     this.viewMode = this.viewMode === 'icon' ? 'list' : 'icon';
   },
 
-  deleteRegion: function(event) {
+  openDeleteModal: function(event) {
     event.stopPropagation();
-    var id = $(event.currentTarget).parent().data()["region_id"]
+    var subview = new Chickadee.Views.Modal({
+      message: "You will lose all experience and statistics if you delete this region.",
+      isConfirm: true,
+      confirmCallback: function() {
+        this.deleteRegion(event);
+      }.bind(this)
+    })
+    this.$el.prepend(subview.render().el);
+  },
+
+  deleteRegion: function(event) {
+    var id = $(event.currentTarget).parent().data()["region_id"];
     $.ajax({
       url: "/api/regions/" + id.toString(),
       method: 'DELETE',

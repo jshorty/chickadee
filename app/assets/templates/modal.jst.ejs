@@ -1,0 +1,22 @@
+<!-- styles: modal.css, greeting_window.css -->
+
+<div class='modal-window' 'modal-tall'>
+
+  <% if (isConfirm) { %>
+    <span class='modal-header'>Are you sure?</span>
+  <% } else { %>
+    <span class='modal-header'><%= header %></span>
+  <% } %>
+
+  <p class="modal-message">
+    <%= message %>
+  </p>
+
+  <% if (isConfirm) { %>
+    <button class="confirm-true">OK</button>
+    <button class="confirm-false">Cancel</button>
+  <% } else { %>
+    <button class="ok-button">OK</button>
+  <% } %>
+
+</div>
