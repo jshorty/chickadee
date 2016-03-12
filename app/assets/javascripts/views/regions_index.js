@@ -76,6 +76,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
         "Click \"New Region\" to get started!"
     });
     this.$el.append(this.greetingWindow.render().el);
+    this.greetingWindow.$el.find(".modal-window").addClass('modal-tight')
     this.greetingWindow.$el.fadeIn(300);
   },
 
@@ -111,6 +112,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
       }.bind(this)
     })
     this.$el.prepend(subview.render().el);
+    subview.$el.fadeIn(300);
   },
 
   deleteRegion: function(event) {

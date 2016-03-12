@@ -3,7 +3,7 @@ Chickadee.Views.SignUp = Backbone.View.extend({
   template: JST["sign_up"],
 
   events: {
-    "click .go-button":"submit"
+    "click .get-started-button":"submit"
   },
 
   tagName: "section",

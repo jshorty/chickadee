@@ -1,22 +1,31 @@
 <!-- styles: modal.css, greeting_window.css -->
 
-<div class='modal-window' 'modal-tall'>
 
-  <% if (isConfirm) { %>
+<% if (isConfirm) { %>
+  <div class='modal-window modal-tight'>
     <span class='modal-header'>Are you sure?</span>
-  <% } else { %>
+<% } else { %>
+  <div class='modal-window'>
     <span class='modal-header'><%= header %></span>
-  <% } %>
+<% } %>
 
+<% if (!useButtons) { %>
   <p class="modal-message">
     <%= message %>
   </p>
+<% } else { %>
+  <% buttons.forEach(function (button) { %>
+    <button class="<%= button.class %>"><%= button.text %></button>
+  <% }) %>
+<% } %>
 
   <% if (isConfirm) { %>
-    <button class="confirm-true">OK</button>
-    <button class="confirm-false">Cancel</button>
-  <% } else { %>
-    <button class="ok-button">OK</button>
+    <br>
+    <br>
+    <button class="confirm-true button button-green">OK</button>
+    <button class="confirm-false button button-orange">Cancel</button>
+  <% } else if (!useButtons) { %>
+    <button class="button button-green ok-button">OK</button>
   <% } %>
 
 </div>

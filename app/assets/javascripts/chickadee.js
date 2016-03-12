@@ -6,6 +6,13 @@ window.Chickadee = {
   initialize: function() {
     var $header = $("#header-content")
     var $main = $("#main-content");
+    setInterval(function() {
+      if ($main.height() === 0) {
+        $main.css('background', 'none')
+      } else {
+        $main.css('background-color', '#eee');
+      }
+    }, 500);
 
     Chickadee.Collections.regions = new Chickadee.Collections.Regions()
     Chickadee.Collections.regions.fetch();

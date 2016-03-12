@@ -8,6 +8,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "":"welcome",
+    "about":"about",
     "profile":"userProfile",
     "birds":"regionShow",
     "quiz/:regionId":"quizShow",
@@ -18,6 +19,10 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     "loading":"loading",
     "_=_":"welcome",
     "*nomatch":"notFound",
+  },
+
+  about: function() {
+    this._swapView(new Chickadee.Views.About(), true);
   },
 
   backToWelcome: function () {
@@ -33,7 +38,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
       var region = new Chickadee.Models.Region();
       this._swapView(new Chickadee.Views.RegionForm({model: region}));
     } else {
-      this._swapView(new Chickadee.Views.Welcome());
+      this._swapView(new Chickadee.Views.Welcome(), true);
     }
   },
 
@@ -100,7 +105,8 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     if (this._requireLoggedOut()) {
       this._swapView(new Chickadee.Views.Welcome({
         model: Chickadee.Models.currentUser
-      }));
+      }), true);
+      $("body").addClass("image-body")
     } else {
     Backbone.history.navigate("regions", {trigger: true})
     }
@@ -116,15 +122,22 @@ Chickadee.Routers.Router = Backbone.Router.extend({
     return loggedOut;
   },
 
-  _swapView: function (view) {
-    var curHeight = this.$main.height();
+  _swapView: function (view, hideFlexBox) {
+    var curHeight = this.$main.height() + 2000;
+    if (!hideFlexBox) {
+      this.$main.css('display', 'none')
+    }
     this.currentView && this.currentView.remove();
     this.currentView = view;
     this.$main.html(this.currentView.render().el);
-    this.$main.css('height', 'auto')
+    this.$main.css('display', 'block');
+    this.$main.css('height', 'auto');
+    if (!hideFlexBox) {
+      this.$main.css('padding', '20px');
+    }
     var autoHeight = this.$main.height();
     if (!(view instanceof Chickadee.Views.Welcome)) {
-      this.$main.height(curHeight).animate({height: autoHeight}, 500);
+      this.$main.height(curHeight).animate({height: autoHeight}, 800);
     }
   },
 });

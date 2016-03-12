@@ -1,8 +1,10 @@
-<h1><%= user.name() %></h1>
-<img class="user-image" src="<%= user.get('image_url_medium') %>">
+<div class="image-upload-pane">
+  <h1><%= user.name() %></h1>
+  <img class="user-image" src="<%= user.get('image_url_medium') %>">
 
-<label class="image-upload-label" for="user-image-input">Profile Image</label>
-<input type="file" name="user[image]" id="user-image-input">
+  <label class="image-upload-label" for="user-image-input">Profile Image</label>
+  <input type="file" name="user[image]" id="user-image-input">
+</div>
 
 <label for="user_name">Display Name</label>
 <input type="text" name="user[alias]" id="user_name" value="<%= user.escape('alias') %>">

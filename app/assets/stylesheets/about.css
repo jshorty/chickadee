@@ -1,0 +1,44 @@
+.about-background {
+  background-image: url('sparrow-2-short.jpg');
+  background-size: cover;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: background-image 0.5s linear;
+}
+
+#main-content .about-background .welcome-message p {
+  text-align: left;
+  clear: left;
+}
+
+.welcome-message a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  .about-background {
+    background: none;
+  }
+
+  .about-background::after {
+    content: "";
+    background: url('sparrow-2-short.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    transition: background-image 0.5s linear;
+    z-index: -1;
+  }
+
+  .about-background .welcome-message {
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+  }
+}

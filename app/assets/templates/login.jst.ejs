@@ -4,13 +4,19 @@
   <span class='login-message'>LOGIN!</span>
 
   <form>
+    <div class="login-error-box">
+      <span class="login-error">Invalid email or password.</span>
+    </div class="login-error-box">
+
     <label for="login-email">Email</label>
     <input type="text" id="login-email" name="user[email]">
 
     <label for="login-password">Password</label>
     <input type="password" id="login-password" name="user[password]">
+    <small class="password-link">Forgot Password?</small>
+    <br>
 
-    <button class="go-button">GO</button>
-    <span class='login-error'>Invalid email or password.</span>
+
+    <button class="button button-green">GO</button>
   </form>
 </div>

@@ -89,6 +89,45 @@ small {
   font-size: 11px;
 }
 
+button.button {
+  border-radius: 10px;
+  background-color: #333;
+  color: #FFF;
+  font-size: 16px;
+  padding: 15px 50px;
+  transition: none;
+}
+
+button.button:hover {
+  cursor: pointer;
+  transition: background-color 500ms ease, box-shadow 1s;
+  box-shadow: 0px 0px 4px #000;
+}
+
+button.button.button-green {
+  background-color: #669966;
+}
+
+button.button.button-green:hover {
+  background-color: #336600;
+}
+
+button.button.button-orange {
+  background-color: #996600;
+}
+
+button.button.button-orange:hover {
+  background-color: #CC6633;
+}
+
+button.button.button-gray {
+  background-color: #444;
+}
+
+button.button.button-gray:hover {
+  background-color: #666;
+}
+
 /*HEADER*/
 
 header {
@@ -99,14 +138,64 @@ header {
   font-weight: 700;
 }
 
-@media screen and (max-width: 680px) {
-  header {
-    height: 140px;
-  }
+header .dropdown {
+  z-index: 5;
+}
 
+#nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
   nav ul.nav-right.group {
     float: left;
     margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  nav ul.nav-right.group {
+    display: none;
+  }
+  /* Awesome hamburger icon by Elijah Manor http://codepen.io/elijahmanor/pen/Igpoe */
+  #nav-toggle {
+    display: block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  header #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  #nav-toggle span:before {
+    top: -10px;
+  }
+  #nav-toggle span:after {
+    bottom: -10px;
+  }
+  #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    transition: all 500ms ease-in-out;
+  }
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -124,9 +213,14 @@ nav {
 }
 
 nav .nav-left {
+  float: left;
+}
+
+nav .nav-left button {
   display: block;
   float: left;
-  letter-spacing: 1px;
+  margin-top: -10px;
+  font-weight: normal;
 }
 
 nav .nav-right {
@@ -137,17 +231,8 @@ nav .nav-right {
 
 nav .nav-left li {
   float: left;
-  margin: 17px 10px 15px 10px;
+  margin: 17px 0px 15px 0px;
   padding: 5px 10px 5px 10px;
-  border-radius: 50px;
-}
-
-nav .nav-left li:hover {
-  background: #666;
-}
-
-nav .nav-left li.current {
-  background: #666;
 }
 
 nav .nav-right li {
@@ -236,13 +321,11 @@ nav .streak-count .dropdown .streak-msg {
 }
 
 nav .login {
-  cursor: pointer;
-  margin: 17px 10px 15px 10px;
-  padding: 5px 10px 5px 10px;
-  border-radius: 10px;
-  background: #666;
-  color: #fff;
-  letter-spacing: 1px;
+  margin-top: -10px;
+}
+
+nav .about {
+  margin-top: -10px;
 }
 
 div.welcome-popdown {

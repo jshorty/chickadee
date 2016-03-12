@@ -30,7 +30,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
     if (this.songInfo) { // Fade in the song sampler
       setTimeout(function() {
         this.$el.find('#song-sampler').css('opacity', '1.0');
-      }.bind(this), 1000);
+      }.bind(this), 100);
     }
     return this;
   },
@@ -46,7 +46,7 @@ Chickadee.Views.Welcome = Backbone.View.extend({
   openSignUpWindow: function(event){
     this.signUpWindow = new Chickadee.Views.SignUp();
     this.$el.append(this.signUpWindow.render().el);
-    this.signUpWindow.$el.fadeIn(300)
+    this.signUpWindow.$el.fadeIn(300);
   },
 
   closeSignUpWindow: function (event) {

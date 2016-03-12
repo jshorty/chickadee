@@ -2,8 +2,6 @@
   width: 250px;
   height: 350px;
   border: 5px solid #999;
-  border-radius: 15px;
-  padding: 50px 20px 20px 20px;
   background-color: #333;
   text-align: center;
   font-weight: bold;
@@ -17,7 +15,7 @@
 .login-window > form {
   display: block;
   height: 200px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .login-window label {
@@ -28,21 +26,27 @@
 .login-window input {
   display: block;
   height: 24px;
-  width: 150px;
+  width: 200px;
   margin: 10px auto;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ccc;
   font-size: 12px;
   font-weight: 400;
 }
 
-.login-window button {
-  margin-top: 50px;
+.login-window input textarea {
+  color: #FFF;
+}
+
+.login-window .login-error-box {
+  width: 220px;
+  height: 20px;
+  margin: 0px auto 15px auto;
+  text-align: center;
 }
 
 .login-window .login-error {
   display: block;
-  margin-top: 10px;
-  font-size: 16px;
+  font-size: 14px;
   color: #FFCC00;
 }

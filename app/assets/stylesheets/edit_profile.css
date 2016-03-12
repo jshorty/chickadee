@@ -1,0 +1,55 @@
+.image-upload-pane {
+  width: 300px;
+  float: left;
+}
+
+.user-image {
+  float; left;
+  border-radius: 50%;
+  display: block;
+  width: 150px;
+  margin: 20px auto 30px auto;
+}
+
+form h2 {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+
+#main-content form .image-upload-pane label.image-upload-label {
+  text-align: center;
+  width: 100%;
+}
+
+form input#user-image-input {
+  font-size: 12px;
+  background: transparent;
+  width: 170px;
+  position: relative;
+  padding-left: 22px;
+}
+
+#main-content form.edit-profile {
+  height: 700px;
+}
+
+#user-image-input {
+  font-family: sans-serif;
+}
+
+#main-content form.edit-profile label {
+  width: 300px;
+  text-align: left;
+  font-size: 16px;
+}
+
+#main-content form.edit-profile textarea {
+  width: 300px;
+  background: #fff;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}

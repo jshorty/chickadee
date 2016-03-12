@@ -13,6 +13,7 @@ Chickadee.Views.Header = Backbone.View.extend({
   template: JST["header_public"],
 
   events: {
+    "click .about":"goToAbout",
     "click .login":"openLoginWindow",
     "click .modal-backdrop":"closeLoginWindow",
     "click .logout":"logout",
@@ -20,7 +21,8 @@ Chickadee.Views.Header = Backbone.View.extend({
     "click .profile":"openMyProfile",
     "click .home-link":"goToHome",
     "click .logo":"goToHome",
-    "click .birds-link":"goToBirds"
+    "click .birds-link":"goToBirds",
+    "click #nav-toggle":"toggleNav"
   },
 
   render: function (options) {
@@ -42,6 +44,10 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   openLoginWindow: function (event) {
+    if (this.dropdown) {
+      this.toggleNav();
+    }
+
     if (!this.openedLogin) {
       this.openedLogin = true;
       this.loginWindow = new Chickadee.Views.Login();
@@ -64,11 +70,24 @@ Chickadee.Views.Header = Backbone.View.extend({
     Backbone.history.navigate("profile", {trigger: true});
   },
 
-  goToHome: function (event) {
+  goToAbout: function(event) {
+    if (this.dropdown) {
+      this.toggleNav();
+    }
     event.preventDefault();
+    Backbone.history.navigate("about", {trigger: true});
+  },
+
+  goToHome: function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+    if (this.dropdown) {
+      this.toggleNav();
+    }
     this.$(".home-link").parent().addClass("current");
     this.$(".birds-link").parent().removeClass("current");
-    Backbone.history.navigate("regions", {trigger: true})
+    Backbone.history.navigate("regions", {trigger: true});
   },
 
   goToBirds: function (event) {
@@ -121,6 +140,38 @@ Chickadee.Views.Header = Backbone.View.extend({
       setTimeout(function () {
         this.$(".login-error").fadeOut(300);
       }.bind(this), 3000)
+    }.bind(this));
+  },
+
+  toggleNav: function(event) {
+    if (event) {
+      event.preventDefault();
+    }
+    var nav = event ? $(event.currentTarget) : $('#nav-toggle');
+    if (nav.hasClass('active')) {
+      nav.removeClass('active');
+      this.hideDropdown();
+    } else {
+      nav.addClass('active');
+      this.showDropdown();
+    }
+  },
+
+  showDropdown: function() {
+    this.dropdown = new Chickadee.Views.Modal({
+      header: 'chickadee',
+      useButtons: true,
+      buttons: [{text: 'LOGIN', class: 'login'}, {text: 'ABOUT', class: 'about'}, {text: 'HOME', class: 'home-link'}]
+    });
+    $(".dropdown").append(this.dropdown.render().el);
+    this.dropdown.$el.fadeIn(300);
+    $("#nav-toggle").css({'z-index': '10', 'right': '0px', 'position': 'fixed'});
+  },
+
+  hideDropdown: function() {
+    this.dropdown.$el.fadeOut(300, function() {
+      this.dropdown.remove();
+      this.dropdown = undefined;
     }.bind(this));
   }
 });

@@ -17,3 +17,6 @@
 
 # Ignore the worst thing in the world!
 .DS_Store
+
+# Ignore credentials
+/docs/digital_ocean_creds
