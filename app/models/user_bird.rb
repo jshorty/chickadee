@@ -25,13 +25,13 @@ class UserBird < ActiveRecord::Base
     }
   end
 
-  # HACK: Real solution here is to remove jbuilder templates, just
-  # use simpler `render json:` syntax instead.
-  def as_json(options = {})
-    super.merge(options)
-  end
-
-  def serializable_hash
+  # # HACK: Real solution here is to remove jbuilder templates, just
+  # # use simpler `render json:` syntax instead.
+  # def to_json(options = {})
+  #   super.merge(options)
+  # end
+  #
+  def serializable_hash(options = {})
     super.merge({common_name: bird.common_name, sci_name: bird.sci_name})
   end
 end
