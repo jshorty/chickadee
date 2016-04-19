@@ -36,7 +36,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var message = "Loading audio..."
     this.$(".fade-box").fadeOut(500, function () {
       this.$(".audio-box").html(JST["loading"]({message: message}));
-      this.$(".spinner").attr("src", "../spinner-dark.gif");
       this.$(".audio-box").prepend("<br><br><br>")
     }.bind(this));
   },

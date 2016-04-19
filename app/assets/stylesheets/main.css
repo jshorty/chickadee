@@ -110,7 +110,7 @@ form div.spinner-box {
 .audio-box {
   background: #666;
   width: 530px;
-  height: 280px;
+  height: 250px;
   margin: 30px auto 0px auto;
   border-radius: 20px;
   padding: 10px;
@@ -127,13 +127,13 @@ form div.spinner-box {
   font-size: 100px;
   color: #aaa;
   width: 45px;
-  top: 60px;
+  top: 65px;
 }
 
 .bird-silhouette {
-  width: 250px;
+  width: 220px;
   display: block;
-  margin: 30px 150px ;
+  margin: 20px 150px 18px;
 }
 
 .flash-box {
@@ -196,21 +196,18 @@ form div.spinner-box {
 }
 
 .answer-choices > ul {
-  width: 560px;
+  width: 540px;
   margin: 0 auto;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .answer-choices > ul > li > button.answer {
-  text-align: center;
-  background: #339966;
   width: 240px;
   height: 21px;
-  margin: 10px;
-  padding: 40px 10px;
-  border-radius: 20px;
+  text-align: center;
+  margin: 5px;
+  padding: 25px 10px;
   font-size: 18px;
-  color: #fff;
   float: left;
   cursor: pointer;
 }
@@ -243,9 +240,9 @@ h1.result-header {
   margin: 0 auto;
   height: 200px;
 }
-h1.loading-message {
-  margin-bottom: 20px;
-  color: #aaa;
+.loading-message {
+  display: block;
+  margin: 0 auto;
 }
 .spinner {
   margin: 0 auto;

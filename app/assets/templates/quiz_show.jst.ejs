@@ -17,7 +17,7 @@
   <div class='audio-box'>
 
     <div class='fade-box'>
-      <h2>What do you hear?</h2>
+      <h3>What do you hear?</h3>
 
       <audio src="<%=question.get('audio_url')%>" controls="true" autoplay="true">
         Your browser does not support the audio player element
@@ -44,7 +44,7 @@
     <ul class= "group">
       <% question.answerChoices().forEach(function (answer) { %>
         <li>
-          <button class="answer" data-id="<%= answer.id %>">
+          <button class="button button-green answer" data-id="<%= answer.id %>">
             <%= answer.common_name %>
           </button>
         </li>
