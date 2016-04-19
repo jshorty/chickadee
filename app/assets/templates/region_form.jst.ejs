@@ -1,7 +1,8 @@
 <h1>Add a new study region</h1>
 <p>We'll go find out what bird species have been seen there!</p>
+<br>
 <fieldset>
-<label for="new-region-country"><strong>Country*</strong></label>
+<label for="new-region-country"><strong>Country</strong></label>
 <input type="text"
        name="region[country]"
        id="new-region-country"
@@ -13,12 +14,12 @@
        id="new-region-state"
        value='<%= region.get('state') %>'>
 
-<label for="new-region-county">County</label>
+<label for="new-region-county">County/Subregion</label>
 <input type="text"
        name="region[county]"
        id="new-region-county"
        value='<% region.get('county') %>'>
 </fieldset>
 <div class="spinner-box"></div>
-<button class="back-button">Back</button>
-<button class="go-button">Find birds!</button>
+<button class="button button-orange back-button">BACK</button>
+<button class="button button-green go-button">ADD REGION</button>

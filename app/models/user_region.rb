@@ -65,7 +65,11 @@ class UserRegion < ActiveRecord::Base
 
   def get_photo_if_new
     if region.image.url == "/images/original/missing.png"
-      region.get_photo
+      region.get_image
     end
+  end
+
+  def percent_correct
+    (correct_answers * 100.0 / total_answers).round(1)
   end
 end

@@ -5,7 +5,6 @@
 
 #main-content h1 {
   text-align: center;
-  font-size: 36px;
 }
 
 #main-content p {
@@ -28,7 +27,6 @@
   padding: 0px 10px;
   text-align: center;
   cursor: pointer;
-
 }
 
 #main-content .region-menu-buttons li.region-item div.region-level {
@@ -95,11 +93,54 @@
   background-color: #ccc;
   border-radius: 10px;
   margin-bottom: 2px;
-  padding: 3px 0px 3px 30px;
+  padding-left: 40px;
+  height: 50px;
+}
+@media screen and (max-width: 1080px) {
+  #main-content #region-menu {
+    float: none;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main-content #region-menu .region-item {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  #main-content ul.region-menu.region-menu-buttons {
+    width: 330px;
+  }
+
+  #main-content #region-menu {
+    width: 340px;
+  }
+
+  .regions-index-header {
+    width: 340px;
+    margin: 0 auto;
+  }
+
+  .region-menu-list li {
+    width: 330px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #main-content .region-menu-list li.new {
+    padding-left: 5px;
+  }
+
+  #main-content .region-menu-list p {
+    font-size: 14px;
+  }
 }
 
 .region-menu-list li.new {
-  padding: 3px 0px;
+  padding-left: 0px;
 }
 
 .region-menu-list li:hover {
@@ -117,7 +158,7 @@
 }
 
 .region-menu-list p {
-  padding: 3px 0px;
+  padding: 16px 0px;
 }
 
 .region-menu-buttons .delete-region {
@@ -126,12 +167,12 @@
 
 .region-menu-list .delete-region {
   visibility: hidden;
-  padding-top: 2px;
+  padding-top: 8px;
   padding-right: 10px;
   opacity: 0.3;
   display: block;
   float: right;
-  width: 20px;
+  width: 30px;
 }
 
 .region-menu-list li:hover .delete-region {

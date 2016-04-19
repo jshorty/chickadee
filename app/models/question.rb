@@ -8,22 +8,22 @@ class Question < ActiveRecord::Base
     foreign_key: :quiz_id
 
   belongs_to :correct_answer,
-    class_name: "Bird",
+    class_name: "UserBird",
     primary_key: :id,
     foreign_key: :bird_id
 
   belongs_to :answer_a,
-    class_name: "Bird",
+    class_name: "UserBird",
     primary_key: :id,
     foreign_key: :choice_a
 
   belongs_to :answer_b,
-    class_name: "Bird",
+    class_name: "UserBird",
     primary_key: :id,
     foreign_key: :choice_b
 
   belongs_to :answer_c,
-    class_name: "Bird",
+    class_name: "UserBird",
     primary_key: :id,
     foreign_key: :choice_c
 

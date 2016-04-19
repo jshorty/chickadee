@@ -89,6 +89,23 @@ small {
   font-size: 11px;
 }
 
+textarea {
+  resize: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
 button.button {
   border-radius: 10px;
   background-color: #333;
@@ -100,7 +117,7 @@ button.button {
 
 button.button:hover {
   cursor: pointer;
-  transition: background-color 500ms ease, box-shadow 1s;
+  transition: background-color 500ms ease, box-shadow 0.5s;
   box-shadow: 0px 0px 4px #000;
 }
 
@@ -146,26 +163,20 @@ header .dropdown {
   display: none;
 }
 
-@media screen and (max-width: 680px) {
-  nav ul.nav-right.group {
-    float: left;
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  nav ul.nav-right.group {
-    display: none;
-  }
-  /* Awesome hamburger icon by Elijah Manor http://codepen.io/elijahmanor/pen/Igpoe */
-  #nav-toggle {
-    display: block;
+@media screen and (max-width: 990px) {
+  .private-toggle {
+    display: block !important;
     float: right;
     margin-top: 20px;
     margin-right: 20px;
     cursor: pointer;
     padding: 10px 35px 16px 0px;
   }
+
+  .private-toggle span {
+    display: inline
+  }
+
   header #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
     cursor: pointer;
     border-radius: 1px;
@@ -196,6 +207,59 @@ header .dropdown {
   }
   #nav-toggle.active span:after {
     transform: rotate(-45deg);
+  }
+
+  nav.private .nav-left.group {
+    display: none;
+  }
+
+  nav.private ul.nav-right.group {
+    display: list-item;
+    float: left;
+    margin-left: 50px;
+  }
+
+  nav.private .current-user {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  body {
+    background-color: #eee;
+  }
+}
+
+@media screen and (max-width: 680px) {
+
+  nav ul.nav-right.group {
+    float: left;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  nav ul.nav-right.group {
+    display: none;
+  }
+  /* Awesome hamburger icon by Elijah Manor http://codepen.io/elijahmanor/pen/Igpoe */
+  #nav-toggle {
+    display: block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  nav.private ul.nav-right.group {
+    display: none;
+  }
+
+  .welcome-popdown-wrapper {
+    display: none;
   }
 }
 
@@ -246,7 +310,7 @@ nav .nav-right li.current-user-img {
 
 nav .nav-right li.current-user-img img {
   border: 1px solid transparent;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 50px;
   height: 50px;
 }
@@ -328,12 +392,14 @@ nav .about {
   margin-top: -10px;
 }
 
-div.welcome-popdown {
+.welcome-popdown {
   z-index: 10;
   position: fixed;
   top: 4px;
   right: 20px;
-  background: #33cc99;
-  padding: 20px 23px;
-  border-radius: 20px;
+  height: 30px;
+}
+
+.welcome-popdown:hover {
+  cursor: default;
 }

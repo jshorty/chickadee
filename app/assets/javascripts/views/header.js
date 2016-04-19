@@ -92,6 +92,9 @@ Chickadee.Views.Header = Backbone.View.extend({
 
   goToBirds: function (event) {
     event.preventDefault();
+    if (this.dropdown) {
+      this.toggleNav();
+    }
     this.$(".birds-link").parent().addClass("current");
     this.$(".home-link").parent().removeClass("current");
     Backbone.history.navigate("birds", {trigger: true})
@@ -120,6 +123,9 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   logout: function (event) {
+    if (this.dropdown) {
+      this.toggleNav();
+    }
     event.preventDefault();
     this.model.logout();
   },
@@ -158,18 +164,31 @@ Chickadee.Views.Header = Backbone.View.extend({
   },
 
   showDropdown: function() {
-    this.dropdown = new Chickadee.Views.Modal({
-      header: 'chickadee',
-      useButtons: true,
-      buttons: [{text: 'LOGIN', class: 'login'}, {text: 'ABOUT', class: 'about'}, {text: 'HOME', class: 'home-link'}]
-    });
+    if (!this.model.isLoggedIn()) {
+      this.dropdown = new Chickadee.Views.Modal({
+        header: 'chickadee',
+        useButtons: true,
+        buttons: [{text: 'LOGIN', class: 'login'}, {text: 'ABOUT', class: 'about'}, {text: 'HOME', class: 'home-link'}]
+      });
+    } else {
+      this.dropdown = new Chickadee.Views.Modal({
+        header: 'chickadee',
+        useButtons: true,
+        buttons: [
+          {text: 'STUDY', class: 'home-link'},
+          {text: 'BIRDS', class: 'birds-link'},
+          {text: 'ABOUT', class: 'about'},
+          {text: 'LOGOUT', class: 'logout'}
+        ]
+      });
+    }
     $(".dropdown").append(this.dropdown.render().el);
-    this.dropdown.$el.fadeIn(300);
-    $("#nav-toggle").css({'z-index': '10', 'right': '0px', 'position': 'fixed'});
+    $('.modal-backdrop').fadeIn(300);
+    $("#nav-toggle").css({'z-index': '1000', 'right': '0px', 'position': 'fixed'});
   },
 
   hideDropdown: function() {
-    this.dropdown.$el.fadeOut(300, function() {
+    $('.modal-backdrop').fadeOut(300, function() {
       this.dropdown.remove();
       this.dropdown = undefined;
     }.bind(this));

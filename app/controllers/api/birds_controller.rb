@@ -39,10 +39,15 @@ module Api
       }
     end
 
-    private
-
-      def bird_params
-        params.require(:bird).permit(:id, :common_name, :sci_name, :song_desc)
-      end
+    def random_image
+      photo = BirdPhoto.all.sample || Bird.all.sample.random_photo
+      photo.retrieve_file
+      render json: {
+        bird: "#{photo.bird.common_name} (<i>#{photo.bird.sci_name}</i>)",
+        url: photo.image.url,
+        flickr_url: photo.flickr_url,
+        owner: photo.owner,
+      }
+    end
   end
 end

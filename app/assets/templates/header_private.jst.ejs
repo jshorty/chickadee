@@ -1,13 +1,16 @@
 <meta name="viewport" content="width=device-width">
 
-<div class="welcome-popdown">
-  Welcome back, <%=user.name()%>!
+<div class="welcome-popdown-wrapper">
+  <button class="welcome-popdown button button-green">
+    Welcome back, <%=user.name()%>!
+  </button>
 </div>
 
 
 <h1 class="logo">chickadee</h1>
 
-<nav>
+<nav class="private">
+  <div class='dropdown'></div>
   <ul class="nav-left group">
     <li><button class="button home-link">STUDY</button></li>
     <li><button class="button birds-link">BIRDS</button></li>
@@ -35,4 +38,5 @@
       </ul>
     </li>
   </ul>
+  <a id="nav-toggle" class="private-toggle" href="#"><span></span></a>
 </nav>

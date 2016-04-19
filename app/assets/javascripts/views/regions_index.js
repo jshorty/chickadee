@@ -10,7 +10,6 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
 
   events: {
     "click .new-region-link":"newRegion",
-    "click .region-item":"goToQuiz",
     "click .modal-backdrop":"closeGreeting",
     "click .greeting-button":"closeGreeting",
     "click .view-toggle":"toggleView",
@@ -23,13 +22,6 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     });
   },
 
-  goToQuiz: function (event) {
-    var region_id = $(event.currentTarget).data("region_id");
-    this.$el.fadeOut(200, function () {
-      Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
-    });
-  },
-
   readjustHeight: function () {
     Chickadee.Routers.router.readjustHeight();
   },
@@ -38,6 +30,7 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
     this.viewMode = 'icon';
     var content = this.template({regions: this.collection});
     this.$el.html(content);
+    this.toggleView();
     this.collection.each(function (region) {
       var subview = new Chickadee.Views.RegionsIndexItem({model: region});
       this.subviews.push(subview);
@@ -105,8 +98,9 @@ Chickadee.Views.RegionsIndex = Backbone.View.extend({
   openDeleteModal: function(event) {
     event.stopPropagation();
     var subview = new Chickadee.Views.Modal({
-      message: "You will lose all experience and statistics if you delete this region.",
+      message: "Are you sure? You will lose all experience and statistics if you delete this region.",
       isConfirm: true,
+      header: 'Delete Region',
       confirmCallback: function() {
         this.deleteRegion(event);
       }.bind(this)

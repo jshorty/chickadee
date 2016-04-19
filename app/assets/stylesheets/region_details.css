@@ -1,0 +1,81 @@
+#region-details {
+  float: left;
+  border: 10px solid #ccc;
+  border-radius: 5px;
+  width: 450px;
+  min-height: 324px;
+  margin-left: 50px;
+}
+
+#region-details h3:first-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#region-details .fake-image {
+  padding-top: 70px;
+  margin: 0 auto;
+  width: 400px;
+  height: 186px;
+  background-color: #ccc;
+}
+
+#region-details .bird-image {
+  margin: 0 auto;
+  max-width: 400px;
+  max-height: 256px;
+}
+
+#region-details .bird-info {
+  color: #666;
+  max-width: 420px;
+  margin: 0 auto 10px auto;
+  text-align: center;
+  font-size: 10px;
+}
+
+#region-details .fake-map {
+  background-color: #999;
+  width: 250px;
+  height: 250px;
+}
+
+#region-details button {
+  margin: 10px 0;
+  width: 100px;
+}
+
+#region-details .image-wrapper {
+  min-width: 450px;
+  min-height: 259px;
+}
+
+#region-details .image-wrapper > .spinner {
+  margin-top: 60px;
+  margin-bottom: -50px;
+}
+
+@media screen and (max-width: 1080px) {
+  #region-details {
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin: 0 auto;
+  }
+}
+
+.random-bird-photo {
+  width: 50%;
+  height: 50%;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+iframe {
+  display: none;
+  -webkit-filter: sepia(0.7);
+  -moz-filter: sepia(0.7);
+  -ms-filter: sepia(0.7);
+  -o-filter: sepia(0.7);
+  filter: sepia(0.7);
+}

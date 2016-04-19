@@ -1,11 +1,45 @@
+.profile-form-wrapper {
+  width: 660px;
+  margin: 0 auto;
+}
+
 .image-upload-pane {
-  width: 300px;
   float: left;
+  width: 300px;
+  display: inline-block;
+}
+
+.user-details-pane {
+  float: right;
+  width: 350px;
+  display: inline-block;
+}
+
+#main-content form.edit-profile {
+  min-height: 450px;
+}
+
+@media screen and (max-width: 950px) {
+  .profile-form-wrapper {
+    width: auto;
+    padding-bottom: 40px;
+  }
+
+  .user-details-pane, .image-upload-pane {
+    margin: 0 auto;
+    float: none;
+    clear: both;
+  }
+
+  #main-content form.edit-profile {
+    min-height: auto;
+  }
 }
 
 .user-image {
   float; left;
-  border-radius: 50%;
+  border-radius: 5px;
+  border: 3px solid #aaa;
   display: block;
   width: 150px;
   margin: 20px auto 30px auto;
@@ -28,10 +62,6 @@ form input#user-image-input {
   width: 170px;
   position: relative;
   padding-left: 22px;
-}
-
-#main-content form.edit-profile {
-  height: 700px;
 }
 
 #user-image-input {

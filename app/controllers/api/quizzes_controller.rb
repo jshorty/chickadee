@@ -11,7 +11,7 @@ module Api
           return
         end
         begin
-          @quiz.generate_questions(10)
+          @quiz.generate_questions
         rescue
           render json: ["Region has too few birds for quiz"], status: 422
           return
@@ -20,8 +20,8 @@ module Api
 
       begin
         @question = @quiz.next_question
-        @song = @question.correct_answer.random_song
-      rescue NoMethodError
+        @song = @question.correct_answer.bird.random_song
+      rescue NoMethodError => e
         @quiz.regenerate_remaining_questions
         retry
       end
@@ -44,7 +44,7 @@ module Api
       @question = @quiz.next_question
 
       if @question
-        @song = @question.correct_answer.random_song
+        @song = @question.correct_answer.bird.random_song
       end
 
       render :show

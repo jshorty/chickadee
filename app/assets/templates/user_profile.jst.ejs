@@ -1,20 +1,22 @@
-<div class="image-upload-pane">
-  <h1><%= user.name() %></h1>
-  <img class="user-image" src="<%= user.get('image_url_medium') %>">
+<div class="profile-form-wrapper">
+  <div class="image-upload-pane">
+    <h1><%= user.name() %></h1>
+    <img class="user-image" src="<%= user.get('image_url_medium') %>">
 
-  <label class="image-upload-label" for="user-image-input">Profile Image</label>
-  <input type="file" name="user[image]" id="user-image-input">
+    <label class="image-upload-label" for="user-image-input">Profile Image</label>
+    <input type="file" name="user[image]" id="user-image-input">
+  </div>
+
+  <div class="user-details-pane">
+    <h3>Display Name</h3>
+    <input type="text" name="user[alias]" id="user_name" value="<%= user.escape('alias') %>">
+
+    <h3>About Me</h3>
+    <textarea name="user[about]" id="user_about"><%= user.escape('about') %></textarea>
+
+    <h3 for='user_favorite_bird'>Favorite Bird</h3>
+    <input type="text" name="user[favorite]" id="user_favorite_bird" value="<%=user.escape('favorite') %>">
+    <button class="button button-orange back-button">BACK</button>
+    <button class="button button-green go-button update-user-profile">UPDATE</button>
+  </div>
 </div>
-
-<label for="user_name">Display Name</label>
-<input type="text" name="user[alias]" id="user_name" value="<%= user.escape('alias') %>">
-
-<label for="user_about">About Me</label>
-<textarea name="user[about]" id="user_about"><%= user.escape('about') %></textarea>
-
-<label for="user_favorite_bird">Favorite Bird</label>
-<input type="text" name="user[favorite]" id="user_favorite_bird"
-  value="<%=user.escape('favorite') %>">
-
-<button class="back-button">Back</button>
-<button class="go-button update-user-profile">Update!</button>

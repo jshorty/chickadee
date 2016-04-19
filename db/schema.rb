@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104003414) do
+ActiveRecord::Schema.define(version: 20160409215248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,22 +100,34 @@ ActiveRecord::Schema.define(version: 20160104003414) do
     t.string   "rating"
   end
 
+  create_table "user_birds", force: :cascade do |t|
+    t.integer "user_id",                         null: false
+    t.integer "bird_id",                         null: false
+    t.integer "total_answers",   default: 0
+    t.integer "correct_answers", default: 0
+    t.boolean "is_favorite",     default: false
+  end
+
+  add_index "user_birds", ["user_id"], name: "index_user_birds_on_user_id", using: :btree
+
   create_table "user_regions", force: :cascade do |t|
-    t.integer  "user_id",                null: false
-    t.integer  "region_id",              null: false
+    t.integer  "user_id",                     null: false
+    t.integer  "region_id",                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "xp",         default: 0, null: false
-    t.integer  "level",      default: 1, null: false
-    t.integer  "xp_day2",    default: 0
-    t.integer  "xp_day3",    default: 0
-    t.integer  "xp_day4",    default: 0
-    t.integer  "xp_day5",    default: 0
-    t.integer  "xp_day6",    default: 0
-    t.integer  "xp_day7",    default: 0
-    t.string   "country",                null: false
+    t.integer  "xp",              default: 0, null: false
+    t.integer  "level",           default: 1, null: false
+    t.integer  "xp_day2",         default: 0
+    t.integer  "xp_day3",         default: 0
+    t.integer  "xp_day4",         default: 0
+    t.integer  "xp_day5",         default: 0
+    t.integer  "xp_day6",         default: 0
+    t.integer  "xp_day7",         default: 0
+    t.string   "country",                     null: false
     t.string   "state"
     t.string   "county"
+    t.integer  "total_answers",   default: 0
+    t.integer  "correct_answers", default: 0
   end
 
   add_index "user_regions", ["user_id"], name: "index_user_regions_on_user_id", using: :btree

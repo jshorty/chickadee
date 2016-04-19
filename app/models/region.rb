@@ -1,4 +1,10 @@
 class Region < ActiveRecord::Base
+  # Represents a region compatible with the eBird API, broken down
+  # by three levels of specificity- country, 'subregion 1' (referred to
+  # throughout Chickadee as 'state') and 'subregion 2' (referred to
+  # throughout Chickadee as 'county'). Region records are only created
+  # and maintained manually in the database.
+
   require 'open-uri'
 
   validates :country, :code, presence: true
@@ -37,7 +43,7 @@ class Region < ActiveRecord::Base
   #default_url: "https://s3.amazonaws.com/chickadee-development/images/user_image.jpg",
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  after_create :get_photo
+  after_create :get_image
 
   def name
     county_name = self.county ? "#{self.county}, " : ""
@@ -104,10 +110,22 @@ class Region < ActiveRecord::Base
     end
   end
 
+  InvalidQuizError = Class.new(StandardError)
+
   def quiz_question
+    # Deprecating
     parse_birds_from_ebird_data if self.birds.length < 4
     birds = self.birds.to_a.sample(4)
     unless birds.length == 4
+      raise InvalidQuizError.new("Not enough birds for a quiz.")
+    end
+    birds
+  end
+
+  def all_birds_for_quiz
+    parse_birds_from_ebird_data if birds.length < 4
+    birds.reload
+    unless birds.length >= 4
       raise InvalidQuizError.new("Not enough birds for a quiz.")
     end
     birds
@@ -123,6 +141,8 @@ class Region < ActiveRecord::Base
   end
 
   def self.find_most_specific(params)
+    # Give the user the benefit of the doubt and remove
+    # county, then state, if it helps find a related region.
     region = Region.find_by(params)
     unless region
       params["county"] = nil
@@ -132,10 +152,11 @@ class Region < ActiveRecord::Base
       params["state"] = nil
       region = Region.find_by(params)
     end
+    raise ActiveRecord::RecordNotFound unless region
     region
   end
 
-  def get_photo
+  def get_image
     FlickRaw.api_key = ENV["FLICKR_KEY"]
     FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
 
@@ -154,5 +175,24 @@ class Region < ActiveRecord::Base
 
     self.image = URI.parse(image.source)
     save!(validate: false)
+  end
+
+  def random_bird_photo_url
+    birds.sample.random_photo.image.url
+  end
+
+  def map_embed_url
+    "https://www.google.com/maps/embed/v1/search?key=#{ENV['GOOGLE_API_KEY']}&q=#{map_embed_query}"
+  end
+
+  def map_embed_query
+    query = if county
+      "#{county}+#{state}+#{country}" if county
+    elsif state
+      "#{state}+#{country}" if state
+    else
+      country
+    end
+    query.gsub(' ', '%20')
   end
 end

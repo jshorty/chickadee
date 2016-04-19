@@ -3,7 +3,7 @@ class Bird < ActiveRecord::Base
   # Since we're providing attribution, we can use everything except
   # code 0, which is 'All Rights Reserved'.
   MAX_PHOTOS = 5
-  IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
+
 
   validates :common_name, :sci_name, presence: true
   validates :sci_name, uniqueness: true
@@ -76,21 +76,10 @@ class Bird < ActiveRecord::Base
     end
   end
 
-  def get_photos! # Creates records in the database for new photos from Flickr.
-    photos = photo_search
-    return false if photos.empty?
-    photos[0...MAX_PHOTOS].each { |photo| BirdPhoto.create_photo_record(self, photo) if photo }
-    true
-  end
-
-  def photo_search
-    FlickRaw.api_key = ENV["FLICKR_KEY"]
-    FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
-
-    photos = flickr.photos.search(text: "#{sci_name} #{common_name}", license: IMAGE_LICENSES, sort: "interestingness-desc").to_a
-    photos = flickr.photos.search(text: sci_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
-    photos = flickr.photos.search(text: common_name, license: IMAGE_LICENSES, sort: "interestingness-desc").to_a if photos.empty?
-    photos
+  def get_photos!
+    # Finds photos via a Flickr search. If photos aren't found
+    # meeting the search criteria, a PhotoNotFoundError will be raised.
+    BirdPhoto.get_photos_for_bird(self)
   end
 
   def prioritize_songs_by_quality(song_payload, count)
@@ -112,32 +101,26 @@ class Bird < ActiveRecord::Base
     end
   end
 
-  def has_photos?
-    photographs.any? || get_photos!
-  end
-
   def random_photo
-    # Send some kind of alert here and link to a placeholder.
-    return false unless has_photos?
-
-    photos = photographs.shuffle
-    i = 0
-    while i < photos.length
+    # Find associated BirdPhotos. If we don't have any yet,
+    # find them on Flickr via #get_photos!. Randomly select
+    # one, ensure we have the file on S3, and return it.
+    get_photos! unless photographs.any?
+    photos = photographs.reload.shuffle
+    photos.each do |photo|
       begin
-        return photos[i] if photos[i].local || photos[i].retrieve_file
+        photo.retrieve_file
+        return photo
       rescue URI::InvalidURIError
-        song.destroy
-      ensure
-        i += 1
+        photos[i].destroy
       end
     end
   end
 
   def random_song
     self.get_songs unless self.has_songs
-    songs = self.songs.shuffle
+    songs = self.songs.reload.shuffle
     i = 0
-
     while i < songs.length
       begin
         return songs[i] if songs[i].local || songs[i].retrieve_file

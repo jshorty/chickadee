@@ -16,13 +16,17 @@
   display: block;
   margin: 0 auto;
   border: 3px solid #ccc;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #fff;
   width: 300px;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   padding: 5px 10px;
   margin-bottom: 20px;
+}
+
+.centered-form textarea {
+  height: 70px;
 }
 
 .centered-form button {

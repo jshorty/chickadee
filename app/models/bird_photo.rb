@@ -1,10 +1,18 @@
 require 'open-uri'
 
 class BirdPhoto < ActiveRecord::Base
-  # Desired photo size from Flickr (Medium is 500px width).
-  PHOTO_SIZE = "Medium"
-  IMAGE_MAX_WIDTH = "500"
-  IMAGE_MAX_HEIGHT = "320"
+  IMAGE_LICENSES = "1,2,3,4,5,6,7,8,9,10"
+  PHOTO_SEARCH_TERMS =
+  PHOTO_SIZE = "Medium" # Look for 500px width.
+  IMAGE_MAX_WIDTH = 500
+  IMAGE_MAX_HEIGHT = 320
+  MAX_PHOTOS_PER_BIRD = 5
+  PHOTO_SEARCH_DEFAULTS = {
+    license: IMAGE_LICENSES,
+    sort: "interestingness-desc",
+    content_type: 'photo',
+    tags: 'bird',
+  }
 
   has_attached_file :image
   # URL to default 'missing photo' image should go here:
@@ -16,47 +24,41 @@ class BirdPhoto < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :bird_id
 
-  def self.create_photo_record(bird, flickr_photo_data)
-    owner = flickr.people.getInfo(user_id: flickr_photo_data["owner"])
-    image = find_image_with_appropriate_size(flickr_photo_data)
+  PhotoNotFoundError = Class.new(StandardError)
 
-    BirdPhoto.create(
-      bird_id: bird.id,
-      owner: owner.try(:realname) || owner.try(:username),
-      flickr_url: image.url,
-      file_url: image.source,
-    )
-  end
-
-  def self.replace(id)
-    FlickRaw.api_key = ENV["FLICKR_KEY"]
-    FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
-    byebug
-    old_photo = find(id)
-    bird = old_photo.bird
-    photos = bird.photo_search
-    photos.each do |photo|
-      image = self.find_image_with_appropriate_size(photo)
-      if bird.photographs.any? { |bp| bp.flickr_url == image.url }
-        next
-      else
-        self.create_photo_record(bird, photo)
-        old_photo.destroy
-        return
-      end
+  def self.get_photos_for_bird(bird)
+    photo_data_with_images = self.search_flickr(bird)
+    photo_data_with_images.each do |h|
+      owner = flickr.people.getInfo(user_id: h[:photo_data]["owner"])
+      BirdPhoto.create(
+        bird_id: bird.id,
+        owner: owner.try(:realname) || owner.try(:username) || "Anonymous",
+        flickr_url: h[:image].url,
+        file_url: h[:image].source,
+      )
     end
   end
 
-  def self.find_image_with_appropriate_size(flickr_photo_data)
-    sizes = flickr.photos.getSizes(photo_id: flickr_photo_data["id"])
-    is_landscape = sizes.any? { |img| (img.width.to_i > img.height.to_i) }
-    image = sizes.find { |img| img.width == IMAGE_MAX_WIDTH } if is_landscape
-    image = sizes.find { |img| img.height == IMAGE_MAX_HEIGHT } unless is_landscape
-    image = sizes.find { |img| img.label == "Large Square" } unless image
-    image
+  def self.search_flickr(bird)
+    # Tries to find quality landscape bird photos; takes a long time given the iterative API calls.
+    FlickRaw.api_key = ENV["FLICKR_KEY"]
+    FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
+    photos = flickr.photos.search({ text: "#{bird.sci_name} #{bird.common_name}" }.merge(PHOTO_SEARCH_DEFAULTS)).to_a
+    photos = flickr.photos.search({ text: bird.sci_name }.merge(PHOTO_SEARCH_DEFAULTS)).to_a if photos.empty?
+    photos = flickr.photos.search({ text: bird.common_name }.merge(PHOTO_SEARCH_DEFAULTS)).to_a if photos.empty?
+    prioritized_photos = []
+    photos.each do |photo|
+      sizes = flickr.photos.getSizes(photo_id: photo["id"])
+      landscape_image = sizes.find { |img| (img.width.to_i == IMAGE_MAX_WIDTH && IMAGE_MAX_WIDTH > img.height.to_i) }
+      prioritized_photos << { photo_data: photo, image: landscape_image } if landscape_image
+      break if prioritized_photos.length == MAX_PHOTOS_PER_BIRD
+    end
+    raise PhotoNotFoundError unless prioritized_photos.any?
+    prioritized_photos
   end
 
   def retrieve_file
+    return if local
     self.image = URI.parse(file_url)
     self.update(local: true)
   end

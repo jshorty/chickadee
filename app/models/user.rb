@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
 
   has_many :regions, through: :user_regions, source: :region
   has_many :birds, through: :regions, source: :birds
+  has_many :bird_regions, through: :birds, source: :bird_regions
 
   has_attached_file :image,
   default_url: "https://s3.amazonaws.com/chickadee-development/images/user_image.jpg",

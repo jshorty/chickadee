@@ -1,13 +1,7 @@
 <!-- styles: modal.css, greeting_window.css -->
 
-
-<% if (isConfirm) { %>
-  <div class='modal-window modal-tight'>
-    <span class='modal-header'>Are you sure?</span>
-<% } else { %>
   <div class='modal-window'>
     <span class='modal-header'><%= header %></span>
-<% } %>
 
 <% if (!useButtons) { %>
   <p class="modal-message">

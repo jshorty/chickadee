@@ -20,10 +20,16 @@ Rails.application.routes.draw do
     resources :regions, only: [:show, :index, :create, :destroy]
     get "/countries", to: "regions#countries"
 
-    resources :birds, only: [:create, :show, :index]
+    resources :birds, only: [:create, :show, :index] do
+      collection do
+        get :random_image
+      end
+    end
+    
     get "/birds_all", to: "birds#world_index"
     get "/birds_quiz", to: "birds#quiz_question"
     get "/random_song", to: "birds#random_song"
+    get "birds/random_image", to: "birds#random_image"
 
     resources :quizzes, only: [:create, :update, :show]
 
