@@ -59,21 +59,32 @@ form div.spinner-box {
   background-size: cover;
   padding-bottom: 40px;
   min-height: 669px;
+  text-align: center;
 }
 
+.quiz-show h3 {
+  display: inline-block;
+}
 
-#main-content > section.quiz-show > h1 {
-  font-size: 24px;
+.quiz-upper-left, .quiz-upper-right {
+  width: 200px;
+  display: inline-block;
+}
+
+.quiz-upper-left {
+  float: left;
+}
+
+.quiz-upper-right {
+  float: right;
 }
 
 .quiz-window {
   position: relative;
   width: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
   margin-top: 10px;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 5px;
 }
 
 .quiz-level {
@@ -111,7 +122,7 @@ form div.spinner-box {
   background: #666;
   width: 530px;
   height: 250px;
-  margin: 30px auto 0px auto;
+  margin: 0 auto;
   border-radius: 20px;
   padding: 10px;
   text-align: center;
@@ -201,6 +212,10 @@ form div.spinner-box {
   padding: 10px;
   border-radius: 5px;
 }
+
+.answer-small {
+  font-size: 14px;
+}
 .answer-choices > ul > li > button.answer {
   width: 240px;
   height: 21px;
@@ -239,10 +254,12 @@ h1.result-header {
 .loading {
   margin: 0 auto;
   height: 200px;
+  text-align: center;
 }
-.loading-message {
-  display: block;
-  margin: 0 auto;
+
+.loading .loading-message {
+  margin: 0 auto 20px auto;
+  display: inline-block;
 }
 .spinner {
   margin: 0 auto;

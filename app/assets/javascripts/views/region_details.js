@@ -12,7 +12,7 @@ Chickadee.Views.RegionDetails = Backbone.View.extend({
     setTimeout(function() {
       this.$('#google-maps').ready(function(){
         this.$('.spinner').fadeOut(200, function() {
-            this.$('#google-maps').fadeIn(2500);
+            this.$('#google-maps').fadeIn(1500);
           }.bind(this));
         }.bind(this)
       );
