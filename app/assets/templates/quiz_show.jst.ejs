@@ -6,13 +6,6 @@
 
 <div class="quiz-upper-right group">
   <div class="quiz-score"><%= quiz.escape('score') %></div>
-  <div class="quiz-progress group">
-    <div class="unanswered"> </div><div class="unanswered"> </div>
-    <div class="unanswered"> </div><div class="unanswered"> </div>
-    <div class="unanswered"> </div><div class="unanswered"> </div>
-    <div class="unanswered"> </div><div class="unanswered"> </div>
-    <div class="unanswered"> </div><div class="unanswered"> </div>
-  </div>
 </div>
 
 <section class="quiz-window group">
@@ -22,15 +15,24 @@
   <div class='audio-box'>
 
     <div class='fade-box'>
-      <h3>What do you hear?</h3>
+      <div class='fade-box-top'>
+        <span class="what-do-you-hear"><strong>WHAT DO YOU HEAR?</strong></span>
+        <div class="quiz-progress group">
+          <div class="unanswered"> </div><div class="unanswered"> </div>
+          <div class="unanswered"> </div><div class="unanswered"> </div>
+          <div class="unanswered"> </div><div class="unanswered"> </div>
+          <div class="unanswered"> </div><div class="unanswered"> </div>
+          <div class="unanswered"> </div><div class="unanswered"> </div>
+        </div>
+      </div>
+
+      <span class="question-mark">?</span>
+      <img class="bird-silhouette" src="bird-silhouette.png">
 
       <audio src="<%=question.get('audio_url')%>" controls="true" autoplay="true">
         Your browser does not support the audio player element
         (try Chrome or Safari)
       </audio>
-
-      <span class="question-mark">?</span>
-      <img class="bird-silhouette" src="bird-silhouette.png">
 
       <span class="audio-info">
         Recorded by <%= question.escape('recordist') %>. Info and

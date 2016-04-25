@@ -325,6 +325,22 @@ nav li.streak-count {
   cursor: help;
 }
 
+.flame-icon {
+  display: inline-block;
+  width: 20px;
+  margin: 3px 8px 0 0;
+}
+
+.flame-icon > i {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 10px solid #111;
+    border-top: 10px solid transparent;
+}
+
+
 nav .current-user .dropdown {
   display: none;
   position: absolute;
