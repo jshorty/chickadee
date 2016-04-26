@@ -56,7 +56,7 @@ Chickadee.Views.Home = Backbone.View.extend({
           this.$(".image-wrapper").html(
             '<img class="bird-image" src="' + photo.url + '"><div class="bird-info"><a href="' +
               photo.flickr_url + '">' + attribution + '</a><br><a href="' + photo.flickr_url + '">' +
-              '(Click for license and Info)</a></div>'
+              '(Click for license and info)</a></div>'
           );
           this.$('.bird-image').css('display', 'none');
           this.$('.bird-info').css('display', 'none');

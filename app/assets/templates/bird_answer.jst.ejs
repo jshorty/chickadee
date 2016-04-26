@@ -1,0 +1,23 @@
+<div class="answer-box">
+  <h4>
+    <strong>
+      <%= question.get('correct_answer').common_name %> (
+      <em>
+        <%= question.get('correct_answer').sci_name %>
+      </em>)
+    </strong>
+  </h4>
+
+  <% if (correct) { %>
+    <img class="correct" src="<%= question.get('image_url') %>">
+  <% } else { %>
+    <img class="incorrect" src="<%= question.get('image_url') %>">
+  <% } %>
+
+
+  <span class="photo-info">
+    <a href="<%= question.get('image_flickr_url') %>">
+    Photo by <%= question.get('image_owner') %> via Flickr. (
+    Click for license and info)
+  </span>
+</div>

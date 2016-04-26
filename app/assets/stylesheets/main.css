@@ -1,7 +1,7 @@
 /*MAIN*/
 
 #main-content {
-  width: 90%;
+  width: 93%;
   margin: 20px auto;
   border-radius: 10px;
   background: #eee;
@@ -13,8 +13,6 @@
   width: 96px;
   height: 96px;
 }
-
-
 
 body > ul.ui-autocomplete {
     background: #fff;
@@ -94,7 +92,6 @@ form div.spinner-box {
 }
 
 .quiz-level {
-  float: left;
   font-size: 24px;
   font-weight: 700;
   color: #669966;
@@ -174,10 +171,10 @@ form div.spinner-box {
 .flash-box {
   position: absolute;
   left: 50%;
-  top: 115px;
-  width: 200px;
+  top: 100px;
+  width: 140px;
   margin-left: -110px;
-  height: 150px;
+  height: 80px;
   border-radius: 20px;
   text-align: center;
   padding: 10px;
@@ -191,28 +188,40 @@ form div.spinner-box {
   background: #cc6600;
 }
 
-.flash-answer {
-  font-size: 18px;
-  color: #fff;
-  display: block;
-}
-
-.flash-box em {
-  color: #ccc;
-}
-
 .flash-result {
-  position: absolute;
   color: white;
-  font-size: 100px;
-  left: 73px;
-  top: 55px;
+  font-size: 90px;
 }
 
-.fade-box {
+.fade-box, .answer-box {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.answer-box.correct {
+  display: none;
+  background: none;
+}
+
+.answer-box.incorrect {
+  display: none;
+  background: none;
+}
+
+.answer-box img {
+  max-height: 200px;
+  display: block;
+  margin: 8px auto;
+  border-radius: 5px;
+}
+
+.answer-box img.correct {
+  border: 6px solid #669966
+}
+
+.answer-box img.incorrect {
+  border: 6px solid #cc6600
 }
 
 .what-do-you-hear {
@@ -226,7 +235,7 @@ form div.spinner-box {
   margin-bottom: 10px
 }
 
-.fade-box span.audio-info {
+.fade-box span.audio-info, .answer-box span.photo-info {
   font-size: 10px;
   color: #333;
   display: block;
@@ -251,6 +260,12 @@ form div.spinner-box {
 .answer-small {
   font-size: 14px;
 }
+
+.answer-choices > ul > li {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 .answer-choices > ul > li > button.answer {
   width: 240px;
   height: 70px;

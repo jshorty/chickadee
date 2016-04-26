@@ -20,6 +20,7 @@ module Api
 
       begin
         @question = @quiz.next_question
+        @image = @question.correct_answer.bird.random_photo
         @song = @question.correct_answer.bird.random_song
       rescue NoMethodError => e
         @quiz.regenerate_remaining_questions
@@ -44,6 +45,7 @@ module Api
       @question = @quiz.next_question
 
       if @question
+        @image = @question.correct_answer.bird.random_photo
         @song = @question.correct_answer.bird.random_song
       end
 

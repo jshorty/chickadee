@@ -12,3 +12,11 @@ if @song
     json.audio_url @song.recording.url
   end
 end
+
+if @image
+  json.question do
+    json.image_url @image.image.url
+    json.image_owner @image.owner
+    json.image_flickr_url @image.flickr_url
+  end
+end

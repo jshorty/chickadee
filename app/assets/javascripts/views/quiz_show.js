@@ -40,6 +40,21 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     }.bind(this));
   },
 
+  fadeToAnswer: function(correct) {
+    this.$(".fade-box").fadeOut(300, function() {
+      this.$(".audio-box").html(JST["bird_answer"]({question: this.question, correct: correct}));
+      this.$(".answer-box").fadeIn(300, function() {
+        setTimeout(function() {
+          this.$(".answer-box").fadeOut(500, function() {
+            this.flashOver = true;
+            this.$(".audio-box").html(JST["loading"]({message: "Loading audio..."}));
+            this.$(".audio-box").prepend("<br><br><br>");
+          }.bind(this));
+        }.bind(this), 3000);
+      }.bind(this));
+    }.bind(this));
+  },
+
   fillProgressBar: function () {
     this.model.get('history').forEach(function (answer, i) {
       var currentDot = (i + 1).toString();
@@ -70,9 +85,8 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
 
     this.fillProgressBar();
     correct && this.updateScore();
-    this.flashResult(correct);
 
-    this.fadeToLoad();
+    this.fadeToAnswer(correct);
 
     this.question.save({correct: correct}, {
       success: function (model, response) {
@@ -92,6 +106,11 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     if (parseInt(response.progress) < 10) {
       this.question = this.model.question();
       this.answered = false;
+
+      // Eager load the bird photo showed after question is answered.
+      var birdPhoto = new Image(313, 200);
+      birdPhoto.src = this.question.get('image_url');
+
       this.render();
     } else {
       this.answered = false;
