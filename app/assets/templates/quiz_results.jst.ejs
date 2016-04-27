@@ -1,6 +1,23 @@
-<h1>Birds of <%= region.name() %></h1>
+<h3><strong><%= region.name() %> &nbsp;<span class="quiz-level">Lv. <%= quiz.escape('level') %></span></strong></h3>
 
-<br>
+<div class='audio-box'>
+
+  <div class='fade-box'>
+    <div class='fade-box-top'>
+      <span class="what-do-you-hear"><strong>WHAT DO YOU HEAR?</strong></span>
+      <div class="quiz-progress group">
+        <div class="unanswered"> </div><div class="unanswered"> </div>
+        <div class="unanswered"> </div><div class="unanswered"> </div>
+        <div class="unanswered"> </div><div class="unanswered"> </div>
+        <div class="unanswered"> </div><div class="unanswered"> </div>
+        <div class="unanswered"> </div><div class="unanswered"> </div>
+      </div>
+    </div>
+
+    <span class="question-mark">?</span>
+    <img class="bird-silhouette" src="bird-silhouette.png">
+
+  </div>
 
 <section class="quiz-window">
   <h1 class="result-header">
@@ -25,8 +42,8 @@
   </section>
 
   <section class="quiz-result-choices">
-    <button class="back-button" href="#regions">Home</button>
-    <button class="go-button quiz-again">Practice again</button>
+    <button class="button button-orange back-button" href="#regions">HOME</button>
+    <button class="button button-green quiz-again">CONTINUE</button>
   </section>
 
   <style>

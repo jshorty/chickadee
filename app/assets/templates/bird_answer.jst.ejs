@@ -17,7 +17,7 @@
 
   <span class="photo-info">
     <a href="<%= question.get('image_flickr_url') %>">
-    Photo by <%= question.get('image_owner') %> via Flickr. (
+    Photo by <%= question.get('image_owner') || "Anonymous" %> via Flickr. (
     Click for license and info)
   </span>
 </div>

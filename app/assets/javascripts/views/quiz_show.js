@@ -2,9 +2,8 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
   initialize: function (options) {
     this.regionId = options.regionId;
     this.question = this.model.question();
+    this.eagerLoadImage();
     this.region = new Chickadee.Models.Region(this.model.get('region'));
-    this.$el.append('<audio class="ping" src="correct-beep.mp3"></audio>')
-    this.$el.append('<audio class="ping" src="incorrect-beep.mp3"></audio>')
   },
 
   tagName: "section",
@@ -16,31 +15,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     "click .back-button":"goToIndex",
   },
 
-  flashResult: function (correct, callback) {
-    var resultStr = correct ? "correct" : "incorrect"
-    var flash = JST[("answer_" + resultStr)]({bird: this.question.get('correct_answer')});
-    var flashbox = this.$(".flash-box");
-    flashbox.addClass(resultStr);
-    this.$el.append('<audio class="ping" src="'+ resultStr +'-beep.mp3" autoplay></audio>');
-    var view = this;
-    flashbox.html(flash).hide().fadeToggle(400, function () {
-      setTimeout(function () {
-        flashbox.fadeToggle(600, "linear", function () {
-          view.flashOver = true;
-        });
-      }, 1000)
-    });
-  },
-
-  fadeToLoad: function () {
-    var message = "Loading audio..."
-    this.$(".fade-box").fadeOut(500, function () {
-      this.$(".audio-box").html(JST["loading"]({message: message}));
-      this.$(".audio-box").prepend("<br><br><br>")
-    }.bind(this));
-  },
-
-  fadeToAnswer: function(correct) {
+  fadeToAnswerThenLoading: function(correct) {
     this.$(".fade-box").fadeOut(300, function() {
       this.$(".audio-box").html(JST["bird_answer"]({question: this.question, correct: correct}));
       this.$(".answer-box").fadeIn(300, function() {
@@ -74,6 +49,12 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$(".quiz-score").html(parseInt(this.model.get('score')) + 1);
   },
 
+  stopSongAndPing: function(isCorrect) {
+    this.$('audio')[0].pause();
+    audioSrc = isCorrect ? "correct.mp3" : "incorrect-beep.mp3";
+    this.$('.ping').html(`<audio autoplay="true" src="${audioSrc}"></audio>`);
+  },
+
   handleAnswer: function (event) {
     if (this.answered) {return}
     this.answered = true
@@ -83,10 +64,12 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
+    this.stopSongAndPing(correct);
+
     this.fillProgressBar();
     correct && this.updateScore();
 
-    this.fadeToAnswer(correct);
+    this.fadeToAnswerThenLoading(correct);
 
     this.question.save({correct: correct}, {
       success: function (model, response) {
@@ -106,11 +89,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     if (parseInt(response.progress) < 10) {
       this.question = this.model.question();
       this.answered = false;
-
-      // Eager load the bird photo showed after question is answered.
-      var birdPhoto = new Image(313, 200);
-      birdPhoto.src = this.question.get('image_url');
-
+      this.eagerLoadImage();
       this.render();
     } else {
       this.answered = false;
@@ -151,6 +130,11 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$el.fadeOut(300, function () {
       Backbone.history.navigate("regions", {trigger: true})
     });
+  },
+
+  eagerLoadImage: function() {
+    var birdPhoto = new Image(313, 200);
+    birdPhoto.src = this.question.get('image_url');
   },
 
   renderGraph: function () {
