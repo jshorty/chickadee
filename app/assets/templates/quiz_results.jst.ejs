@@ -1,39 +1,20 @@
 <h3><strong><%= region.name() %> &nbsp;<span class="quiz-level">Lv. <%= quiz.escape('level') %></span></strong></h3>
 
-<div class='audio-box'>
-
-  <div class='fade-box'>
-    <div class='fade-box-top'>
-      <span class="what-do-you-hear"><strong>WHAT DO YOU HEAR?</strong></span>
-      <div class="quiz-progress group">
-        <div class="unanswered"> </div><div class="unanswered"> </div>
-        <div class="unanswered"> </div><div class="unanswered"> </div>
-        <div class="unanswered"> </div><div class="unanswered"> </div>
-        <div class="unanswered"> </div><div class="unanswered"> </div>
-        <div class="unanswered"> </div><div class="unanswered"> </div>
-      </div>
-    </div>
-
-    <span class="question-mark">?</span>
-    <img class="bird-silhouette" src="bird-silhouette.png">
-
-  </div>
-
 <section class="quiz-window">
-  <h1 class="result-header">
+  <h2 class="result-header">
     You got <%= quiz.escape('score') %>/10 correct!
-  </h1>
+  </h2>
 
   <% var score = parseInt(quiz.escape('score')) %>
 
   <% if (score === 10) {%>
-    <h2 class="encouragement">Wow, looks like you know your stuff.</h2>
+    <p class="encouragement">Wow, looks like you know your stuff.</p>
   <% } else if (score >= 7) { %>
-    <h2 class="encouragement">Good job, but there's more to learn!</h2>
+    <p class="encouragement">Good job, but there's more to learn!</p>
   <% } else if (score >= 3){ %>
-    <h2 class="encouragement">Keep practicing and you'll develop a keen ear.</h2>
+    <p class="encouragement">Keep practicing and you'll develop a keen ear.</p>
   <% } else { %>
-    <h2 class="encouragement">Uh oh! The birds are laughing at you! Prove them wrong and try again!</h2>
+    <p class="encouragement">Uh oh! The birds are laughing at you! Prove them wrong and try again!</p>
   <% } %>
 
   <h2 class="encouragement">XP this week:</h2>

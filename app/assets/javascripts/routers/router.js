@@ -71,7 +71,7 @@ Chickadee.Routers.Router = Backbone.Router.extend({
 
   regionShow: function (region_id) {
     if (this._requireLoggedIn()) {
-      var region = (region_id ? this.regions.getOrFetch(region_id) : null)
+      var region = this.regions.getOrFetch(region_id || this.regions.models[0].get('region_id'))
       this._swapView(new Chickadee.Views.RegionShow({
         model: region, collection: this.regions
       }));

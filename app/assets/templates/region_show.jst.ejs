@@ -19,8 +19,8 @@
           <div class="down-icon">▾</div>
         </h6>
         <small>
-          (reported species from <%= region.get('start_date') %> to
-          <%= region.get('updated_at') %>)
+          (reported species from <%= region.get('start_date') || "N/A" %> to
+          <%= region.get('updated_at') || "N/A" %>)
           <button class='region-update'><img src="refresh.png" alt="refresh"></button>
         </small>
       <% } else { %>

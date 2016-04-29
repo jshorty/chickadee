@@ -93,11 +93,16 @@ class Region < ActiveRecord::Base
     end
   end
 
+  NoBirdError = Class.new(StandardError)
+
   def parse_birds_from_ebird_data
     self.touch
     doc = query_ebird
     common_names = doc.xpath("//com-name").children
     sci_names = doc.xpath("//sci-name").children
+    # Eventually, log this to a Slack channel or something.
+    raise NoBirdError, "No bird reports found on eBird" if common_names.none? && sci_names.none?
+
     birds = self.birds.dup
 
     common_names.length.times do |i|
@@ -179,6 +184,8 @@ class Region < ActiveRecord::Base
 
   def random_bird_photo_url
     birds.sample.random_photo.image.url
+  rescue NoMethodError
+    debugger
   end
 
   def map_embed_url
