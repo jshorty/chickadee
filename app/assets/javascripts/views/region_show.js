@@ -1,5 +1,6 @@
 Chickadee.Views.RegionShow = Backbone.View.extend({
   initialize: function (options) {
+    debugger;
     this.subviews = [];
 
     if (!options.model) {
@@ -12,8 +13,8 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
       this.render = function(){this.$el.html(this.template); return this};
     } else {
       this.$el.addClass("group");
-      this.listenTo(this.model.birds(), "sync", this.render);
-      this.listenTo(this.model, "sync", this.render);
+      this.listenTo(this.model.birds(), "sync", this.renderWithList);
+      this.listenTo(this.model, "sync", this.renderWithList);
     }
   },
 
@@ -29,7 +30,7 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     "change .region-chooser":"swapRegion"
   },
 
-  render: function () {
+  render: function (isLoading) {
     this.removeSubviews();
     var content = this.template({region: this.model,
                                  regions: this.collection});
@@ -40,8 +41,12 @@ Chickadee.Views.RegionShow = Backbone.View.extend({
     });
     this.subviews.push(birdIndex);
     this.listenTo(birdIndex, "birdSelected", this.renderBird);
-    this.$el.find(".bird-list").append(birdIndex.render().el);
+    this.$el.find(".bird-list").append(birdIndex.render(isLoading || false).el);
     return this;
+  },
+
+  renderWithList: function () {
+    this.render(true);
   },
 
   renderBird: function (data) {

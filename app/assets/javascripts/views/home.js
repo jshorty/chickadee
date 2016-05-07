@@ -11,6 +11,7 @@ Chickadee.Views.Home = Backbone.View.extend({
   events: {
     "click .region-item":"displayRegionDetails",
     "click .study-button":"goToQuiz",
+    "click .birds-button":"goToBirds",
   },
 
   displayRegionDetails: function (event) {
@@ -32,10 +33,17 @@ Chickadee.Views.Home = Backbone.View.extend({
     }
   },
 
+  goToBirds: function (event) {
+    var region_id = $(event.currentTarget).data().id;
+    this.$el.fadeOut(200, function () {
+      Backbone.history.navigate("#regions/" + region_id + "/birds", {trigger: true});
+    });
+  },
+
   goToQuiz: function (event) {
     var region_id = $(event.currentTarget).data().id;
     this.$el.fadeOut(200, function () {
-      Backbone.history.navigate("#quiz/" + region_id, {trigger: true})
+      Backbone.history.navigate("#quiz/" + region_id, {trigger: true});
     });
   },
 

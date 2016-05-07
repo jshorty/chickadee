@@ -7,8 +7,8 @@ Chickadee.Views.BirdIndex = Backbone.View.extend({
     "click .bird-link":"birdSelected"
   },
 
-  render: function () {
-    var content = this.template({birds: this.collection});
+  render: function (isLoaded) {
+    var content = this.template({birds: this.collection, loaded: isLoaded || false});
     this.$el.html(content);
     return this;
   },

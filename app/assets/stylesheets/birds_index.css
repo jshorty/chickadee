@@ -64,7 +64,9 @@ section.region-info {
 
 .bird-details {
   float: right;
-  width: 550px;
+  width: 520px;
+  margin-left: 20px;
+  border: 10px solid #ccc;
 }
 
 .bird-details .bird-name {
