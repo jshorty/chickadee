@@ -5,3 +5,13 @@
     Photograph by <%= bird.photo.photographer %> via Flickr. (Click for license and Info)
   </a>
 </div>
+<div class="percentage">
+  You've correctly identified this bird <strong><%= bird.stats.percent_correct %>%</strong> of the time
+  (<%= bird.stats.correct_answers %>/<%= bird.stats.total_answers %>).
+</div>
+<div class="special-scrollbar">
+  <div class="wikipedia">
+    <small><strong>From Wikipedia:</strong></small>
+    <div class="summary"><small><%= bird.wikipedia_summary %></small></div>
+  </div>
+</div>

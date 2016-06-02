@@ -297,6 +297,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    wikipedia-client (1.6.2)
 
 PLATFORMS
   ruby
@@ -333,3 +334,7 @@ DEPENDENCIES
   spring
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  wikipedia-client
+
+BUNDLED WITH
+   1.11.2

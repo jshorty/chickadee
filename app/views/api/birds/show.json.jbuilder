@@ -7,3 +7,7 @@ if @photograph
     json.image_url @photograph.image.url
   end
 end
+
+json.stats(@user_bird.stats_hash)
+json.wikipedia_summary(@bird.wikipedia_summary)
+json.wikipedia_link(@bird.wikipedia_url)

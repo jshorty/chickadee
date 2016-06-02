@@ -18,6 +18,7 @@ gem 'rest-client'
 gem 'omniauth-facebook'
 gem 'omniauth-flickr'
 gem 'flickraw'
+gem 'wikipedia-client'
 
 group :development do
   gem 'better_errors'

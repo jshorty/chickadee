@@ -32,15 +32,21 @@ module Api
     def update
       id = params[:id]
       correct = params[:correct]
-      @question = Question.find(id);
+      question = Question.find(id);
 
-      unless @question && (@question.user == current_user || @question.answered)
+      unless question && (question.user == current_user || question.answered)
         render json: ["You don't have permission to do that"], status: 403
         return
       end
 
-      @question.update(correct: correct, answered: true)
-      @quiz = @question.quiz
+      answer = question.correct_answer
+      question.update(correct: correct, answered: true)
+      question.correct_answer.update(
+        total_answers: answer.total_answers + 1,
+        correct_answers: correct ? answer.correct_answers + 1 : answer.correct_answers
+      )
+
+      @quiz = question.quiz
       correct ? @quiz.correct! : @quiz.incorrect!
       @question = @quiz.next_question
 

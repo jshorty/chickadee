@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     foreign_key: :user_id,
     dependent: :destroy
 
+  has_many :user_birds
+
   has_many :regions, through: :user_regions, source: :region
   has_many :birds, through: :regions, source: :birds
   has_many :bird_regions, through: :birds, source: :bird_regions

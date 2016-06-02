@@ -1,9 +1,9 @@
 <h3><strong><%= region.name() %> &nbsp;<span class="quiz-level">Lv. <%= quiz.escape('level') %></span></strong></h3>
 
 <section class="quiz-window">
-  <h2 class="result-header">
+  <h4 class="result-header">
     You got <%= quiz.escape('score') %>/10 correct!
-  </h2>
+  </h4>
 
   <% var score = parseInt(quiz.escape('score')) %>
 
@@ -17,7 +17,7 @@
     <p class="encouragement">Uh oh! The birds are laughing at you! Prove them wrong and try again!</p>
   <% } %>
 
-  <h2 class="encouragement">XP this week:</h2>
+  <h4 class="encouragement">XP this week:</h2>
 
   <section id="xp-chart">
   </section>

@@ -72,7 +72,7 @@ section.region-info {
 .bird-details .bird-name {
   display: block;
   text-align: center;
-  margin: 5px 0px 15px 0px;
+  margin: 5px 0px 10px 0px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -185,4 +185,33 @@ button.go-button.quiz-start:hover {
 #no-birds-msg {
   text-align: center;
   margin: 5px auto;
+}
+
+.bird-show .percentage {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.bird-show .wikipedia {
+  margin-top: 5px;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.bird-show .wikipedia strong {
+  margin-bottom: 5px;
+}
+
+.bird-show .wikipedia .summary {
+  max-height: 110px;
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
+.bird-show .wikipedia .summary::-webkit-scrollbar {
+    display: none;
+}
+
+.bird-show .wikipedia .summary:hover::-webkit-scrollbar {
+    display: inherit;
 }

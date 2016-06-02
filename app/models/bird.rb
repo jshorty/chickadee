@@ -131,4 +131,18 @@ class Bird < ActiveRecord::Base
       end
     end
   end
+
+  require 'wikipedia'
+
+  def wikipedia_summary
+    wikipedia_result.try(:summary) || "No Wikipedia page found."
+  end
+
+  def wikipedia_url
+    wikipedia_result.try(:fullurl)
+  end
+
+  def wikipedia_result
+    @wikipedia_result ||= Wikipedia.find(common_name)
+  end
 end

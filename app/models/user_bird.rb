@@ -14,6 +14,7 @@ class UserBird < ActiveRecord::Base
     foreign_key: :bird_id
 
   def percent_correct
+    return 0.0 if total_answers < 1
     (correct_answers * 100.0 / total_answers).round(1)
   end
 

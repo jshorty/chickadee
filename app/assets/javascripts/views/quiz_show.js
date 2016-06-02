@@ -49,10 +49,11 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$(".quiz-score").html(parseInt(this.model.get('score')) + 1);
   },
 
-  stopSongAndPing: function(isCorrect) {
-    this.$('audio')[0].pause();
+  fadeOutSongAndPing: function(isCorrect) {
+    this.$('audio')[0].animate({volume: 0.0}, 3000);
     audioSrc = isCorrect ? "correct.mp3" : "incorrect-beep.mp3";
     this.$('.ping').html(`<audio autoplay="true" src="${audioSrc}"></audio>`);
+    debugger;
   },
 
   handleAnswer: function (event) {
@@ -64,7 +65,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     var correctId = this.question.get('correct_answer').id;
     var correct = (correctId === chosenId ? true : false);
 
-    this.stopSongAndPing(correct);
+    this.fadeOutSongAndPing(correct);
 
     this.fillProgressBar();
     correct && this.updateScore();
@@ -166,7 +167,7 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
                 .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
+                  "translate(" + (margin.left - 50) + "," + margin.top + ")");
 
     svg.append("path")
         .attr("class", "line")
