@@ -66,7 +66,8 @@ section.region-info {
   float: right;
   width: 520px;
   margin-left: 20px;
-  border: 10px solid #ccc;
+  border: 6px solid #F3F2F2;
+  padding: 4px;
 }
 
 .bird-details .bird-name {
@@ -199,7 +200,8 @@ button.go-button.quiz-start:hover {
 }
 
 .bird-show .wikipedia strong {
-  margin-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .bird-show .wikipedia .summary {
@@ -209,9 +211,48 @@ button.go-button.quiz-start:hover {
 }
 
 .bird-show .wikipedia .summary::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .bird-show .wikipedia .summary:hover::-webkit-scrollbar {
-    display: inherit;
+  display: inherit;
+}
+
+.bird-details .region-details {
+  display: none;
+  margin-top: 20px;
+}
+
+.bird-details .region-details img {
+  margin: 0px 0px 10px 35px;
+  float: left;
+}
+
+.bird-details .leaderboard p {
+  display: block;
+  margin: 0px auto 10px auto;
+}
+
+.bird-details .leaderboard {
+  width: 260px;
+  padding: 10px 10px 10px 0px;
+  margin: 0 10px 0 20px;
+  float: right;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.bird-details .leaderboard ul {
+  margin-left: 10px;
+}
+
+.bird-details .stats-table {
+  width: 220px;
+  clear: left;
+  float: left;
+}
+
+.bird-details td:nth-child(2) {
+  min-width: 40px;
+  text-align: right;
 }

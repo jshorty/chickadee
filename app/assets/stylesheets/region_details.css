@@ -1,6 +1,7 @@
 #region-details {
   float: left;
-  border: 10px solid #ccc;
+  border: 6px solid #F3F2F2;
+  padding: 4px;
   border-radius: 5px;
   width: 450px;
   min-height: 324px;

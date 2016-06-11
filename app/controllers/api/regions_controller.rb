@@ -29,8 +29,12 @@ module Api
           render json: @user_region.errors.full_messages, status: 422
         end
       end
-    rescue
-      render json: ["Sorry, we couldn't find this region."], status: 404
+    rescue => e
+      if e.class == Region::NoBirdError
+        render json: ["Sorry, there are no recent bird reports (via eBird) for this region."], status: 404
+      else
+        render json: ["Sorry, we couldn't find this region."], status: 404
+      end
     end
 
     def show
@@ -56,7 +60,7 @@ module Api
 
     def countries
       @countries = []
-      countries = Region.all.where("county IS NULL and state IS NULL")
+      countries = Region.where("county IS NULL and state IS NULL")
       countries.each { |region| @countries.push(region.country) }
       @countries.sort
       render :countries
@@ -65,7 +69,7 @@ module Api
     private
 
     def region_params
-      [:country, :state, :country].each do |scope|
+      [:county, :state, :country].each do |scope|
         params[:region][scope] = nil if params[:region][scope].blank?
       end
       params.require(:region).permit(:id, :county, :state, :country)

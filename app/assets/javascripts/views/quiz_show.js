@@ -53,7 +53,6 @@ Chickadee.Views.QuizShow = Backbone.View.extend({
     this.$('audio')[0].animate({volume: 0.0}, 3000);
     audioSrc = isCorrect ? "correct.mp3" : "incorrect-beep.mp3";
     this.$('.ping').html(`<audio autoplay="true" src="${audioSrc}"></audio>`);
-    debugger;
   },
 
   handleAnswer: function (event) {

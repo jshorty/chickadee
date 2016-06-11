@@ -72,4 +72,11 @@ class UserRegion < ActiveRecord::Base
   def percent_correct
     (correct_answers * 100.0 / total_answers).round(1)
   end
+
+  # TODO: Replace user_id and region_id columns/associations on Quiz
+  # and associate with this model instead.
+  def quiz_count
+    Quiz.where(user_id: user_id, region_id: region_id)
+      .where('progress >= ?', Quiz::NUM_QUESTIONS).count
+  end
 end

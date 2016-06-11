@@ -58,13 +58,13 @@ class Region < ActiveRecord::Base
   end
 
   def region_is_unique_by_scope
-    if self.county && Region.all.where({
+    if self.county && Region.where({
         county: self.county, state: self.state, country: self.country}).any?
       errors[:base] << "this county is already in the database for this state"
-    elsif !self.county && self.state && Region.all.where({
+    elsif !self.county && self.state && Region.where({
         county: nil, state: self.state, country: self.country}).any?
       errors[:base] << "this state is already in the database for this country"
-    elsif !self.county && !self.state && Region.all.where({
+    elsif !self.county && !self.state && Region.where({
         county: nil, state: nil, country: self.country}).any?
       errors[:base] << "this country is already in the database"
     end
@@ -184,8 +184,6 @@ class Region < ActiveRecord::Base
 
   def random_bird_photo_url
     birds.sample.random_photo.image.url
-  rescue NoMethodError
-    debugger
   end
 
   def map_embed_url
