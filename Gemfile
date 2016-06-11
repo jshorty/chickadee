@@ -19,6 +19,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-flickr'
 gem 'flickraw'
 gem 'wikipedia-client'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'

@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: chickadee_production
-  username: chickadee
+  username: rails
   password: <%= ENV['CHICKADEE_DATABASE_PASSWORD'] %>
