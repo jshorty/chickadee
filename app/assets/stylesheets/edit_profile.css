@@ -37,7 +37,7 @@
 }
 
 .user-image {
-  float; left;
+  float: left;
   border-radius: 5px;
   border: 3px solid #aaa;
   display: block;
