@@ -1,6 +1,7 @@
 /*MAIN*/
 
 #main-content {
+  min-height: 460px;
   width: 93%;
   margin: 20px auto;
   border-radius: 10px;
