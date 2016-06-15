@@ -5,10 +5,13 @@ module Api
     def show
       @bird = Bird.find(params[:id])
       @photograph = @bird.random_photo
+      puts "USER ID = '#{current_user.id}'"
+      puts "BIRD ID = '#{params[:id]}'"
       @user_bird = current_user.user_birds.find_or_create_by(
         user_id: current_user.id,
         bird_id: params[:id],
       )
+      puts "USER BIRD = '#{@user_bird}'"
       render :show
     end
 
