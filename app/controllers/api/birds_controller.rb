@@ -5,7 +5,10 @@ module Api
     def show
       @bird = Bird.find(params[:id])
       @photograph = @bird.random_photo
-      @user_bird = current_user.user_birds.find_by_bird_id(params[:id])
+      @user_bird = current_user.user_birds.find_or_create_by(
+        user_id: current_user.id,
+        bird_id: params[:id],
+      )
       render :show
     end
 
