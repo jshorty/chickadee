@@ -1,6 +1,6 @@
 # Chickadee
 
-[www.chickadee.io][live]
+### Formerly hosted at [www.chickadee.io][live], this was a web application built with Backbone.js and Ruby on Rails. It provided dynamically birdsong quizzes for a user-specified region of the world, consuming bird demographic data from the eBird API, audio recordings from the xeno-canto API, and public image files from the Flickr API. In its current state, the Rails application is configured to sit atop a PostgreSQL database, with baseline bird & region data manually seeded. As this has been unmaintained for a number of years, the API integrations may no longer be compatible.
 
 [live]: http://www.chickadee.io
 
